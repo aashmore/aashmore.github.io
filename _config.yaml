@@ -1,7 +1,7 @@
 # site properties and page defaults
 title: Ashmore Lab
 subtitle: Computational physics and ML research group
-description: A computational physics and machine learning research group at Skidmore College.
+description: "A computational physics and machine learning research group at Skidmore College."
 header: images/background.jpg
 footer: images/background.jpg
 proofer: false
