@@ -1,174 +1,164 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
-- id: doi:10.1093/nar/gkad1082
-  title: "The Monarch Initiative in 2024: an analytic platform integrating phenotypes,\
-    \ genes\_and diseases across species"
+- id: doi:10.1002/prop.202200071
+  title: "Hidden Sectors from Multiple Line Bundles for the B\u2212L$B-L$ MSSM"
   authors:
-  - Tim E Putman
-  - Kevin Schaper
-  - Nicolas Matentzoglu
-  - "Vincent\_P Rubinetti"
-  - "Faisal\_S Alquaddoomi"
-  - Corey Cox
-  - J Harry Caufield
-  - Glass Elsarboukh
-  - Sarah Gehrke
-  - Harshad Hegde
-  - "Justin\_T Reese"
-  - Ian Braun
-  - "Richard\_M Bruskiewich"
-  - Luca Cappelletti
-  - Seth Carbon
-  - "Anita\_R Caron"
-  - "Lauren\_E Chan"
-  - "Christopher\_G Chute"
-  - "Katherina\_G Cortes"
-  - "Vin\xEDcius De\_Souza"
-  - Tommaso Fontana
-  - "Nomi\_L Harris"
-  - "Emily\_L Hartley"
-  - Eric Hurwitz
-  - "Julius\_O B Jacobsen"
-  - Madan Krishnamurthy
-  - "Bryan\_J Laraway"
-  - "James\_A McLaughlin"
-  - "Julie\_A McMurry"
-  - "Sierra\_A T Moxon"
-  - "Kathleen\_R Mullen"
-  - "Shawn\_T O\u2019Neil"
-  - "Kent\_A Shefchek"
-  - Ray Stefancsik
-  - Sabrina Toro
-  - "Nicole\_A Vasilevsky"
-  - "Ramona\_L Walls"
-  - "Patricia\_L Whetzel"
-  - David Osumi-Sutherland
-  - Damian Smedley
-  - "Peter\_N Robinson"
-  - "Christopher\_J Mungall"
-  - "Melissa\_A Haendel"
-  - "Monica\_C Munoz-Torres"
-  publisher: Nucleic Acids Research
-  date: '2023-11-24'
-  link: https://doi.org/gs6kmr
-  orcid: 0000-0002-4655-3773
+  - Anthony Ashmore
+  - Sebastian Dumitru
+  - Burt A. Ovrut
+  publisher: Fortschritte der Physik
+  date: '2022-06-06'
+  link: https://doi.org/g673j5
+  orcid: 0000-0001-6178-7538
   plugin: orcid.py
   file: orcid.yaml
-- id: doi:10.1101/2023.10.11.560955
-  title: Integration of 168,000 samples reveals global patterns of the human gut microbiome
+- id: doi:10.1103/PhysRevLett.128.191601
+  title: Exactly Marginal Deformations and Their Supergravity Duals
   authors:
-  - Richard J. Abdill
-  - Samantha P. Graham
-  - Vincent Rubinetti
-  - Frank W. Albert
-  - Casey S. Greene
-  - Sean Davis
-  - Ran Blekhman
-  publisher: Cold Spring Harbor Laboratory
-  date: '2023-10-11'
-  link: https://doi.org/gsvf5z
-  orcid: 0000-0002-4655-3773
+  - Anthony Ashmore
+  - Michela Petrini
+  - "Edward L\xF8d\xF8en Tasker"
+  - Daniel Waldram
+  publisher: Physical Review Letters
+  date: '2022-05-09'
+  link: https://doi.org/g673j7
+  orcid: 0000-0001-6178-7538
   plugin: orcid.py
   file: orcid.yaml
-- id: doi:10.1093/nar/gkad289
-  title: 'MyGeneset.info: an interactive and programmatic platform for community-curated
-    and user-created collections of genes'
+- id: doi:10.1016/j.physletb.2022.136972
+  title: Machine learning line bundle connections
   authors:
-  - Ricardo Avila
-  - Vincent Rubinetti
-  - Xinghua Zhou
-  - Dongbo Hu
-  - Zhongchao Qian
-  - Marco Alvarado Cano
-  - Everaldo Rodolpho
-  - Ginger Tsueng
-  - Casey Greene
-  - Chunlei Wu
-  publisher: Nucleic Acids Research
-  date: '2023-04-18'
-  link: https://doi.org/gr5hb5
-  orcid: 0000-0002-4655-3773
+  - Anthony Ashmore
+  - Rehan Deen
+  - Yang-Hui He
+  - Burt A. Ovrut
+  publisher: Physics Letters B
+  date: '2022-04-01'
+  link: https://doi.org/gtdxq9
+  orcid: 0000-0001-6178-7538
   plugin: orcid.py
   file: orcid.yaml
-- id: doi:10.1101/2023.01.05.522941
-  title: Hetnet connectivity search provides rapid insights into how two biomedical
-    entities are related
+- id: doi:10.1007/JHEP02(2022)021
+  title: Calabi-Yau CFTs and random matrices
   authors:
-  - Daniel S. Himmelstein
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Kyle Kloster
-  - Benjamin J. Heil
-  - Faisal Alquaddoomi
-  - Dongbo Hu
-  - David N. Nicholson
-  - Yun Hao
-  - Blair D. Sullivan
-  - Michael W. Nagle
-  - Casey S. Greene
-  publisher: Cold Spring Harbor Laboratory
-  date: '2023-01-07'
-  link: https://doi.org/grmcb9
-  orcid: 0000-0002-4655-3773
+  - Nima Afkhami-Jeddi
+  - Anthony Ashmore
+  - "Clay C\xF3rdova"
+  publisher: Journal of High Energy Physics
+  date: '2022-02-01'
+  link: https://doi.org/g589vx
+  orcid: 0000-0001-6178-7538
   plugin: orcid.py
   file: orcid.yaml
-- id: doi:10.1093/gigascience/giad047
-  title: Hetnet connectivity search provides rapid insights into how biomedical entities
-    are related
+- id: doi:10.1007/JHEP02(2022)089
+  title: Topological G2 and Spin(7) strings at 1-loop from double complexes
   authors:
-  - Daniel S Himmelstein
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Kyle Kloster
-  - Benjamin J Heil
-  - Faisal Alquaddoomi
-  - Dongbo Hu
-  - David N Nicholson
-  - Yun Hao
-  - Blair D Sullivan
-  - Michael W Nagle
-  - Casey S Greene
-  publisher: GigaScience
-  date: '2022-12-28'
-  link: https://doi.org/gsd85n
-  orcid: 0000-0002-4655-3773
+  - Anthony Ashmore
+  - "Andr\xE9 Coimbra"
+  - Charles Strickland-Constable
+  - Eirik Eik Svanes
+  - David Tennyson
+  publisher: Journal of High Energy Physics
+  date: '2022-02-01'
+  link: https://doi.org/g673j8
+  orcid: 0000-0001-6178-7538
   plugin: orcid.py
   file: orcid.yaml
-- id: doi:10.1101/2022.02.18.461833
-  title: 'MolEvolvR: A web-app for characterizing proteins using molecular evolution
-    and phylogeny'
+- id: doi:10.1007/JHEP08(2021)033
+  title: "Explicit soft supersymmetry breaking in the heterotic M-theory B \u2212\
+    \ L MSSM"
   authors:
-  - Jacob D Krol
-  - Joseph T Burke
-  - Samuel Z Chen
-  - Lo M Sosinski
-  - Faisal S Alquaddoomi
-  - Evan P Brenner
-  - Ethan P Wolfe
-  - Vincent P Rubinetti
-  - Shaddai Amolitos
-  - Kellen M Reason
-  - John B Johnston
-  - Janani Ravi
-  publisher: Cold Spring Harbor Laboratory
-  date: '2022-02-22'
-  link: https://doi.org/gstx7j
-  orcid: 0000-0002-4655-3773
+  - Anthony Ashmore
+  - Sebastian Dumitru
+  - Burt A. Ovrut
+  publisher: Journal of High Energy Physics
+  date: '2021-08-09'
+  link: https://doi.org/g673kb
+  orcid: 0000-0001-6178-7538
   plugin: orcid.py
   file: orcid.yaml
-- id: doi:10.1186/s13059-020-02021-3
-  title: Compressing gene expression data using multiple latent space dimensionalities
-    learns complementary biological representations
+- id: doi:10.1002/prop.202100052
+  title: Line Bundle Hidden Sectors for Strongly Coupled Heterotic Standard Models
   authors:
-  - Gregory P. Way
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Daniel S. Himmelstein
-  - Casey S. Greene
-  publisher: Genome Biology
-  date: '2020-05-11'
-  link: https://doi.org/gg2mjh
-  orcid: 0000-0002-4655-3773
+  - Anthony Ashmore
+  - Sebastian Dumitru
+  - Burt A. Ovrut
+  publisher: Fortschritte der Physik
+  date: '2021-05-24'
+  link: https://doi.org/gj6pbv
+  orcid: 0000-0001-6178-7538
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1103/PhysRevD.103.106028
+  title: Moduli-dependent KK towers and the swampland distance conjecture on the quintic
+    Calabi-Yau manifold
+  authors:
+  - Anthony Ashmore
+  - Fabian Ruehle
+  publisher: Physical Review D
+  date: '2021-05-28'
+  link: https://doi.org/gj8szw
+  orcid: 0000-0001-6178-7538
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1007/jhep01(2021)158
+  title: 'Generalising G2 geometry: involutivity, moment maps and moduli'
+  authors:
+  - Anthony Ashmore
+  - Charles Strickland-Constable
+  - David Tennyson
+  - Daniel Waldram
+  publisher: Journal of High Energy Physics
+  date: '2021-01-26'
+  link: https://doi.org/g673kh
+  orcid: 0000-0001-6178-7538
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1007/JHEP11(2020)071
+  title: 'Heterotic backgrounds via generalised geometry: moment maps and moduli'
+  authors:
+  - Anthony Ashmore
+  - Charles Strickland-Constable
+  - David Tennyson
+  - Daniel Waldram
+  publisher: Journal of High Energy Physics
+  date: '2020-11-01'
+  link: https://doi.org/g673kk
+  orcid: 0000-0001-6178-7538
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1002/prop.202000068
+  title: "Machine Learning Calabi\u2013Yau Metrics"
+  authors:
+  - Anthony Ashmore
+  - "Yang\u2010Hui He"
+  - Burt A. Ovrut
+  publisher: Fortschritte der Physik
+  date: '2020-08-12'
+  link: https://doi.org/ghf4nr
+  orcid: 0000-0001-6178-7538
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1007/JHEP12(2018)060
+  title: Marginal deformations of 3d $$ \mathcal{N}=2 $$ CFTs from AdS4 backgrounds
+    in generalised geometry
+  authors:
+  - Anthony Ashmore
+  publisher: Journal of High Energy Physics
+  date: '2018-12-01'
+  link: https://doi.org/gf27t8
+  orcid: 0000-0001-6178-7538
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1002/prop.201600109
+  title: "Exceptional Calabi\u2013Yau spaces: the geometry of  backgrounds with flux"
+  authors:
+  - Anthony Ashmore
+  - Daniel Waldram
+  publisher: Fortschritte der Physik
+  date: '2017-01-01'
+  link: https://doi.org/gksxjm
+  orcid: 0000-0001-6178-7538
   plugin: orcid.py
   file: orcid.yaml
 - id: doi:10.1371/journal.pcbi.1007128
@@ -184,9 +174,6 @@
   publisher: PLOS Computational Biology
   date: '2020-12-04'
   link: https://doi.org/c7np
-  orcid: 0000-0002-4655-3773
-  plugin: sources.py
-  file: sources.yaml
   type: paper
   description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed
     do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -203,21 +190,8 @@
   - open science
   - collaboration
   repo: greenelab/meta-review
-- id: doi:10.1101/573782
-  title: Sequential compression of gene expression across dimensionalities and methods
-    reveals no single best method or dimensionality
-  authors:
-  - Gregory P. Way
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Daniel S. Himmelstein
-  - Casey S. Greene
-  publisher: Cold Spring Harbor Laboratory
-  date: '2019-03-11'
-  link: https://doi.org/gfxjxf
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1016/j.csbj.2020.05.017
   title: Constructing knowledge graphs and their biomedical applications
   authors:
