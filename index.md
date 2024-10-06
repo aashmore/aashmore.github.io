@@ -1,9 +1,11 @@
 ---
 ---
 
-# aashmoreDESCRIPTION=An engaging 1-3 sentence description of your lab.'s Website
+Welcome to the Computational Physics and Machine Learning research group in the Physics Department at Skidmore College. 
 
+The research directions of the group include developing and applying numerical and machine-learning techniques to problems in quantum mechanics, quantum field theory and string theory.
 
+If you're interested in working with us, get in touch!
 
 {% include section.html %}
 
