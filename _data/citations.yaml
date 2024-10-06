@@ -1,18 +1,85 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
-- id: doi:10.1002/prop.202200071
-  title: "Hidden Sectors from Multiple Line Bundles for the B\u2212L$B-L$ MSSM"
+- id: arxiv:2405.14830
+  title: Deep learning lattice gauge theories
+  authors:
+  - Anuj Apte
+  - Anthony Ashmore
+  - Clay Cordova
+  - Tzu-Chen Huang
+  publisher: arXiv
+  date: '2024-05-24'
+  link: https://arxiv.org/abs/2405.14830
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/JHEP10(2023)130
+  title: A heterotic Kodaira-Spencer theory at one-loop
   authors:
   - Anthony Ashmore
-  - Sebastian Dumitru
+  - "Javier Jos\xE9 Murgas Ibarra"
+  - David Duncan McNutt
+  - Charles Strickland-Constable
+  - Eirik Eik Svanes
+  - David Tennyson
+  - Sander Winje
+  publisher: Journal of High Energy Physics
+  date: '2023-10-23'
+  link: https://doi.org/g68ssz
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/JHEP07(2023)164
+  title: Numerical spectra of the Laplacian for line bundles on Calabi-Yau hypersurfaces
+  authors:
+  - A. Ashmore
+  - Y-H. He
+  - E. Heyes
+  - B. A. Ovrut
+  publisher: Journal of High Energy Physics
+  date: '2023-07-21'
+  link: https://doi.org/g68spq
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/s00220-023-04910-7
+  title: Geometric Flows and Supersymmetry
+  authors:
+  - Anthony Ashmore
+  - Ruben Minasian
+  - Yann Proto
+  publisher: Communications in Mathematical Physics
+  date: '2024-01-01'
+  link: https://doi.org/g68spr
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/JHEP05(2023)101
+  title: N = (2, 0) AdS3 solutions of M-theory
+  authors:
+  - A. Ashmore
+  publisher: Journal of High Energy Physics
+  date: '2023-05-12'
+  link: https://doi.org/g68spv
+  plugin: sources.py
+  file: sources.yaml
+- id: arxiv:2202.05896
+  title: Calabi-Yau metrics, CFTs and random matrices
+  authors:
+  - Anthony Ashmore
+  publisher: arXiv
+  date: '2022-02-15'
+  link: https://arxiv.org/abs/2202.05896
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1142/S2810939222500034
+  title: "Calabi\u2013Yau metrics, energy functionals and machine learning"
+  authors:
+  - Anthony Ashmore
+  - Lucille Calmon
+  - Yang-Hui He
   - Burt A. Ovrut
-  publisher: Fortschritte der Physik
-  date: '2022-06-06'
-  link: https://doi.org/g673j5
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
+  publisher: International Journal of Data Science in the Mathematical Sciences
+  date: '2022-05-21'
+  link: https://doi.org/g68sqp
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1103/PhysRevLett.128.191601
   title: Exactly Marginal Deformations and Their Supergravity Duals
   authors:
@@ -23,10 +90,8 @@
   publisher: Physical Review Letters
   date: '2022-05-09'
   link: https://doi.org/g673j7
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1016/j.physletb.2022.136972
   title: Machine learning line bundle connections
   authors:
@@ -37,23 +102,8 @@
   publisher: Physics Letters B
   date: '2022-04-01'
   link: https://doi.org/gtdxq9
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1007/JHEP02(2022)021
-  title: Calabi-Yau CFTs and random matrices
-  authors:
-  - Nima Afkhami-Jeddi
-  - Anthony Ashmore
-  - "Clay C\xF3rdova"
-  publisher: Journal of High Energy Physics
-  date: '2022-02-01'
-  link: https://doi.org/g589vx
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1007/JHEP02(2022)089
   title: Topological G2 and Spin(7) strings at 1-loop from double complexes
   authors:
@@ -65,10 +115,41 @@
   publisher: Journal of High Energy Physics
   date: '2022-02-01'
   link: https://doi.org/g673j8
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/JHEP02(2022)021
+  title: Calabi-Yau CFTs and random matrices
+  authors:
+  - Nima Afkhami-Jeddi
+  - Anthony Ashmore
+  - "Clay C\xF3rdova"
+  publisher: Journal of High Energy Physics
+  date: '2022-02-01'
+  link: https://doi.org/g589vx
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1002/prop.202200071
+  title: "Hidden Sectors from Multiple Line Bundles for the B\u2212L$B-L$ MSSM"
+  authors:
+  - Anthony Ashmore
+  - Sebastian Dumitru
+  - Burt A. Ovrut
+  publisher: Fortschritte der Physik
+  date: '2022-06-06'
+  link: https://doi.org/g673j5
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1103/PhysRevD.103.106028
+  title: Moduli-dependent KK towers and the swampland distance conjecture on the quintic
+    Calabi-Yau manifold
+  authors:
+  - Anthony Ashmore
+  - Fabian Ruehle
+  publisher: Physical Review D
+  date: '2021-05-28'
+  link: https://doi.org/gj8szw
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1007/JHEP08(2021)033
   title: "Explicit soft supersymmetry breaking in the heterotic M-theory B \u2212\
     \ L MSSM"
@@ -79,10 +160,17 @@
   publisher: Journal of High Energy Physics
   date: '2021-08-09'
   link: https://doi.org/g673kb
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.geomphys.2023.105028
+  title: "Eigenvalues and eigenforms on Calabi\u2013Yau threefolds"
+  authors:
+  - Anthony Ashmore
+  publisher: Journal of Geometry and Physics
+  date: '2024-01-01'
+  link: https://doi.org/g68sqq
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1002/prop.202100052
   title: Line Bundle Hidden Sectors for Strongly Coupled Heterotic Standard Models
   authors:
@@ -92,37 +180,8 @@
   publisher: Fortschritte der Physik
   date: '2021-05-24'
   link: https://doi.org/gj6pbv
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1103/PhysRevD.103.106028
-  title: Moduli-dependent KK towers and the swampland distance conjecture on the quintic
-    Calabi-Yau manifold
-  authors:
-  - Anthony Ashmore
-  - Fabian Ruehle
-  publisher: Physical Review D
-  date: '2021-05-28'
-  link: https://doi.org/gj8szw
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1007/jhep01(2021)158
-  title: 'Generalising G2 geometry: involutivity, moment maps and moduli'
-  authors:
-  - Anthony Ashmore
-  - Charles Strickland-Constable
-  - David Tennyson
-  - Daniel Waldram
-  publisher: Journal of High Energy Physics
-  date: '2021-01-26'
-  link: https://doi.org/g673kh
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1007/JHEP11(2020)071
   title: 'Heterotic backgrounds via generalised geometry: moment maps and moduli'
   authors:
@@ -133,10 +192,8 @@
   publisher: Journal of High Energy Physics
   date: '2020-11-01'
   link: https://doi.org/g673kk
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1002/prop.202000068
   title: "Machine Learning Calabi\u2013Yau Metrics"
   authors:
@@ -146,10 +203,20 @@
   publisher: Fortschritte der Physik
   date: '2020-08-12'
   link: https://doi.org/ghf4nr
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/JHEP01(2021)158
+  title: 'Generalising G2 geometry: involutivity, moment maps and moduli'
+  authors:
+  - Anthony Ashmore
+  - Charles Strickland-Constable
+  - David Tennyson
+  - Daniel Waldram
+  publisher: Journal of High Energy Physics
+  date: '2021-01-26'
+  link: https://doi.org/g673kh
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1007/JHEP12(2018)060
   title: Marginal deformations of 3d $$ \mathcal{N}=2 $$ CFTs from AdS4 backgrounds
     in generalised geometry
@@ -158,10 +225,55 @@
   publisher: Journal of High Energy Physics
   date: '2018-12-01'
   link: https://doi.org/gf27t8
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/JHEP10(2018)179
+  title: "Finite deformations from a heterotic superpotential: holomorphic Chern-Simons\
+    \ and an L\u221E algebra"
+  authors:
+  - Anthony Ashmore
+  - Xenia de la Ossa
+  - Ruben Minasian
+  - Charles Strickland-Constable
+  - Eirik Eik Svanes
+  publisher: Journal of High Energy Physics
+  date: '2018-10-01'
+  link: https://doi.org/g68sqs
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.25560/55241
+  title: Generalised geometry for supersymmetric flux backgrounds
+  authors:
+  - Anthony Ashmore
+  publisher: Imperial College London
+  date: '2016-08-01'
+  link: https://doi.org/g68sqw
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/JHEP01(2017)124
+  title: Exactly marginal deformations from exceptional generalised geometry
+  authors:
+  - Anthony Ashmore
+  - Maxime Gabella
+  - "Mariana Gra\xF1a"
+  - Michela Petrini
+  - Daniel Waldram
+  publisher: Journal of High Energy Physics
+  date: '2017-01-01'
+  link: https://doi.org/f9x4cq
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/JHEP12(2016)146
+  title: The exceptional generalised geometry of supersymmetric AdS flux backgrounds
+  authors:
+  - Anthony Ashmore
+  - Michela Petrini
+  - Daniel Waldram
+  publisher: Journal of High Energy Physics
+  date: '2016-12-01'
+  link: https://doi.org/gks3g7
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1002/prop.201600109
   title: "Exceptional Calabi\u2013Yau spaces: the geometry of  backgrounds with flux"
   authors:
@@ -170,7 +282,27 @@
   publisher: Fortschritte der Physik
   date: '2017-01-01'
   link: https://doi.org/gksxjm
-  orcid: 0000-0001-6178-7538
-  ashmore: true
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1142/9789814412551_0007
+  title: "Calabi\u2013Yau three-folds: Poincar\xE9 polynomials and fractals"
+  authors:
+  - Anthony Ashmore
+  - Yang-Hui He
+  publisher: Strings, Gauge Fields, and the Geometry Behind
+  date: '2012-12-01'
+  link: https://doi.org/gks274
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.2478/s11534-010-0142-5
+  title: Numerical analysis of space charge effects in electron bunches at laser-driven
+    plasma accelerators
+  authors:
+  - Anthony Ashmore
+  - Riccardo Bartolini
+  - Nicolas Delerue
+  publisher: Open Physics
+  date: '2011-04-30'
+  link: https://doi.org/bc2w98
+  plugin: sources.py
+  file: sources.yaml
