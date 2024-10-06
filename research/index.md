@@ -24,22 +24,22 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 ## Deep learning for gauge theories
 
-{% include list.html data="citations" component="citation" style="rich" filters="lattice: True" %}
+{% include list.html data="citations" component="citation" style="rich" filters="lattice: true" %}
 
 {% include section.html %}
 
 ## Numerical and machine-learning methods for string theory
 
-{% include list.html data="citations" component="citation" style="rich" filters="numerical: True" %}
+{% include list.html data="citations" component="citation" style="rich" filters="numerical: true" %}
 
 {% include section.html %}
 
 ## Geometric structures in supergravity and string theory
 
-{% include list.html data="citations" component="citation" style="rich" filters="geometry: True" %}
+{% include list.html data="citations" component="citation" style="rich" filters="geometry: true" %}
 
 {% include section.html %}
 
 ## String model building and phenomenology
 
-{% include list.html data="citations" component="citation" style="rich" filters="model: True" %}
+{% include list.html data="citations" component="citation" style="rich" filters="model: true" %}
