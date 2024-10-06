@@ -14,13 +14,13 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 {% include search-info.html %}
 
-<!-- {% include section.html %} -->
+<!--- {% include section.html %} --->
 
-<!-- ## Highlighted
+<!--- ## Highlighted
 
-{% include citation.html lookup="Machine learning line bundle connections" style="rich" %}
+{% include citation.html lookup="Machine learning line bundle connections" style="rich" %} --->
 
-{% include section.html %} -->
+{% include section.html %}
 
 ## Deep learning for gauge theories
 
