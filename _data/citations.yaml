@@ -10,6 +10,7 @@
   publisher: arXiv
   date: '2024-05-24'
   link: https://arxiv.org/abs/2405.14830
+  lattice: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP10(2023)130
@@ -25,6 +26,7 @@
   publisher: Journal of High Energy Physics
   date: '2023-10-23'
   link: https://doi.org/g68ssz
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP07(2023)164
@@ -37,6 +39,7 @@
   publisher: Journal of High Energy Physics
   date: '2023-07-21'
   link: https://doi.org/g68spq
+  numerical: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/s00220-023-04910-7
@@ -48,6 +51,7 @@
   publisher: Communications in Mathematical Physics
   date: '2024-01-01'
   link: https://doi.org/g68spr
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP05(2023)101
@@ -57,6 +61,7 @@
   publisher: Journal of High Energy Physics
   date: '2023-05-12'
   link: https://doi.org/g68spv
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: arxiv:2202.05896
@@ -66,6 +71,7 @@
   publisher: arXiv
   date: '2022-02-15'
   link: https://arxiv.org/abs/2202.05896
+  numerical: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1142/S2810939222500034
@@ -78,6 +84,7 @@
   publisher: International Journal of Data Science in the Mathematical Sciences
   date: '2022-05-21'
   link: https://doi.org/g68sqp
+  numerical: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1103/PhysRevLett.128.191601
@@ -90,6 +97,7 @@
   publisher: Physical Review Letters
   date: '2022-05-09'
   link: https://doi.org/g673j7
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1016/j.physletb.2022.136972
@@ -102,6 +110,7 @@
   publisher: Physics Letters B
   date: '2022-04-01'
   link: https://doi.org/gtdxq9
+  numerical: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP02(2022)089
@@ -115,6 +124,7 @@
   publisher: Journal of High Energy Physics
   date: '2022-02-01'
   link: https://doi.org/g673j8
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP02(2022)021
@@ -126,6 +136,7 @@
   publisher: Journal of High Energy Physics
   date: '2022-02-01'
   link: https://doi.org/g589vx
+  numerical: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1002/prop.202200071
@@ -137,6 +148,7 @@
   publisher: Fortschritte der Physik
   date: '2022-06-06'
   link: https://doi.org/g673j5
+  model: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1103/PhysRevD.103.106028
@@ -148,11 +160,12 @@
   publisher: Physical Review D
   date: '2021-05-28'
   link: https://doi.org/gj8szw
+  numerical: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP08(2021)033
-  title: Marginal deformations of 3d N=2 CFTs from AdS4 backgrounds in generalised
-    geometry
+  title: "Explicit soft supersymmetry breaking in the heterotic M-theory B \u2212\
+    \ L MSSM"
   authors:
   - Anthony Ashmore
   - Sebastian Dumitru
@@ -160,6 +173,7 @@
   publisher: Journal of High Energy Physics
   date: '2021-08-09'
   link: https://doi.org/g673kb
+  model: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1016/j.geomphys.2023.105028
@@ -169,6 +183,7 @@
   publisher: Journal of Geometry and Physics
   date: '2024-01-01'
   link: https://doi.org/g68sqq
+  numerical: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1002/prop.202100052
@@ -180,6 +195,7 @@
   publisher: Fortschritte der Physik
   date: '2021-05-24'
   link: https://doi.org/gj6pbv
+  model: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP11(2020)071
@@ -192,6 +208,7 @@
   publisher: Journal of High Energy Physics
   date: '2020-11-01'
   link: https://doi.org/g673kk
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1002/prop.202000068
@@ -203,6 +220,7 @@
   publisher: Fortschritte der Physik
   date: '2020-08-12'
   link: https://doi.org/ghf4nr
+  numerical: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP01(2021)158
@@ -215,16 +233,18 @@
   publisher: Journal of High Energy Physics
   date: '2021-01-26'
   link: https://doi.org/g673kh
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP12(2018)060
-  title: Marginal deformations of 3d $$ \mathcal{N}=2 $$ CFTs from AdS4 backgrounds
-    in generalised geometry
+  title: Marginal deformations of 3d N=2 CFTs from AdS4 backgrounds in generalised
+    geometry
   authors:
   - Anthony Ashmore
   publisher: Journal of High Energy Physics
   date: '2018-12-01'
   link: https://doi.org/gf27t8
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP10(2018)179
@@ -239,6 +259,7 @@
   publisher: Journal of High Energy Physics
   date: '2018-10-01'
   link: https://doi.org/g68sqs
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.25560/55241
@@ -248,6 +269,7 @@
   publisher: Imperial College London
   date: '2016-08-01'
   link: https://doi.org/g68sqw
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP01(2017)124
@@ -261,6 +283,7 @@
   publisher: Journal of High Energy Physics
   date: '2017-01-01'
   link: https://doi.org/f9x4cq
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP12(2016)146
@@ -272,6 +295,7 @@
   publisher: Journal of High Energy Physics
   date: '2016-12-01'
   link: https://doi.org/gks3g7
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1002/prop.201600109
@@ -282,6 +306,7 @@
   publisher: Fortschritte der Physik
   date: '2017-01-01'
   link: https://doi.org/gksxjm
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1142/9789814412551_0007
@@ -292,6 +317,7 @@
   publisher: Strings, Gauge Fields, and the Geometry Behind
   date: '2012-12-01'
   link: https://doi.org/gks274
+  geometry: true
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.2478/s11534-010-0142-5
@@ -304,5 +330,6 @@
   publisher: Open Physics
   date: '2011-04-30'
   link: https://doi.org/bc2w98
+  geometry: true
   plugin: sources.py
   file: sources.yaml
