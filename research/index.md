@@ -14,7 +14,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 ## Highlighted
 
-{% include citation.html lookup="Machine learning line bundle connections" style="rich" filters="ashmore: true" %}
+{% include citation.html lookup="Machine learning line bundle connections" style="rich" %}
 
 {% include section.html %}
 
@@ -24,4 +24,4 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 {% include search-info.html %}
 
-{% include list.html data="citations" component="citation" style="rich" filters="ashmore: true" %}
+{% include list.html data="citations" component="citation" style="rich" %}
