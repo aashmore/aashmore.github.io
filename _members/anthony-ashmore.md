@@ -6,9 +6,13 @@ affiliation: Skidmore College
 aliases:
   - A. Ashmore
   - A Ashmore
+  - Anthony Ashmore
 links:
   #home-page: https://janesmith.com
+  email: aashmore@skidmore.edu
   orcid: 0000-0001-6178-7538
+  google-scholar: XwF3jY4AAAAJ
+  github: https://github.com/aashmore
 ---
 
 My research focuses on computational techniques for the geometry of string compactifications and quantum field theories. 
