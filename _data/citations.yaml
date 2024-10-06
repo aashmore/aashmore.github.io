@@ -129,7 +129,7 @@
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1002/prop.202200071
-  title: "Hidden Sectors from Multiple Line Bundles for the B\u2212L$B-L$ MSSM"
+  title: Hidden Sectors from Multiple Line Bundles for the B-L MSSM
   authors:
   - Anthony Ashmore
   - Sebastian Dumitru
@@ -151,8 +151,8 @@
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP08(2021)033
-  title: "Explicit soft supersymmetry breaking in the heterotic M-theory B \u2212\
-    \ L MSSM"
+  title: Marginal deformations of 3d N=2 CFTs from AdS4 backgrounds in generalised
+    geometry
   authors:
   - Anthony Ashmore
   - Sebastian Dumitru
