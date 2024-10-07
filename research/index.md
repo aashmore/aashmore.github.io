@@ -18,23 +18,14 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 ## Deep learning for gauge theories
 
-{% capture content %}
-  {% include figure.html ... %}
-{% endcapture %}
-
 {% capture lattice %}
-  {%
-  include figure.html
-  image="images/nn.png"
-  caption="A gauge-equivariant neural network."
-  width="400px"
-  %}
+  {% include figure.html image="images/nn.png" caption="A gauge-equivariant neural network." width="400px" %}
 {% end capture %}
 
 {%
   include float.html
   content=lattice
-  flip=true
+  flip=false
 %}
 
 Lattice gauge theories play a pivotal role in our understanding of fundamental physics in nature, particularly in the realm of quantum chromodynamics (QCD), which governs the strong nuclear force. QCD, a non-abelian gauge theory, describes the interactions between quarks and gluons, the elementary constituents of protons and neutrons. Despite its simple formulation, the non-perturbative regime of QCD exhibits remarkably complex phenomena, including confinement and chiral symmetry breaking. Monte Carlo methods have led to profound insights into the behaviour of these theories at strong coupling, and produced remarkable results such as computation of hadron masses from first principles. Despite the tremendous progress made over the last four decades, fundamental stumbling blocks such as the sign problem and the inability to simulate real-time dynamics still remain. 
