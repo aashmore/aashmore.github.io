@@ -1,4 +1,562 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aashmore.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aashmore.github.io/" rel="alternate" type="text/html" /><updated>2024-10-07T14:43:12+00:00</updated><id>https://aashmore.github.io/feed.xml</id><title type="html">Ashmore Lab</title><subtitle>A computational physics and machine learning research group at Skidmore College.</subtitle><entry><title type="html">Mathematica tips for numerical linear algebra (4)</title><link href="https://aashmore.github.io/2022/10/14/mathematica-4.html" rel="alternate" type="text/html" title="Mathematica tips for numerical linear algebra (4)" /><published>2022-10-14T00:00:00+00:00</published><updated>2022-10-14T00:00:00+00:00</updated><id>https://aashmore.github.io/2022/10/14/mathematica-4</id><content type="html" xml:base="https://aashmore.github.io/2022/10/14/mathematica-4.html"><![CDATA[<h2 id="transpose-and-flatten">Transpose and Flatten</h2>
+<!DOCTYPE html>
+<html lang="en" data-dark="false">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--
+  put your analytics (e.g. Google Analytics) tracking code here
+-->
+
+  <!--
+  put your search engine verification (e.g. Google Search Console) tag here
+-->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Mathematica tips for numerical linear algebra (4) | Ashmore Lab</title>
+
+<link rel="icon" href="/images/icon.png">
+
+<meta name="title" content="Mathematica tips for numerical linear algebra (4)">
+<meta name="description" content="Computational physics and ML research group. A computational physics and machine learning research group at Skidmore College.">
+
+<meta property="og:title" content="Mathematica tips for numerical linear algebra (4)">
+<meta property="og:site_title" content="Ashmore Lab">
+<meta property="og:description" content="Computational physics and ML research group. A computational physics and machine learning research group at Skidmore College.">
+<meta property="og:url" content="https://aashmore.github.io">
+<meta property="og:image" content="/images/share.jpg">
+<meta property="og:locale" content="en_US">
+
+<meta property="twitter:title" content="Mathematica tips for numerical linear algebra (4)">
+<meta property="twitter:description" content="Computational physics and ML research group. A computational physics and machine learning research group at Skidmore College.">
+<meta property="twitter:url" content="https://aashmore.github.io">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="/images/share.jpg">
+
+
+  <meta name="author" content="anthony-ashmore">
+  <meta property="og:type" content="article">
+  <meta property="og:updated_time" content="">
+  <meta property="article:published_time" content="2022-10-14T00:00:00+00:00">
+  <meta property="article:modified_time" content="">
+  <meta name="revised" content="">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "BlogPosting",
+      "author": { "@type": "Person", "name": "Mathematica tips for numerical linear algebra (4)" },
+      "datePublished": "2022-10-14T00:00:00+00:00",
+      "dateModified": "",
+    
+    "name": "Mathematica tips for numerical linear algebra (4)",
+    "description": "Computational physics and ML research group. A computational physics and machine learning research group at Skidmore College.",
+    "headline": "Mathematica tips for numerical linear algebra (4)",
+    "publisher": {
+      "@type": "Organization",
+      "logo": { "@type": "ImageObject", "url": "/images/icon.png" }
+    },
+    "url": "https://aashmore.github.io"
+  }
+</script>
+
+<link rel="alternate" type="application/rss+xml" href="https://aashmore.github.io/feed.xml">
+
+  <!-- Google Fonts -->
+<!-- automatically get url from fonts used in theme file -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Nunito:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+
+<!-- Font Awesome icons (load asynchronously due to size) -->
+
+<link href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" rel="stylesheet" media="none" onload="this.removeAttribute('media'); this.onload = null;">
+<noscript>
+  <link href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" rel="stylesheet">
+</noscript>
+
+  <!-- third party styles -->
+<!-- https://stylishthemes.github.io/Syntax-Themes/pygments/ -->
+<link href="https://cdn.jsdelivr.net/gh/StylishThemes/Syntax-Themes/pygments/css-github/pygments-tomorrow-night-eighties.css" rel="stylesheet">
+
+<!-- include all sass in styles folder -->
+
+
+  
+    <link href="/_styles/-theme.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/alert.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/all.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/anchor.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/background.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/body.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/bold.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/button.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/card.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/checkbox.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/citation.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/code.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/cols.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/dark-toggle.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/feature.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/figure.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/float.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/font.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/footer.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/form.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/grid.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/header.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/heading.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/highlight.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/icon.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/image.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/link.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/list.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/main.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/paragraph.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/portrait.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/post-excerpt.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/post-info.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/post-nav.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/quote.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/rule.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/search-box.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/search-info.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/section.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/table.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/tags.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/textbox.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/tooltip.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/util.css" rel="stylesheet">
+  
+
+
+<!-- include all css in styles folder -->
+
+
+
+  <!-- third party scripts -->
+<script src="https://unpkg.com/@popperjs/core@2" defer></script>
+<script src="https://unpkg.com/tippy.js@6" defer></script>
+<script src="https://unpkg.com/mark.js@8" defer></script>
+
+<!-- include all js in scripts folder -->
+
+
+  <script src="/_scripts/anchors.js"></script>
+
+  <script src="/_scripts/dark-mode.js"></script>
+
+  <script src="/_scripts/fetch-tags.js"></script>
+
+  <script src="/_scripts/search.js"></script>
+
+  <script src="/_scripts/site-search.js"></script>
+
+  <script src="/_scripts/table-wrap.js"></script>
+
+  <script src="/_scripts/tooltip.js"></script>
+
+
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="background" style="--image: url('/images/background.jpg')" data-dark="true">
+  <a href="/" class="home">
+    
+      <span class="logo">
+        
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
+  <style>
+    .bubble {
+      animation: float 2s ease-out both infinite var(--delay);
+    }
+    @keyframes float {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      75% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+    }
+  </style>
+  <g fill="currentColor" opacity="0.5">
+    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.1s"></circle>
+    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.4s"></circle>
+    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 1.1s"></circle>
+  </g>
+  <path fill="#38bdf8" d="
+      M 0 -22.5
+      L -19.5 -11.25
+      L -19.5 11.25
+      L 0 22.5
+      L 19.5 11.25
+      L 19.5 -11.25
+      z
+    "></path>
+  <path fill="#bae6fd" d="
+      M 0 -22.5
+      L -19.5 -11.25
+      L 0 0
+      L 19.5 -11.25
+      z
+    "></path>
+  <path fill="none" stroke="currentColor" stroke-width="5" d="
+      M -18 -53
+      L -10 -53
+      L -10 -29.2
+      L -30.3 -17.5
+      L -30.3 17.5
+      L 0 35
+      L 30.3 17.5
+      L 30.3 -17.5
+      L 10 -29.2
+      L 10 -53
+      L 18 -53
+    "></path>
+</svg>
+
+        
+      </span>
+    
+    
+      <span class="title-text" data-tooltip="Home">
+        
+          <span class="title">Ashmore Lab</span>
+        
+        
+          <span class="subtitle">Computational physics and ML research group</span>
+        
+      </span>
+    
+  </a>
+
+  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
+
+  <nav>
+    
+    
+      
+        <a href="/research/" data-tooltip="Published works">
+          Research
+        </a>
+      
+    
+      
+        <a href="/teaching/" data-tooltip="Software, datasets, and more">
+          Teaching
+        </a>
+      
+    
+      
+        <a href="/talks/" data-tooltip="Software, datasets, and more">
+          Talks
+        </a>
+      
+    
+      
+        <a href="/team/" data-tooltip="About our team">
+          Team
+        </a>
+      
+    
+      
+        <a href="/blog/" data-tooltip="Musings and miscellany">
+          Blog
+        </a>
+      
+    
+      
+        <a href="/contact/" data-tooltip="Email, address, and location">
+          Contact
+        </a>
+      
+    
+  </nav>
+</header>
+
+    <main>
+      <!--
+  modify main content of page:
+  - add section breaks
+  - attach section properties
+  - filter out blank sections
+-->
+
+
+
+
+
+
+  
+  
+  
+
+  <section class="background" data-size="1">
+    <!--
+  background: ;
+  dark: ;
+  size: 1;
+-->
+
+
+<h1 class="center">Mathematica tips for numerical linear algebra (4)</h1>
+
+<div class="post-info">
+  
+    
+    
+      
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/anthony-ashmore.html" class="portrait" data-style="tiny" aria-label="Anthony Ashmore">
+    
+      <i class="icon fa-solid fa-microscope"></i>
+    
+
+    <img src="/images/ashmore.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Anthony Ashmore
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Assistant Professor
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        Skidmore College
+      </span>
+    
+  </a>
+</div>
+
+    
+  
+
+  
+  
+
+  
+    <span data-tooltip="Originally published on">
+      <i class="icon fa-regular fa-calendar"></i>
+      <span>October 14, 2022</span>
+    </span>
+  
+
+  
+</div>
+
+
+  
+
+
+  <div class="tags" data-link="https://aashmore.github.io/blog">
+    
+      <a href="https://aashmore.github.io/blog?search=%22tag:%20mathematica%22" class="tag" data-tooltip='Show items with the tag "mathematica"'>
+        mathematica
+      </a>
+    
+      <a href="https://aashmore.github.io/blog?search=%22tag:%20linear-algebra%22" class="tag" data-tooltip='Show items with the tag "linear-algebra"'>
+        linear-algebra
+      </a>
+    
+  </div>
+  </section>
+
+  
+  
+  
+
+  <section class="background" data-size="page">
+    <!--
+  background: ;
+  dark: ;
+  size: ;
+-->
+
+
+<h2 id="transpose-and-flatten">Transpose and Flatten</h2>
 
 <p>So now we know how to multiply matrices using Mathematica’s <code class="language-plaintext highlighter-rouge">Dot</code> function. This also works for higher-rank tensors (more indices) such as $m_{abc} n_{cde} = (mn)_{abde}$, which we can implement as</p>
 
@@ -112,81 +670,123 @@
 </span><span class="c">(* {4.8638016, {10,300,400,200}} *)</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="language-plaintext highlighter-rouge">Flatten</code> is 8 times slower than <code class="language-plaintext highlighter-rouge">Tranpose</code> in this case! If you have to repeat this operation many thousands of times, this could become a huge bottleneck!</p>]]></content><author><name>anthony-ashmore</name></author><category term="mathematica" /><category term="linear algebra" /><summary type="html"><![CDATA[Transpose and Flatten]]></summary></entry><entry><title type="html">Mathematica tips for numerical linear algebra (3)</title><link href="https://aashmore.github.io/2022/06/23/mathematica-3.html" rel="alternate" type="text/html" title="Mathematica tips for numerical linear algebra (3)" /><published>2022-06-23T00:00:00+00:00</published><updated>2022-06-23T00:00:00+00:00</updated><id>https://aashmore.github.io/2022/06/23/mathematica-3</id><content type="html" xml:base="https://aashmore.github.io/2022/06/23/mathematica-3.html"><![CDATA[<h2 id="mathematica-is-smart">Mathematica is smart</h2>
+<p><code class="language-plaintext highlighter-rouge">Flatten</code> is 8 times slower than <code class="language-plaintext highlighter-rouge">Tranpose</code> in this case! If you have to repeat this operation many thousands of times, this could become a huge bottleneck!</p>
+  </section>
 
-<!-- excerpt start -->
-<p>The take-away from this is that many clever people have worked for a very long time on optimising the Mathematica’s built-in functions, such as <code class="language-plaintext highlighter-rouge">Dot</code>. In particular, when <code class="language-plaintext highlighter-rouge">Dot</code> is called, it turns the calculation over to a set of C++ libraries for numerical linear algebra known as the Intel MKL. 
-<!-- excerpt end -->
-Of course, we could just do all of this in C++ and call MKL directly. Usually, however, the time saved in the calculation itself is not worth the extra headaches of coding in C++ and having to recompile just to try out a new idea. Mathematica allows us to play with ideas and have performance close to (within a factor of three or so) doing everything in C++. And as we’ll see in a future post, Mathematica can take advantage of multiple CPU cores without us really having to think about it.</p>
+  
+  
+  
 
-<p>We can see the same behaviour play out with higher-rank tensors. Imagine we want to contract a matrix with another matrix: $m_{ab}n_{bc} = (mn)_ac$. We could implement this as</p>
+  <section class="background" data-size="page">
+    <!--
+  background: ;
+  dark: ;
+  size: ;
+-->
 
-<div class="language-mathematica highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="m">500</span><span class="o">,</span><span class="w"> </span><span class="m">1000</span><span class="p">}]</span><span class="o">;</span><span class="w">
-</span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="m">1000</span><span class="o">,</span><span class="w"> </span><span class="m">750</span><span class="p">}]</span><span class="o">;</span><span class="w">
 
-</span><span class="nv">m</span><span class="o">.</span><span class="nv">n</span><span class="o">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">AbsoluteTiming</span><span class="w">
-</span><span class="c">(* 0.0735985 s *)</span><span class="w">
-</span></code></pre></div></div>
+<div class="post-nav">
+  <span>
+    
+      <i class="icon fa-solid fa-angle-left"></i> Previous post<br>
+      <a href="/2022/06/23/mathematica-3.html">
+        Mathematica tips for numerical linear algebra (3)
+      </a>
+    
+  </span>
+  <span>
+    
+  </span>
+</div>
+  </section>
 
-<p>Not bad! Just let Mathematica do the dirty work! Note that Mathematica thinks of these matrices as arrays (or more accurately <code class="language-plaintext highlighter-rouge">Lists</code>) of dimensions <code class="language-plaintext highlighter-rouge">{500,1000}</code> and <code class="language-plaintext highlighter-rouge">{1000,750}</code> respectively:</p>
 
-<div class="language-mathematica highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">m</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Dimensions</span><span class="w">
-</span><span class="c">(* {500,1000} *)</span><span class="w">
-</span><span class="nv">n</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Dimensions</span><span class="w">
-</span><span class="c">(* {1000,750} *)</span><span class="w">
-</span><span class="nv">m</span><span class="o">.</span><span class="nv">n</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Dimensions</span><span class="w">
-</span><span class="c">(* {500,750} *)</span><span class="w">
-</span></code></pre></div></div>
+    </main>
+    
 
-<p>This also gives us an idea of what Mathematica is doing with <code class="language-plaintext highlighter-rouge">Dot</code> – the length of the last dimension of $m$  must match the length of the first dimension of $n$ (since it is contracting these indices). The resulting array is labelled by the remaining indices of $m$ and $n$ in the order they appear in according to $m_{ab} n_{bc} = (m n)_{ac}$.</p>]]></content><author><name>anthony-ashmore</name></author><category term="mathematica" /><category term="linear algebra" /><summary type="html"><![CDATA[Mathematica is smart]]></summary></entry><entry><title type="html">Mathematica tips for numerical linear algebra (2)</title><link href="https://aashmore.github.io/2022/04/03/mathematica-2.html" rel="alternate" type="text/html" title="Mathematica tips for numerical linear algebra (2)" /><published>2022-04-03T00:00:00+00:00</published><updated>2022-04-03T00:00:00+00:00</updated><id>https://aashmore.github.io/2022/04/03/mathematica-2</id><content type="html" xml:base="https://aashmore.github.io/2022/04/03/mathematica-2.html"><![CDATA[<h2 id="dot-products">Dot products</h2>
 
-<!-- excerpt start -->
-<p>The bulk of the numerical calculations that I need are basically linear algebra – matrix-matrix, vector-matrix and more exotic multiplications. All of the entries in these tensors are “machine precision”, which roughly translates to a C++ double. Mathematica can store these numbers as “packed arrays” – working with machine precision numbers rather than “exact” quantities greatly speeds up calculations (if they are written in the right way).
-<!-- excerpt end --></p>
+<footer class="background" style="--image: url('/images/background.jpg')" data-dark="true" data-size="wide">
+  <!--
+    <div>
+      Extra details like contact info or address
+    </div>
+  -->
 
-<p>Let’s start with a simple example where we want to take the dot product of two vectors $u$ and $v$. In index notation this is simply $u \cdot v =u_a v_a$, so we can think of the dot product as simply multiplying and then summing the individual entries of the vectors. Mathematica has many ways to carry out such a simple calculation, but picking the right way now will make sure more complicated calculations don’t take all weekend!</p>
+  <div>
+    
+      
+      
+      
 
-<div class="language-mathematica highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="o">;</span><span class="w"> </span><span class="c">(* size of vectors *)</span><span class="w">
-</span><span class="nv">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">l</span><span class="p">}]</span><span class="o">;</span><span class="w">
-</span><span class="nv">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">l</span><span class="p">}]</span><span class="o">;</span><span class="w">
 
-</span><span class="nb">Sum</span><span class="p">[</span><span class="nv">u</span><span class="p">[[</span><span class="nv">i</span><span class="p">]]</span><span class="w"> </span><span class="nv">v</span><span class="p">[[</span><span class="nv">i</span><span class="p">]]</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">i</span><span class="o">,</span><span class="w"> </span><span class="m">1</span><span class="o">,</span><span class="w"> </span><span class="nv">l</span><span class="p">}]</span><span class="w">
-</span><span class="nb">Total</span><span class="p">[</span><span class="nv">u</span><span class="o">*</span><span class="nv">v</span><span class="p">]</span><span class="w">
-</span><span class="nv">u</span><span class="o">.</span><span class="nv">v</span><span class="w">
-</span></code></pre></div></div>
 
-<p>Here we’ve defined our vectors to be of length $l$. <code class="language-plaintext highlighter-rouge">RandomComplex</code> then gives a list whose entries are machine-precision complex numbers. We have given three ways to calculate the dot product.</p>
+  <div class="button-wrapper">
+    <a class="button" href="mailto:aashmore@skidmore.edu" data-tooltip="Email" data-style="bare" aria-label="Email">
+      <i class="icon fa-solid fa-envelope"></i>
+      
+    </a>
+  </div>
 
-<ul>
-  <li>
-    <p>The first is closest to what one might do in C++ where we simply loop over the entries and sum them together. Though this might be the most obvious thing to do, this is nearly always the slowest (as we’ll see below).</p>
-  </li>
-  <li>
-    <p>The next way uses the Mathematica operator <code class="language-plaintext highlighter-rouge">*</code> which in this instance takes in two vectors and outputs a third vector whose entries are given by $(u*v)_a = u_a v_a$  with no sum over $a$. We can then sum the entries of this new vector using <code class="language-plaintext highlighter-rouge">Total</code> to get the dot product.</p>
-  </li>
-  <li>
-    <p>Our third way is simply using the built-in Mathematica function <code class="language-plaintext highlighter-rouge">Dot[u,v]</code>, which can also be called as <code class="language-plaintext highlighter-rouge">u.v</code>.</p>
-  </li>
-</ul>
 
-<p>For relatively small vectors, any of these will do. However, when one is dealing with numerical calculations with millions of points, there are big differences between them. For example, let’s increase the length of the vectors to ten million and check how long each method takes.</p>
+    
+      
+      
+      
 
-<div class="language-mathematica highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="o">^</span><span class="m">7</span><span class="o">;</span><span class="w"> </span><span class="c">(* size of vectors *)</span><span class="w">
-</span><span class="nv">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">l</span><span class="p">}]</span><span class="o">;</span><span class="w">
-</span><span class="nv">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">l</span><span class="p">}]</span><span class="o">;</span><span class="w">
 
-</span><span class="nb">Sum</span><span class="p">[</span><span class="nv">u</span><span class="p">[[</span><span class="nv">i</span><span class="p">]]</span><span class="w"> </span><span class="nv">v</span><span class="p">[[</span><span class="nv">i</span><span class="p">]]</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">i</span><span class="o">,</span><span class="w"> </span><span class="m">1</span><span class="o">,</span><span class="w"> </span><span class="nv">l</span><span class="p">}]</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">AbsoluteTiming</span><span class="w">
-</span><span class="c">(* 29.6766 s *)</span><span class="w">
-</span><span class="nb">Total</span><span class="p">[</span><span class="nv">u</span><span class="o">*</span><span class="nv">v</span><span class="p">]</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">AbsoluteTiming</span><span class="w">
-</span><span class="c">(* 0.155223 s *)</span><span class="w">
-</span><span class="nv">u</span><span class="o">.</span><span class="nv">v</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">AbsoluteTiming</span><span class="w">
-</span><span class="c">(* 0.036661 s *)</span><span class="w">
-</span></code></pre></div></div>
 
-<p>Uh oh! Explicitly summing over the elements of the vectors as one might do in C++ is crazy slow, taking over 800 times longer than using <code class="language-plaintext highlighter-rouge">Dot</code>. Notice that using <code class="language-plaintext highlighter-rouge">Total</code> is slower than <code class="language-plaintext highlighter-rouge">Dot</code> – you might have expected this since <code class="language-plaintext highlighter-rouge">u*v</code> constructs a new vector which <code class="language-plaintext highlighter-rouge">Total</code> then sums, whereas <code class="language-plaintext highlighter-rouge">Dot</code> just computes the sum directly. So what’s up?</p>]]></content><author><name>anthony-ashmore</name></author><category term="mathematica" /><category term="linear algebra" /><summary type="html"><![CDATA[Dot products]]></summary></entry><entry><title type="html">Mathematica tips for numerical linear algebra (1)</title><link href="https://aashmore.github.io/2022/01/13/mathematica-1.html" rel="alternate" type="text/html" title="Mathematica tips for numerical linear algebra (1)" /><published>2022-01-13T00:00:00+00:00</published><updated>2022-01-13T00:00:00+00:00</updated><id>https://aashmore.github.io/2022/01/13/mathematica-1</id><content type="html" xml:base="https://aashmore.github.io/2022/01/13/mathematica-1.html"><![CDATA[<!-- excerpt start -->
-<p>Calabi-Yau manifolds are special as they are Kähler manifolds which admit Ricci-flat metrics. As of the end of 2020, there are still no complete analytic expressions for such metrics on compact manifolds, other than in the somewhat trivial cases of tori. Instead, the best we can do are approximate numerical metrics. I became interested in this a couple of years ago when trying to learn some of the machine-learning techniques that are all the rage at the moment. But before I could I apply all this fancy new technology, I first needed some data to work with. And so I found myself needing to understand how to generate these numerical metrics.
-<!-- excerpt end --></p>
+  <div class="button-wrapper">
+    <a class="button" href="https://orcid.org/0000-0001-6178-7538" data-tooltip="ORCID" data-style="bare" aria-label="ORCID">
+      <i class="icon fa-brands fa-orcid"></i>
+      
+    </a>
+  </div>
 
-<p>Previous work on these numerical metrics had used C++. Unfortunately, my experience with C++ is limited to a “Teach Yourself C++ in 24 Hours” book and some bad memories of pointers in undergraduate computing labs. Since I didn’t want to reinvent the wheel, I decided I’d try to implement the numerical metrics using Mathematica instead. I figured this would make the code much easier to handle and it would be closer to the kind of language (tensors and so on) that I would use if I were doing a calculation with pen and paper.</p>
 
-<p>And so here we are almost two years later. I did manage to do what I wanted using only Mathematica. It took a few late nights of scouring the Wolfram documentation and copious amounts of help from StackExchange, but I think it really was easier than keeping track of hundreds of .cc and .h files (and trying to decipher completely cryptic compiler errors). Along the way, I learned a few neat tricks and tips for working with numerical calculations in Mathematica that I figure might be of use to someone else, and so I’m going to lay them out in the next few posts for the interested reader.</p>]]></content><author><name>anthony-ashmore</name></author><category term="mathematica" /><category term="linear algebra" /><summary type="html"><![CDATA[Calabi-Yau manifolds are special as they are Kähler manifolds which admit Ricci-flat metrics. As of the end of 2020, there are still no complete analytic expressions for such metrics on compact manifolds, other than in the somewhat trivial cases of tori. Instead, the best we can do are approximate numerical metrics. I became interested in this a couple of years ago when trying to learn some of the machine-learning techniques that are all the rage at the moment. But before I could I apply all this fancy new technology, I first needed some data to work with. And so I found myself needing to understand how to generate these numerical metrics.]]></summary></entry></feed>
+    
+      
+      
+      
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="https://scholar.google.com/citations?user=XwF3jY4AAAAJ" data-tooltip="Google Scholar" data-style="bare" aria-label="Google Scholar">
+      <i class="icon fa-brands fa-google"></i>
+      
+    </a>
+  </div>
+
+
+    
+      
+      
+      
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="https://github.com/aashmore" data-tooltip="GitHub" data-style="bare" aria-label="GitHub">
+      <i class="icon fa-brands fa-github"></i>
+      
+    </a>
+  </div>
+
+
+    
+  </div>
+
+  <div>
+    © 2024
+    Ashmore Lab
+      |   Built with
+    <a href="https://github.com/greenelab/lab-website-template">
+      Lab Website Template
+    </a>
+  </div>
+
+  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+</footer>
+
+  </body>
+</html>
