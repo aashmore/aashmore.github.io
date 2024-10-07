@@ -62,10 +62,10 @@
 
   <meta name="author" content="anthony-ashmore">
   <meta property="og:type" content="article">
-  <meta property="og:updated_time" content="2024-10-07T14:13:34+00:00">
+  <meta property="og:updated_time" content="">
   <meta property="article:published_time" content="2022-01-13T00:00:00+00:00">
-  <meta property="article:modified_time" content="2024-10-07T14:13:34+00:00">
-  <meta name="revised" content="2024-10-07T14:13:34+00:00">
+  <meta property="article:modified_time" content="">
+  <meta name="revised" content="">
 
 
 <script type="application/ld+json">
@@ -75,7 +75,7 @@
       "@type": "BlogPosting",
       "author": { "@type": "Person", "name": "Mathematica tips for numerical linear algebra (1)" },
       "datePublished": "2022-01-13T00:00:00+00:00",
-      "dateModified": "2024-10-07T14:13:34+00:00",
+      "dateModified": "",
     
     "name": "Mathematica tips for numerical linear algebra (1)",
     "description": "Computational physics and ML research group. A computational physics and machine learning research group at Skidmore College.",
@@ -524,11 +524,6 @@
   
 
   
-    <span data-tooltip="Last updated on">
-      <i class="icon fa-solid fa-clock-rotate-left"></i>
-      <span>October 07, 2024</span>
-    </span>
-  
 </div>
 
 
@@ -560,7 +555,9 @@
 -->
 
 
-<p>Calabi-Yau manifolds are special as they are Kähler manifolds which admit Ricci-flat metrics. As of the end of 2020, there are still no complete analytic expressions for such metrics on compact manifolds, other than in the somewhat trivial cases of tori. Instead, the best we can do are approximate numerical metrics. I became interested in this a couple of years ago when trying to learn some of the machine-learning techniques that are all the rage at the moment. But before I could I apply all this fancy new technology, I first needed some data to work with. And so I found myself needing to understand how to generate these numerical metrics.</p>
+<!-- excerpt start -->
+<p>Calabi-Yau manifolds are special as they are Kähler manifolds which admit Ricci-flat metrics. As of the end of 2020, there are still no complete analytic expressions for such metrics on compact manifolds, other than in the somewhat trivial cases of tori. Instead, the best we can do are approximate numerical metrics. I became interested in this a couple of years ago when trying to learn some of the machine-learning techniques that are all the rage at the moment. But before I could I apply all this fancy new technology, I first needed some data to work with. And so I found myself needing to understand how to generate these numerical metrics.
+<!-- excerpt end --></p>
 
 <p>Previous work on these numerical metrics had used C++. Unfortunately, my experience with C++ is limited to a “Teach Yourself C++ in 24 Hours” book and some bad memories of pointers in undergraduate computing labs. Since I didn’t want to reinvent the wheel, I decided I’d try to implement the numerical metrics using Mathematica instead. I figured this would make the code much easier to handle and it would be closer to the kind of language (tensors and so on) that I would use if I were doing a calculation with pen and paper.</p>
 
