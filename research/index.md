@@ -101,7 +101,9 @@ Open problems we are interested in include finding a geometric dual to $c$-extre
   flip=false
 %}
 
-DESCRIPTION HERE
+String theory provides a promising framework for unifying gravity with the other fundamental forces of nature. However, connecting string theory to observable particle physics remains a significant challenge. This research thread focuses on constructing realistic string models that could describe our universe, with a particular emphasis on heterotic string theory. Our work has developed techniques for constructing vector bundles on Calabi-Yau manifolds and studying the phenomenology of specific heterotic standard models, including details of gauge coupling unification, supersymmetry breaking, and particle spectra.
+
+Open problems in this field that we are thinking about include fully stabilizing all moduli in a controlled manner, understanding the landscape of string vacua, and making concrete predictions that can be tested experimentally.
 
 {% include float.html clear=true %} 
 
