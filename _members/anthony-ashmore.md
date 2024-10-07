@@ -12,7 +12,7 @@ links:
   email: aashmore@skidmore.edu
   orcid: 0000-0001-6178-7538
   google-scholar: XwF3jY4AAAAJ
-  github: https://github.com/aashmore
+  github: aashmore
 ---
 
 My research focuses on computational techniques for the geometry of string compactifications and quantum field theories. I also study geometry and string theory using purely theoretical tools, such as generalised geometry.
