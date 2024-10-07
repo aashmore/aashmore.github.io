@@ -103,7 +103,7 @@ Flatten[m, {{1}, {4}, {2}, {3}}] // Dimensions
 ```
 {% endraw %}
 
-Using `Transpose` with the argument `{1, 4, 2, 3}`, we leave the 1st index unchanged, send the 2nd index to 4th position, send the 3rd index to 2nd position, and send the 4th index to 3rd position. Using `Flatten` with the argument `{{1}, {4}, {2}, {3}}`, we leave the 1st index unchanged, set the 2nd index of the result to be the 4th index of the original tensor, set the 3rd index of the result to be the 2nd index of the original tensor, and finally set the 4th index of the result to be the 3rd index of the original tensor. These operations are not the same! And the difference is whether you are thinking about *where to send the indices to* or *where the indices came from*.
+Using `Transpose` with the argument `{1, 4, 2, 3}`, we leave the 1st index unchanged, send the 2nd index to 4th position, send the 3rd index to 2nd position, and send the 4th index to 3rd position. Using `Flatten` with the argument {% raw %}`{{1}, {4}, {2}, {3}}`{% endraw %}, we leave the 1st index unchanged, set the 2nd index of the result to be the 4th index of the original tensor, set the 3rd index of the result to be the 2nd index of the original tensor, and finally set the 4th index of the result to be the 3rd index of the original tensor. These operations are not the same! And the difference is whether you are thinking about *where to send the indices to* or *where the indices came from*.
 
 If we want the same result from both, we would use
 
