@@ -7,9 +7,7 @@ nav:
 
 # {% include icon.html icon="fa-regular fa-envelope" %}Contact
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Get in touch if you want to work with us, or are just interested in hearing about what we're up to! You can email using the link below or come find us in office 380D in The Billie Tisch Center for Integrated Sciences, Skidmore College.
 
 {%
   include button.html
