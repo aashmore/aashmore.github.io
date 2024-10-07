@@ -5,14 +5,7 @@ nav:
   tooltip: Software, datasets, and more
 ---
 
-# {% include icon.html icon="fa-solid fa-wrench" %}Projects
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-{% include tags.html tags="publication, resource, website" %}
-
-{% include search-info.html %}
+# {% include icon.html icon="fa-solid fa-person-chalkboard" %}Teaching
 
 {% include section.html %}
 
@@ -22,7 +15,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 {%
   include button.html
-  link="research"
+  link="https://catalog.skidmore.edu/courses-study/py/#:~:text=PY%20130%20%2D%C2%A0%C2%A0Introductory%20Physics%20I%20with%20Laboratory%3A%20Forces%20and%20Energy"
   text="PY 130 (Fall 2024)"
   icon="fa-solid fa-arrow-right"
   flip=true
@@ -36,6 +29,6 @@ A calculus-based introduction to the concepts and principles of mechanics, empha
 {%
   include feature.html
   image="images/photo.jpg"
-  link="research"
+  link="https://catalog.skidmore.edu/courses-study/py/#:~:text=PY%20130%20%2D%C2%A0%C2%A0Introductory%20Physics%20I%20with%20Laboratory%3A%20Forces%20and%20Energy"
   text=text
 %}
