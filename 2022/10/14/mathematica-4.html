@@ -558,7 +558,9 @@
 
 <h2 id="transpose-and-flatten">Transpose and Flatten</h2>
 
-<p>So now we know how to multiply matrices using Mathematica’s <code class="language-plaintext highlighter-rouge">Dot</code> function. This also works for higher-rank tensors (more indices) such as $m_{abc} n_{cde} = (mn)_{abde}$, which we can implement as</p>
+<!-- excerpt start -->
+<p>So now we know how to multiply matrices using Mathematica’s <code class="language-plaintext highlighter-rouge">Dot</code> function. This also works for higher-rank tensors (more indices) such as $m_{abc} n_{cde} = (mn)_{abde}$, which we can implement as
+<!-- excerpt end --></p>
 
 <div class="language-mathematica highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="m">10</span><span class="o">,</span><span class="w"> </span><span class="m">20</span><span class="o">,</span><span class="w"> </span><span class="m">30</span><span class="p">}]</span><span class="o">;</span><span class="w">
 </span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="m">30</span><span class="o">,</span><span class="w"> </span><span class="m">40</span><span class="o">,</span><span class="w"> </span><span class="m">50</span><span class="p">}]</span><span class="o">;</span><span class="w">
