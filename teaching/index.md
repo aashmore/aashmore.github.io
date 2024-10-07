@@ -28,7 +28,7 @@ A calculus-based introduction to the concepts and principles of mechanics, empha
 
 {%
   include feature.html
-  image="images/py_130_2024.jpg"
+  image="images/py_130_2024.png"
   link="https://catalog.skidmore.edu/courses-study/py/#:~:text=PY%20130%20%2D%C2%A0%C2%A0Introductory%20Physics%20I%20with%20Laboratory%3A%20Forces%20and%20Energy"
   text=text
 %}
