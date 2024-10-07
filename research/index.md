@@ -36,9 +36,25 @@ We are actively investigating the use of neural networks to model the ground-sta
 
 {% include list.html data="citations" component="citation" style="rich" filters="lattice: true" %}
 
+
+
 {% include section.html %}
 
 ## Numerical and machine-learning methods for string theory
+
+{% capture numerical %}
+  {% include figure.html image="images/eigenvalues.png" caption="Scalar eigenvalues of the Laplacian on a Calabi-Yau manifold as a function of complex structure moduli." width="400px" %}
+{% endcapture %}
+
+{%
+  include float.html
+  content=numerical
+  flip=false
+%}
+
+DESCRIPTION HERE
+
+{% include float.html clear=true %} 
 
 {% include list.html data="citations" component="citation" style="rich" filters="numerical: true" %}
 
@@ -46,10 +62,38 @@ We are actively investigating the use of neural networks to model the ground-sta
 
 ## Geometric structures in supergravity and string theory
 
+{% capture geometry %}
+  {% include figure.html image="images/moduli_space.png" caption="Space of holomorphic structures with a flow by complexified generalised diffeomorphisms." width="400px" %}
+{% endcapture %}
+
+{%
+  include float.html
+  content=geometry
+  flip=false
+%}
+
+DESCRIPTION HERE
+
+{% include float.html clear=true %} 
+
 {% include list.html data="citations" component="citation" style="rich" filters="geometry: true" %}
 
 {% include section.html %}
 
 ## String model building and phenomenology
+
+{% capture model %}
+  {% include figure.html image="images/model.png" caption="Distribution of unification scale among heterotic string models." width="400px" %}
+{% endcapture %}
+
+{%
+  include model.html
+  content=numerical
+  flip=false
+%}
+
+DESCRIPTION HERE
+
+{% include float.html clear=true %} 
 
 {% include list.html data="citations" component="citation" style="rich" filters="model: true" %}
