@@ -20,7 +20,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 {% capture lattice %}
   {% include figure.html image="images/nn.png" caption="A gauge-equivariant neural network." width="400px" %}
-{% end capture %}
+{% endcapture %}
 
 {%
   include float.html

@@ -1,7 +1,7 @@
 ---
 name: Anthony Ashmore
 image: images/ashmore.jpg
-role: Assistant Professor of Physics
+role: ap
 affiliation: Skidmore College
 aliases:
   - A. Ashmore
