@@ -16,12 +16,26 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 {% include section.html %}
 
-## Featured
+## Introductory Physics I with Lab: Forces and Energy
 
-{% include list.html component="card" data="projects" filters="group: featured" %}
+{% capture text %}
 
-{% include section.html %}
+{%
+  include button.html
+  link="research"
+  text="PY 130 (Fall 2024)"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
 
-## More
+A calculus-based introduction to the concepts and principles of mechanics, emphasizing translational and rotational kinematics and dynamics, work and energy, conservation laws, and gravitation. Hands-on exploration of physical systems using computer-interfaced laboratory equipment and modeling techniques are used to illustrate physical principles.
 
-{% include list.html component="card" data="projects" filters="group: " style="small" %}
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/photo.jpg"
+  link="research"
+  text=text
+%}
