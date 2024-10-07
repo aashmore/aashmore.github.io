@@ -13,8 +13,8 @@ Below you'll find current members of the lab and former members.
 
 ## Current members
 
-{% include list.html data="members" component="portrait" filters="role: ap" %}
-{% include list.html data="members" component="portrait" filters="role: ^(?!ap$), current: true" %}
+{% include list.html data="members" component="portrait" filters="role: pi" %}
+{% include list.html data="members" component="portrait" filters="role: ^(?!pi$), current: true" %}
 
 {% include section.html %}
 
