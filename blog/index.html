@@ -548,8 +548,6 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 <div class="search-info"></div>
 
-<h3 id="2023">2023</h3>
-
 <div class="post-excerpt-container">
   <div class="post-excerpt">
     
@@ -559,7 +557,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
     
 
     <div class="post-excerpt-text">
-      <a href="/2023/02/23/example-post-3.html">Mathematica tips for numerical linear algebra (3)</a>
+      <a href="/2022/06/23/mathematica-3.html">Mathematica tips for numerical linear algebra (3)</a>
 
       <div class="post-info">
   
@@ -606,7 +604,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   
     <span data-tooltip="Originally published on">
       <i class="icon fa-regular fa-calendar"></i>
-      <span>February 23, 2023</span>
+      <span>June 23, 2022</span>
     </span>
   
 
@@ -635,105 +633,9 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
       
       
-      <p data-search="Dot productsThe bulk of the numerical calculations that I need are basically linear algebra   matrix matrix  vector matrix and more exotic multiplications  All of the entries in these tensors are  machine precision   which roughly translates to a C   double  Mathematica can store these numbers as  packed arrays    working with machine precision numbers rather than  exact  quantities greatly speeds up calculations  if they are written in the right way  Let s start with a simple example where we want to take the dot product of two vectors  u  and  v   In index notation this is simply  u  cdot v  u a v a   so we can think of the dot product as simply multiplying and then summing the individual entries of the vectors  Mathematica has many ways to carry out such a simple calculation  but picking the right way now will make sure more complicated calculations don t take all weekend l   10     size of vectors   u   RandomComplex      l   v   RandomComplex      l   Sum u  i   v  i     i  1  l  Total u v u vHere we ve defined our vectors to be of length  l   RandomComplex then gives a list whose entries are machine precision complex numbers  We have given three ways to calculate the dot product       The first is closest to what one might do in C   where we simply loop over the entries and sum them together  Though this might be the most obvious thing to do  this is nearly always the slowest  as we ll see below          The next way uses the Mathematica operator   which in this instance takes in two vectors and outputs a third vector whose entries are given by   u v  a   u a v a   with no sum over  a   We can then sum the entries of this new vector using Total to get the dot product         Our third way is simply using the built in Mathematica function Dot u v   which can also be called as u v   For relatively small vectors  any of these will do  However  when one is dealing with numerical calculations with millions of points  there are big differences between them  For example  let s increase the length of the vectors to ten million and check how long each method takes l   10 7     size of vectors   u   RandomComplex      l   v   RandomComplex      l   Sum u  i   v  i     i  1  l      AbsoluteTiming   29 6766 s   Total u v     AbsoluteTiming   0 155223 s   u v    AbsoluteTiming   0 036661 s   Uh oh  Explicitly summing over the elements of the vectors as one might do in C   is crazy slow  taking over 800 times longer than using Dot  Notice that using Total is slower than Dot   you might have expected this since u v constructs a new vector which Total then sums  whereas Dot just computes the sum directly  So what s up ">
+      <p data-search="Dot productsThe bulk of the numerical calculations that I need are basically linear algebra   matrix matrix  vector matrix and more exotic multiplications  All of the entries in these tensors are  machine precision   which roughly translates to a C   double  Mathematica can store these numbers as  packed arrays    working with machine precision numbers rather than  exact  quantities greatly speeds up calculations  if they are written in the right way  Mathematica is smartThe take away from this is that many clever people have worked for a very long time on optimising the Mathematica s built in functions  such as Dot  In particular  when Dot is called  it turns the calculation over to a set of C   libraries for numerical linear algebra known as the Intel MKL  Of course  we could just do all of this in C   and call MKL directly  Usually  however  the time saved in the calculation itself is not worth the extra headaches of coding in C   and having to recompile just to try out a new idea  Mathematica allows us to play with ideas and have performance close to  within a factor of three or so  doing everything in C    And as we ll see in a future post  Mathematica can take advantage of multiple CPU cores without us really having to think about it We can see the same behaviour play out with higher rank tensors  Imagine we want to contract a matrix with another matrix   m  ab n  bc     mn  ac   We could implement this asm   RandomComplex      500  1000   n   RandomComplex      1000  750   m n     AbsoluteTiming   0 0735985 s   Not bad  Just let Mathematica do the dirty work  Note that Mathematica thinks of these matrices as arrays  or more accurately Lists  of dimensions  500 1000  and  1000 750  respectively m    Dimensions    500 1000    n    Dimensions    1000 750    m n    Dimensions    500 750    This also gives us an idea of what Mathematica is doing with Dot   the length of the last dimension of  m   must match the length of the first dimension of  n   since it is contracting these indices   The resulting array is labelled by the remaining indices of  m  and  n  in the order they appear in according to  m  ab  n  bc     m n   ac   ">
         
-The bulk of the numerical calculations that I need are basically linear algebra – matrix-matrix, vector-matrix and more exotic multiplications. All of the entries in these tensors are “machine precision”, which roughly translates to a C++ double. Mathematica can store these numbers as “packed arrays” – working with machine precision numbers rather than “exact” quantities greatly speeds up calculations (if they are written in the right way).
-
-      </p>
-    </div>
-  </div>
-</div>
-
-<h3 id="2022">2022</h3>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt">
-    
-    
-    
-
-    
-
-    <div class="post-excerpt-text">
-      <a href="/2022/01/13/mathematica-1.html">Mathematica tips for numerical linear algebra (1)</a>
-
-      <div class="post-info">
-  
-    
-    
-      
-
-
-
-<div class="portrait-wrapper">
-  <a href="/members/anthony-ashmore.html" class="portrait" data-style="tiny" aria-label="Anthony Ashmore">
-    
-      <i class="icon fa-solid fa-microscope"></i>
-    
-
-    <img src="/images/ashmore.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Anthony Ashmore
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Assistant Professor
-      </span>
-    
-
-    
-      <span class="portrait-affiliation">
-        Skidmore College
-      </span>
-    
-  </a>
-</div>
-
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>January 13, 2022</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags" data-link="https://aashmore.github.io/blog">
-    
-      <a href="https://aashmore.github.io/blog?search=%22tag:%20mathematica%22" class="tag" data-tooltip='Show items with the tag "mathematica"'>
-        mathematica
-      </a>
-    
-      <a href="https://aashmore.github.io/blog?search=%22tag:%20linear-algebra%22" class="tag" data-tooltip='Show items with the tag "linear-algebra"'>
-        linear-algebra
-      </a>
-    
-  </div>
-
-
-
-
-
-      
-      
-      <p data-search="Calabi Yau manifolds are special as they are Kähler manifolds which admit Ricci flat metrics  As of the end of 2020  there are still no complete analytic expressions for such metrics on compact manifolds  other than in the somewhat trivial cases of tori  Instead  the best we can do are approximate numerical metrics  I became interested in this a couple of years ago when trying to learn some of the machine learning techniques that are all the rage at the moment  But before I could I apply all this fancy new technology  I first needed some data to work with  And so I found myself needing to understand how to generate these numerical metrics Previous work on these numerical metrics had used C    Unfortunately  my experience with C   is limited to a  Teach Yourself C   in 24 Hours  book and some bad memories of pointers in undergraduate computing labs  Since I didn t want to reinvent the wheel  I decided I d try to implement the numerical metrics using Mathematica instead  I figured this would make the code much easier to handle and it would be closer to the kind of language  tensors and so on  that I would use if I were doing a calculation with pen and paper And so here we are almost two years later  I did manage to do what I wanted using only Mathematica  It took a few late nights of scouring the Wolfram documentation and copious amounts of help from StackExchange  but I think it really was easier than keeping track of hundreds of  cc and  h files  and trying to decipher completely cryptic compiler errors   Along the way  I learned a few neat tricks and tips for working with numerical calculations in Mathematica that I figure might be of use to someone else  and so I m going to lay them out in the next few posts for the interested reader ">
-        
-Calabi-Yau manifolds are special as they are Kähler manifolds which admit Ricci-flat metrics. As of the end of 2020, there are still no complete analytic expressions for such metrics on compact manifolds, other than in the somewhat trivial cases of tori. Instead, the best we can do are approximate numerical metrics. I became interested in this a couple of years ago when trying to learn some of the machine-learning techniques that are all the rage at the moment. But before I could I apply all this fancy new technology, I first needed some data to work with. And so I found myself needing to understand how to generate these numerical metrics.
+The take-away from this is that many clever people have worked for a very long time on optimising the Mathematica’s built-in functions, such as Dot. In particular, when Dot is called, it turns the calculation over to a set of C++ libraries for numerical linear algebra known as the Intel MKL. 
 
       </p>
     </div>
@@ -828,6 +730,100 @@ Calabi-Yau manifolds are special as they are Kähler manifolds which admit Ricci
       <p data-search="Dot productsThe bulk of the numerical calculations that I need are basically linear algebra   matrix matrix  vector matrix and more exotic multiplications  All of the entries in these tensors are  machine precision   which roughly translates to a C   double  Mathematica can store these numbers as  packed arrays    working with machine precision numbers rather than  exact  quantities greatly speeds up calculations  if they are written in the right way  Let s start with a simple example where we want to take the dot product of two vectors  u  and  v   In index notation this is simply  u  cdot v  u a v a   so we can think of the dot product as simply multiplying and then summing the individual entries of the vectors  Mathematica has many ways to carry out such a simple calculation  but picking the right way now will make sure more complicated calculations don t take all weekend l   10     size of vectors   u   RandomComplex      l   v   RandomComplex      l   Sum u  i   v  i     i  1  l  Total u v u vHere we ve defined our vectors to be of length  l   RandomComplex then gives a list whose entries are machine precision complex numbers  We have given three ways to calculate the dot product       The first is closest to what one might do in C   where we simply loop over the entries and sum them together  Though this might be the most obvious thing to do  this is nearly always the slowest  as we ll see below          The next way uses the Mathematica operator   which in this instance takes in two vectors and outputs a third vector whose entries are given by   u v  a   u a v a   with no sum over  a   We can then sum the entries of this new vector using Total to get the dot product         Our third way is simply using the built in Mathematica function Dot u v   which can also be called as u v   For relatively small vectors  any of these will do  However  when one is dealing with numerical calculations with millions of points  there are big differences between them  For example  let s increase the length of the vectors to ten million and check how long each method takes l   10 7     size of vectors   u   RandomComplex      l   v   RandomComplex      l   Sum u  i   v  i     i  1  l      AbsoluteTiming   29 6766 s   Total u v     AbsoluteTiming   0 155223 s   u v    AbsoluteTiming   0 036661 s   Uh oh  Explicitly summing over the elements of the vectors as one might do in C   is crazy slow  taking over 800 times longer than using Dot  Notice that using Total is slower than Dot   you might have expected this since u v constructs a new vector which Total then sums  whereas Dot just computes the sum directly  So what s up ">
         
 The bulk of the numerical calculations that I need are basically linear algebra – matrix-matrix, vector-matrix and more exotic multiplications. All of the entries in these tensors are “machine precision”, which roughly translates to a C++ double. Mathematica can store these numbers as “packed arrays” – working with machine precision numbers rather than “exact” quantities greatly speeds up calculations (if they are written in the right way).
+
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="post-excerpt-container">
+  <div class="post-excerpt">
+    
+    
+    
+
+    
+
+    <div class="post-excerpt-text">
+      <a href="/2022/01/13/mathematica-1.html">Mathematica tips for numerical linear algebra (1)</a>
+
+      <div class="post-info">
+  
+    
+    
+      
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/anthony-ashmore.html" class="portrait" data-style="tiny" aria-label="Anthony Ashmore">
+    
+      <i class="icon fa-solid fa-microscope"></i>
+    
+
+    <img src="/images/ashmore.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Anthony Ashmore
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Assistant Professor
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        Skidmore College
+      </span>
+    
+  </a>
+</div>
+
+    
+  
+
+  
+  
+
+  
+    <span data-tooltip="Originally published on">
+      <i class="icon fa-regular fa-calendar"></i>
+      <span>January 13, 2022</span>
+    </span>
+  
+
+  
+</div>
+
+
+  
+
+
+  <div class="tags" data-link="https://aashmore.github.io/blog">
+    
+      <a href="https://aashmore.github.io/blog?search=%22tag:%20mathematica%22" class="tag" data-tooltip='Show items with the tag "mathematica"'>
+        mathematica
+      </a>
+    
+      <a href="https://aashmore.github.io/blog?search=%22tag:%20linear-algebra%22" class="tag" data-tooltip='Show items with the tag "linear-algebra"'>
+        linear-algebra
+      </a>
+    
+  </div>
+
+
+
+
+
+      
+      
+      <p data-search="Calabi Yau manifolds are special as they are Kähler manifolds which admit Ricci flat metrics  As of the end of 2020  there are still no complete analytic expressions for such metrics on compact manifolds  other than in the somewhat trivial cases of tori  Instead  the best we can do are approximate numerical metrics  I became interested in this a couple of years ago when trying to learn some of the machine learning techniques that are all the rage at the moment  But before I could I apply all this fancy new technology  I first needed some data to work with  And so I found myself needing to understand how to generate these numerical metrics Previous work on these numerical metrics had used C    Unfortunately  my experience with C   is limited to a  Teach Yourself C   in 24 Hours  book and some bad memories of pointers in undergraduate computing labs  Since I didn t want to reinvent the wheel  I decided I d try to implement the numerical metrics using Mathematica instead  I figured this would make the code much easier to handle and it would be closer to the kind of language  tensors and so on  that I would use if I were doing a calculation with pen and paper And so here we are almost two years later  I did manage to do what I wanted using only Mathematica  It took a few late nights of scouring the Wolfram documentation and copious amounts of help from StackExchange  but I think it really was easier than keeping track of hundreds of  cc and  h files  and trying to decipher completely cryptic compiler errors   Along the way  I learned a few neat tricks and tips for working with numerical calculations in Mathematica that I figure might be of use to someone else  and so I m going to lay them out in the next few posts for the interested reader ">
+        
+Calabi-Yau manifolds are special as they are Kähler manifolds which admit Ricci-flat metrics. As of the end of 2020, there are still no complete analytic expressions for such metrics on compact manifolds, other than in the somewhat trivial cases of tori. Instead, the best we can do are approximate numerical metrics. I became interested in this a couple of years ago when trying to learn some of the machine-learning techniques that are all the rage at the moment. But before I could I apply all this fancy new technology, I first needed some data to work with. And so I found myself needing to understand how to generate these numerical metrics.
 
       </p>
     </div>

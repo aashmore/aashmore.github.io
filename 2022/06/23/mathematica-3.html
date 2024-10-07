@@ -63,7 +63,7 @@
   <meta name="author" content="anthony-ashmore">
   <meta property="og:type" content="article">
   <meta property="og:updated_time" content="">
-  <meta property="article:published_time" content="2023-02-23T00:00:00+00:00">
+  <meta property="article:published_time" content="2022-06-23T00:00:00+00:00">
   <meta property="article:modified_time" content="">
   <meta name="revised" content="">
 
@@ -74,7 +74,7 @@
     
       "@type": "BlogPosting",
       "author": { "@type": "Person", "name": "Mathematica tips for numerical linear algebra (3)" },
-      "datePublished": "2023-02-23T00:00:00+00:00",
+      "datePublished": "2022-06-23T00:00:00+00:00",
       "dateModified": "",
     
     "name": "Mathematica tips for numerical linear algebra (3)",
@@ -520,7 +520,7 @@
   
     <span data-tooltip="Originally published on">
       <i class="icon fa-regular fa-calendar"></i>
-      <span>February 23, 2023</span>
+      <span>June 23, 2022</span>
     </span>
   
 
@@ -558,50 +558,35 @@
 
 <h2 id="dot-products">Dot products</h2>
 
+<p>The bulk of the numerical calculations that I need are basically linear algebra – matrix-matrix, vector-matrix and more exotic multiplications. All of the entries in these tensors are “machine precision”, which roughly translates to a C++ double. Mathematica can store these numbers as “packed arrays” – working with machine precision numbers rather than “exact” quantities greatly speeds up calculations (if they are written in the right way).</p>
+
+<h2 id="mathematica-is-smart">Mathematica is smart</h2>
+
 <!-- excerpt start -->
-<p>The bulk of the numerical calculations that I need are basically linear algebra – matrix-matrix, vector-matrix and more exotic multiplications. All of the entries in these tensors are “machine precision”, which roughly translates to a C++ double. Mathematica can store these numbers as “packed arrays” – working with machine precision numbers rather than “exact” quantities greatly speeds up calculations (if they are written in the right way).
-<!-- excerpt end --></p>
+<p>The take-away from this is that many clever people have worked for a very long time on optimising the Mathematica’s built-in functions, such as <code class="language-plaintext highlighter-rouge">Dot</code>. In particular, when <code class="language-plaintext highlighter-rouge">Dot</code> is called, it turns the calculation over to a set of C++ libraries for numerical linear algebra known as the Intel MKL. 
+<!-- excerpt end -->
+Of course, we could just do all of this in C++ and call MKL directly. Usually, however, the time saved in the calculation itself is not worth the extra headaches of coding in C++ and having to recompile just to try out a new idea. Mathematica allows us to play with ideas and have performance close to (within a factor of three or so) doing everything in C++. And as we’ll see in a future post, Mathematica can take advantage of multiple CPU cores without us really having to think about it.</p>
 
-<p>Let’s start with a simple example where we want to take the dot product of two vectors $u$ and $v$. In index notation this is simply $u \cdot v =u_a v_a$, so we can think of the dot product as simply multiplying and then summing the individual entries of the vectors. Mathematica has many ways to carry out such a simple calculation, but picking the right way now will make sure more complicated calculations don’t take all weekend!</p>
+<p>We can see the same behaviour play out with higher-rank tensors. Imagine we want to contract a matrix with another matrix: $m_{ab}n_{bc} = (mn)_ac$. We could implement this as</p>
 
-<div class="language-mathematica highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="o">;</span><span class="w"> </span><span class="c">(* size of vectors *)</span><span class="w">
-</span><span class="nv">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">l</span><span class="p">}]</span><span class="o">;</span><span class="w">
-</span><span class="nv">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">l</span><span class="p">}]</span><span class="o">;</span><span class="w">
+<div class="language-mathematica highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="m">500</span><span class="o">,</span><span class="w"> </span><span class="m">1000</span><span class="p">}]</span><span class="o">;</span><span class="w">
+</span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="m">1000</span><span class="o">,</span><span class="w"> </span><span class="m">750</span><span class="p">}]</span><span class="o">;</span><span class="w">
 
-</span><span class="nb">Sum</span><span class="p">[</span><span class="nv">u</span><span class="p">[[</span><span class="nv">i</span><span class="p">]]</span><span class="w"> </span><span class="nv">v</span><span class="p">[[</span><span class="nv">i</span><span class="p">]]</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">i</span><span class="o">,</span><span class="w"> </span><span class="m">1</span><span class="o">,</span><span class="w"> </span><span class="nv">l</span><span class="p">}]</span><span class="w">
-</span><span class="nb">Total</span><span class="p">[</span><span class="nv">u</span><span class="o">*</span><span class="nv">v</span><span class="p">]</span><span class="w">
-</span><span class="nv">u</span><span class="o">.</span><span class="nv">v</span><span class="w">
+</span><span class="nv">m</span><span class="o">.</span><span class="nv">n</span><span class="o">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">AbsoluteTiming</span><span class="w">
+</span><span class="c">(* 0.0735985 s *)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Here we’ve defined our vectors to be of length $l$. <code class="language-plaintext highlighter-rouge">RandomComplex</code> then gives a list whose entries are machine-precision complex numbers. We have given three ways to calculate the dot product.</p>
+<p>Not bad! Just let Mathematica do the dirty work! Note that Mathematica thinks of these matrices as arrays (or more accurately <code class="language-plaintext highlighter-rouge">Lists</code>) of dimensions <code class="language-plaintext highlighter-rouge">{500,1000}</code> and <code class="language-plaintext highlighter-rouge">{1000,750}</code> respectively:</p>
 
-<ul>
-  <li>
-    <p>The first is closest to what one might do in C++ where we simply loop over the entries and sum them together. Though this might be the most obvious thing to do, this is nearly always the slowest (as we’ll see below).</p>
-  </li>
-  <li>
-    <p>The next way uses the Mathematica operator <code class="language-plaintext highlighter-rouge">*</code> which in this instance takes in two vectors and outputs a third vector whose entries are given by $(u*v)_a = u_a v_a$  with no sum over $a$. We can then sum the entries of this new vector using <code class="language-plaintext highlighter-rouge">Total</code> to get the dot product.</p>
-  </li>
-  <li>
-    <p>Our third way is simply using the built-in Mathematica function <code class="language-plaintext highlighter-rouge">Dot[u,v]</code>, which can also be called as <code class="language-plaintext highlighter-rouge">u.v</code>.</p>
-  </li>
-</ul>
-
-<p>For relatively small vectors, any of these will do. However, when one is dealing with numerical calculations with millions of points, there are big differences between them. For example, let’s increase the length of the vectors to ten million and check how long each method takes.</p>
-
-<div class="language-mathematica highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="o">^</span><span class="m">7</span><span class="o">;</span><span class="w"> </span><span class="c">(* size of vectors *)</span><span class="w">
-</span><span class="nv">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">l</span><span class="p">}]</span><span class="o">;</span><span class="w">
-</span><span class="nv">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">RandomComplex</span><span class="p">[{}</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">l</span><span class="p">}]</span><span class="o">;</span><span class="w">
-
-</span><span class="nb">Sum</span><span class="p">[</span><span class="nv">u</span><span class="p">[[</span><span class="nv">i</span><span class="p">]]</span><span class="w"> </span><span class="nv">v</span><span class="p">[[</span><span class="nv">i</span><span class="p">]]</span><span class="o">,</span><span class="w"> </span><span class="p">{</span><span class="nv">i</span><span class="o">,</span><span class="w"> </span><span class="m">1</span><span class="o">,</span><span class="w"> </span><span class="nv">l</span><span class="p">}]</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">AbsoluteTiming</span><span class="w">
-</span><span class="c">(* 29.6766 s *)</span><span class="w">
-</span><span class="nb">Total</span><span class="p">[</span><span class="nv">u</span><span class="o">*</span><span class="nv">v</span><span class="p">]</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">AbsoluteTiming</span><span class="w">
-</span><span class="c">(* 0.155223 s *)</span><span class="w">
-</span><span class="nv">u</span><span class="o">.</span><span class="nv">v</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">AbsoluteTiming</span><span class="w">
-</span><span class="c">(* 0.036661 s *)</span><span class="w">
+<div class="language-mathematica highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">m</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Dimensions</span><span class="w">
+</span><span class="c">(* {500,1000} *)</span><span class="w">
+</span><span class="nv">n</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Dimensions</span><span class="w">
+</span><span class="c">(* {1000,750} *)</span><span class="w">
+</span><span class="nv">m</span><span class="o">.</span><span class="nv">n</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">Dimensions</span><span class="w">
+</span><span class="c">(* {500,750} *)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Uh oh! Explicitly summing over the elements of the vectors as one might do in C++ is crazy slow, taking over 800 times longer than using <code class="language-plaintext highlighter-rouge">Dot</code>. Notice that using <code class="language-plaintext highlighter-rouge">Total</code> is slower than <code class="language-plaintext highlighter-rouge">Dot</code> – you might have expected this since <code class="language-plaintext highlighter-rouge">u*v</code> constructs a new vector which <code class="language-plaintext highlighter-rouge">Total</code> then sums, whereas <code class="language-plaintext highlighter-rouge">Dot</code> just computes the sum directly. So what’s up?</p>
+<p>This also gives us an idea of what Mathematica is doing with <code class="language-plaintext highlighter-rouge">Dot</code> – the length of the last dimension of $m$  must match the length of the first dimension of $n$ (since it is contracting these indices). The resulting array is labelled by the remaining indices of $m$ and $n$ in the order they appear in according to $m_{ab} n_{bc} = (m n)_{ac}$.</p>
   </section>
 
   
