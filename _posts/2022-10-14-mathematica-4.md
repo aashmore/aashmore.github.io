@@ -9,7 +9,9 @@ last_modified_at: ""
 
 ## Transpose and Flatten
 
+<!-- excerpt start -->
 So now we know how to multiply matrices using Mathematica’s `Dot` function. This also works for higher-rank tensors (more indices) such as $m_{abc} n_{cde} = (mn)_{abde}$, which we can implement as
+<!-- excerpt end -->
 
 ```mathematica
 m = RandomComplex[{}, {10, 20, 30}];
