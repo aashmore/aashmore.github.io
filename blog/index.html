@@ -728,8 +728,6 @@ Calabi-Yau manifolds are special as they are Kähler manifolds which admit Ricci
   </div>
 </div>
 
-<h3 id="2021">2021</h3>
-
 <div class="post-excerpt-container">
   <div class="post-excerpt">
     
@@ -739,16 +737,44 @@ Calabi-Yau manifolds are special as they are Kähler manifolds which admit Ricci
     
 
     <div class="post-excerpt-text">
-      <a href="/2021/09/30/example-post-2.html">Example post 2</a>
+      <a href="/2022/01/13/mathematica-2.html">Mathematica tips for numerical linear algebra (2)</a>
 
       <div class="post-info">
   
     
     
-      <span data-tooltip="Author">
-        <i class="icon fa-solid fa-feather-pointed"></i>
-        <span>jane-smith</span>
+      
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/anthony-ashmore.html" class="portrait" data-style="tiny" aria-label="Anthony Ashmore">
+    
+      <i class="icon fa-solid fa-microscope"></i>
+    
+
+    <img src="/images/ashmore.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Anthony Ashmore
       </span>
+    
+
+    
+      <span class="portrait-description">
+        Assistant Professor
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        Skidmore College
+      </span>
+    
+  </a>
+</div>
+
     
   
 
@@ -758,21 +784,28 @@ Calabi-Yau manifolds are special as they are Kähler manifolds which admit Ricci
   
     <span data-tooltip="Originally published on">
       <i class="icon fa-regular fa-calendar"></i>
-      <span>September 30, 2021</span>
+      <span>January 13, 2022</span>
     </span>
   
 
-  
-    <span data-tooltip="Last updated on">
-      <i class="icon fa-solid fa-clock-rotate-left"></i>
-      <span>October 07, 2024</span>
-    </span>
   
 </div>
 
 
   
 
+
+  <div class="tags" data-link="https://aashmore.github.io/blog">
+    
+      <a href="https://aashmore.github.io/blog?search=%22tag:%20mathematica%22" class="tag" data-tooltip='Show items with the tag "mathematica"'>
+        mathematica
+      </a>
+    
+      <a href="https://aashmore.github.io/blog?search=%22tag:%20linear-algebra%22" class="tag" data-tooltip='Show items with the tag "linear-algebra"'>
+        linear-algebra
+      </a>
+    
+  </div>
 
 
 
@@ -781,7 +814,8 @@ Calabi-Yau manifolds are special as they are Kähler manifolds which admit Ricci
       
       
       <p data-search="Dot productsThe bulk of the numerical calculations that I need are basically linear algebra   matrix matrix  vector matrix and more exotic multiplications  All of the entries in these tensors are  machine precision   which roughly translates to a C   double  Mathematica can store these numbers as  packed arrays    working with machine precision numbers rather than  exact  quantities greatly speeds up calculations  if they are written in the right way  Let s start with a simple example where we want to take the dot product of two vectors  u  and  v   In index notation this is simply  u  cdot v  u a v a   so we can think of the dot product as simply multiplying and then summing the individual entries of the vectors  Mathematica has many ways to carry out such a simple calculation  but picking the right way now will make sure more complicated calculations don t take all weekend l   10     size of vectors   u   RandomComplex      l   v   RandomComplex      l   Sum u  i   v  i     i  1  l  Total u v u vHere we ve defined our vectors to be of length  l   RandomComplex then gives a list whose entries are machine precision complex numbers  We have given three ways to calculate the dot product       The first is closest to what one might do in C   where we simply loop over the entries and sum them together  Though this might be the most obvious thing to do  this is nearly always the slowest  as we ll see below          The next way uses the Mathematica operator   which in this instance takes in two vectors and outputs a third vector whose entries are given by   u v  a   u a v a   with no sum over  a   We can then sum the entries of this new vector using Total to get the dot product         Our third way is simply using the built in Mathematica function Dot u v   which can also be called as u v   For relatively small vectors  any of these will do  However  when one is dealing with numerical calculations with millions of points  there are big differences between them  For example  let s increase the length of the vectors to ten million and check how long each method takes l   10 7     size of vectors   u   RandomComplex      l   v   RandomComplex      l   Sum u  i   v  i     i  1  l      AbsoluteTiming   29 6766 s   Total u v     AbsoluteTiming   0 155223 s   u v    AbsoluteTiming   0 036661 s   Uh oh  Explicitly summing over the elements of the vectors as one might do in C   is crazy slow  taking over 800 times longer than using Dot  Notice that using Total is slower than Dot   you might have expected this since u v constructs a new vector which Total then sums  whereas Dot just computes the sum directly  So what s up ">
-        Dot products
+        
+The bulk of the numerical calculations that I need are basically linear algebra – matrix-matrix, vector-matrix and more exotic multiplications. All of the entries in these tensors are “machine precision”, which roughly translates to a C++ double. Mathematica can store these numbers as “packed arrays” – working with machine precision numbers rather than “exact” quantities greatly speeds up calculations (if they are written in the right way).
 
       </p>
     </div>
