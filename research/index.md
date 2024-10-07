@@ -56,7 +56,7 @@ DESCRIPTION HERE
 
 {% include float.html clear=true %} 
 
-{% include list.html data="citations" component="citation" style="rich" filters="numerical: true" %}
+{% include list_no_date.html data="citations" component="citation" style="rich" filters="numerical: true" %}
 
 {% include section.html %}
 
