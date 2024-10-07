@@ -87,8 +87,8 @@ DESCRIPTION HERE
 {% endcapture %}
 
 {%
-  include model.html
-  content=numerical
+  include float.html
+  content=model
   flip=false
 %}
 

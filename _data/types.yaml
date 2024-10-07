@@ -8,7 +8,7 @@ pi:
 
 ap:
   icon: fa-solid fa-microscope
-  description: Assistant Professor of Physics
+  description: Assistant Professor
 
 postdoc:
   icon: fa-solid fa-glasses
