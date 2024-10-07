@@ -2,7 +2,7 @@
 title: Talks
 nav:
   order: 2
-  tooltip: Software, datasets, and more
+  tooltip: Presentations and invited seminars
 ---
 
 # {% include icon.html icon="fa-solid fa-comment-dots" %}Projects
