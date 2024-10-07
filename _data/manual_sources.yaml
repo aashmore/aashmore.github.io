@@ -1,0 +1,306 @@
+- title: Deep learning lattice gauge theories
+  authors:
+  - Anuj Apte
+  - Anthony Ashmore
+  - Clay Cordova
+  - Tzu-Chen Huang
+  publisher: arXiv
+  date: '2024-05-24'
+  link: https://arxiv.org/abs/2405.14830
+  lattice: true
+  plugin: sources.py
+  file: sources.yaml
+- title: A heterotic Kodaira-Spencer theory at one-loop
+  authors:
+  - Anthony Ashmore
+  - "Javier Jos\xE9 Murgas Ibarra"
+  - David Duncan McNutt
+  - Charles Strickland-Constable
+  - Eirik Eik Svanes
+  - David Tennyson
+  - Sander Winje
+  publisher: Journal of High Energy Physics
+  date: '2023-10-23'
+  link: https://doi.org/g68ssz
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: "Numerical spectra of the Laplacian for line bundles on Calabi\u2013Yau hypersurfaces"
+  authors:
+  - Anthony Ashmore
+  - Yang-Hui He
+  - Elli Heyes
+  - Burt A. Ovrut
+  publisher: Journal of High Energy Physics
+  date: '2023-07-21'
+  link: https://doi.org/g68spq
+  numerical: true
+  plugin: sources.py
+  file: sources.yaml
+- title: Geometric flows and supersymmetry
+  authors:
+  - Anthony Ashmore
+  - Ruben Minasian
+  - Yann Proto
+  publisher: Communications in Mathematical Physics
+  date: '2024-01-01'
+  link: https://doi.org/g68spr
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: N = (2,0) AdS3 solutions of M-theory
+  authors:
+  - A. Ashmore
+  publisher: Journal of High Energy Physics
+  date: '2023-05-12'
+  link: https://doi.org/g68spv
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: "Calabi\u2013Yau metrics, CFTs and random matrices"
+  authors:
+  - Anthony Ashmore
+  publisher: arXiv
+  date: '2022-02-15'
+  link: https://arxiv.org/abs/2202.05896
+  numerical: true
+  plugin: sources.py
+  file: sources.yaml
+- title: "Calabi\u2013Yau metrics, energy functionals and machine learning"
+  authors:
+  - Anthony Ashmore
+  - Lucille Calmon
+  - Yang-Hui He
+  - Burt A. Ovrut
+  publisher: International Journal of Data Science in the Mathematical Sciences
+  date: '2022-05-21'
+  link: https://doi.org/g68sqp
+  numerical: true
+  plugin: sources.py
+  file: sources.yaml
+- title: Exactly marginal deformations and their supergravity duals
+  authors:
+  - Anthony Ashmore
+  - Michela Petrini
+  - "Edward L\xF8d\xF8en Tasker"
+  - Daniel Waldram
+  publisher: Physical Review Letters
+  date: '2022-05-09'
+  link: https://doi.org/g673j7
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: Machine learning line bundle connections
+  authors:
+  - Anthony Ashmore
+  - Rehan Deen
+  - Yang-Hui He
+  - Burt A. Ovrut
+  publisher: Physics Letters B
+  date: '2022-04-01'
+  link: https://doi.org/gtdxq9
+  numerical: true
+  plugin: sources.py
+  file: sources.yaml
+- title: Topological G2 and Spin(7) strings at 1-loop from double complexes
+  authors:
+  - Anthony Ashmore
+  - "Andr\xE9 Coimbra"
+  - Charles Strickland-Constable
+  - Eirik Eik Svanes
+  - David Tennyson
+  publisher: Journal of High Energy Physics
+  date: '2022-02-01'
+  link: https://doi.org/g673j8
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: "Calabi\u2013Yau CFTs and random matrices"
+  authors:
+  - Nima Afkhami-Jeddi
+  - Anthony Ashmore
+  - "Clay C\xF3rdova"
+  publisher: Journal of High Energy Physics
+  date: '2022-02-01'
+  link: https://doi.org/g589vx
+  numerical: true
+  plugin: sources.py
+  file: sources.yaml
+- title: Hidden sectors from multiple line bundles for the B-L MSSM
+  authors:
+  - Anthony Ashmore
+  - Sebastian Dumitru
+  - Burt A. Ovrut
+  publisher: Fortschritte der Physik
+  date: '2022-06-06'
+  link: https://doi.org/g673j5
+  model: true
+  plugin: sources.py
+  file: sources.yaml
+- title: "Moduli-dependent KK towers and the swampland distance conjecture on the quintic
+    Calabi\u2013Yau manifold"
+  authors:
+  - Anthony Ashmore
+  - Fabian Ruehle
+  publisher: Physical Review D
+  date: '2021-05-28'
+  link: https://doi.org/gj8szw
+  numerical: true
+  plugin: sources.py
+  file: sources.yaml
+- title: "Explicit soft supersymmetry breaking in the heterotic M-theory B \u2212\
+    \ L MSSM"
+  authors:
+  - Anthony Ashmore
+  - Sebastian Dumitru
+  - Burt A. Ovrut
+  publisher: Journal of High Energy Physics
+  date: '2021-08-09'
+  link: https://doi.org/g673kb
+  model: true
+  plugin: sources.py
+  file: sources.yaml
+- title: "Eigenvalues and eigenforms on Calabi\u2013Yau threefolds"
+  authors:
+  - Anthony Ashmore
+  publisher: Journal of Geometry and Physics
+  date: '2024-01-01'
+  link: https://doi.org/g68sqq
+  numerical: true
+  plugin: sources.py
+  file: sources.yaml
+- title: Line bundle hidden sectors for strongly coupled heterotic standard models
+  authors:
+  - Anthony Ashmore
+  - Sebastian Dumitru
+  - Burt A. Ovrut
+  publisher: Fortschritte der Physik
+  date: '2021-05-24'
+  link: https://doi.org/gj6pbv
+  model: true
+  plugin: sources.py
+  file: sources.yaml
+- title: 'Heterotic backgrounds via generalised geometry: moment maps and moduli'
+  authors:
+  - Anthony Ashmore
+  - Charles Strickland-Constable
+  - David Tennyson
+  - Daniel Waldram
+  publisher: Journal of High Energy Physics
+  date: '2020-11-01'
+  link: https://doi.org/g673kk
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: "Machine learning Calabi\u2013Yau metrics"
+  authors:
+  - Anthony Ashmore
+  - "Yang\u2010Hui He"
+  - Burt A. Ovrut
+  publisher: Fortschritte der Physik
+  date: '2020-08-12'
+  link: https://doi.org/ghf4nr
+  numerical: true
+  plugin: sources.py
+  file: sources.yaml
+- title: 'Generalising G2 geometry: involutivity, moment maps and moduli'
+  authors:
+  - Anthony Ashmore
+  - Charles Strickland-Constable
+  - David Tennyson
+  - Daniel Waldram
+  publisher: Journal of High Energy Physics
+  date: '2021-01-26'
+  link: https://doi.org/g673kh
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: Marginal deformations of 3d N=2 CFTs from AdS4 backgrounds in generalised
+    geometry
+  authors:
+  - Anthony Ashmore
+  publisher: Journal of High Energy Physics
+  date: '2018-12-01'
+  link: https://doi.org/gf27t8
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: "Finite deformations from a heterotic superpotential: holomorphic Chern-Simons\
+    \ and an L\u221E algebra"
+  authors:
+  - Anthony Ashmore
+  - Xenia de la Ossa
+  - Ruben Minasian
+  - Charles Strickland-Constable
+  - Eirik Eik Svanes
+  publisher: Journal of High Energy Physics
+  date: '2018-10-01'
+  link: https://doi.org/g68sqs
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: Generalised geometry for supersymmetric flux backgrounds
+  authors:
+  - Anthony Ashmore
+  publisher: Imperial College London
+  date: '2016-08-01'
+  link: https://doi.org/g68sqw
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: Exactly marginal deformations from exceptional generalised geometry
+  authors:
+  - Anthony Ashmore
+  - Maxime Gabella
+  - "Mariana Gra\xF1a"
+  - Michela Petrini
+  - Daniel Waldram
+  publisher: Journal of High Energy Physics
+  date: '2017-01-01'
+  link: https://doi.org/f9x4cq
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: The exceptional generalised geometry of supersymmetric AdS flux backgrounds
+  authors:
+  - Anthony Ashmore
+  - Michela Petrini
+  - Daniel Waldram
+  publisher: Journal of High Energy Physics
+  date: '2016-12-01'
+  link: https://doi.org/gks3g7
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: "Exceptional Calabi\u2013Yau spaces: the geometry of  backgrounds with flux"
+  authors:
+  - Anthony Ashmore
+  - Daniel Waldram
+  publisher: Fortschritte der Physik
+  date: '2017-01-01'
+  link: https://doi.org/gksxjm
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: "Calabi\u2013Yau three-folds: Poincar\xE9 polynomials and fractals"
+  authors:
+  - Anthony Ashmore
+  - Yang-Hui He
+  publisher: Strings, Gauge Fields, and the Geometry Behind
+  date: '2012-12-01'
+  link: https://doi.org/gks274
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
+- title: Numerical analysis of space charge effects in electron bunches at laser-driven
+    plasma accelerators
+  authors:
+  - Anthony Ashmore
+  - Riccardo Bartolini
+  - Nicolas Delerue
+  publisher: Open Physics
+  date: '2011-04-30'
+  link: https://doi.org/bc2w98
+  geometry: true
+  plugin: sources.py
+  file: sources.yaml
