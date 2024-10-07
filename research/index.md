@@ -34,7 +34,7 @@ We are actively investigating the use of neural networks to model the ground-sta
 
 {% include float.html clear=true %} 
 
-{% include list.html data="citations" component="citation" style="rich" filters="lattice: true" %}
+{% include list_no_date.html data="citations" component="citation" style="rich" filters="lattice: true" %}
 
 
 
@@ -76,7 +76,7 @@ DESCRIPTION HERE
 
 {% include float.html clear=true %} 
 
-{% include list.html data="citations" component="citation" style="rich" filters="geometry: true" %}
+{% include list_no_date.html data="citations" component="citation" style="rich" filters="geometry: true" %}
 
 {% include section.html %}
 
@@ -96,4 +96,4 @@ DESCRIPTION HERE
 
 {% include float.html clear=true %} 
 
-{% include list.html data="citations" component="citation" style="rich" filters="model: true" %}
+{% include list_no_date.html data="citations" component="citation" style="rich" filters="model: true" %}
