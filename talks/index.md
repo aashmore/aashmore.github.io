@@ -16,6 +16,8 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 {% include section.html %}
 
+{% include talks-template.html %}
+
 ## Featured
 
 {% include list.html component="card" data="projects" filters="group: featured" %}
