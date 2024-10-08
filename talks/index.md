@@ -9,6 +9,10 @@ nav:
 
 Here are recent talks, seminars and conference presentations made by members of the lab. You'll also find links to slides or video recordings where avaliable.
 
+{% include search-box.html %}
+
+{% include search-info.html %}
+
 {% include section.html %}
 
 {% include talks.html filters="year: 2024" %}
