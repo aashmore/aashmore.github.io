@@ -15,11 +15,12 @@ Here are recent talks, seminars and conference presentations made by members of 
 
 {% include section.html %}
 
-{% include talks.html filters="year: 2023" %}
+{% include talks.html filters="year: 2024" %}
 
 {% include section.html %}
 
-{% include talks.html filters="year: 2024" %}
+{% include talks.html filters="year: 2023" %}
+
 
 {% comment %}
 
