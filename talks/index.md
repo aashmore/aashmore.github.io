@@ -7,8 +7,7 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-comment-dots" %}Talks and seminars
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Here are recent talks, seminars and conference presentations made by members of the lab. You'll also find links to slides or video recordings where avaliable.
 
 {% include tags.html tags="publication, resource, website" %}
 
@@ -17,6 +16,8 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 {% include section.html %}
 
 {% include talks.html %}
+
+{% comment %}
 
 ## Featured
 
@@ -27,3 +28,5 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 ## More
 
 {% include list.html component="card" data="projects" filters="group: " style="small" %}
+
+{% endcomment %}
