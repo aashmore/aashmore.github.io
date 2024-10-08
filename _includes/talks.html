@@ -13,21 +13,13 @@
       <h3>{{ talk.title }}</h3>
       <p>
         <em>{{ talk.venue }}, {{ talk.location }}</em>
-        {% if talk.date %}
-          <br>{{ talk.date | date: "%B %d, %Y" }}
+        {% if talk.slides %}
+          &nbsp;|&nbsp;<a href="{{ talk.slides }}" class="tag" data-tooltip="View slides">slides</a>
+        {% endif %}
+        {% if talk.video %}
+          &nbsp;|&nbsp;<a href="{{ talk.video }}" class="tag" data-tooltip="Watch video">video</a>
         {% endif %}
       </p>
-      {% if talk.slides or talk.video %}
-        <p>
-          {% if talk.slides %}
-            <a href="{{ talk.slides }}" target="_blank">Slides</a>
-          {% endif %}
-          {% if talk.slides and talk.video %} | {% endif %}
-          {% if talk.video %}
-            <a href="{{ talk.video }}" target="_blank">Video</a>
-          {% endif %}
-        </p>
-      {% endif %}
     {% endfor %}
   {% endfor %}
 </div>
