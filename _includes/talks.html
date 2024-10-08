@@ -5,24 +5,29 @@
 {% endif %}
 
 <div class="talks-list">
-  {% assign filtered_talks = site.data.talks | where_exp: "talk", "talk.year == filter_value" %}
+  {% assign filtered_years = site.data.talks | where: "year", filter_value %}
   
-  {% for talk in filtered_talks %}
-    <h3>{{ talk.title }}</h3>
-    <p><em>{{ talk.venue }}, {{ talk.date | date: "%B %Y" }}</em></p>
-    {% if talk.abstract %}
-      <details>
-        <summary>Abstract</summary>
-        <p>{{ talk.abstract }}</p>
-      </details>
-    {% endif %}
-    {% if talk.links %}
+  {% for year_data in filtered_years %}
+    <h2>{{ year_data.year }}</h2>
+    {% for talk in year_data.talks %}
+      <h3>{{ talk.title }}</h3>
       <p>
-        {% for link in talk.links %}
-          <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
-          {% unless forloop.last %} | {% endunless %}
-        {% endfor %}
+        <em>{{ talk.venue }}, {{ talk.location }}</em>
+        {% if talk.date %}
+          <br>{{ talk.date | date: "%B %d, %Y" }}
+        {% endif %}
       </p>
-    {% endif %}
+      {% if talk.slides or talk.video %}
+        <p>
+          {% if talk.slides %}
+            <a href="{{ talk.slides }}" target="_blank">Slides</a>
+          {% endif %}
+          {% if talk.slides and talk.video %} | {% endif %}
+          {% if talk.video %}
+            <a href="{{ talk.video }}" target="_blank">Video</a>
+          {% endif %}
+        </p>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 </div>
