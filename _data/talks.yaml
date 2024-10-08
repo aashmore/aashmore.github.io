@@ -3,9 +3,11 @@
     - title: Exactly marginal deformations and their supergravity duals
       venue: Generalized Geometry Meets String Theory
       location: University of Granada, Spain
+      slides: "pdfs/2024_granada.pdf"
     - title: Exactly marginal deformations and their supergravity duals
       venue: New Deformations of Quantum Field and Gravity Theories
       location: MATRIX, Australia
+      slides: "pdfs/2024_matrix.pdf"
     - title: Discrete lattice gauge theories via neural network quantum states
       venue: Strings, Field and Deep Learning
       location: Aspen Center for Physics, USA
