@@ -1,7 +1,7 @@
 ---
 title: Talks
 nav:
-  order: 2
+  order: 3
   tooltip: Presentations and invited seminars
 ---
 
