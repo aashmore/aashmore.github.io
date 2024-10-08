@@ -1,5 +1,16 @@
+{% assign filter_parts = include.filters | split: ":" %}
+{% assign filter_key = filter_parts[0] | strip %}
+{% assign filter_value = filter_parts[1] | strip %}
+
 <div class="talks-list">
-  {% for year_data in site.data.talks %}
+
+  {% if filter_key == "year" and filter_value != "" %}
+    {% assign filtered_talks = site.data.talks | where: "year", filter_value %}
+  {% else %}
+    {% assign filtered_talks = site.data.talks %}
+  {% endif %}
+  
+  {% for year_data in filtered_talks %}
     <h2>{{ year_data.year }}</h2>
     {% for talk in year_data.talks %}
       <h3>{{ talk.title }}</h3>
