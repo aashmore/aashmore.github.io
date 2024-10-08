@@ -1,20 +1,28 @@
-{% assign filter_parts = include.filters | split: ":" %}
-{% assign filter_key = filter_parts[0] | strip %}
-{% assign filter_value = filter_parts[1] | strip %}
+{% if include.filters %}
+  {% assign filter_parts = include.filters | split: ":" %}
+  {% assign filter_key = filter_parts[0] | strip %}
+  {% assign filter_value = filter_parts[1] | strip %}
+{% endif %}
 
 <div class="talks-list">
-
-  {% if filter_key == "year" and filter_value != "" %}
-    {% assign filtered_talks = site.data.talks | where: "year", filter_value %}
-  {% else %}
-    {% assign filtered_talks = site.data.talks %}
-  {% endif %}
+  {% assign filtered_talks = site.data.talks | where_exp: "talk", "talk.year == filter_value" %}
   
-  {% for year_data in filtered_talks %}
-    <h2>{{ year_data.year }}</h2>
-    {% for talk in year_data.talks %}
-      <h3>{{ talk.title }}</h3>
-      <p><em>{{ talk.venue }}, {{ talk.location }}</em></p>
-    {% endfor %}
+  {% for talk in filtered_talks %}
+    <h3>{{ talk.title }}</h3>
+    <p><em>{{ talk.venue }}, {{ talk.date | date: "%B %Y" }}</em></p>
+    {% if talk.abstract %}
+      <details>
+        <summary>Abstract</summary>
+        <p>{{ talk.abstract }}</p>
+      </details>
+    {% endif %}
+    {% if talk.links %}
+      <p>
+        {% for link in talk.links %}
+          <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+          {% unless forloop.last %} | {% endunless %}
+        {% endfor %}
+      </p>
+    {% endif %}
   {% endfor %}
 </div>
