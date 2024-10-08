@@ -7,7 +7,7 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %}Team
 
-Below you'll find current members of the lab and former members.
+Below you'll find current and former members of the lab.
 
 {% include section.html %}
 
