@@ -1,0 +1,24 @@
+.talks-list h2 {
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.talks-list h3 {
+  margin-bottom: 0;
+  color: #0066cc;
+}
+
+.talks-list p {
+  margin-top: 5px;
+  color: #666;
+}
+
+{% for year_data in site.data.talks %}
+  <h2>{{ year_data.year }}</h2>
+  {% for talk in year_data.talks %}
+    <h3>{{ talk.title }}</h3>
+    <p><em>{{ talk.venue }}, {{ talk.location }}</em></p>
+  {% endfor %}
+{% endfor %}
+
