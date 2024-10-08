@@ -1,17 +1,29 @@
+- year: 2024
+  talks:
+    - title: Exactly marginal deformations and their supergravity duals
+      venue: Generalized Geometry Meets String Theory
+      location: University of Granada, Spain
+    - title: Exactly marginal deformations and their supergravity duals
+      venue: New Deformations of Quantum Field and Gravity Theories
+      location: MATRIX, Australia
+    - title: Discrete lattice gauge theories via neural network quantum states
+      venue: Strings, Field and Deep Learning
+      location: Aspen Center for Physics, USA
+
 - year: 2023
   talks:
+    - title: Physics in the age of AI: quantum physics to string theory
+      venue: Departmental colloquium
+      location: Skidmore College, USA
     - title: Machine learning for geometry and string compactifications
-      venue: LPTHE Seminar
-      location: Sorbonne Universite
+      venue: String Theory Seminar
+      location: BIMSA, China
     - title: Machine learning for geometry and string compactifications
-      venue: Rencontres Théoriciennes
-      location: Paris
-
-- year: 2022
-  talks:
-    - title: Example Talk Title
-      venue: Example Conference
-      location: Example Location
-    - title: Another Example Presentation
-      venue: Another Venue
-      location: Another Location
+      venue: String Theory Seminar
+      location: ETH Zurich, Switzerland
+    - title: Machine learning for geometry and string compactifications
+      venue: Rencontres Théoriciennes
+      location: Joint Paris Theory Seminar
+    - title: Machine Learning for String Compactifications
+      venue: Theory Seminar
+      location: University of Wisconsin – Madison, USA
