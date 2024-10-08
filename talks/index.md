@@ -5,7 +5,7 @@ nav:
   tooltip: Presentations and invited seminars
 ---
 
-# {% include icon.html icon="fa-solid fa-comment-dots" %}Projects
+# {% include icon.html icon="fa-solid fa-comment-dots" %}Talks and seminars
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
