@@ -10,14 +10,19 @@
   {% for year_data in filtered_years %}
     <h2>{{ year_data.year }}</h2>
     {% for talk in year_data.talks %}
-      <h3>{{ talk.title }}</h3>
-      <p>
-        <em>{{ talk.venue }}, {{ talk.location }}</em>
+      <h3>
+        {{ talk.title }}
         {% if talk.slides %}
-          &nbsp;|&nbsp;<a href="{{ talk.slides }}" class="tag" data-tooltip="View slides">slides</a>
+          <a href="{{ talk.slides }}" class="tag" data-tooltip="View slides">slides</a>
         {% endif %}
         {% if talk.video %}
-          &nbsp;|&nbsp;<a href="{{ talk.video }}" class="tag" data-tooltip="Watch video">video</a>
+          <a href="{{ talk.video }}" class="tag" data-tooltip="Watch video">video</a>
+        {% endif %}
+      </h3>
+      <p>
+        <em>{{ talk.venue }}, {{ talk.location }}</em>
+        {% if talk.date %}
+          <br>{{ talk.date | date: "%B %d, %Y" }}
         {% endif %}
       </p>
     {% endfor %}
