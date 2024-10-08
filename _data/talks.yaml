@@ -1,0 +1,17 @@
+- year: 2023
+  talks:
+    - title: Machine learning for geometry and string compactifications
+      venue: LPTHE Seminar
+      location: Sorbonne Universite
+    - title: Machine learning for geometry and string compactifications
+      venue: Rencontres Théoriciennes
+      location: Paris
+
+- year: 2022
+  talks:
+    - title: Example Talk Title
+      venue: Example Conference
+      location: Example Location
+    - title: Another Example Presentation
+      venue: Another Venue
+      location: Another Location
