@@ -9,7 +9,15 @@ If you're interested in working with us, get in touch!
 
 {% include section.html %}
 
-## Highlights
+## News
+
+### 2024
+
+**October:** Our paper [Deep learning lattice gauge theories](https://arxiv.org/abs/2405.14830) has been accepted for publication in [Physical Review B](https://prb.aps.org/) and has been selected as an "Editors' Suggestion".
+
+#### 2024
+
+**October:** 
 
 {% capture text %}
 
