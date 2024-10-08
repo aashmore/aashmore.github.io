@@ -5,8 +5,5 @@
       <h3>{{ talk.title }}</h3>
       <p><em>{{ talk.venue }}, {{ talk.location }}</em></p>
     {% endfor %}
-    {% unless forloop.last %}
-      {% include section.html %}
-    {% endunless %}
   {% endfor %}
 </div>
