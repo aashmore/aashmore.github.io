@@ -1,19 +1,19 @@
 ---
 ---
 
-/* .talks-list h2 { 
+.talks-list h2 { 
   color: #333; 
   border-bottom: 1px solid #ccc; 
   padding-bottom: 5px; 
-} */
+}
 
-/* .talks-list h3 { 
+.talks-list h3 { 
   margin-bottom: 0; 
   color: #0066cc; 
-} */
+}
 
 
-/* .talks-list p { 
+.talks-list p { 
   margin-top: 5px; 
   color: #666; 
-} */
+}
