@@ -8,10 +8,16 @@
   arxiv_class: "hep-th"
 - id: doi:10.1007/JHEP07(2023)164
   numerical: true
+  arxiv_id: "2305.08901"
+  arxiv_class: "hep-th"
 - id: doi:10.1007/s00220-023-04910-7
   geometry: true
+  arxiv_id: "2302.06624"
+  arxiv_class: "hep-th"
 - id: doi:10.1007/JHEP05(2023)101
   geometry: true
+  arxiv_id: "2209.10680"
+  arxiv_class: "hep-th"
 - id: arxiv:2202.05896
   numerical: true
 - id: doi:10.1142/S2810939222500034
