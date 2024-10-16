@@ -82,6 +82,8 @@
   date: '2022-02-15'
   link: https://arxiv.org/abs/2202.05896
   numerical: true
+  arxiv_id: '2202.05896'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1142/S2810939222500034
@@ -95,6 +97,8 @@
   date: '2022-05-21'
   link: https://doi.org/g68sqp
   numerical: true
+  arxiv_id: '2112.10872'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1103/PhysRevLett.128.191601
@@ -108,6 +112,8 @@
   date: '2022-05-09'
   link: https://doi.org/g673j7
   geometry: true
+  arxiv_id: '2112.08375'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1016/j.physletb.2022.136972
@@ -121,6 +127,8 @@
   date: '2022-04-01'
   link: https://doi.org/gtdxq9
   numerical: true
+  arxiv_id: '2110.12483'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP02(2022)089
@@ -135,6 +143,8 @@
   date: '2022-02-01'
   link: https://doi.org/g673j8
   geometry: true
+  arxiv_id: '2108.09310'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP02(2022)021
@@ -147,6 +157,8 @@
   date: '2022-02-01'
   link: https://doi.org/g589vx
   numerical: true
+  arxiv_id: '2107.11461 '
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1002/prop.202200071
@@ -159,6 +171,8 @@
   date: '2022-06-06'
   link: https://doi.org/g673j5
   model: true
+  arxiv_id: '2106.09087 '
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1103/PhysRevD.103.106028
@@ -171,6 +185,8 @@
   date: '2021-05-28'
   link: https://doi.org/gj8szw
   numerical: true
+  arxiv_id: '2103.07472 '
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP08(2021)033
@@ -184,6 +200,8 @@
   date: '2021-08-09'
   link: https://doi.org/g673kb
   model: true
+  arxiv_id: '2012.11029 '
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1016/j.geomphys.2023.105028
@@ -194,6 +212,8 @@
   date: '2024-01-01'
   link: https://doi.org/g68sqq
   numerical: true
+  arxiv_id: '2011.13929  '
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1002/prop.202100052
@@ -206,6 +226,8 @@
   date: '2021-05-24'
   link: https://doi.org/gj6pbv
   model: true
+  arxiv_id: ''
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP11(2020)071
@@ -219,6 +241,8 @@
   date: '2020-11-01'
   link: https://doi.org/g673kk
   geometry: true
+  arxiv_id: '1912.09981'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1002/prop.202000068
@@ -231,6 +255,8 @@
   date: '2020-08-12'
   link: https://doi.org/ghf4nr
   numerical: true
+  arxiv_id: '1910.08605'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP01(2021)158
@@ -244,6 +270,8 @@
   date: '2021-01-26'
   link: https://doi.org/g673kh
   geometry: true
+  arxiv_id: '1910.04795'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP12(2018)060
@@ -255,6 +283,8 @@
   date: '2018-12-01'
   link: https://doi.org/gf27t8
   geometry: true
+  arxiv_id: '1809.03503'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP10(2018)179
@@ -270,6 +300,8 @@
   date: '2018-10-01'
   link: https://doi.org/g68sqs
   geometry: true
+  arxiv_id: '1806.08367'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.25560/55241
@@ -294,6 +326,8 @@
   date: '2017-01-01'
   link: https://doi.org/f9x4cq
   geometry: true
+  arxiv_id: '1605.05730'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP12(2016)146
@@ -306,6 +340,8 @@
   date: '2016-12-01'
   link: https://doi.org/gks3g7
   geometry: true
+  arxiv_id: '1602.02158'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1002/prop.201600109
@@ -317,6 +353,8 @@
   date: '2017-01-01'
   link: https://doi.org/gksxjm
   geometry: true
+  arxiv_id: '1510.00022 '
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1142/9789814412551_0007
@@ -328,6 +366,8 @@
   date: '2012-12-01'
   link: https://doi.org/gks274
   geometry: true
+  arxiv_id: '1110.1612'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.2478/s11534-010-0142-5
@@ -340,6 +380,8 @@
   publisher: Open Physics
   date: '2011-04-30'
   link: https://doi.org/bc2w98
-  geometry: true
+  numerical: true
+  arxiv_id: '1008.4823'
+  arxiv_class: physics.plasm-ph
   plugin: sources.py
   file: sources.yaml
