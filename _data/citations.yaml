@@ -157,7 +157,7 @@
   date: '2022-02-01'
   link: https://doi.org/g589vx
   numerical: true
-  arxiv_id: '2107.11461 '
+  arxiv_id: '2107.11461'
   arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
@@ -171,7 +171,7 @@
   date: '2022-06-06'
   link: https://doi.org/g673j5
   model: true
-  arxiv_id: '2106.09087 '
+  arxiv_id: '2106.09087'
   arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
@@ -185,7 +185,7 @@
   date: '2021-05-28'
   link: https://doi.org/gj8szw
   numerical: true
-  arxiv_id: '2103.07472 '
+  arxiv_id: '2103.07472'
   arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
@@ -200,7 +200,7 @@
   date: '2021-08-09'
   link: https://doi.org/g673kb
   model: true
-  arxiv_id: '2012.11029 '
+  arxiv_id: '2012.11029'
   arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
@@ -212,7 +212,7 @@
   date: '2024-01-01'
   link: https://doi.org/g68sqq
   numerical: true
-  arxiv_id: '2011.13929  '
+  arxiv_id: '2011.13929'
   arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
@@ -226,7 +226,7 @@
   date: '2021-05-24'
   link: https://doi.org/gj6pbv
   model: true
-  arxiv_id: ''
+  arxiv_id: '2003.05455'
   arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
@@ -353,7 +353,7 @@
   date: '2017-01-01'
   link: https://doi.org/gksxjm
   geometry: true
-  arxiv_id: '1510.00022 '
+  arxiv_id: '1510.00022'
   arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
