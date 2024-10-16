@@ -1,11 +1,11 @@
 - id: doi:10.1103/PhysRevB.110.165133
   lattice: true
-  arxiv-id: 2405.14830
-  arxiv-class: hep-lat
+  arxiv-id: "2405.14830"
+  arxiv-class: "hep-lat"
 - id: doi:10.1007/JHEP10(2023)130
   geometry: true
-  arxiv-id: 2306.10106
-  arxiv-class: hep-th
+  arxiv-id: "2306.10106"
+  arxiv-class: "hep-th"
 - id: doi:10.1007/JHEP07(2023)164
   numerical: true
 - id: doi:10.1007/s00220-023-04910-7
