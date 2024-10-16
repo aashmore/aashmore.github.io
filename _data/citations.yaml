@@ -1,15 +1,15 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
-- id: arxiv:2405.14830
+- id: doi:10.1103/PhysRevB.110.165133
   title: Deep learning lattice gauge theories
   authors:
   - Anuj Apte
-  - Anthony Ashmore
-  - Clay Cordova
+  - "Clay C\xF3rdova"
   - Tzu-Chen Huang
-  publisher: arXiv
-  date: '2024-05-24'
-  link: https://arxiv.org/abs/2405.14830
+  - Anthony Ashmore
+  publisher: Physical Review B
+  date: '2024-10-15'
+  link: https://doi.org/g8jk6w
   lattice: true
   plugin: sources.py
   file: sources.yaml
