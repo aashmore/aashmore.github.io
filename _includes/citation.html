@@ -84,12 +84,6 @@
         arXiv: {{ citation.arxiv_id | default: "[no arxiv-id info]" }} [{{ citation.arxiv_class | default: "[no arxiv-class info]" }}]
       </a>
         </span>
-
-        <!-- Debug output -->
-  <p>Debug: arxiv-id = {{ citation.arxiv-id | inspect }}</p>
-  <p>Debug: arxiv_id = {{ citation.arxiv_id | inspect }}</p>
-  <p>Debug: citation keys = {{ citation | keys | join: ', ' }}</p>
-  <!-- End debug output -->
       </div>
 
       {% if include.style == "rich" %}
