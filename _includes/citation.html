@@ -71,6 +71,18 @@
         <span class="citation-id">
           {{- citation.id | default: "[no id info]" -}}
         </span>
+        &nbsp;·&nbsp;
+        <span class="citation-id">
+          {{- citation.id | default: "[no id info]" -}}
+          <a
+        {% if citation.link %}
+          href="{{ citation.link | relative_url }}"
+        {% endif %}
+        class="citation-title"
+      >
+        {{ citation.id | default: "[no id info]" }}
+      </a>
+        </span>
       </div>
 
       {% if include.style == "rich" %}
