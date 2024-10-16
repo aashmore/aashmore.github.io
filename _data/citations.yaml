@@ -44,6 +44,8 @@
   date: '2023-07-21'
   link: https://doi.org/g68spq
   numerical: true
+  arxiv_id: '2305.08901'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/s00220-023-04910-7
@@ -56,6 +58,8 @@
   date: '2024-01-01'
   link: https://doi.org/g68spr
   geometry: true
+  arxiv_id: '2302.06624'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1007/JHEP05(2023)101
@@ -66,6 +70,8 @@
   date: '2023-05-12'
   link: https://doi.org/g68spv
   geometry: true
+  arxiv_id: '2209.10680'
+  arxiv_class: hep-th
   plugin: sources.py
   file: sources.yaml
 - id: arxiv:2202.05896
