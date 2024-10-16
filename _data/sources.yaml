@@ -20,47 +20,89 @@
   arxiv_class: "hep-th"
 - id: arxiv:2202.05896
   numerical: true
+  arxiv_id: "2202.05896"
+  arxiv_class: "hep-th"
 - id: doi:10.1142/S2810939222500034
   numerical: true
+  arxiv_id: "2112.10872"
+  arxiv_class: "hep-th"
 - id: doi:10.1103/PhysRevLett.128.191601
   geometry: true
+  arxiv_id: "2112.08375"
+  arxiv_class: "hep-th"
 - id: doi:10.1016/j.physletb.2022.136972
   numerical: true
+  arxiv_id: "2110.12483"
+  arxiv_class: "hep-th"
 - id: doi:10.1007/JHEP02(2022)089
   geometry: true
+  arxiv_id: "2108.09310"
+  arxiv_class: "hep-th"
 - id: doi:10.1007/JHEP02(2022)021
   numerical: true
+  arxiv_id: "2107.11461 "
+  arxiv_class: "hep-th"
 - id: doi:10.1002/prop.202200071
   title: "Hidden Sectors from Multiple Line Bundles for the B-L MSSM"
   model: true
+  arxiv_id: "2106.09087 "
+  arxiv_class: "hep-th"
 - id: doi:10.1103/PhysRevD.103.106028
   numerical: true
+  arxiv_id: "2103.07472 "
+  arxiv_class: "hep-th"
 - id: doi:10.1007/JHEP08(2021)033
   model: true
+  arxiv_id: "2012.11029 "
+  arxiv_class: "hep-th"
 - id: doi:10.1016/j.geomphys.2023.105028
   numerical: true
+  arxiv_id: "2011.13929  "
+  arxiv_class: "hep-th"
 - id: doi:10.1002/prop.202100052
   model: true
+  arxiv_id: ""
+  arxiv_class: "hep-th"
 - id: doi:10.1007/JHEP11(2020)071
   geometry: true
+  arxiv_id: "1912.09981"
+  arxiv_class: "hep-th"
 - id: doi:10.1002/prop.202000068
   numerical: true
+  arxiv_id: "1910.08605"
+  arxiv_class: "hep-th"
 - id: doi:10.1007/JHEP01(2021)158
   geometry: true
+  arxiv_id: "1910.04795"
+  arxiv_class: "hep-th"
 - id: doi:10.1007/JHEP12(2018)060
   title: Marginal deformations of 3d N=2 CFTs from AdS4 backgrounds in generalised geometry
   geometry: true
+  arxiv_id: "1809.03503"
+  arxiv_class: "hep-th"
 - id: doi:10.1007/JHEP10(2018)179
   geometry: true
+  arxiv_id: "1806.08367"
+  arxiv_class: "hep-th"
 - id: doi:10.25560/55241
   geometry: true
 - id: doi:10.1007/JHEP01(2017)124
   geometry: true
+  arxiv_id: "1605.05730"
+  arxiv_class: "hep-th"
 - id: doi:10.1007/JHEP12(2016)146
   geometry: true
+  arxiv_id: "1602.02158"
+  arxiv_class: "hep-th"
 - id: doi:10.1002/prop.201600109
   geometry: true
+  arxiv_id: "1510.00022 "
+  arxiv_class: "hep-th"
 - id: doi:10.1142/9789814412551_0007
   geometry: true
+  arxiv_id: "1110.1612"
+  arxiv_class: "hep-th"
 - id: doi:10.2478/s11534-010-0142-5
-  geometry: true
+  numerical: true
+  arxiv_id: "1008.4823"
+  arxiv_class: "physics.plasm-ph"
