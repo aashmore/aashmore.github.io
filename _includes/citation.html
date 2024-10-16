@@ -73,17 +73,17 @@
           {{- citation.id | default: "[no id info]" -}}
         </span>
         {% endcomment %}
+        {% if citation["arxiv_id"] %}
         &nbsp;·&nbsp;
         <span class="citation-id">
           <a
-        {% if citation["arxiv_id"] %}
           href="https://arxiv.org/abs/{{ citation.arxiv_id }}"
-        {% endif %}
         class="citation-title"
       >
         arXiv: {{ citation.arxiv_id | default: "[no arxiv-id info]" }} [{{ citation.arxiv_class | default: "[no arxiv-class info]" }}]
       </a>
         </span>
+        {% endif %}
       </div>
 
       {% if include.style == "rich" %}
