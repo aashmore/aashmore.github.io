@@ -76,12 +76,12 @@
         &nbsp;·&nbsp;
         <span class="citation-id">
           <a
-        {% if citation.arxiv-id %}
+        {% if citation["arxiv-id"] %}
           href="https://arxiv.org/abs/{{ citation.arxiv-id }}"
         {% endif %}
         class="citation-title"
       >
-        arXiv: {{ citation.arxiv-id | default: "[no arxiv-id info]" }} [{{ citation.arxiv-class | default: "[no arxiv-class info]" }}]
+        arXiv: {{ citation["arxiv-id"] | default: "[no arxiv-id info]" }} [{{ citation["arxiv-class"] | default: "[no arxiv-class info]" }}]
       </a>
         </span>
       </div>
