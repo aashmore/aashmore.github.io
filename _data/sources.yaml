@@ -18,6 +18,8 @@
   geometry: true
   arxiv_id: "2209.10680"
   arxiv_class: "hep-th"
+  authors:
+  - Anthony Ashmore
 - id: arxiv:2202.05896
   numerical: true
   arxiv_id: "2202.05896"
