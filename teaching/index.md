@@ -9,6 +9,32 @@ nav:
 
 {% include section.html %}
 
+## Mathematical and Computational Methods in Physics
+
+{% capture text %}
+
+{%
+  include button.html
+  link="https://catalog.skidmore.edu/courses-study/py/#:~:text=PY%20130%20%2D%C2%A0%C2%A0Introductory%20Physics%20I%20with%20Laboratory%3A%20Forces%20and%20Energy"
+  text="PY 331 (Spring 2025)"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+An exploration of mathematical and computational techniques used to solve problems in physics. Topics include basic programming and data analysis, statistics, curve fitting and minimization, numerical solutions to differential equations, wave equations, diffusion equations, complex numbers, and Fourier analysis.
+
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/py_130_2024.png"
+  link="https://catalog.skidmore.edu/courses-study/py/#:~:text=PY%20130%20%2D%C2%A0%C2%A0Introductory%20Physics%20I%20with%20Laboratory%3A%20Forces%20and%20Energy"
+  text=text
+%}
+
+{% include section.html %}
+
 ## Introductory Physics I with Lab: Forces and Energy
 
 {% capture text %}
