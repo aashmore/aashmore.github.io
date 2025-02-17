@@ -1,3 +1,10 @@
+- year: 2025
+  talks:
+    - title: Hull-Strominger, involutivity and moment maps
+      venue: Geometric partial differential equations from unified string theories
+      location: American Institute of Mathematics, Caltech, California
+      video: "https://vimeo.com/showcase/11574155/video/1055791481"
+
 - year: 2024
   talks:
     - title: Exactly marginal deformations and their supergravity duals
