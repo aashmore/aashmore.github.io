@@ -3,6 +3,7 @@ name: Kailey Bologh
 image: images/bologh.jpg
 role: undergrad
 affiliation: Skidmore College
+current: true
 aliases:
   - K. Bologh
   - K Bologh
