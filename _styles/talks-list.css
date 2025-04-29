@@ -658,7 +658,7 @@
       
         <a
           href="/teaching/"
-          data-tooltip="Software, datasets, and more"
+          data-tooltip="Current and previous courses"
         >
           Teaching
         </a>
@@ -697,6 +697,15 @@
           data-tooltip="Email, address, and location"
         >
           Contact
+        </a>
+      
+    
+      
+        <a
+          href="/zulip/"
+          data-tooltip="Join our Zulip chat"
+        >
+          Zulip
         </a>
       
     
