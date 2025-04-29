@@ -1,13 +1,13 @@
 ---
-name: Kailey Bologh
-image: images/bologh.jpg
+name: Adam Blyberg
+image: images/blyberg.jpg
 role: undergrad
 affiliation: Skidmore College
 current: true
 aliases:
-  - K. Bologh
-  - K Bologh
-  - Kailey Bologh
+  - A. Blyberg
+  - A Blyberg
+  - Adam Blyberg
 links:
   #home-page: https://janesmith.com
   #email: aashmore@skidmore.edu
