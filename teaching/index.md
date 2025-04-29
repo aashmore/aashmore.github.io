@@ -2,7 +2,7 @@
 title: Teaching
 nav:
   order: 2
-  tooltip: Software, datasets, and more
+  tooltip: Current and previous courses
 ---
 
 # {% include icon.html icon="fa-solid fa-person-chalkboard" %}Teaching
