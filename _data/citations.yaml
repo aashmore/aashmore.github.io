@@ -1,5 +1,20 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
+- id: doi:10.48550/arXiv.2507.06003
+  title: Holomorphic supergravity in ten dimensions and anomaly cancellation
+  authors:
+  - Anthony Ashmore
+  - "Javier Jos\xE9 Murgas Ibarra"
+  - Charles Strickland-Constable
+  - Eirik Eik Svanes
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/g9vwbw
+  geometry: true
+  arxiv_id: '2507.06003'
+  arxiv_class: hep-th
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1103/PhysRevB.110.165133
   title: Deep learning lattice gauge theories
   authors:
