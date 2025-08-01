@@ -1,3 +1,7 @@
+- id: doi:10.48550/arXiv.2507.06003
+  geometry: true
+  arxiv_id: "2507.06003"
+  arxiv_class: "hep-th"
 - id: doi:10.1103/PhysRevB.110.165133
   lattice: true
   arxiv_id: "2405.14830"
