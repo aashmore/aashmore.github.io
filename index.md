@@ -11,6 +11,10 @@ If you're interested in working with us, get in touch!
 
 ## News
 
+#### 2025
+
+**July:** Our paper [Holomorphic supergravity in ten dimensions and anomaly cancellation](https://arxiv.org/abs/2507.06003) has been released on the arXiv as a preprint.
+
 #### 2024
 
 **October:** Our paper [Deep learning lattice gauge theories](https://arxiv.org/abs/2405.14830) has been published in [Physical Review B](https://doi.org/10.1103/PhysRevB.110.165133) and selected as an "Editors' Suggestion".
