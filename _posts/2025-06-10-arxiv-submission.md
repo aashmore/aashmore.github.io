@@ -33,6 +33,6 @@ Format the cleaned `.tex` file using the [LaTeX formatter](https://latex-editor.
 
 ## Uploading to arXiv
 
-Create a file named `00README.XXX` in your submission folder's base directory. Enter `nohypertex` as the file's content. This prevents arXiv from running its own `hyperref` version, using instead the version you explicitly load.
+~~Create a file named `00README.XXX` in your submission folder's base directory. Enter `nohypertex` as the file's content. This prevents arXiv from running its own `hyperref` version, using instead the version you explicitly load.~~ (No longer needed. The new arXiv submission system [does not add hypertex](https://info.arxiv.org/help/faq/texprobs.html#hyperlink-related-issues:~:text=The%20current%20submission%20system%20does%20not%20automatically%20add%20hypertex).)
 
-Compile your file one final time. Delete all files except `main.tex`, `main.bbl`, `utphys.bst`, and `00README.XXX`. Zip these files (not the folder containing them) and upload the zip file as your submission.
+Compile your file one final time. Delete all files except `main.tex`, `main.bbl`, ~~and `00README.XXX`~~. Zip these files (not the folder containing them) and upload the zip file as your submission.
