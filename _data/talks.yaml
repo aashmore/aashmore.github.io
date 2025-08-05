@@ -1,9 +1,15 @@
 - year: 2025
   talks:
+    - title: Simulating the strong force with neural networks
+      venue: Faculty Student Summer Research Program
+      location: Skidmore College, USA
+      author: "Jack Biggins"
+      slides: "pdfs/biggins_summer_2025.pdf"
     - title: Hull-Strominger, involutivity and moment maps
       venue: Geometric partial differential equations from unified string theories
       location: American Institute of Mathematics, Caltech, California
       video: "https://vimeo.com/showcase/11574155/video/1055791481"
+      author: "Anthony Ashmore"
 
 - year: 2024
   talks:
@@ -11,28 +17,36 @@
       venue: Generalized Geometry Meets String Theory
       location: University of Granada, Spain
       slides: "pdfs/2024_granada.pdf"
+      author: "Anthony Ashmore"
     - title: Exactly marginal deformations and their supergravity duals
       venue: New Deformations of Quantum Field and Gravity Theories
       location: MATRIX, Australia
+      author: "Anthony Ashmore"
     - title: Discrete lattice gauge theories via neural network quantum states
       venue: Strings, Field and Deep Learning
       location: Aspen Center for Physics, USA
       slides: "pdfs/2024_aspen.pdf"
+      author: "Anthony Ashmore"
 
 - year: 2023
   talks:
     - title: "Physics in the age of AI: quantum physics to string theory"
       venue: Departmental colloquium
       location: Skidmore College, USA
+      author: "Anthony Ashmore"
     - title: Machine learning for geometry and string compactifications
       venue: String Theory Seminar
       location: BIMSA, China
+      author: "Anthony Ashmore"
     - title: Machine learning for geometry and string compactifications
       venue: String Theory Seminar
       location: ETH Zurich, Switzerland
+      author: "Anthony Ashmore"
     - title: Machine learning for geometry and string compactifications
       venue: Rencontres Théoriciennes
       location: Joint Paris Theory Seminar
+      author: "Anthony Ashmore"
     - title: Machine Learning for String Compactifications
       venue: Theory Seminar
       location: University of Wisconsin – Madison, USA
+      author: "Anthony Ashmore"

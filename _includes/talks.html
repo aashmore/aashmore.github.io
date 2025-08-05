@@ -12,7 +12,7 @@
     {% for talk in year_data.talks %}
       <h3>{{ talk.title }}</h3>
       <p>
-        <em>{{ talk.venue }}, {{ talk.location }}</em>
+        {{ talk.author }} &ndash; <em>{{ talk.venue }}, {{ talk.location }}</em>
         {% if talk.date %}
           <br>{{ talk.date | date: "%B %d, %Y" }}
         {% endif %}

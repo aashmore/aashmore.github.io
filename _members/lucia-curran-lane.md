@@ -1,13 +1,13 @@
 ---
-name: Kailey Bologh
-image: images/bologh.jpg
+name: Lucia Curran-Lane
+image:
 role: undergrad
 affiliation: Skidmore College
-current: false
+current: true
 aliases:
-  - K. Bologh
-  - K Bologh
-  - Kailey Bologh
+  - L. Curran-Lane
+  - L Curran-Lane
+  - Lucia Curran-Lane
 links:
   #home-page: https://janesmith.com
   #email: aashmore@skidmore.edu
