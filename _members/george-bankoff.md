@@ -1,13 +1,13 @@
 ---
-name: Zachary Fata
-image: images/fata.jpg
+name: George Bankoff
+image:
 role: undergrad
 affiliation: Skidmore College
-current: false
+current: true
 aliases:
-  - Z. Fata
-  - Z Fata
-  - Zachary Fata
+  - G. Bankoff
+  - G Bankoff
+  - George Bankoff
 links:
   #home-page: https://janesmith.com
   #email: aashmore@skidmore.edu
