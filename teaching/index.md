@@ -28,7 +28,7 @@ A project-centered introduction to modeling and simulating physical systems with
 
 {%
   include feature.html
-  image="images/nn.png"
+  image="images/py_331_2026.png"
   link="https://catalog.skidmore.edu/courses-study/py/#:~:text=PY%20331%20%2D%C2%A0%C2%A0Computational%20Methods%20in%20Physics"
   text=text
 %}
