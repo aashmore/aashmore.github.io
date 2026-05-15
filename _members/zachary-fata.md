@@ -3,7 +3,7 @@ name: Zachary Fata
 image: images/fata.jpg
 role: undergrad
 affiliation: Skidmore College
-current: false
+current: true
 aliases:
   - Z. Fata
   - Z Fata

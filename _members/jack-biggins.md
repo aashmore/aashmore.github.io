@@ -3,7 +3,7 @@ name: Jack Biggins
 image: images/biggins.jpg
 role: undergrad
 affiliation: Skidmore College
-current: true
+current: false
 aliases:
   - J. Biggins
   - J Biggins
