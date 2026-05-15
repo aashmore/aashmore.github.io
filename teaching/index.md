@@ -9,6 +9,58 @@ nav:
 
 {% include section.html %}
 
+## Computational Methods in Physics
+
+{% capture text %}
+
+{%
+  include button.html
+  link="https://catalog.skidmore.edu/courses-study/py/#:~:text=PY%20331%20%2D%C2%A0%C2%A0Computational%20Methods%20in%20Physics"
+  text="PY 331 (Spring 2026)"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+A project-centered introduction to modeling and simulating physical systems with Python. Topics will be drawn from population dynamics, oscillators and chaos, orbital mechanics and scattering, data analysis and fitting, diffusion and waves, quantum and statistical physics, and quantum computing. Emphasis is on implementing models, using computation to understand the underlying physics, and presenting results effectively.
+
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/nn.png"
+  link="https://catalog.skidmore.edu/courses-study/py/#:~:text=PY%20331%20%2D%C2%A0%C2%A0Computational%20Methods%20in%20Physics"
+  text=text
+%}
+
+{% include section.html %}
+
+## Mathematical Methods in Physics and Engineering
+
+{% capture text %}
+
+{%
+  include button.html
+  link="https://catalog.skidmore.edu/courses-study/py/#:~:text=PY%20216%20%2D%C2%A0%C2%A0Mathematical%20Methods%20in%20Physics%20and%20Engineering"
+  text="PY 216 (Spring 2026)"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+An introduction to the mathematical tools used across the physical sciences. Topics include complex numbers; power series; vectors and matrices; ordinary differential equations; functions as vectors; curve fitting; Fourier series and transforms; partial derivatives; and partial differential equations. Emphasis is on physical interpretation and using these tools to solve problems in physics. Applications include oscillations and waves, diffraction and optics, electromagnetic fields, heat flow and diffusion, and quantum mechanics.
+
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/py_216_2026.png"
+  link="https://catalog.skidmore.edu/courses-study/py/#:~:text=PY%20216%20%2D%C2%A0%C2%A0Mathematical%20Methods%20in%20Physics%20and%20Engineering"
+  text=text
+%}
+
+{% include section.html %}
+
 ## Mathematical and Computational Methods in Physics
 
 {% capture text %}
