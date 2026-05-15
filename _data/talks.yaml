@@ -1,3 +1,11 @@
+- year: 2026
+  talks:
+    - title: Learning ground states of gauge theories with neural networks
+      venue: AMS Special Session on Machine Learning Tools for Mathematical Discovery, JMM 2026
+      location: Washington, DC
+      author: "Anthony Ashmore"
+      slides: "pdfs/2026_jmm_ashmore.pdf"
+
 - year: 2025
   talks:
     - title: Simulating the strong force with neural networks
