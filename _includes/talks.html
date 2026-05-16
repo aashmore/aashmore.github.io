@@ -15,6 +15,9 @@
         {{ talk.author }} {% if talk.slides %}
           &nbsp;&nbsp;<a href="{{ talk.slides }}" class="tag" data-tooltip="View slides">slides</a>
         {% endif %}
+        {% if talk.poster %}
+          &nbsp;&nbsp;<a href="{{ talk.poster }}" class="tag" data-tooltip="View poster">poster</a>
+        {% endif %}
         {% if talk.video %}
           &nbsp;&nbsp;<a href="{{ talk.video }}" class="tag" data-tooltip="Watch video">video</a>
         {% endif %}

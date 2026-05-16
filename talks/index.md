@@ -2,12 +2,12 @@
 title: Talks
 nav:
   order: 3
-  tooltip: Presentations and invited seminars
+  tooltip: Presentations, invited seminars, and posters
 ---
 
-# {% include icon.html icon="fa-solid fa-comment-dots" %}Talks and seminars
+# {% include icon.html icon="fa-solid fa-comment-dots" %}Talks, seminars and posters
 
-Here are recent talks, seminars and conference presentations made by members of the lab. You'll also find links to slides or video recordings where avaliable.
+Here are recent talks, seminars, conference presentations, and posters made by members of the lab. You'll also find links to slides, posters, or video recordings where available.
 
 {% include section.html %}
 

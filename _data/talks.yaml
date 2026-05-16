@@ -1,5 +1,10 @@
 - year: 2026
   talks:
+    - title: Do neural quantum states exhibit double descent?
+      venue: Academic Festival
+      location: Skidmore College, USA
+      author: "Rebecca Merber"
+      poster: "pdfs/2026_merber_double_descent_poster.pdf"
     - title: Learning ground states of gauge theories with neural networks
       venue: AMS Special Session on Machine Learning Tools for Mathematical Discovery, JMM 2026
       location: Washington, DC

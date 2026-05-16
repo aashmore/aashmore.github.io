@@ -9,6 +9,12 @@ If you're interested in working with us, get in touch!
 
 {% include section.html %}
 
+## 2026
+
+#### June
+
+Rebecca Merber presented her research, [Do neural quantum states exhibit double descent?](talks/pdfs/2026_merber_double_descent_poster.pdf), at the Skidmore end-of-year Academic Festival.
+
 ## 2025
 
 #### July
