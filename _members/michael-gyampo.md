@@ -1,6 +1,6 @@
 ---
 name: Michael Gyampo
-image:
+image: images/michael-gyampo.jpg
 role: undergrad
 affiliation: Skidmore College
 current: true
@@ -15,4 +15,3 @@ links:
   #google-scholar: XwF3jY4AAAAJ
   #github: aashmore
 ---
-
