@@ -156,23 +156,13 @@ A useful weekly cycle is:
 
 1. Take a timed test or substantial timed question set.
 2. Mark every question, including correct answers reached by guessing.
-3. Classify each error.
-4. Review the relevant physics and learn a faster solution method.
-5. Retake missed questions after several days without looking at the solution.
+3. Add any needed formulas to your formula sheet.
+4. Review the relevant physics and look for the fastest reliable way to answer each missed or slow question.
+5. Retake missed or slow questions after several days without looking at the solution.
 
-Keep an error log with categories such as:
+Keep an ever-growing formula sheet. Include formulas that recur and formulas you failed to recall. Memorize the standard results before the real test, but also practise reconstructing answers from dimensions, symmetry, limiting cases, and basic physical principles.
 
-- Concept not known
-- Formula not recalled
-- Algebra or arithmetic error
-- Units or sign error
-- Question misread
-- Correct method, but too slow
-- Failed to recognize a shortcut
-
-Also keep an ever-growing formula sheet. Include formulas that recur and formulas you failed to recall. Memorize the standard results before the real test, but also practise reconstructing answers from dimensions, symmetry, limiting cases, and basic physical principles.
-
-The released exams contain hundreds of useful questions. By the end of your revision, aim to answer standard questions quickly, not merely eventually.
+The released exams and current-format practice book contain 670 practice questions in total. By the end of your revision, aim to answer all of them quickly, recalling any necessary formulas from memory and recognizing the shortcuts that make the timed test manageable.
 
 ## Test-Taking Strategies
 
