@@ -21,7 +21,7 @@ This page collects information for students preparing for the Physics GRE: offic
 
 **Last checked: July 17, 2026.** Test dates, fees, locations, and university requirements can change. Always confirm the details on the official ETS and university pages before registering or applying.
 
-**On this page:** [Format and practice tests](#format-and-practice-tests) | [Study materials](#study-materials) | [Study plan](#study-plan) | [Test-taking strategies](#test-taking-strategies) | [Do I need the GRE?](#do-you-need-to-take-the-gre) | [University policies](#gre-policies-at-25-leading-us-physics-phd-programmes) | [What this survey suggests](#what-this-survey-suggests) | [Booking](#booking-a-test-slot) | [Application timeline](#suggested-application-timeline) | [Fees and score reporting](#fees-and-score-reporting) | [Interpreting scores](#interpreting-your-score) | [Topics covered](#topics-covered)
+<p><strong>On this page:</strong> <a href="#format-and-practice-tests">Format and practice tests</a> | <a href="#study-materials">Study materials</a> | <a href="#study-plan">Study plan</a> | <a href="#test-taking-strategies">Test-taking strategies</a> | <a href="#do-you-need-to-take-the-gre">Do I need the GRE?</a> | <a href="#gre-policies-at-25-leading-us-physics-phd-programmes">University policies</a> | <a href="#what-this-survey-suggests">What this survey suggests</a> | <a href="#booking-a-test-slot">Booking</a> | <a href="#suggested-application-timeline">Application timeline</a> | <a href="#fees-and-score-reporting">Fees and score reporting</a> | <a href="#interpreting-your-score">Interpreting scores</a> | <a href="#topics-covered">Topics covered</a></p>
 
 ## Format and Practice Tests
 
