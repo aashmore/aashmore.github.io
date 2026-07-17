@@ -19,6 +19,11 @@ links:
 
 # front matter defaults
 defaults:
+  # files for the hidden Physics GRE resource page
+  - scope:
+      path: "physics-gre/pdfs"
+    values:
+      sitemap: false
   # all markdown files
   - scope:
       path: ""
