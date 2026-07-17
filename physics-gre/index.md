@@ -27,7 +27,7 @@ The Physics GRE is now a **computer-delivered, two-hour test with approximately 
 
 The test does not provide an on-screen calculator, and personal calculators are not permitted unless approved as an accommodation. ETS does provide a short table of physical constants and conversion factors, so you should practise without a calculator or personal equation sheet.
 
-The released exams below mostly use the older **100-question format**. For a rough current-format practice test, choose 70 questions in advance and allow yourself two hours. This will not perfectly reproduce a modern test, but it gives more realistic pacing than completing all 100 questions.
+The released exams below mostly use the older **100-question format**. The time per question is roughly comparable to the current test, so the older exams are still useful for pacing. Do not simply take the first 70 questions as a current-format proxy: questions from different parts of the exam cover different material, and skipping the later questions would leave gaps in your practice.
 
 ## Do You Need to Take the GRE?
 
