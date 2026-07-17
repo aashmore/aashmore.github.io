@@ -27,11 +27,11 @@ The Physics GRE is now a **computer-delivered, two-hour test with approximately 
 
 The test does not provide an on-screen calculator, and personal calculators are not permitted unless approved as an accommodation. ETS does provide a short table of physical constants and conversion factors, so you should practise without a calculator or personal equation sheet.
 
-The released exams below mostly use the older **100-question format**. The time per question is roughly comparable to the current test, so the older exams are still useful for pacing. Do not simply take the first 70 questions as a current-format proxy: questions from different parts of the exam cover different material, and skipping the later questions would leave gaps in your practice.
-
-Save the [official ETS Physics Practice Book](pdfs/practice-book-physics.pdf) for your final full practice test, since it reflects the current test structure more closely than the older exams below. ETS also posts current test information on its [Physics GRE content and structure page](https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html).
+The released exams below mostly use the older **100-question format**. The time per question is roughly comparable to the current test, so the older exams are still useful for pacing. Complete each older exam in **2 hours 50 minutes**. Do not simply take the first 70 questions as a current-format proxy: questions from different parts of the exam cover different material, and skipping the later questions would leave gaps in your practice.
 
 Use the older released exams for most of your preparation, working from oldest to newest. Most use the older 100-question format, but they are still valuable for breadth, pacing, and repeated exposure to standard problem types.
+
+Practice papers:
 
 - [1986 Physics GRE](pdfs/1986_exam.pdf)
 - [1992 Physics GRE](pdfs/1992_exam.pdf)
@@ -39,8 +39,48 @@ Use the older released exams for most of your preparation, working from oldest t
 - [2001 Physics GRE](pdfs/2001_exam.pdf)
 - [2008 Physics GRE](pdfs/2008_exam.pdf)
 - [2017 Physics GRE](pdfs/2017_exam.pdf)
+- [Current-format ETS Physics Practice Book](pdfs/practice-book-physics.pdf)
 
-Some solutions can be found at [GREPhysics.NET: All-solutions list](https://grephysics.net/ans/all-solutions_list.php).
+Save the current-format ETS practice book for your final full practice test. Complete it last and allow yourself **2 hours**. ETS also posts current test information on its [Physics GRE content and structure page](https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html).
+
+Some solutions to the older exams can be found at [GREPhysics.NET: All-solutions list](https://grephysics.net/ans/all-solutions_list.php).
+
+## Study Materials
+
+- [Conquering the Physics GRE](pdfs/textbook.pdf)
+- [How to ace the GRE and Physics GRE - Jaan Li](https://jaan.io/how-to-ace-the-gre-and-physics-gre/)
+- [Guide to Applying to US Science PhD Programs and Fellowships - DJ Strouse](https://djstrouse.com/guide-to-applying-to-us-science-phd-programs-and-fellowships)
+- [APS video: Preparing for the Physics GRE](https://www.youtube.com/watch?v=fCSNKstJcUM)
+
+## Study Plan
+
+Begin with the oldest released exam as a diagnostic. Take it under timed conditions, mark it, and identify the topics and types of errors that cost you points. Then work forward through the older exams while combining targeted revision with shorter mixed sets of questions.
+
+Keep the current-format ETS practice book unseen until the final two weeks before the real test. Use it as your dress rehearsal after you have already built speed and coverage with the older exams.
+
+A useful weekly cycle is:
+
+1. Take a timed test or substantial timed question set.
+2. Mark every question, including correct answers reached by guessing.
+3. Add any needed formulas to your formula sheet.
+4. Review the relevant physics and look for the fastest reliable way to answer each missed or slow question.
+5. Retake missed or slow questions after several days without looking at the solution.
+
+Keep an ever-growing formula sheet. Include formulas that recur and formulas you failed to recall. Memorize the standard results before the real test, but also practise reconstructing answers from dimensions, symmetry, limiting cases, and basic physical principles.
+
+The released exams and current-format practice book contain 670 practice questions in total. By the end of your revision, aim to answer all of them quickly, recalling any necessary formulas from memory and recognizing the shortcuts that make the timed test manageable.
+
+## Test-Taking Strategies
+
+- **Answer every question.** ETS subtracts nothing for an incorrect answer, so guessing is better than leaving a question blank.
+- Study and practise at the same time of day as your real test. It is not very useful to become good at taking the test at midnight if the real exam is at 9 AM.
+- Do quick passes first: answer questions you can solve cleanly, mark the rest, and return.
+- You have little time per question. If a problem takes a long time, make a note to look up a faster solution later.
+- Use units, scaling, symmetry, special cases, and limiting cases to eliminate answers quickly.
+- Estimate before calculating. Many questions require only the order of magnitude or qualitative dependence.
+- Keep an eye on pacing and avoid spending too long on any one problem.
+- Mark questions where you guessed, even when the guess was correct, and review them after the practice test.
+- Review mistakes by topic and error type, not only by problem number.
 
 ## Do You Need to Take the GRE?
 
@@ -136,43 +176,6 @@ Registration for the 2026–27 testing year opens in July 2026. Test-center avai
 The worldwide GRE Subject Test fee is currently $175. ETS states that it will increase to **$199 for registrations completed on or after August 1, 2026**. Additional score reports cost $40 per recipient. Eligible students can apply for the [GRE Fee Reduction Program](https://www.ets.org/gre/test-takers/subject-tests/register/fees.html).
 
 Scores remain reportable for five years, and ScoreSelect allows students who retake the test to choose which test dates to report. The score scale and current percentile data are explained below.
-
-## Study Materials
-
-- [Conquering the Physics GRE](pdfs/textbook.pdf)
-- [How to ace the GRE and Physics GRE – Jaan Li](https://jaan.io/how-to-ace-the-gre-and-physics-gre/)
-- [Guide to Applying to US Science PhD Programs and Fellowships – DJ Strouse](https://djstrouse.com/guide-to-applying-to-us-science-phd-programs-and-fellowships)
-- [APS video: Preparing for the Physics GRE](https://www.youtube.com/watch?v=fCSNKstJcUM)
-
-## Study Plan
-
-Begin with the oldest released exam as a diagnostic. Take it under timed conditions, mark it, and identify the topics and types of errors that cost you points. Then work forward through the older exams while combining targeted revision with shorter mixed sets of questions.
-
-Keep the current-format ETS practice book unseen until the final two weeks before the real test. Use it as your dress rehearsal after you have already built speed and coverage with the older exams.
-
-A useful weekly cycle is:
-
-1. Take a timed test or substantial timed question set.
-2. Mark every question, including correct answers reached by guessing.
-3. Add any needed formulas to your formula sheet.
-4. Review the relevant physics and look for the fastest reliable way to answer each missed or slow question.
-5. Retake missed or slow questions after several days without looking at the solution.
-
-Keep an ever-growing formula sheet. Include formulas that recur and formulas you failed to recall. Memorize the standard results before the real test, but also practise reconstructing answers from dimensions, symmetry, limiting cases, and basic physical principles.
-
-The released exams and current-format practice book contain 670 practice questions in total. By the end of your revision, aim to answer all of them quickly, recalling any necessary formulas from memory and recognizing the shortcuts that make the timed test manageable.
-
-## Test-Taking Strategies
-
-- **Answer every question.** ETS subtracts nothing for an incorrect answer, so guessing is better than leaving a question blank.
-- Study and practise at the same time of day as your real test. It is not very useful to become good at taking the test at midnight if the real exam is at 9 AM.
-- Do quick passes first: answer questions you can solve cleanly, mark the rest, and return.
-- You have little time per question. If a problem takes a long time, make a note to look up a faster solution later.
-- Use units, scaling, symmetry, special cases, and limiting cases to eliminate answers quickly.
-- Estimate before calculating. Many questions require only the order of magnitude or qualitative dependence.
-- Keep an eye on pacing and avoid spending too long on any one problem.
-- Mark questions where you guessed, even when the guess was correct, and review them after the practice test.
-- Review mistakes by topic and error type, not only by problem number.
 
 ## Interpreting Your Score
 
