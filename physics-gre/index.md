@@ -13,6 +13,8 @@ This page collects information for students preparing for the Physics GRE: offic
 
 **Last checked: July 17, 2026.** Test dates, fees, locations, and university requirements can change. Always confirm the details on the official ETS and university pages before registering or applying.
 
+**On this page:** [Do I need the GRE?](#do-you-need-to-take-the-gre) · [Booking](#booking-a-test-slot) · [Study plan](#study-plan) · [Practice tests](#format-and-practice-tests) · [Interpreting scores](#interpreting-your-score) · [University policies](#gre-policies-at-25-leading-us-physics-phd-programmes)
+
 {% include button.html
   link="https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html"
   text="ETS Physics GRE"
@@ -26,6 +28,8 @@ This page collects information for students preparing for the Physics GRE: offic
 The Physics GRE is now a **computer-delivered, two-hour test with approximately 70 five-choice questions**. This gives you an average of about **1 minute 43 seconds per question**.
 
 The test does not provide an on-screen calculator, and personal calculators are not permitted unless approved as an accommodation. ETS does provide a short table of physical constants and conversion factors, so you should practise without a calculator or personal equation sheet.
+
+Complete at least some practice tests from a computer screen, using separate scratch paper, rather than printing every test. This better approximates the real test and helps you practise moving between the screen and written calculations.
 
 The released exams below mostly use the older **100-question format**. The time per question is roughly comparable to the current test, so the older exams are still useful for pacing. Complete each older exam in **2 hours 50 minutes**. Do not simply take the first 70 questions as a current-format proxy: questions from different parts of the exam cover different material, and skipping the later questions would leave gaps in your practice.
 
