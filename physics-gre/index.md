@@ -49,7 +49,7 @@ Some solutions to the older exams can be found at [GREPhysics.NET: All-solutions
 
 - [Conquering the Physics GRE](pdfs/textbook.pdf)
 - [How to ace the GRE and Physics GRE - Jaan Li](https://jaan.io/how-to-ace-the-gre-and-physics-gre/)
-- [Guide to Applying to US Science PhD Programs and Fellowships - DJ Strouse](https://djstrouse.com/guide-to-applying-to-us-science-phd-programs-and-fellowships)
+- [Guide to Applying to US Science PhD Programmes and Fellowships - DJ Strouse](https://djstrouse.com/guide-to-applying-to-us-science-phd-programs-and-fellowships)
 - [APS video: Preparing for the Physics GRE](https://www.youtube.com/watch?v=fCSNKstJcUM)
 
 ## Study Plan
@@ -62,13 +62,13 @@ A useful weekly cycle is:
 
 1. Take a timed test or substantial timed question set.
 2. Mark every question, including correct answers reached by guessing.
-3. Add any needed formulas to your formula sheet.
+3. Add any needed formulae to your formula sheet.
 4. Review the relevant physics and look for the fastest reliable way to answer each missed or slow question.
 5. Retake missed or slow questions after several days without looking at the solution.
 
-Keep an ever-growing formula sheet. Include formulas that recur and formulas you failed to recall. Memorize the standard results before the real test, but also practise reconstructing answers from dimensions, symmetry, limiting cases, and basic physical principles.
+Keep an ever-growing formula sheet. Include formulae that recur and formulae you failed to recall. Memorise the standard results before the real test, but also practise reconstructing answers from dimensions, symmetry, limiting cases, and basic physical principles.
 
-The released exams and current-format practice book contain 670 practice questions in total. By the end of your revision, aim to answer all of them quickly, recalling any necessary formulas from memory and recognizing the shortcuts that make the timed test manageable.
+The released exams and current-format practice book contain 670 practice questions in total. By the end of your revision, aim to answer all of them quickly, recalling any necessary formulae from memory and recognising the shortcuts that make the timed test manageable.
 
 ## Test-Taking Strategies
 
@@ -84,21 +84,21 @@ The released exams and current-format practice book contain 670 practice questio
 
 ## Do You Need to Take the GRE?
 
-Before registering, make a preliminary list of graduate programs and check three separate questions:
+Before registering, make a preliminary list of graduate programmes and check three separate questions:
 
-1. Does the program require the **General GRE**?
+1. Does the programme require the **General GRE**?
 2. Does it require the **Physics GRE**?
 3. If the Physics GRE is optional, would a strong score add useful evidence that is not already clear from your transcript, research experience, and recommendations?
 
-Policies change from year to year, and departments may distinguish between *optional*, *recommended*, *not considered*, and *not accepted*. A score cannot help you at a department that will not consider it.
+Policies change from year to year, and departments may distinguish between *optional*, *recommended*, *not considered* and *not accepted*. A score cannot help you at a department that will not consider it.
 
-For students applying broadly to highly ranked U.S. physics PhD programs, particularly in theoretical physics, taking the Physics GRE may preserve considerably more options. The General GRE is required by far fewer physics departments, so check your intended programs before preparing for it.
+For students applying broadly to highly ranked US physics PhD programmes, particularly in theoretical physics, taking the Physics GRE may preserve considerably more options. The General GRE is required by far fewer physics departments, so check your intended programmes before preparing for it.
 
-### GRE Policies at 25 Leading U.S. Physics PhD Programs
+### GRE Policies at 25 Leading US Physics PhD Programmes
 
-This is a representative group of departments that regularly appear near the top of U.S. graduate-physics rankings; it is not a definitive ranking. The policies below concern applications submitted in Fall 2026 for Fall 2027 entry wherever the department has published that information.
+This is a representative group of departments that regularly appear near the top of US graduate-physics rankings; it is not a definitive ranking. The policies below concern applications submitted in Fall 2026 for Fall 2027 entry wherever the department has published that information.
 
-An asterisk indicates that the department had not yet posted a clearly labeled Fall 2027 policy when this page was checked. Recheck those programs after their applications open.
+An asterisk indicates that the department had not yet posted a clearly labelled Fall 2027 policy when this page was checked. Recheck those programmes after their applications open.
 
 | University | General GRE | Physics GRE | Cycle and notes |
 |---|---|---|---|
@@ -136,9 +136,9 @@ The Physics GRE matters at a larger number of departments. Stanford, Harvard, Ca
 
 A reasonable rule is:
 
-> Plan to take the Physics GRE if you may apply broadly to highly ranked programs, especially in theoretical physics. Take the General GRE only when your intended school list gives you a clear reason to do so.
+> Plan to take the Physics GRE if you may apply broadly to highly ranked programmes, especially in theoretical physics. Take the General GRE only when your intended school list gives you a clear reason to do so.
 
-Recheck every policy in September or October 2026, before finalizing your application list.
+Recheck every policy in September or October 2026, before finalising your application list.
 
 ## Booking a Test Slot
 
@@ -160,20 +160,20 @@ For the 2026–27 testing year, ETS lists the following GRE Subject Test windows
 
 For students applying in Fall 2026, the September and October windows are the useful ones. The April 2027 window is after the usual PhD application deadlines.
 
-Registration for the 2026–27 testing year opens in July 2026. Test-center availability changes and slots can fill, so do not leave booking until the last minute. Check the official scheduling system rather than relying on an old list of nearby centers.
+Registration for the 2026–27 testing year opens in July 2026. Test-centre availability changes and slots can fill, so do not leave booking until the last minute. Check the official scheduling system rather than relying on an old list of nearby centres.
 
 ## Suggested Application Timeline
 
 - **June–July:** Make a preliminary school list and take a diagnostic exam.
 - **July–August:** Register and begin systematic revision.
 - **September 14–27:** First useful testing window for Fall 2027 applicants.
-- **October 19–November 1:** Final useful testing window for most programs.
+- **October 19–November 1:** Final useful testing window for most programmes.
 - **November:** Confirm that scores will arrive in time and recheck every department's policy.
 - **Early–mid December:** Most physics PhD applications are due.
 
 ## Fees and Score Reporting
 
-The worldwide GRE Subject Test fee is currently $175. ETS states that it will increase to **$199 for registrations completed on or after August 1, 2026**. Additional score reports cost $40 per recipient. Eligible students can apply for the [GRE Fee Reduction Program](https://www.ets.org/gre/test-takers/subject-tests/register/fees.html).
+The worldwide GRE Subject Test fee is currently $175. ETS states that it will increase to **$199 for registrations completed on or after August 1, 2026**. Additional score reports cost $40 per recipient. Eligible students can apply for the [GRE Fee Reduction Programme](https://www.ets.org/gre/test-takers/subject-tests/register/fees.html).
 
 The test fee includes up to four free score reports to graduate institutions or fellowship sponsors, chosen during registration. For each free report, you can send your most recent Subject Test score or all reportable Subject Test scores from the last five years. Additional score reports can be ordered later for a fee.
 
@@ -212,7 +212,7 @@ The percentile rank tells you the percentage of recent Physics GRE test takers w
 
 The comparison group is self-selected: it consists of people who took the Physics GRE, rather than all physics students. A 50th-percentile Physics GRE score therefore does not mean average performance among all undergraduate physics majors.
 
-There is no universal score that is “good enough.” Expectations differ by department, subfield, and applicant background. A strong optional score may help when it supplies evidence not already obvious from the application. A weaker optional score need not always be submitted, but required-score programs must receive it.
+There is no universal score that is 'good enough'. Expectations differ by department, subfield, and applicant background. A strong optional score may help when it supplies evidence not already obvious from the application. A weaker optional score need not always be submitted, but required-score programmes must receive it.
 
 ## Topics Covered
 
@@ -225,13 +225,13 @@ ETS currently lists the approximate topic weights as follows.
 - **Quantum Mechanics – 13%**
   Fundamental concepts, solutions of the Schrödinger equation, including square wells, oscillators, and hydrogenic atoms, spin, angular momentum, wave-function symmetry, and elementary perturbation theory.
 - **Atomic Physics – 10%**
-  Properties of electrons, the Bohr model, energy quantization, atomic structure, atomic spectra, selection rules, black-body radiation, x-rays, and atoms in electric and magnetic fields.
+  Properties of electrons, the Bohr model, energy quantisation, atomic structure, atomic spectra, selection rules, black-body radiation, x-rays, and atoms in electric and magnetic fields.
 - **Thermodynamics and Statistical Physics – 10%**
   Laws of thermodynamics, thermodynamic processes, equations of state, ideal gases, kinetic theory, ensembles, statistical concepts and calculation of thermodynamic quantities, thermal expansion, and heat transfer.
-- **Specialized Topics – 9%**
+- **Specialised Topics – 9%**
   Nuclear and particle physics, condensed-matter physics, mathematical methods, computer applications, and astrophysics.
 - **Optics and Wave Phenomena – 8%**
-  Wave properties, superposition, interference, diffraction, geometrical optics, polarization, and the Doppler effect.
+  Wave properties, superposition, interference, diffraction, geometrical optics, polarisation, and the Doppler effect.
 - **Special Relativity – 6%**
   Introductory concepts, time dilation, length contraction, simultaneity, energy and momentum, four-vectors and Lorentz transformations, and velocity addition.
 - **Laboratory Methods – 6%**
