@@ -126,7 +126,7 @@ Scores remain reportable for five years, and ScoreSelect allows students who ret
 
 ## Previous Exams
 
-Start with the [official ETS Physics Practice Book](https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html), which reflects the current test structure more closely than the older exams below.
+Start with the [official ETS Physics Practice Book](pdfs/practice-book-physics.pdf), which reflects the current test structure more closely than the older exams below. ETS also posts current test information on its [Physics GRE content and structure page](https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html).
 
 There are six additional past exams here. Most use the older 100-question format. Practise without a calculator or personal equation sheet, but remember that ETS supplies physical constants and a few unit conversions on the real test.
 
