@@ -126,9 +126,9 @@ Scores remain reportable for five years, and ScoreSelect allows students who ret
 
 ## Previous Exams
 
-Start with the [official ETS Physics Practice Book](pdfs/practice-book-physics.pdf), which reflects the current test structure more closely than the older exams below. ETS also posts current test information on its [Physics GRE content and structure page](https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html).
+Save the [official ETS Physics Practice Book](pdfs/practice-book-physics.pdf) for your final full practice test, since it reflects the current test structure more closely than the older exams below. ETS also posts current test information on its [Physics GRE content and structure page](https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html).
 
-There are six additional past exams here. Most use the older 100-question format. Practise without a calculator or personal equation sheet, but remember that ETS supplies physical constants and a few unit conversions on the real test.
+Use the older released exams for most of your preparation, working from oldest to newest. Most use the older 100-question format, but they are still valuable for breadth, pacing, and repeated exposure to standard problem types. Practise without a calculator or personal equation sheet, but remember that ETS supplies physical constants and a few unit conversions on the real test.
 
 - [1986 Physics GRE](pdfs/1986_exam.pdf)
 - [1992 Physics GRE](pdfs/1992_exam.pdf)
@@ -148,9 +148,9 @@ Some solutions can be found at [GREPhysics.NET: All-solutions list](https://grep
 
 ## Study Plan
 
-Begin with one older practice test as a diagnostic. Take it under timed conditions, mark it, and identify the topics and types of errors that cost you points. Then spend several weeks combining targeted revision with shorter mixed sets of questions.
+Begin with the oldest released exam as a diagnostic. Take it under timed conditions, mark it, and identify the topics and types of errors that cost you points. Then work forward through the older exams while combining targeted revision with shorter mixed sets of questions.
 
-Do not use every complete exam immediately. Keep at least one good practice test unseen for the final two weeks before the real test.
+Keep the current-format ETS practice book unseen until the final two weeks before the real test. Use it as your dress rehearsal after you have already built speed and coverage with the older exams.
 
 A useful weekly cycle is:
 
