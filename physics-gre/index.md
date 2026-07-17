@@ -175,6 +175,8 @@ Registration for the 2026–27 testing year opens in July 2026. Test-center avai
 
 The worldwide GRE Subject Test fee is currently $175. ETS states that it will increase to **$199 for registrations completed on or after August 1, 2026**. Additional score reports cost $40 per recipient. Eligible students can apply for the [GRE Fee Reduction Program](https://www.ets.org/gre/test-takers/subject-tests/register/fees.html).
 
+The test fee includes up to four free score reports to graduate institutions or fellowship sponsors, chosen during registration. For each free report, you can send your most recent Subject Test score or all reportable Subject Test scores from the last five years. Additional score reports can be ordered later for a fee.
+
 Scores remain reportable for five years, and ScoreSelect allows students who retake the test to choose which test dates to report. The score scale and current percentile data are explained below.
 
 ## Interpreting Your Score
