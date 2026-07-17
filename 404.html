@@ -293,6 +293,18 @@
   <!-- third party scripts -->
 <script src="/_scripts/vendor-tippy-bundle.umd.min.js"></script>
 <script src="/_scripts/vendor-mark.min.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+    },
+    svg: {
+      fontCache: "global"
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <!-- include all js in scripts folder -->
 
