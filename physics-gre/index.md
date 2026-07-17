@@ -21,13 +21,26 @@ This page collects information for students preparing for the Physics GRE: offic
   style="bare"
 %}
 
-## Current Test Format
+## Format and Practice Tests
 
 The Physics GRE is now a **computer-delivered, two-hour test with approximately 70 five-choice questions**. This gives you an average of about **1 minute 43 seconds per question**.
 
 The test does not provide an on-screen calculator, and personal calculators are not permitted unless approved as an accommodation. ETS does provide a short table of physical constants and conversion factors, so you should practise without a calculator or personal equation sheet.
 
 The released exams below mostly use the older **100-question format**. The time per question is roughly comparable to the current test, so the older exams are still useful for pacing. Do not simply take the first 70 questions as a current-format proxy: questions from different parts of the exam cover different material, and skipping the later questions would leave gaps in your practice.
+
+Save the [official ETS Physics Practice Book](pdfs/practice-book-physics.pdf) for your final full practice test, since it reflects the current test structure more closely than the older exams below. ETS also posts current test information on its [Physics GRE content and structure page](https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html).
+
+Use the older released exams for most of your preparation, working from oldest to newest. Most use the older 100-question format, but they are still valuable for breadth, pacing, and repeated exposure to standard problem types.
+
+- [1986 Physics GRE](pdfs/1986_exam.pdf)
+- [1992 Physics GRE](pdfs/1992_exam.pdf)
+- [1996 Physics GRE](pdfs/1996_exam.pdf)
+- [2001 Physics GRE](pdfs/2001_exam.pdf)
+- [2008 Physics GRE](pdfs/2008_exam.pdf)
+- [2017 Physics GRE](pdfs/2017_exam.pdf)
+
+Some solutions can be found at [GREPhysics.NET: All-solutions list](https://grephysics.net/ans/all-solutions_list.php).
 
 ## Do You Need to Take the GRE?
 
@@ -122,22 +135,7 @@ Registration for the 2026–27 testing year opens in July 2026. Test-center avai
 
 The worldwide GRE Subject Test fee is currently $175. ETS states that it will increase to **$199 for registrations completed on or after August 1, 2026**. Additional score reports cost $40 per recipient. Eligible students can apply for the [GRE Fee Reduction Program](https://www.ets.org/gre/test-takers/subject-tests/register/fees.html).
 
-Scores remain reportable for five years, and ScoreSelect allows students who retake the test to choose which test dates to report. The score scale, subscores, and current percentile data are explained below.
-
-## Previous Exams
-
-Save the [official ETS Physics Practice Book](pdfs/practice-book-physics.pdf) for your final full practice test, since it reflects the current test structure more closely than the older exams below. ETS also posts current test information on its [Physics GRE content and structure page](https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html).
-
-Use the older released exams for most of your preparation, working from oldest to newest. Most use the older 100-question format, but they are still valuable for breadth, pacing, and repeated exposure to standard problem types. Practise without a calculator or personal equation sheet, but remember that ETS supplies physical constants and a few unit conversions on the real test.
-
-- [1986 Physics GRE](pdfs/1986_exam.pdf)
-- [1992 Physics GRE](pdfs/1992_exam.pdf)
-- [1996 Physics GRE](pdfs/1996_exam.pdf)
-- [2001 Physics GRE](pdfs/2001_exam.pdf)
-- [2008 Physics GRE](pdfs/2008_exam.pdf)
-- [2017 Physics GRE](pdfs/2017_exam.pdf)
-
-Some solutions can be found at [GREPhysics.NET: All-solutions list](https://grephysics.net/ans/all-solutions_list.php).
+Scores remain reportable for five years, and ScoreSelect allows students who retake the test to choose which test dates to report. The score scale and current percentile data are explained below.
 
 ## Study Materials
 
@@ -209,29 +207,7 @@ The percentile rank tells you the percentage of recent Physics GRE test takers w
 
 The comparison group is self-selected: it consists of people who took the Physics GRE, rather than all physics students. A 50th-percentile Physics GRE score therefore does not mean average performance among all undergraduate physics majors.
 
-For tests taken since September 2023, ETS also reports percentage-correct subscores from 0 to 100 in **classical mechanics**, **electromagnetism**, and **quantum mechanics and atomic physics**. These subscores can reveal areas to revise, but graduate programs will usually focus more heavily on the total score and the rest of the application.
-
 There is no universal score that is “good enough.” Expectations differ by department, subfield, and applicant background. A strong optional score may help when it supplies evidence not already obvious from the application. A weaker optional score need not always be submitted, but required-score programs must receive it.
-
-When deciding whether to submit an optional score, consider:
-
-- Whether the department says that it recommends the test
-- Whether you are applying in theoretical physics
-- Whether your institution or grading system may be unfamiliar to the committee
-- Whether your transcript understates your current physics preparation
-- Whether your score adds positive information beyond your grades and recommendations
-
-## Test-Day Checklist
-
-Well before the test, confirm:
-
-- The identification documents ETS will accept
-- Your test time, location, and travel arrangements
-- Whether you need accommodations and whether they have been approved
-- The computer-delivered interface and navigation controls
-- The rules for scratch work and personal belongings
-
-The Physics GRE has no scheduled break. Sleep normally, eat beforehand, arrive early, and avoid making major changes to your routine immediately before the test.
 
 ## Topics Covered
 
