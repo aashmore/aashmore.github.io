@@ -51,7 +51,7 @@ Some solutions to the older exams can be found at [GREPhysics.NET: All-solutions
 
 ## Study Materials
 
-- [Conquering the Physics GRE](pdfs/textbook.pdf)
+- [Conquering the Physics GRE](pdfs/textbook.pdf) (includes three sample exams, slightly harder than the real test)
 - [How to ace the GRE and Physics GRE - Jaan Li](https://jaan.io/how-to-ace-the-gre-and-physics-gre/)
 - [Guide to Applying to US Science PhD Programmes and Fellowships - DJ Strouse](https://djstrouse.com/guide-to-applying-to-us-science-phd-programs-and-fellowships)
 - [APS video: Preparing for the Physics GRE](https://www.youtube.com/watch?v=fCSNKstJcUM)
