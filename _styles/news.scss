@@ -1,0 +1,28 @@
+---
+---
+
+.news-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0 24px;
+}
+
+.news-thumbnails a {
+  display: block;
+  width: min(180px, 31%);
+}
+
+.news-thumbnails img {
+  aspect-ratio: 3 / 2;
+  border-radius: var(--rounded);
+  box-shadow: var(--shadow);
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .news-thumbnails a {
+    width: min(160px, 48%);
+  }
+}

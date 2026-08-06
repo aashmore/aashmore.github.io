@@ -13,7 +13,24 @@ If you're interested in working with us, get in touch!
 
 #### July
 
+The lab took a break from summer research for an ice cream outing to Dairy Haus.
+
+<div class="news-thumbnails">
+  <a href="images/2026_dairy_haus_lab_outing.jpg">
+    <img src="images/2026_dairy_haus_lab_outing_thumb.jpg" alt="Lab members at Dairy Haus during summer research">
+  </a>
+</div>
+
 Adam Blyberg, Marta Insolia, Lucia Curran-Lane, Michael Gyampo, and Finlay Savoir presented their summer research posters at the Skidmore Faculty Student Summer Research Program. Adam and Marta presented [Phases of quantum D(N) theories via neural quantum states](talks/pdfs/2026_blyberg_insolia_dn_theories_poster.pdf), and Lucia, Michael, and Finlay presented [Phases of lattice gauge theories via neural networks](talks/pdfs/2026_curran_lane_gyampo_savoir_lattice_gauge_theories_poster.pdf).
+
+<div class="news-thumbnails">
+  <a href="images/2026_fssrp_blyberg_insolia_poster_presentation.jpg">
+    <img src="images/2026_fssrp_blyberg_insolia_poster_presentation_thumb.jpg" alt="Adam Blyberg and Marta Insolia presenting their summer research poster">
+  </a>
+  <a href="images/2026_fssrp_curran_lane_gyampo_savoir_poster_presentation.jpg">
+    <img src="images/2026_fssrp_curran_lane_gyampo_savoir_poster_presentation_thumb.jpg" alt="Lucia Curran-Lane, Michael Gyampo, and Finlay Savoir presenting their summer research poster">
+  </a>
+</div>
 
 #### June
 
