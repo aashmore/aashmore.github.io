@@ -11,6 +11,10 @@ If you're interested in working with us, get in touch!
 
 ## 2026
 
+#### July
+
+Adam Blyberg, Marta Insolia, Lucia Curran-Lane, Michael Gyampo, and Finlay Savoir presented their summer research posters at the Skidmore Faculty Student Summer Research Program. Adam and Marta presented [Phases of quantum D(N) theories via neural quantum states](talks/pdfs/2026_blyberg_insolia_dn_theories_poster.pdf), and Lucia, Michael, and Finlay presented [Phases of lattice gauge theories via neural networks](talks/pdfs/2026_curran_lane_gyampo_savoir_lattice_gauge_theories_poster.pdf).
+
 #### June
 
 Rebecca Merber presented her research, [Do neural quantum states exhibit double descent?](talks/pdfs/2026_merber_double_descent_poster.pdf), at the Skidmore end-of-year Academic Festival.

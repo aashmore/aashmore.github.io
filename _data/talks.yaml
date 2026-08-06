@@ -1,5 +1,15 @@
 - year: 2026
   talks:
+    - title: Phases of quantum D(N) theories via neural quantum states
+      venue: Faculty Student Summer Research Program
+      location: Skidmore College, USA
+      author: "Adam Blyberg and Marta Insolia"
+      poster: "pdfs/2026_blyberg_insolia_dn_theories_poster.pdf"
+    - title: Phases of lattice gauge theories via neural networks
+      venue: Faculty Student Summer Research Program
+      location: Skidmore College, USA
+      author: "Lucia Curran-Lane, Michael Gyampo, and Finlay Savoir"
+      poster: "pdfs/2026_curran_lane_gyampo_savoir_lattice_gauge_theories_poster.pdf"
     - title: Do neural quantum states exhibit double descent?
       venue: Academic Festival
       location: Skidmore College, USA
