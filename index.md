@@ -27,8 +27,14 @@ Adam Blyberg, Marta Insolia, Lucia Curran-Lane, Michael Gyampo, and Finlay Savoi
   <a href="images/2026_fssrp_blyberg_insolia_poster_presentation.jpg">
     <img src="images/2026_fssrp_blyberg_insolia_poster_presentation_thumb.jpg" alt="Adam Blyberg and Marta Insolia presenting their summer research poster">
   </a>
+  <a href="images/2026_fssrp_blyberg_insolia_poster_action.jpg">
+    <img src="images/2026_fssrp_blyberg_insolia_poster_action_thumb.jpg" alt="Marta Insolia presenting the D(N) theories poster">
+  </a>
   <a href="images/2026_fssrp_curran_lane_gyampo_savoir_poster_presentation.jpg">
     <img src="images/2026_fssrp_curran_lane_gyampo_savoir_poster_presentation_thumb.jpg" alt="Lucia Curran-Lane, Michael Gyampo, and Finlay Savoir presenting their summer research poster">
+  </a>
+  <a href="images/2026_fssrp_curran_lane_gyampo_savoir_poster_action.jpg">
+    <img src="images/2026_fssrp_curran_lane_gyampo_savoir_poster_action_thumb.jpg" alt="Finlay Savoir and Michael Gyampo with the lattice gauge theories poster">
   </a>
 </div>
 
