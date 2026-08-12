@@ -7,7 +7,7 @@
 
 .news-thumbnails a {
   display: block;
-  width: min(180px, 31%);
+  width: min(180px, 23%);
 }
 
 .news-thumbnails img {
