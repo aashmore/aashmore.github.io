@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>One fall, two system choices</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    color-scheme: light;
+    --bg: #e6ebf0;
+    --panel: #ffffff;
+    --ink: #0f1720;
+    --muted: #46535f;
+    --line: #c5ced6;
+    --track: #e3e8ed;
+    --ke: #d97706;
+    --spring: #0f7f73;
+    --grav: #6340c4;
+    --mass: #2a3850;
+    --mass-text: #f4f7fa;
+    --accent: #0f7f73;
+    --btn-bg: #0f1720;
+    --btn-ink: #ffffff;
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0b1015;
+    --panel: #141b22;
+    --ink: #f1f5f9;
+    --muted: #a9b6c2;
+    --line: #2b3641;
+    --track: #212b34;
+    --ke: #f5a43d;
+    --spring: #3fc9b8;
+    --grav: #a98ff5;
+    --mass: #a9bbd6;
+    --mass-text: #0b1015;
+    --accent: #3fc9b8;
+    --btn-bg: #f1f5f9;
+    --btn-ink: #0b1015;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 18px 14px 28px; }
+
+  /* header */
+  .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 16px; margin-bottom: 12px; }
+  h1 { font-size: 22px; line-height: 1.15; margin: 0 0 4px; font-weight: 650; letter-spacing: -0.01em; }
+  .facts { margin: 0; color: var(--muted); font-size: 13.5px; font-variant-numeric: tabular-nums; }
+  .side { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .readout { display: flex; align-items: baseline; gap: 10px; }
+  .readout .lbl { color: var(--muted); font-size: 13.5px; }
+  .readout .val { font-size: 24px; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+  .toolbar { display: flex; gap: 8px; }
+  button.ghost { font-weight: 500; color: var(--muted); padding: 6px 12px; min-height: 34px; font-size: 13px; }
+
+  /* panels */
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px; margin-bottom: 12px; }
+  .panel.graph { padding: 12px 10px 8px; }
+  .wrap { position: relative; width: 100%; }
+  .wrap canvas { position: absolute; left: 0; top: 0; display: block; }
+  .wrap.stage { height: 350px; }
+  .wrap.gwrap { height: 200px; }
+  h2 { font-size: 14px; margin: 0; font-weight: 600; }
+  .ghead { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 14px; margin-bottom: 4px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .legend i.line { height: 3px; width: 14px; }
+
+  /* controls */
+  .controls { display: grid; gap: 12px 22px; grid-template-columns: 1fr; padding: 14px 14px 12px; }
+  @media (min-width: 620px) { .controls { grid-template-columns: 1fr 1fr; } .btns { grid-column: 1 / -1; } }
+  .ctl { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 2px 8px; }
+  .ctl label { font-size: 13.5px; font-weight: 500; }
+  .ctl output { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .ctl input[type=range] { grid-column: 1 / -1; width: 100%; margin: 4px 0 0; accent-color: var(--accent); height: 28px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  button {
+    font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+    border: 1px solid var(--line); background: transparent; color: var(--ink);
+    border-radius: 8px; padding: 9px 16px; min-height: 40px;
+  }
+  button.primary { background: var(--btn-bg); color: var(--btn-ink); border-color: var(--btn-bg); min-width: 90px; }
+  button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .seg button { border: 0; border-radius: 0; padding: 9px 12px; font-weight: 500; color: var(--muted); }
+  .seg button + button { border-left: 1px solid var(--line); }
+  .seg button[aria-pressed="true"] { background: var(--track); color: var(--ink); font-weight: 600; }
+  .note { font-size: 12.5px; color: var(--muted); margin: 4px 2px 0; max-width: 62ch; }
+  .keys { display: none; }
+
+  /* hide controls (clean projection) */
+  .reveal { display: none; position: fixed; right: 14px; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); opacity: 0.4; min-height: 34px; padding: 6px 12px; font-size: 13px; background: var(--panel); }
+  .reveal:hover, .reveal:focus-visible { opacity: 1; }
+  body.clean .controls, body.clean .toolbar, body.clean .note, body.clean .keys { display: none; }
+  body.clean .reveal { display: block; }
+
+  /* ---- projector / desktop layout: fill the viewport, no scrolling ---- */
+  @media (min-width: 900px) and (min-height: 520px) {
+    body { font-size: clamp(15px, 1.05vw, 20px); overflow: hidden; }
+    main {
+      max-width: none; margin: 0;
+      height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+      padding: clamp(12px, 1.8vh, 26px) clamp(16px, 2vw, 40px);
+      display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; gap: clamp(10px, 1.6vh, 20px);
+    }
+    .head { margin: 0; flex-wrap: nowrap; }
+    h1 { font-size: clamp(22px, 2.3vw, 46px); margin-bottom: 6px; }
+    .facts { font-size: clamp(14px, 1.05vw, 20px); }
+    .side { gap: clamp(14px, 1.6vw, 30px); flex-wrap: nowrap; }
+    .readout { gap: 12px; }
+    .readout .lbl { font-size: clamp(14px, 1.1vw, 21px); }
+    .readout .val { font-size: clamp(28px, 2.7vw, 56px); }
+    button.ghost { font-size: clamp(13px, 0.95vw, 18px); min-height: clamp(34px, 2.8vw, 48px); padding: 6px clamp(12px, 1vw, 20px); }
+    .grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(10px, 1.4vw, 24px); min-height: 0; }
+    .panel { margin: 0; display: flex; flex-direction: column; min-height: 0; padding: clamp(10px, 1vw, 18px); border-radius: 12px; }
+    .wrap, .wrap.stage, .wrap.gwrap { flex: 1; min-height: 0; height: auto; }
+    h2 { font-size: clamp(16px, 1.3vw, 26px); }
+    .legend { font-size: clamp(13px, 1vw, 19px); gap: 4px clamp(12px, 1.2vw, 24px); }
+    .legend i { width: 1.1em; height: 1.1em; }
+    .legend i.line { height: 0.28em; width: 1.5em; }
+    .controls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: end; padding: clamp(10px, 1.2vh, 18px) clamp(14px, 1.4vw, 26px); gap: 10px clamp(16px, 1.8vw, 36px); }
+    .btns { grid-column: 1 / -1; gap: clamp(8px, 0.8vw, 14px); }
+    .ctl label, .ctl output { font-size: clamp(13.5px, 1vw, 19px); }
+    .ctl input[type=range] { height: clamp(26px, 2.2vw, 40px); }
+    button { font-size: clamp(14px, 1vw, 19px); min-height: clamp(40px, 3.2vw, 56px); padding: 6px clamp(14px, 1.3vw, 26px); }
+    .seg button { padding: 6px clamp(10px, 1vw, 20px); }
+    .note { display: none; }
+    .keys { display: block; margin: 0 2px; font-size: clamp(12px, 0.85vw, 16px); color: var(--muted); }
+    body.clean .keys { display: none; }
+    body.clean main { grid-template-rows: auto minmax(0, 1fr); padding-bottom: calc(clamp(12px, 1.8vh, 26px) + 44px); }
+  }
+  @media (min-width: 1280px) and (min-height: 520px) {
+    .controls { grid-template-columns: auto repeat(4, minmax(0, 1fr)); }
+    .btns { grid-column: auto; flex-wrap: nowrap; }
+  }
+
+  .wrap.stage { height: 430px; }
+  .system-picker { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .system-picker .picker-label { font-size: 13px; color: var(--muted); }
+  .system-picker button { font-size: 14px; min-height: 38px; }
+  .system-picker button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  :root[data-theme="dark"] .system-picker button[aria-pressed="true"] { color: var(--bg); }
+  .explanation { margin: 8px 0 0; font-size: 14px; line-height: 1.35; min-height: 2.7em; }
+  .model { margin: 7px 0 0; font-size: 12px; color: var(--muted); }
+  .motion-stats { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 10px; font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .motion-stats strong { color: var(--ink); font-weight: 600; white-space: nowrap; }
+  .accounts { display: grid; grid-template-rows: 1fr 1fr; gap: 12px; }
+  .account { border: 1px solid var(--line); border-radius: 9px; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; }
+  .account.selected { border-color: var(--accent); box-shadow: inset 3px 0 var(--accent); }
+  .account-title { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .account-title h3 { font-size: 17px; font-weight: 650; margin: 0; }
+  .tag { font-size: 12px; color: var(--muted); }
+  .quantity { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; }
+  .quantity strong, .energy-values strong { font-weight: 600; white-space: nowrap; }
+  .energy-values { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 3px 12px; font-size: 14px; }
+  .kinetic { color: var(--ke); }
+  .gravitational { color: var(--grav); }
+  .stored-bar { display: flex; height: 20px; min-height: 20px; overflow: hidden; border-radius: 6px; background: var(--track); }
+  .stored-bar .kinetic-fill { background: var(--ke); }
+  .stored-bar .gravity-fill { background: var(--grav); }
+  .equation { font-size: 20px; font-weight: 600; margin: 0; }
+  .equation sub { font-size: .65em; }
+  .account-note { margin: 0; font-size: 13px; line-height: 1.3; color: var(--muted); }
+  .readout .val { font-size: 24px; white-space: nowrap; }
+  @media (min-width: 900px) and (min-height: 520px) {
+    .wrap.stage { height: auto; }
+    .accounts { flex: 1; min-height: 0; grid-template-rows: minmax(0,1fr) minmax(0,1fr); }
+    .account { min-height: 0; padding: clamp(10px, 1vw, 18px); gap: 6px; }
+    .account-title h3 { font-size: clamp(17px, 1.3vw, 25px); }
+    .quantity, .energy-values, .explanation { font-size: clamp(14px, 1.05vw, 20px); }
+    .account-note, .model, .tag { font-size: clamp(12px, .95vw, 18px); }
+    .motion-stats, .system-picker .picker-label { font-size: clamp(13px, 1vw, 19px); }
+    .system-picker button { font-size: clamp(14px, 1vw, 19px); }
+    .equation { font-size: clamp(20px, 1.6vw, 30px); }
+    .readout .val { font-size: clamp(24px, 1.8vw, 36px); }
+    .controls { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  }
+  @media (min-width: 1280px) and (min-height: 520px) {
+    .controls { grid-template-columns: auto repeat(3, minmax(0,1fr)); }
+  }
+  @media (min-width: 900px) and (min-height: 520px) and (max-height: 650px) {
+    .account { padding: 8px; gap: 4px; }
+    .account-note { display: none; }
+    .equation { font-size: 18px; }
+    .stored-bar { height: 16px; min-height: 16px; }
+    .explanation { font-size: 13px; }
+    .model { font-size: 11px; }
+    .system-picker .picker-label { display: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="head">
+    <div class="title">
+      <h1>One fall, two system choices</h1>
+      <p class="facts">Changing the system changes the energy account, not the fall.</p>
+    </div>
+    <div class="side">
+      <div class="readout"><span class="lbl">System</span><span class="val" id="systemName">Ball only</span></div>
+      <div class="toolbar">
+        <button type="button" class="ghost" id="theme">Dark mode</button>
+        <button type="button" class="ghost" id="hide">Hide controls</button>
+      </div>
+    </div>
+  </header>
+  <div class="grid">
+    <section class="panel" aria-label="The same falling ball with a selected system boundary">
+      <div class="system-picker">
+        <span class="picker-label">Choose the system</span>
+        <div class="seg" role="group" aria-label="System choice; switching pauses the fall">
+          <button type="button" data-system="ball" aria-pressed="true">Ball only</button>
+          <button type="button" data-system="combined" aria-pressed="false">Ball + Earth</button>
+        </div>
+      </div>
+      <div class="wrap stage" id="stageWrap">
+        <canvas id="stage" role="img" aria-label="A falling ball and Earth. A dashed teal boundary selects the ball alone or the ball and Earth together. The gravitational interaction is unchanged."></canvas>
+      </div>
+      <div class="motion-stats">
+        <span>Height <strong id="height">5.00 m</strong></span>
+        <span>Speed <strong id="velocity">0.00 m/s</strong></span>
+        <span id="phase">Ready to release</span>
+      </div>
+      <p class="explanation" id="explanation">Gravity is external to the ball. Its work increases the ball’s kinetic energy.</p>
+      <p class="model">No drag · uniform g · Earth’s motion neglected</p>
+    </section>
+    <section class="panel graph" aria-label="Two simultaneous energy accounts for the same fall">
+      <div class="ghead">
+        <h2>Energy accounts at the same instant</h2>
+        <div class="legend">
+          <span><i style="background:var(--ke)"></i>Kinetic</span>
+          <span><i style="background:var(--grav)"></i>Gravitational</span>
+        </div>
+      </div>
+      <div class="accounts">
+        <section class="account selected" id="ballAccount" aria-label="Ball-only energy account">
+          <div class="account-title"><h3>Ball only</h3><span class="tag">Gravity is external</span></div>
+          <div class="quantity"><span>Work entering: W<sub>gravity</sub></span><strong class="gravitational" id="workBall">+0.0 J</strong></div>
+          <div class="quantity"><span>Kinetic energy: K<sub>ball</sub></span><strong class="kinetic" id="kineticBall">0.0 J</strong></div>
+          <div class="stored-bar" role="img" id="ballBar" aria-label="Kinetic energy of the ball"><div class="kinetic-fill" id="ballKFill"></div></div>
+          <p class="equation">ΔK<sub>ball</sub> = W<sub>gravity</sub></p>
+          <p class="account-note">The ball’s energy increases by the work entering.</p>
+        </section>
+        <section class="account" id="combinedAccount" aria-label="Ball-plus-Earth energy account">
+          <div class="account-title"><h3>Ball + Earth</h3><span class="tag">Gravity is internal</span></div>
+          <div class="quantity"><span>External work: W<sub>ext</sub></span><strong>0.0 J</strong></div>
+          <div class="energy-values">
+            <span class="kinetic">K <strong id="kineticCombined">0.0 J</strong></span>
+            <span class="gravitational">U<sub>g</sub> <strong id="potentialCombined">49.0 J</strong></span>
+            <span>Total <strong id="totalCombined">49.0 J</strong></span>
+          </div>
+          <div class="stored-bar" role="img" id="combinedBar" aria-label="Conserved total energy as kinetic plus gravitational potential energy"><div class="kinetic-fill" id="combinedKFill"></div><div class="gravity-fill" id="combinedUFill"></div></div>
+          <p class="equation">ΔK + ΔU<sub>g</sub> = 0</p>
+          <p class="account-note">Gravitational energy belongs to the Earth–ball interaction.</p>
+        </section>
+      </div>
+    </section>
+  </div>
+  <section class="panel controls" id="controls" aria-label="Playback and physical parameters">
+    <div class="btns">
+      <button type="button" class="primary" id="play">Release</button>
+      <button type="button" id="reset">Restart</button>
+      <div class="seg" role="group" aria-label="Playback speed">
+        <button type="button" data-speed="0.25" aria-pressed="true">0.25×</button>
+        <button type="button" data-speed="0.5" aria-pressed="false">0.5×</button>
+        <button type="button" data-speed="1" aria-pressed="false">1×</button>
+      </div>
+    </div>
+    <div class="ctl"><label for="m">Mass</label><output id="mOut" for="m"></output>
+      <input type="range" id="m" min="0.5" max="3" step="0.1" value="1"></div>
+    <div class="ctl"><label for="H">Drop height</label><output id="HOut" for="H"></output>
+      <input type="range" id="H" min="1" max="10" step="0.5" value="5"></div>
+    <div class="ctl"><label for="progress">Fall progress</label><output id="progressOut" for="progress">0%</output>
+      <input type="range" id="progress" min="0" max="100" step="0.1" value="0" aria-label="Fraction of the drop distance; dragging pauses playback"></div>
+  </section>
+  <p class="note">The ball is released from rest. Switching systems pauses at the current instant without resetting the fall. The kinetic-energy values are the same in both accounts. The larger system includes gravitational potential energy, with its zero at the bottom of the fall. Earth’s kinetic energy is neglected. The animation ends just before contact; it does not model an impact.</p>
+  <p class="keys">Space release/pause/play · R restart · H hide controls · T light/dark · F11 full screen · Switch systems to pause and compare.</p>
+  <button type="button" class="reveal" id="reveal">Show controls</button>
+</main>
+<script>
+(() => {
+  'use strict';
+  const g=9.8, P={m:1,H:5,speed:.25};
+  const $=id=>document.getElementById(id),root=document.documentElement;
+  let elapsed=0,running=false,system='ball',last=performance.now(),S,C={};
+  const duration=()=>Math.sqrt(2*P.H/g);
+  // One trajectory supplies both energy accounts. Changing the system never
+  // changes the trajectory or its current physical state. Earth's recoil and
+  // kinetic energy are neglected in the near-Earth, uniform-g model.
+  function stateAt(time) {
+    const end=duration(),t=Math.max(0,Math.min(end,time));
+    const drop=t>=end?P.H:Math.min(P.H,.5*g*t*t);
+    const y=P.H-drop,velocity=g*t,E0=P.m*g*P.H;
+    const work=P.m*g*drop,K=.5*P.m*velocity*velocity,Ug=P.m*g*y;
+    return {t,drop,y,velocity,E0,work,K,Ug,total:K+Ug,progress:drop/P.H,
+      phase:t===0?'Ready to release':t>=end?'Just before impact':'Falling'};
+  }
+  function readColors() {
+    const cs=getComputedStyle(root);
+    ['ink','muted','line','track','mass','mass-text','accent','ke','grav'].forEach(key=>C[key]=cs.getPropertyValue('--'+key).trim());
+    $('theme').textContent=root.dataset.theme==='dark'?'Light mode':'Dark mode';
+  }
+  new MutationObserver(readColors).observe(root,{attributes:true,attributeFilter:['data-theme']});
+  function resize() {
+    const wrap=$('stageWrap'),canvas=$('stage'),w=wrap.clientWidth,h=wrap.clientHeight;
+    if(w<10||h<10){S=null;return;}
+    const dpr=Math.min(devicePixelRatio||1,3);
+    canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);
+    canvas.style.width=w+'px';canvas.style.height=h+'px';
+    const c=canvas.getContext('2d');c.setTransform(dpr,0,0,dpr,0,0);S={c,w,h};
+  }
+  new ResizeObserver(resize).observe($('stageWrap'));
+  const scale=()=>Math.max(innerWidth>=900?1.15:1,Math.min(2.2,innerWidth/1000,innerHeight/620));
+  function text(c,value,x,y,size,colour=C.ink,weight=500,align='left') {
+    c.fillStyle=colour;c.font=weight+' '+size.toFixed(1)+'px "Instrument Sans", system-ui, sans-serif';
+    c.textAlign=align;c.textBaseline='alphabetic';c.fillText(value,x,y);
+  }
+  function line(c,x0,y0,x1,y1,colour,width=1,dashed=false) {
+    c.strokeStyle=colour;c.lineWidth=width;c.setLineDash(dashed?[5,5]:[]);
+    c.beginPath();c.moveTo(x0,y0);c.lineTo(x1,y1);c.stroke();c.setLineDash([]);
+  }
+  function arrow(c,x0,y0,x1,y1,colour,u) {
+    const a=Math.atan2(y1-y0,x1-x0),len=7*u;
+    line(c,x0,y0,x1,y1,colour,2.5*u);
+    c.fillStyle=colour;c.beginPath();c.moveTo(x1,y1);
+    c.lineTo(x1-len*Math.cos(a-.45),y1-len*Math.sin(a-.45));
+    c.lineTo(x1-len*Math.cos(a+.45),y1-len*Math.sin(a+.45));c.closePath();c.fill();
+  }
+  function drawStage(s) {
+    const {c,w,h}=S,u=scale();c.clearRect(0,0,w,h);
+    const sceneH=Math.max(60,h-20*u);
+    const x=w*.49,earthR=Math.min(42*u,sceneH*.105),r=Math.min(18*u,sceneH*.047);
+    // Leave a schematic gap before contact, so the ball-only boundary never
+    // crosses Earth. y=0 is the reference height at the bottom of this fall.
+    const top=sceneH*.15,ground=sceneH*.72,bottom=ground-r-20*u,earthY=ground+earthR;
+    const y=top+s.progress*(bottom-top),fLen=Math.min(40*u,sceneH*.14);
+    // Teal selects the system; purple is reserved for gravitation.
+    c.strokeStyle=C.accent;c.lineWidth=2*u;c.setLineDash([7*u,5*u]);
+    c.beginPath();
+    if(system==='ball')c.roundRect(x-r-12*u,y-r-12*u,2*r+24*u,2*r+24*u,10*u);
+    else c.roundRect(w*.17,6*u,w*.77,earthY+earthR+7*u-6*u,12*u);
+    c.stroke();c.setLineDash([]);
+    text(c,'System boundary',w-12*u,18*u,12*u,C.accent,600,'right');
+    arrow(c,25*u,bottom,25*u,top,C.muted,u);
+    text(c,'+y',25*u,top-10*u,12*u,C.muted,600,'center');
+    text(c,P.H.toFixed(1)+' m',40*u,top+4*u,12*u,C.muted);
+    text(c,'0 m',40*u,bottom+4*u,12*u,C.muted);
+    line(c,x-40*u,top,x+42*u,top,C.line,u,true);
+    line(c,x-40*u,bottom,x+42*u,bottom,C.line,u,true);
+    // Trail marks are evenly spaced in time, so their increasing separation
+    // reveals acceleration without adding a separate motion graph.
+    for(let i=1;i<=8;i++){
+      const q=i/9;if(q*q>=s.progress)break;
+      c.fillStyle=C.line;c.beginPath();c.arc(x,top+q*q*(bottom-top),2*u,0,2*Math.PI);c.fill();
+    }
+    c.fillStyle=C.mass;c.beginPath();c.arc(x,earthY,earthR,0,2*Math.PI);c.fill();
+    text(c,'Earth',x,earthY+4*u,Math.min(12*u,earthR*.6),C['mass-text'],600,'center');
+    c.fillStyle=C.mass;c.beginPath();c.arc(x,y,r,0,2*Math.PI);c.fill();
+    text(c,r>=11*u?P.m.toFixed(1):'m',x,y+3*u,Math.min(10.5*u,r*1.35),C['mass-text'],600,'center');
+    // The force pair stays visible in both views; system choice only
+    // changes whether the gravitational interaction is internal or external.
+    const ballForceX=w*.68,earthForceX=w*.32;
+    arrow(c,ballForceX,y-fLen*.25,ballForceX,y+fLen*.75,C.grav,u);
+    text(c,'On ball',ballForceX+10*u,y,12*u,C.grav,600);
+    text(c,'F = mg',ballForceX+10*u,y+17*u,11.5*u,C.grav);
+    arrow(c,earthForceX,earthY+fLen*.2,earthForceX,earthY-fLen*.8,C.grav,u);
+    text(c,'On Earth',earthForceX-10*u,earthY-fLen*.2,12*u,C.grav,600,'right');
+    if(s.velocity>1e-7){
+      const motionX=x-r-22*u,vLen=Math.min(30*u,h*.1)*s.velocity/Math.sqrt(2*g*P.H);
+      arrow(c,motionX,y-vLen*.3,motionX,y+vLen*.7,C.ke,u);
+      text(c,'v',motionX-8*u,y+4*u,12*u,C.ke,600,'right');
+    }
+    text(c,'Earth and ball shown schematically',w/2,h-4*u,11*u,C.muted,500,'center');
+  }
+  const joules=value=>(Math.abs(value)<.0005?0:value).toFixed(1)+' J';
+  function setRunning(on) {
+    running=on;last=performance.now();
+    $('play').textContent=on?'Pause':elapsed>=duration()?'Replay':elapsed===0?'Release':'Play';
+  }
+  function chooseSystem(value) {
+    system=value;setRunning(false);
+    document.querySelectorAll('[data-system]').forEach(btn=>btn.setAttribute('aria-pressed',btn.dataset.system===system?'true':'false'));
+    $('ballAccount').classList.toggle('selected',system==='ball');
+    $('combinedAccount').classList.toggle('selected',system==='combined');
+    $('systemName').textContent=system==='ball'?'Ball only':'Ball + Earth';
+    $('explanation').textContent=system==='ball'
+      ?'Gravity is external to the ball. Its work increases the ball’s kinetic energy.'
+      :'Gravity is internal to ball + Earth. Gravitational potential energy becomes kinetic energy within the system.';
+    render();
+  }
+  function reset() {elapsed=0;setRunning(false);render();}
+  function play() {if(elapsed>=duration())elapsed=0;setRunning(!running);}
+  function clean(on) {document.body.classList.toggle('clean',on);}
+  function theme() {root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';}
+  function render() {
+    const s=stateAt(elapsed);
+    $('height').textContent=s.y.toFixed(2)+' m';$('velocity').textContent=s.velocity.toFixed(2)+' m/s';$('phase').textContent=s.phase;
+    $('workBall').textContent='+'+joules(s.work);$('kineticBall').textContent=joules(s.K);
+    $('kineticCombined').textContent=joules(s.K);$('potentialCombined').textContent=joules(s.Ug);$('totalCombined').textContent=joules(s.total);
+    $('ballKFill').style.width=100*s.progress+'%';
+    $('combinedKFill').style.width=100*s.progress+'%';$('combinedUFill').style.width=100*(1-s.progress)+'%';
+    $('ballBar').setAttribute('aria-label','Ball kinetic energy '+joules(s.K));
+    $('combinedBar').setAttribute('aria-label','Kinetic energy '+joules(s.K)+', gravitational energy '+joules(s.Ug)+', total '+joules(s.total));
+    $('progress').value=s.progress*100;$('progressOut').textContent=Math.round(100*s.progress)+'%';
+    if(S)drawStage(s);
+  }
+  function frame(now) {
+    const dt=Math.min(.05,Math.max(0,(now-last)/1000));last=now;
+    if(running){elapsed=Math.min(duration(),elapsed+dt*P.speed);if(elapsed>=duration())setRunning(false);}
+    render();requestAnimationFrame(frame);
+  }
+  ['m','H'].forEach(id=>{
+    const update=()=>{P[id]=+$(id).value;$(id+'Out').textContent=P[id].toFixed(1)+(id==='m'?' kg':' m');};
+    update();$(id).addEventListener('input',()=>{update();reset();});
+  });
+  $('progress').addEventListener('input',()=>{elapsed=duration()*Math.sqrt(+$('progress').value/100);setRunning(false);render();});
+  document.querySelectorAll('[data-system]').forEach(btn=>btn.addEventListener('click',()=>chooseSystem(btn.dataset.system)));
+  document.querySelectorAll('[data-speed]').forEach(btn=>btn.addEventListener('click',()=>{
+    P.speed=+btn.dataset.speed;document.querySelectorAll('[data-speed]').forEach(b=>b.setAttribute('aria-pressed',b===btn?'true':'false'));
+  }));
+  $('play').addEventListener('click',play);$('reset').addEventListener('click',reset);
+  $('theme').addEventListener('click',theme);$('hide').addEventListener('click',()=>clean(true));$('reveal').addEventListener('click',()=>clean(false));
+  document.addEventListener('keydown',e=>{
+    if(e.ctrlKey||e.metaKey||e.altKey||e.target?.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName||''))return;
+    const key=e.key.toLowerCase();if(e.key===' '&&e.target?.tagName!=='BUTTON'){e.preventDefault();play();}
+    else if(key==='r')reset();else if(key==='h')clean(!document.body.classList.contains('clean'));else if(key==='t')theme();
+  });
+  document.addEventListener('visibilitychange',()=>{last=performance.now();});
+  readColors();resize();reset();requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

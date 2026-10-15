@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mass on a spring: where the energy goes</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    color-scheme: light;
+    --bg: #e6ebf0;
+    --panel: #ffffff;
+    --ink: #0f1720;
+    --muted: #46535f;
+    --line: #c5ced6;
+    --track: #e3e8ed;
+    --ke: #d97706;
+    --spring: #0f7f73;
+    --grav: #6340c4;
+    --mass: #2a3850;
+    --mass-text: #f4f7fa;
+    --accent: #0f7f73;
+    --btn-bg: #0f1720;
+    --btn-ink: #ffffff;
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0b1015;
+    --panel: #141b22;
+    --ink: #f1f5f9;
+    --muted: #a9b6c2;
+    --line: #2b3641;
+    --track: #212b34;
+    --ke: #f5a43d;
+    --spring: #3fc9b8;
+    --grav: #a98ff5;
+    --mass: #a9bbd6;
+    --mass-text: #0b1015;
+    --accent: #3fc9b8;
+    --btn-bg: #f1f5f9;
+    --btn-ink: #0b1015;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 18px 14px 28px; }
+
+  /* header */
+  .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 16px; margin-bottom: 12px; }
+  h1 { font-size: 22px; line-height: 1.15; margin: 0 0 4px; font-weight: 650; letter-spacing: -0.01em; }
+  .facts { margin: 0; color: var(--muted); font-size: 13.5px; font-variant-numeric: tabular-nums; }
+  .side { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .readout { display: flex; align-items: baseline; gap: 10px; }
+  .readout .lbl { color: var(--muted); font-size: 13.5px; }
+  .readout .val { font-size: 24px; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+  .toolbar { display: flex; gap: 8px; }
+  button.ghost { font-weight: 500; color: var(--muted); padding: 6px 12px; min-height: 34px; font-size: 13px; }
+
+  /* panels */
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px; margin-bottom: 12px; }
+  .panel.graph { padding: 12px 10px 8px; }
+  .wrap { position: relative; width: 100%; }
+  .wrap canvas { position: absolute; left: 0; top: 0; display: block; }
+  .wrap.stage { height: 350px; }
+  .wrap.gwrap { height: 200px; }
+  h2 { font-size: 14px; margin: 0; font-weight: 600; }
+  .ghead { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 14px; margin-bottom: 4px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .legend i.line { height: 3px; width: 14px; }
+
+  /* controls */
+  .controls { display: grid; gap: 12px 22px; grid-template-columns: 1fr; padding: 14px 14px 12px; }
+  @media (min-width: 620px) { .controls { grid-template-columns: 1fr 1fr; } .btns { grid-column: 1 / -1; } }
+  .ctl { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 2px 8px; }
+  .ctl label { font-size: 13.5px; font-weight: 500; }
+  .ctl output { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .ctl input[type=range] { grid-column: 1 / -1; width: 100%; margin: 4px 0 0; accent-color: var(--accent); height: 28px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  button {
+    font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+    border: 1px solid var(--line); background: transparent; color: var(--ink);
+    border-radius: 8px; padding: 9px 16px; min-height: 40px;
+  }
+  button.primary { background: var(--btn-bg); color: var(--btn-ink); border-color: var(--btn-bg); min-width: 90px; }
+  button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .seg button { border: 0; border-radius: 0; padding: 9px 12px; font-weight: 500; color: var(--muted); }
+  .seg button + button { border-left: 1px solid var(--line); }
+  .seg button[aria-pressed="true"] { background: var(--track); color: var(--ink); font-weight: 600; }
+  .note { font-size: 12.5px; color: var(--muted); margin: 4px 2px 0; max-width: 62ch; }
+  .keys { display: none; }
+
+  /* hide controls (clean projection) */
+  .reveal { display: none; position: fixed; right: 14px; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); opacity: 0.4; min-height: 34px; padding: 6px 12px; font-size: 13px; background: var(--panel); }
+  .reveal:hover, .reveal:focus-visible { opacity: 1; }
+  body.clean .controls, body.clean .toolbar, body.clean .note, body.clean .keys { display: none; }
+  body.clean .reveal { display: block; }
+
+  /* ---- projector / desktop layout: fill the viewport, no scrolling ---- */
+  @media (min-width: 900px) and (min-height: 520px) {
+    body { font-size: clamp(15px, 1.05vw, 20px); overflow: hidden; }
+    main {
+      max-width: none; margin: 0;
+      height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+      padding: clamp(12px, 1.8vh, 26px) clamp(16px, 2vw, 40px);
+      display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; gap: clamp(10px, 1.6vh, 20px);
+    }
+    .head { margin: 0; flex-wrap: nowrap; }
+    h1 { font-size: clamp(22px, 2.3vw, 46px); margin-bottom: 6px; }
+    .facts { font-size: clamp(14px, 1.05vw, 20px); }
+    .side { gap: clamp(14px, 1.6vw, 30px); flex-wrap: nowrap; }
+    .readout { gap: 12px; }
+    .readout .lbl { font-size: clamp(14px, 1.1vw, 21px); }
+    .readout .val { font-size: clamp(28px, 2.7vw, 56px); }
+    button.ghost { font-size: clamp(13px, 0.95vw, 18px); min-height: clamp(34px, 2.8vw, 48px); padding: 6px clamp(12px, 1vw, 20px); }
+    .grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(10px, 1.4vw, 24px); min-height: 0; }
+    .panel { margin: 0; display: flex; flex-direction: column; min-height: 0; padding: clamp(10px, 1vw, 18px); border-radius: 12px; }
+    .wrap, .wrap.stage, .wrap.gwrap { flex: 1; min-height: 0; height: auto; }
+    h2 { font-size: clamp(16px, 1.3vw, 26px); }
+    .legend { font-size: clamp(13px, 1vw, 19px); gap: 4px clamp(12px, 1.2vw, 24px); }
+    .legend i { width: 1.1em; height: 1.1em; }
+    .legend i.line { height: 0.28em; width: 1.5em; }
+    .controls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: end; padding: clamp(10px, 1.2vh, 18px) clamp(14px, 1.4vw, 26px); gap: 10px clamp(16px, 1.8vw, 36px); }
+    .btns { grid-column: 1 / -1; gap: clamp(8px, 0.8vw, 14px); }
+    .ctl label, .ctl output { font-size: clamp(13.5px, 1vw, 19px); }
+    .ctl input[type=range] { height: clamp(26px, 2.2vw, 40px); }
+    button { font-size: clamp(14px, 1vw, 19px); min-height: clamp(40px, 3.2vw, 56px); padding: 6px clamp(14px, 1.3vw, 26px); }
+    .seg button { padding: 6px clamp(10px, 1vw, 20px); }
+    .note { display: none; }
+    .keys { display: block; margin: 0 2px; font-size: clamp(12px, 0.85vw, 16px); color: var(--muted); }
+    body.clean .keys { display: none; }
+    body.clean main { grid-template-rows: auto minmax(0, 1fr); padding-bottom: calc(clamp(12px, 1.8vh, 26px) + 44px); }
+  }
+  @media (min-width: 1280px) and (min-height: 520px) {
+    .controls { grid-template-columns: auto repeat(4, minmax(0, 1fr)); }
+    .btns { grid-column: auto; flex-wrap: nowrap; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="head">
+    <div class="title">
+      <h1>Mass on a spring: where the energy goes</h1>
+      <p class="facts" id="facts"></p>
+    </div>
+    <div class="side">
+      <div class="readout"><span class="lbl">Mechanical energy</span><span class="val" id="totVal">0.00 J</span></div>
+      <div class="toolbar">
+        <button type="button" class="ghost" id="theme">Dark mode</button>
+        <button type="button" class="ghost" id="hide">Hide controls</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="grid">
+    <section class="panel" aria-label="Spring and mass with energy bars">
+      <div class="wrap stage" id="stageWrap">
+        <canvas id="stage" role="img" aria-label="A mass hanging from a spring, oscillating, next to bars showing kinetic, spring and gravitational energy and their total"></canvas>
+      </div>
+    </section>
+
+    <section class="panel graph" aria-label="Energy over time">
+      <div class="ghead">
+        <h2>Energy over time</h2>
+        <div class="legend">
+          <span><i style="background:var(--ke)"></i>Kinetic</span>
+          <span><i style="background:var(--spring)"></i>Spring</span>
+          <span><i style="background:var(--grav)"></i>Gravity</span>
+          <span><i class="line" style="background:var(--ink)"></i>Mechanical (top edge)</span>
+        </div>
+      </div>
+      <div class="wrap gwrap" id="graphWrap">
+        <canvas id="graph" role="img" aria-label="Stacked area chart of kinetic, spring and gravitational energy over time"></canvas>
+      </div>
+    </section>
+  </div>
+
+  <section class="panel controls" id="controls" aria-label="Controls">
+    <div class="btns">
+      <button class="primary" id="play" type="button">Pause</button>
+      <button id="reset" type="button">Restart</button>
+      <div class="seg" role="group" aria-label="Speed">
+        <button type="button" data-speed="0.25" aria-pressed="false">0.25×</button>
+        <button type="button" data-speed="0.5" aria-pressed="false">0.5×</button>
+        <button type="button" data-speed="1" aria-pressed="true">1×</button>
+      </div>
+    </div>
+    <div class="ctl"><label for="m">Mass</label><output id="mOut" for="m"></output>
+      <input type="range" id="m" min="0.5" max="2" step="0.1" value="1"></div>
+    <div class="ctl"><label for="k">Spring stiffness</label><output id="kOut" for="k"></output>
+      <input type="range" id="k" min="15" max="60" step="1" value="25"></div>
+    <div class="ctl"><label for="A">Initial displacement</label><output id="AOut" for="A"></output>
+      <input type="range" id="A" min="0.1" max="0.7" step="0.05" value="0.5"></div>
+    <div class="ctl"><label for="b">Damping</label><output id="bOut" for="b"></output>
+      <input type="range" id="b" min="0" max="1" step="0.05" value="0"></div>
+  </section>
+
+  <p class="note">Gravitational energy is measured from the initial lowest point. Initial displacement is measured downward from equilibrium. Changing mass, stiffness or initial displacement restarts the motion. With damping, mechanical energy is converted into thermal energy in the surroundings.</p>
+  <p class="keys">Keys: Space pause or play, R restart, H hide or show controls, T switch light or dark. F11 for full screen.</p>
+  <button type="button" class="reveal" id="reveal">Show controls</button>
+</main>
+
+<script>
+(() => {
+  const g = 9.81, L0 = 1.0;           // gravity (m/s²), spring natural length (m)
+  const WINDOW = 8;                   // seconds of history shown
+  const P = { m: 1, k: 25, A: 0.5, b: 0, speed: 1 };
+  let y, v, t, yeq, yref, E0, running = true;
+  const hist = [];
+
+  const $ = id => document.getElementById(id);
+  const root = document.documentElement;
+  const stageEl = $('stage'), graphEl = $('graph'), stageWrap = $('stageWrap'), graphWrap = $('graphWrap');
+  let S = null, G = null;
+
+  /* ---------- colours (read from CSS tokens so light/dark both work) ---------- */
+  let C = {};
+  function isDark() { return root.getAttribute('data-theme') === 'dark'; }
+  function readColors() {
+    const cs = getComputedStyle(root);
+    const get = n => cs.getPropertyValue(n).trim();
+    C = { ke: get('--ke'), spring: get('--spring'), grav: get('--grav'), ink: get('--ink'),
+          muted: get('--muted'), line: get('--line'), track: get('--track'),
+          mass: get('--mass'), massText: get('--mass-text') };
+    $('theme').textContent = isDark() ? 'Light mode' : 'Dark mode';
+  }
+  new MutationObserver(readColors).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+
+  /* ---------- canvas sizing: fill the wrapper element ---------- */
+  function fit(wrap, c) {
+    const w = wrap.clientWidth, h = wrap.clientHeight;
+    if (w < 10 || h < 10) return null;
+    const dpr = Math.min(window.devicePixelRatio || 1, 3);
+    c.style.width = w + 'px'; c.style.height = h + 'px';
+    c.width = Math.round(w * dpr); c.height = Math.round(h * dpr);
+    const x = c.getContext('2d');
+    x.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { x, w, h };
+  }
+  function fitAll() { S = fit(stageWrap, stageEl); G = fit(graphWrap, graphEl); }
+  const ro = new ResizeObserver(fitAll);
+  ro.observe(stageWrap); ro.observe(graphWrap);
+
+  // UI scale: 1 on phones, grows with the window so labels stay legible across a room
+  const UI = () => Math.max(window.innerWidth >= 900 ? 1.2 : 1, Math.min(2.6, Math.min(window.innerWidth / 1000, window.innerHeight / 620)));
+
+  /* ---------- physics ---------- */
+  // y = depth of the mass's attachment point below the ceiling (m), increasing downward
+  const acc = (yy, vv) => g - (P.k / P.m) * (yy - L0) - (P.b / P.m) * vv;
+  function step(h) {
+    const k1y = v,                    k1v = acc(y, v);
+    const k2y = v + 0.5 * h * k1v,    k2v = acc(y + 0.5 * h * k1y, v + 0.5 * h * k1v);
+    const k3y = v + 0.5 * h * k2v,    k3v = acc(y + 0.5 * h * k2y, v + 0.5 * h * k2v);
+    const k4y = v + h * k3v,          k4v = acc(y + h * k3y, v + h * k3v);
+    y += h / 6 * (k1y + 2 * k2y + 2 * k3y + k4y);
+    v += h / 6 * (k1v + 2 * k2v + 2 * k3v + k4v);
+  }
+  function energies() {
+    const x = y - L0;
+    const ke = 0.5 * P.m * v * v;
+    const us = 0.5 * P.k * x * x;
+    const ug = Math.max(0, P.m * g * (yref - y));  // zero at the lowest point of the motion
+    return { ke, us, ug, tot: ke + us + ug };
+  }
+  function pushSample() {
+    const e = energies();
+    hist.push({ t, ke: e.ke, us: e.us, ug: e.ug });
+    while (hist.length > 2 && hist[0].t < t - WINDOW - 0.5) hist.shift();
+  }
+  function reset() {
+    yeq = L0 + P.m * g / P.k;
+    y = yeq + P.A; v = 0; t = 0; yref = y;
+    hist.length = 0; sampleAcc = 0;
+    E0 = energies().tot;
+    pushSample();
+    const T = 2 * Math.PI * Math.sqrt(P.m / P.k);
+    $('facts').textContent = 'Period ' + T.toFixed(2) + ' s, equilibrium stretch ' + (P.m * g / P.k).toFixed(2) + ' m';
+  }
+
+  /* ---------- drawing ---------- */
+  const FONT = '"Instrument Sans", system-ui, sans-serif';
+  const font = (weight, size) => weight + ' ' + size.toFixed(1) + 'px ' + FONT;
+  function rr(c, x, y0, w, h, r) {
+    r = Math.min(r, w / 2, h / 2);
+    c.beginPath();
+    c.moveTo(x + r, y0); c.arcTo(x + w, y0, x + w, y0 + h, r); c.arcTo(x + w, y0 + h, x, y0 + h, r);
+    c.arcTo(x, y0 + h, x, y0, r); c.arcTo(x, y0, x + w, y0, r); c.closePath();
+  }
+
+  function drawStage() {
+    const { x: c, w, h } = S, u = UI();
+    c.clearRect(0, 0, w, h);
+    const zl = Math.min(w * 0.46, 190 * u), xs = zl / 2, cy = 28 * u;
+    const maxHalf = (16 + 6.5 * Math.sqrt(2)) * u;
+    const sc = Math.max(20, (h - cy - 2 * maxHalf - 10 * u) / 3.05);   // pixels per metre; fits the full parameter range
+    const py = d => cy + sc * d;
+    const half = (16 + 6.5 * Math.sqrt(P.m)) * u;
+
+    // ceiling
+    c.fillStyle = C.muted; rr(c, 12 * u, cy - 8 * u, zl - 24 * u, 8 * u, 3 * u); c.fill();
+
+    // reference lines: equilibrium and zero of gravitational energy
+    c.lineWidth = Math.max(1, u); c.setLineDash([4 * u, 4 * u]);
+    c.strokeStyle = C.muted; c.beginPath(); c.moveTo(10 * u, py(yeq)); c.lineTo(zl - 10 * u, py(yeq)); c.stroke();
+    c.strokeStyle = C.grav;  c.beginPath(); c.moveTo(10 * u, py(yref)); c.lineTo(zl - 10 * u, py(yref)); c.stroke();
+    c.setLineDash([]);
+    c.textBaseline = 'alphabetic'; c.textAlign = 'left';
+    c.font = font(500, 11 * u); c.fillStyle = C.muted;
+    c.fillText('equilibrium', 10 * u, py(yeq) - 4 * u);
+    c.fillStyle = C.grav;
+    const lx = zl - 10 * u - 46 * u, ly = py(yref) - 4 * u;
+    c.font = font(600, 11 * u); c.fillText('U', lx, ly);
+    c.font = font(600, 8 * u);  c.fillText('g', lx + 8.5 * u, ly + 3 * u);
+    c.font = font(600, 11 * u); c.fillText('= 0', lx + 15 * u, ly);
+
+    // spring
+    const y0 = cy, y1 = py(y), len = y1 - y0;
+    const lead = Math.min(12 * u, len / 4), zs = y0 + lead, ze = y1 - lead, n = 14, amp = 13 * u;
+    c.strokeStyle = C.ink; c.lineWidth = 2.2 * Math.max(1, u * 0.9); c.lineJoin = 'round'; c.lineCap = 'round';
+    c.beginPath(); c.moveTo(xs, y0); c.lineTo(xs, zs);
+    for (let i = 1; i <= 2 * n; i++) c.lineTo(xs + (i % 2 ? amp : -amp), zs + (ze - zs) * (i - 0.5) / (2 * n));
+    c.lineTo(xs, ze); c.lineTo(xs, y1); c.stroke();
+
+    // mass block
+    c.fillStyle = C.mass; rr(c, xs - half, y1, half * 2, half * 2, 5 * u); c.fill();
+    c.fillStyle = C.massText; c.font = font(600, 11.5 * u); c.textAlign = 'center'; c.textBaseline = 'middle';
+    c.fillText(P.m.toFixed(1) + ' kg', xs, y1 + half);
+
+    // energy bars
+    const e = energies();
+    const bx0 = zl + 12 * u, bx1 = w - 6 * u, slot = (bx1 - bx0) / 4, bw = Math.min(46 * u, slot * 0.62);
+    const topY = 40 * u, base = h - 58 * u, H = base - topY, k = H / E0;
+    c.textAlign = 'left'; c.textBaseline = 'alphabetic'; c.font = font(500, 11 * u); c.fillStyle = C.muted;
+    c.fillText('Energy (J)', bx0, topY - 12 * u);
+    const items = [['Kinetic', e.ke, C.ke], ['Spring', e.us, C.spring], ['Gravity', e.ug, C.grav], ['Total', e.tot, null]];
+    items.forEach(([name, val, col], i) => {
+      const cx = bx0 + slot * (i + 0.5), bxl = cx - bw / 2;
+      c.save();
+      rr(c, bxl, topY, bw, H, 6 * u); c.fillStyle = C.track; c.fill(); c.clip();
+      if (col) {
+        const hh = Math.min(H, val * k);
+        c.fillStyle = col; c.fillRect(bxl, base - hh, bw, hh);
+      } else {
+        let yy = base;
+        [[e.ke, C.ke], [e.us, C.spring], [e.ug, C.grav]].forEach(([s, cl]) => {
+          const hh = s * k; c.fillStyle = cl; c.fillRect(bxl, yy - hh, bw, hh); yy -= hh;
+        });
+        c.fillStyle = C.ink; c.fillRect(bxl, yy - 1.5 * u, bw, 3 * u);
+      }
+      c.restore();
+      c.textAlign = 'center';
+      c.font = font(i === 3 ? 600 : 500, 11 * u); c.fillStyle = C.muted;
+      c.fillText(name, cx, base + 17 * u);
+      c.font = font(600, 11 * u); c.fillStyle = C.ink;
+      c.fillText(val.toFixed(1) + ' J', cx, base + 33 * u);
+    });
+  }
+
+  function drawGraph() {
+    const { x: c, w, h } = G, u = UI();
+    c.clearRect(0, 0, w, h);
+    const pad = { l: 44 * u, r: 10 * u, t: 16 * u, b: 26 * u };
+    const pw = w - pad.l - pad.r, ph = h - pad.t - pad.b;
+    const tl = Math.max(0, t - WINDOW), vmax = E0 * 1.06;
+    const X = ti => pad.l + (ti - tl) / WINDOW * pw;
+    const Y = val => pad.t + ph - val / vmax * ph;
+
+    // grid + axis labels
+    c.lineWidth = Math.max(1, u * 0.8); c.strokeStyle = C.line; c.fillStyle = C.muted; c.font = font(500, 11 * u);
+    c.textAlign = 'right'; c.textBaseline = 'middle';
+    [0, 0.5, 1].forEach(f => {
+      const yy = Y(E0 * f);
+      c.beginPath(); c.moveTo(pad.l, yy); c.lineTo(w - pad.r, yy); c.stroke();
+      c.fillText((E0 * f).toFixed(1), pad.l - 6 * u, yy);
+    });
+    c.textAlign = 'center'; c.textBaseline = 'top';
+    for (let tk = Math.ceil(tl / 2) * 2; tk <= tl + WINDOW + 1e-6; tk += 2) {
+      c.fillText(tk + ' s', X(tk), h - pad.b + 7 * u);
+    }
+    c.textAlign = 'left'; c.textBaseline = 'alphabetic';
+    c.fillText('J', 2 * u, pad.t - 4 * u);
+
+    // stacked bands, clipped to the plot area
+    c.save(); c.beginPath(); c.rect(pad.l, pad.t - 2 * u, pw, ph + 2 * u + 1); c.clip();
+    const pts = hist.filter(p => p.t >= tl - 0.1);
+    if (pts.length > 1) {
+      const lo = [() => 0, p => p.ke, p => p.ke + p.us];
+      const hi = [p => p.ke, p => p.ke + p.us, p => p.ke + p.us + p.ug];
+      const cols = [C.ke, C.spring, C.grav];
+      for (let b = 0; b < 3; b++) {
+        c.beginPath();
+        pts.forEach((p, i) => i ? c.lineTo(X(p.t), Y(hi[b](p))) : c.moveTo(X(p.t), Y(hi[b](p))));
+        for (let i = pts.length - 1; i >= 0; i--) c.lineTo(X(pts[i].t), Y(lo[b](pts[i])));
+        c.closePath(); c.globalAlpha = 0.92; c.fillStyle = cols[b]; c.fill(); c.globalAlpha = 1;
+      }
+      c.beginPath();
+      pts.forEach((p, i) => { const yy = Y(p.ke + p.us + p.ug); i ? c.lineTo(X(p.t), yy) : c.moveTo(X(p.t), yy); });
+      c.strokeStyle = C.ink; c.lineWidth = 2.2 * Math.max(1, u * 0.9); c.lineJoin = 'round'; c.stroke();
+    }
+    c.restore();
+
+    // label riding on the total line
+    const tot = energies().tot;
+    c.font = font(600, 12 * u); c.fillStyle = C.ink; c.textAlign = 'right'; c.textBaseline = 'alphabetic';
+    c.fillText('mechanical energy', w - pad.r - 4 * u, Y(tot) - 7 * u);
+  }
+
+  /* ---------- main loop ---------- */
+  let last = performance.now(), sampleAcc = 0, lastTot = '';
+  function frame(now) {
+    const dt = Math.min(0.05, (now - last) / 1000); last = now;
+    if (running) {
+      let rem = dt * P.speed;
+      while (rem > 1e-9) {
+        const h = Math.min(0.002, rem);
+        step(h); t += h; rem -= h; sampleAcc += h;
+        if (sampleAcc >= 0.02) { pushSample(); sampleAcc = 0; }
+      }
+    }
+    if (S && G) { drawStage(); drawGraph(); }
+    const s = energies().tot.toFixed(2) + ' J';
+    if (s !== lastTot) { $('totVal').textContent = s; lastTot = s; }
+    requestAnimationFrame(frame);
+  }
+
+  /* ---------- controls ---------- */
+  const fmt = { m: v => (+v).toFixed(1) + ' kg', k: v => (+v).toFixed(0) + ' N/m', A: v => (+v).toFixed(2) + ' m', b: v => (+v).toFixed(2) + ' N·s/m' };
+  ['m', 'k', 'A', 'b'].forEach(id => {
+    const el = $(id), out = $(id + 'Out');
+    const upd = () => { P[id] = +el.value; out.textContent = fmt[id](el.value); };
+    upd();
+    el.addEventListener('input', () => { upd(); if (id !== 'b') reset(); });
+  });
+
+  function setRunning(on) {
+    running = on; $('play').textContent = on ? 'Pause' : 'Play'; last = performance.now();
+  }
+  function restart() { reset(); if (!running) setRunning(true); }
+  function setClean(on) { document.body.classList.toggle('clean', on); }
+  function toggleTheme() { root.setAttribute('data-theme', isDark() ? 'light' : 'dark'); }
+
+  $('play').addEventListener('click', () => setRunning(!running));
+  $('reset').addEventListener('click', restart);
+  $('theme').addEventListener('click', toggleTheme);
+  $('hide').addEventListener('click', () => setClean(true));
+  $('reveal').addEventListener('click', () => setClean(false));
+  document.querySelectorAll('.seg button').forEach(btn => btn.addEventListener('click', () => {
+    P.speed = +btn.dataset.speed;
+    document.querySelectorAll('.seg button').forEach(b => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
+  }));
+
+  document.addEventListener('keydown', e => {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.target?.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName || '')) return;
+    const onButton = e.target && e.target.tagName === 'BUTTON';
+    const key = e.key.toLowerCase();
+    if (e.key === ' ') { if (!onButton) { e.preventDefault(); setRunning(!running); } }
+    else if (key === 'r') restart();
+    else if (key === 'h') setClean(!document.body.classList.contains('clean'));
+    else if (key === 't') toggleTheme();
+  });
+
+  readColors(); fitAll(); reset();
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

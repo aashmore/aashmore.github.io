@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Spring launch, two system choices</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    color-scheme: light;
+    --bg: #e6ebf0;
+    --panel: #ffffff;
+    --ink: #0f1720;
+    --muted: #46535f;
+    --line: #c5ced6;
+    --track: #e3e8ed;
+    --ke: #d97706;
+    --spring: #0f7f73;
+    --grav: #6340c4;
+    --mass: #2a3850;
+    --mass-text: #f4f7fa;
+    --accent: #0f7f73;
+    --btn-bg: #0f1720;
+    --btn-ink: #ffffff;
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0b1015;
+    --panel: #141b22;
+    --ink: #f1f5f9;
+    --muted: #a9b6c2;
+    --line: #2b3641;
+    --track: #212b34;
+    --ke: #f5a43d;
+    --spring: #3fc9b8;
+    --grav: #a98ff5;
+    --mass: #a9bbd6;
+    --mass-text: #0b1015;
+    --accent: #3fc9b8;
+    --btn-bg: #f1f5f9;
+    --btn-ink: #0b1015;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 18px 14px 28px; }
+
+  /* header */
+  .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 16px; margin-bottom: 12px; }
+  h1 { font-size: 22px; line-height: 1.15; margin: 0 0 4px; font-weight: 650; letter-spacing: -0.01em; }
+  .facts { margin: 0; color: var(--muted); font-size: 13.5px; font-variant-numeric: tabular-nums; }
+  .side { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .readout { display: flex; align-items: baseline; gap: 10px; }
+  .readout .lbl { color: var(--muted); font-size: 13.5px; }
+  .readout .val { font-size: 24px; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+  .toolbar { display: flex; gap: 8px; }
+  button.ghost { font-weight: 500; color: var(--muted); padding: 6px 12px; min-height: 34px; font-size: 13px; }
+
+  /* panels */
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px; margin-bottom: 12px; }
+  .panel.graph { padding: 12px 10px 8px; }
+  .wrap { position: relative; width: 100%; }
+  .wrap canvas { position: absolute; left: 0; top: 0; display: block; }
+  .wrap.stage { height: 350px; }
+  .wrap.gwrap { height: 200px; }
+  h2 { font-size: 14px; margin: 0; font-weight: 600; }
+  .ghead { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 14px; margin-bottom: 4px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .legend i.line { height: 3px; width: 14px; }
+
+  /* controls */
+  .controls { display: grid; gap: 12px 22px; grid-template-columns: 1fr; padding: 14px 14px 12px; }
+  @media (min-width: 620px) { .controls { grid-template-columns: 1fr 1fr; } .btns { grid-column: 1 / -1; } }
+  .ctl { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 2px 8px; }
+  .ctl label { font-size: 13.5px; font-weight: 500; }
+  .ctl output { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .ctl input[type=range] { grid-column: 1 / -1; width: 100%; margin: 4px 0 0; accent-color: var(--accent); height: 28px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  button {
+    font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+    border: 1px solid var(--line); background: transparent; color: var(--ink);
+    border-radius: 8px; padding: 9px 16px; min-height: 40px;
+  }
+  button.primary { background: var(--btn-bg); color: var(--btn-ink); border-color: var(--btn-bg); min-width: 90px; }
+  button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .seg button { border: 0; border-radius: 0; padding: 9px 12px; font-weight: 500; color: var(--muted); }
+  .seg button + button { border-left: 1px solid var(--line); }
+  .seg button[aria-pressed="true"] { background: var(--track); color: var(--ink); font-weight: 600; }
+  .note { font-size: 12.5px; color: var(--muted); margin: 4px 2px 0; max-width: 62ch; }
+  .keys { display: none; }
+
+  /* hide controls (clean projection) */
+  .reveal { display: none; position: fixed; right: 14px; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); opacity: 0.4; min-height: 34px; padding: 6px 12px; font-size: 13px; background: var(--panel); }
+  .reveal:hover, .reveal:focus-visible { opacity: 1; }
+  body.clean .controls, body.clean .toolbar, body.clean .note, body.clean .keys { display: none; }
+  body.clean .reveal { display: block; }
+
+  /* ---- projector / desktop layout: fill the viewport, no scrolling ---- */
+  @media (min-width: 900px) and (min-height: 520px) {
+    body { font-size: clamp(15px, 1.05vw, 20px); overflow: hidden; }
+    main {
+      max-width: none; margin: 0;
+      height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+      padding: clamp(12px, 1.8vh, 26px) clamp(16px, 2vw, 40px);
+      display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; gap: clamp(10px, 1.6vh, 20px);
+    }
+    .head { margin: 0; flex-wrap: nowrap; }
+    h1 { font-size: clamp(22px, 2.3vw, 46px); margin-bottom: 6px; }
+    .facts { font-size: clamp(14px, 1.05vw, 20px); }
+    .side { gap: clamp(14px, 1.6vw, 30px); flex-wrap: nowrap; }
+    .readout { gap: 12px; }
+    .readout .lbl { font-size: clamp(14px, 1.1vw, 21px); }
+    .readout .val { font-size: clamp(28px, 2.7vw, 56px); }
+    button.ghost { font-size: clamp(13px, 0.95vw, 18px); min-height: clamp(34px, 2.8vw, 48px); padding: 6px clamp(12px, 1vw, 20px); }
+    .grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(10px, 1.4vw, 24px); min-height: 0; }
+    .panel { margin: 0; display: flex; flex-direction: column; min-height: 0; padding: clamp(10px, 1vw, 18px); border-radius: 12px; }
+    .wrap, .wrap.stage, .wrap.gwrap { flex: 1; min-height: 0; height: auto; }
+    h2 { font-size: clamp(16px, 1.3vw, 26px); }
+    .legend { font-size: clamp(13px, 1vw, 19px); gap: 4px clamp(12px, 1.2vw, 24px); }
+    .legend i { width: 1.1em; height: 1.1em; }
+    .legend i.line { height: 0.28em; width: 1.5em; }
+    .controls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: end; padding: clamp(10px, 1.2vh, 18px) clamp(14px, 1.4vw, 26px); gap: 10px clamp(16px, 1.8vw, 36px); }
+    .btns { grid-column: 1 / -1; gap: clamp(8px, 0.8vw, 14px); }
+    .ctl label, .ctl output { font-size: clamp(13.5px, 1vw, 19px); }
+    .ctl input[type=range] { height: clamp(26px, 2.2vw, 40px); }
+    button { font-size: clamp(14px, 1vw, 19px); min-height: clamp(40px, 3.2vw, 56px); padding: 6px clamp(14px, 1.3vw, 26px); }
+    .seg button { padding: 6px clamp(10px, 1vw, 20px); }
+    .note { display: none; }
+    .keys { display: block; margin: 0 2px; font-size: clamp(12px, 0.85vw, 16px); color: var(--muted); }
+    body.clean .keys { display: none; }
+    body.clean main { grid-template-rows: auto minmax(0, 1fr); padding-bottom: calc(clamp(12px, 1.8vh, 26px) + 44px); }
+  }
+  @media (min-width: 1280px) and (min-height: 520px) {
+    .controls { grid-template-columns: auto repeat(4, minmax(0, 1fr)); }
+    .btns { grid-column: auto; flex-wrap: nowrap; }
+  }
+
+  .wrap.stage { height: 430px; }
+  .system-picker { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .system-picker .picker-label { font-size: 13px; color: var(--muted); }
+  .system-picker button { font-size: 14px; min-height: 38px; }
+  .system-picker button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  :root[data-theme="dark"] .system-picker button[aria-pressed="true"] { color: var(--bg); }
+  .explanation { margin: 8px 0 0; font-size: 14px; line-height: 1.35; min-height: 2.7em; }
+  .model { margin: 7px 0 0; font-size: 12px; color: var(--muted); }
+  .motion-stats { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 10px; font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .motion-stats strong { color: var(--ink); font-weight: 600; white-space: nowrap; }
+  .accounts { display: grid; grid-template-rows: 1fr 1fr; gap: 12px; }
+  .account { border: 1px solid var(--line); border-radius: 9px; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; }
+  .account.selected { border-color: var(--accent); box-shadow: inset 3px 0 var(--accent); }
+  .account-title { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .account-title h3 { font-size: 17px; font-weight: 650; margin: 0; }
+  .tag { font-size: 12px; color: var(--muted); }
+  .quantity { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; }
+  .quantity strong, .energy-values strong { font-weight: 600; white-space: nowrap; }
+  .energy-values { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 3px 12px; font-size: 14px; }
+  .kinetic { color: var(--ke); }
+  .elastic { color: var(--spring); }
+  .stored-bar { display: flex; height: 20px; min-height: 20px; overflow: hidden; border-radius: 6px; background: var(--track); }
+  .stored-bar .kinetic-fill { background: var(--ke); }
+  .stored-bar .spring-fill { background: var(--spring); }
+  .equation { font-size: 20px; font-weight: 600; margin: 0; }
+  .equation sub { font-size: .65em; }
+  .account-note { margin: 0; font-size: 13px; line-height: 1.3; color: var(--muted); }
+  .readout .val { font-size: 24px; white-space: nowrap; }
+  @media (min-width: 900px) and (min-height: 520px) {
+    .wrap.stage { height: auto; }
+    .accounts { flex: 1; min-height: 0; grid-template-rows: minmax(0,1fr) minmax(0,1fr); }
+    .account { min-height: 0; padding: clamp(10px, 1vw, 18px); gap: 6px; }
+    .account-title h3 { font-size: clamp(17px, 1.3vw, 25px); }
+    .quantity, .energy-values, .explanation { font-size: clamp(14px, 1.05vw, 20px); }
+    .account-note, .model, .tag { font-size: clamp(12px, .95vw, 18px); }
+    .motion-stats, .system-picker .picker-label { font-size: clamp(13px, 1vw, 19px); }
+    .system-picker button { font-size: clamp(14px, 1vw, 19px); }
+    .equation { font-size: clamp(20px, 1.6vw, 30px); }
+    .readout .val { font-size: clamp(24px, 1.8vw, 36px); }
+    .controls { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  }
+  @media (min-width: 1280px) and (min-height: 520px) {
+    .controls { grid-template-columns: auto repeat(3, minmax(0,1fr)); }
+  }
+  @media (min-width: 900px) and (min-height: 520px) and (max-height: 650px) {
+    .account { padding: 8px; gap: 4px; }
+    .account-note { display: none; }
+    .equation { font-size: 18px; }
+    .stored-bar { height: 16px; min-height: 16px; }
+    .explanation { font-size: 13px; }
+    .model { font-size: 11px; }
+    .system-picker .picker-label { display: none; }
+  }
+
+  .total-bar { height: 4px; min-height: 4px; border-radius: 3px; background: var(--ink); }
+  @media (min-width: 900px) and (min-height: 520px) {
+    .controls { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .head { align-items: center; }
+    h1 { font-size: clamp(22px, 2.05vw, 40px); }
+  }
+  @media (min-width: 1280px) and (min-height: 520px) {
+    .controls { grid-template-columns: auto repeat(4, minmax(0,1fr)); }
+  }
+  @media (min-width: 900px) and (max-width: 1100px) {
+    .readout { display: none; }
+  }
+  @media (min-width: 900px) and (min-height: 520px) and (max-height: 650px) {
+    .account { gap: 2px; }
+    .account-title h3 { font-size: 15px; }
+    .quantity, .energy-values { font-size: 13px; }
+    .tag { font-size: 11px; }
+    .controls { padding: 8px 14px; gap: 6px 16px; }
+    .controls button { min-height: 34px; }
+    .ctl input[type=range] { height: 22px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="head">
+    <div class="title">
+      <h1>Spring launch, two system choices</h1>
+      <p class="facts">The same launch, with two ways to account for energy.</p>
+    </div>
+    <div class="side">
+      <div class="readout"><span class="lbl">System</span><span class="val" id="systemName">Mass only</span></div>
+      <div class="toolbar">
+        <button type="button" class="ghost" id="theme">Dark mode</button>
+        <button type="button" class="ghost" id="hide">Hide controls</button>
+      </div>
+    </div>
+  </header>
+  <div class="grid">
+    <section class="panel" aria-label="Spring launcher with a selected system boundary">
+      <div class="system-picker">
+        <span class="picker-label">Choose the system</span>
+        <div class="seg" role="group" aria-label="System choice; switching pauses the launch">
+          <button type="button" data-system="mass" aria-pressed="true">Mass only</button>
+          <button type="button" data-system="combined" aria-pressed="false">Mass + spring</button>
+        </div>
+      </div>
+      <div class="wrap stage" id="stageWrap">
+        <canvas id="stage" role="img" aria-label="A compressed spring launches a mass to the right. Teal shows the spring force on the mass, orange its velocity, and a dashed teal line the chosen system boundary."></canvas>
+      </div>
+      <div class="motion-stats">
+        <span>Compression <strong id="compression">0.30 m</strong></span>
+        <span>Speed <strong id="velocity">0.00 m/s</strong></span>
+        <span id="phase">Ready to release</span>
+      </div>
+      <p class="explanation" id="explanation">The spring force is external to the mass. Its work increases the mass’s kinetic energy.</p>
+      <p class="model">Frictionless track · ideal massless spring · fixed support · mass not attached</p>
+    </section>
+    <section class="panel graph" aria-label="Two simultaneous energy accounts for the same launch">
+      <div class="ghead">
+        <h2>Energy accounts at the same instant</h2>
+        <div class="legend">
+          <span><i style="background:var(--ke)"></i>Kinetic</span>
+          <span><i style="background:var(--spring)"></i>Spring</span>
+          <span><i class="line" style="background:var(--ink)"></i>Total</span>
+        </div>
+      </div>
+      <div class="accounts">
+        <section class="account selected" id="massAccount" aria-label="Mass-only energy account">
+          <div class="account-title"><h3>Mass only</h3><span class="tag">Spring force is external</span></div>
+          <div class="quantity"><span>Work entering: W<sub>spring</sub></span><strong class="elastic" id="workMass">+0.0 J</strong></div>
+          <div class="quantity"><span>Kinetic energy: K<sub>mass</sub></span><strong class="kinetic" id="kineticMass">0.0 J</strong></div>
+          <div class="stored-bar" role="img" id="massBar" aria-label="Kinetic energy of the mass"><div class="kinetic-fill" id="massKFill"></div></div>
+          <p class="equation">ΔK<sub>mass</sub> = W<sub>spring</sub></p>
+          <p class="account-note">Work is energy transferred to the mass from the spring.</p>
+        </section>
+        <section class="account" id="combinedAccount" aria-label="Mass-plus-spring energy account">
+          <div class="account-title"><h3>Mass + spring</h3><span class="tag">Spring force is internal</span></div>
+          <div class="quantity"><span>External work: W<sub>ext</sub></span><strong>0.0 J</strong></div>
+          <div class="energy-values">
+            <span class="kinetic">K <strong id="kineticCombined">0.0 J</strong></span>
+            <span class="elastic">U<sub>spring</sub> <strong id="potentialCombined">4.50 J</strong></span>
+            <span>Total <strong id="totalCombined">4.50 J</strong></span>
+          </div>
+          <div class="stored-bar" role="img" id="combinedBar" aria-label="Kinetic plus spring potential energy"><div class="kinetic-fill" id="combinedKFill"></div><div class="spring-fill" id="combinedUFill"></div></div>
+          <div class="total-bar" role="img" id="totalBar" aria-label="Constant total energy"></div>
+          <p class="equation">ΔK + ΔU<sub>spring</sub> = 0</p>
+          <p class="account-note">U<sub>spring</sub> = ½k(Δx)². Its zero is at the relaxed length.<br>The fixed support exerts a force but does no work.</p>
+        </section>
+      </div>
+    </section>
+  </div>
+  <section class="panel controls" id="controls" aria-label="Playback and physical parameters">
+    <div class="btns">
+      <button type="button" class="primary" id="play">Release</button>
+      <button type="button" id="reset">Restart</button>
+      <div class="seg" role="group" aria-label="Playback speed">
+        <button type="button" data-speed="0.25" aria-pressed="true">0.25×</button>
+        <button type="button" data-speed="0.5" aria-pressed="false">0.5×</button>
+        <button type="button" data-speed="1" aria-pressed="false">1×</button>
+      </div>
+    </div>
+    <div class="ctl"><label for="m">Mass</label><output id="mOut" for="m"></output>
+      <input type="range" id="m" min="0.5" max="3" step="0.1" value="1"></div>
+    <div class="ctl"><label for="k">Spring constant</label><output id="kOut" for="k"></output>
+      <input type="range" id="k" min="20" max="200" step="10" value="100"></div>
+    <div class="ctl"><label for="A">Initial compression</label><output id="AOut" for="A"></output>
+      <input type="range" id="A" min="0.1" max="0.6" step="0.05" value="0.3"></div>
+    <div class="ctl"><label for="progress">Launch progress</label><output id="progressOut" for="progress">0%</output>
+      <input type="range" id="progress" min="0" max="100" step="0.1" value="0" aria-label="Distance progress; 50 percent is the relaxed spring. Dragging pauses playback."></div>
+  </section>
+  <p class="note">Released from rest on a frictionless horizontal track. The mass is not attached: contact ends at the spring’s relaxed length, then the mass coasts. The spring’s mass is neglected. Gravity and the track’s normal force do no work; the fixed support does no work. Switching systems pauses without changing the motion or energy values. The drawing is schematic.</p>
+  <p class="keys">Space release/pause/play · R restart · H controls · T theme · F11 full screen · 50% progress: spring relaxed; mass begins coasting.</p>
+  <button type="button" class="reveal" id="reveal">Show controls</button>
+</main>
+<script>
+(() => {
+  'use strict';
+  const P={m:1,k:100,A:.3,speed:.25};
+  const $=id=>document.getElementById(id),root=document.documentElement;
+  let elapsed=0,running=false,system='mass',last=performance.now(),S,C={};
+  const omega=()=>Math.sqrt(P.k/P.m),releaseTime=()=>Math.PI/(2*omega());
+  const duration=()=>releaseTime()+1/omega();
+  // Push-only contact: a quarter of ideal spring motion, then uniform motion.
+  // The spring and its fixed anchor do not recoil in this massless-spring model.
+  // Both energy accounts always use this one physical trajectory.
+  function stateAt(time) {
+    const t=Math.max(0,Math.min(duration(),time)),w=omega(),tc=releaseTime();
+    const contact=t<tc,c=contact?P.A*Math.cos(w*t):0;
+    const x=contact?-c:P.A*w*(t-tc),velocity=contact?P.A*w*Math.sin(w*t):P.A*w;
+    const E0=.5*P.k*P.A*P.A,U=.5*P.k*c*c,K=.5*P.m*velocity*velocity;
+    return {t,x,c,velocity,force:P.k*c,E0,U,K,work:E0-U,total:K+U,
+      progress:Math.max(0,Math.min(1,(x/P.A+1)/2)),contact,
+      phase:t===0?'Ready to release':contact?'Spring pushing':'Coasting — spring relaxed'};
+  }
+  function timeAtProgress(p) {
+    p=Math.max(0,Math.min(1,p));
+    return p<=.5?Math.acos(1-2*p)/omega():releaseTime()+(2*p-1)/omega();
+  }
+  function readColors() {
+    const cs=getComputedStyle(root);
+    ['ink','muted','line','track','mass','mass-text','accent','ke','spring'].forEach(key=>C[key]=cs.getPropertyValue('--'+key).trim());
+    $('theme').textContent=root.dataset.theme==='dark'?'Light mode':'Dark mode';
+  }
+  new MutationObserver(readColors).observe(root,{attributes:true,attributeFilter:['data-theme']});
+  function resize() {
+    const wrap=$('stageWrap'),canvas=$('stage'),w=wrap.clientWidth,h=wrap.clientHeight;
+    if(w<10||h<10){S=null;return;}
+    const dpr=Math.min(devicePixelRatio||1,3);
+    canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);
+    canvas.style.width=w+'px';canvas.style.height=h+'px';
+    const c=canvas.getContext('2d');c.setTransform(dpr,0,0,dpr,0,0);S={c,w,h};
+  }
+  new ResizeObserver(resize).observe($('stageWrap'));
+  const scale=()=>Math.max(innerWidth>=900?1.05:1,Math.min(2,innerWidth/1000,innerHeight/620));
+  function text(c,value,x,y,size,colour=C.ink,weight=500,align='left') {
+    c.fillStyle=colour;c.font=weight+' '+size.toFixed(1)+'px system-ui, sans-serif';
+    c.textAlign=align;c.textBaseline='alphabetic';c.fillText(value,x,y);
+  }
+  function line(c,x0,y0,x1,y1,colour,width=1,dashed=false) {
+    c.strokeStyle=colour;c.lineWidth=width;c.setLineDash(dashed?[5,5]:[]);
+    c.beginPath();c.moveTo(x0,y0);c.lineTo(x1,y1);c.stroke();c.setLineDash([]);
+  }
+  function arrow(c,x0,y0,x1,y1,colour,u) {
+    const len=Math.min(7*u,Math.abs(x1-x0)*.5);
+    line(c,x0,y0,x1,y1,colour,2.5*u);
+    c.fillStyle=colour;c.beginPath();c.moveTo(x1,y1);c.lineTo(x1-len,y1-len*.55);
+    c.lineTo(x1-len,y1+len*.55);c.closePath();c.fill();
+  }
+  function drawStage(s) {
+    const {c,w,h}=S,u=scale();c.clearRect(0,0,w,h);
+    const wall=w*.085,natural=w*.48,travel=w*.22,b=30*u;
+    const front=natural+travel*s.x/P.A,tip=s.contact?front:natural;
+    const y=h*.48,half=Math.min(20*u,h*.065),track=y+half+4*u;
+    const fY=Math.max(70*u,y-half-50*u),vY=fY-30*u;
+    text(c,'System boundary',w-8*u,20*u,12*u,C.accent,600,'right');
+    c.strokeStyle=C.accent;c.lineWidth=2*u;c.setLineDash([7*u,5*u]);
+    c.beginPath();
+    if(system==='mass')c.roundRect(front-8*u,y-half-10*u,b+20*u,2*half+20*u,8*u);
+    else c.roundRect(wall+3*u,y-half-18*u,front+b-wall+12*u,2*half+36*u,10*u);
+    c.stroke();c.setLineDash([]);
+    line(c,wall,track,w-15*u,track,C.line,2*u);
+    line(c,wall,y-45*u,wall,track,C.ink,3*u);
+    for(let i=0;i<6;i++)line(c,wall-10*u,y-42*u+i*14*u,wall,y-49*u+i*14*u,C.line,u);
+    const lead=10*u,start=wall+lead,end=tip-lead,coils=10;
+    c.strokeStyle=C.spring;c.lineWidth=2.5*u;c.beginPath();c.moveTo(wall,y);c.lineTo(start,y);
+    for(let i=1;i<coils*2;i++)c.lineTo(start+(end-start)*i/(coils*2),y+(i%2?half*.7:-half*.7));
+    c.lineTo(end,y);c.lineTo(tip,y);c.stroke();
+    c.fillStyle=C.mass;c.beginPath();c.roundRect(front,y-half,b,2*half,4*u);c.fill();
+    text(c,'m',front+b/2,y+5*u,14*u,C['mass-text'],650,'center');
+    // Two independently scaled arrows: each length shows its own relative magnitude.
+    // A zero vector has a label and no arrow; force vanishes on separation.
+    const base=front+b/2,maxLen=Math.min(90*u,w*.17);
+    if(s.force>1e-7)arrow(c,base,fY,base+maxLen*s.c/P.A,fY,C.spring,u);
+    if(s.velocity>1e-7)arrow(c,base,vY,base+maxLen*s.velocity/(P.A*omega()),vY,C.ke,u);
+    text(c,'F spring = '+s.force.toFixed(1)+' N',base,fY-10*u,12*u,C.spring,600,'center');
+    text(c,'v = '+s.velocity.toFixed(2)+' m/s',base,vY-10*u,12*u,C.ke,600,'center');
+    line(c,natural,track+7*u,natural,track+42*u,C.muted,u,true);
+    text(c,'Relaxed end',natural,track+59*u,12*u,C.muted,500,'center');
+    text(c,'Δx = 0; U spring = 0',natural,track+77*u,11*u,C.muted,500,'center');
+    if(s.c>1e-7){
+      const dimY=track+38*u;
+      line(c,front,dimY,natural,dimY,C.spring,1.5*u);
+      line(c,front,dimY-5*u,front,dimY+5*u,C.spring,u);
+      line(c,natural,dimY-5*u,natural,dimY+5*u,C.spring,u);
+      text(c,'Δx = −'+s.c.toFixed(2)+' m',(front+natural)/2,dimY-10*u,11*u,C.spring,600,'center');
+    }
+    if(h>260*u)text(c,'Schematic · arrows use separate scales',w/2,h-7*u,11*u,C.muted,500,'center');
+  }
+  const joules=value=>(Math.abs(value)<.00005?0:value).toFixed(2)+' J';
+  function setRunning(on) {
+    running=on;last=performance.now();
+    $('play').textContent=on?'Pause':elapsed>=duration()?'Replay':elapsed===0?'Release':'Play';
+  }
+  function chooseSystem(value) {
+    system=value;setRunning(false);
+    document.querySelectorAll('[data-system]').forEach(btn=>btn.setAttribute('aria-pressed',btn.dataset.system===system?'true':'false'));
+    $('massAccount').classList.toggle('selected',system==='mass');
+    $('combinedAccount').classList.toggle('selected',system==='combined');
+    $('systemName').textContent=system==='mass'?'Mass only':'Mass + spring';
+    $('explanation').textContent=system==='mass'
+      ?'The spring force is external to the mass. Its work increases the mass’s kinetic energy.'
+      :'The spring force is internal to mass + spring. Spring potential energy becomes kinetic energy within the system.';
+    render();
+  }
+  function reset() {elapsed=0;setRunning(false);render();}
+  function play() {if(elapsed>=duration())elapsed=0;setRunning(!running);}
+  function clean(on) {document.body.classList.toggle('clean',on);}
+  function theme() {root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';}
+  function render() {
+    const s=stateAt(elapsed),q=s.K/s.E0;
+    $('compression').textContent=s.c.toFixed(2)+' m';$('velocity').textContent=s.velocity.toFixed(2)+' m/s';$('phase').textContent=s.phase;
+    $('workMass').textContent='+'+joules(s.work);$('kineticMass').textContent=joules(s.K);
+    $('kineticCombined').textContent=joules(s.K);$('potentialCombined').textContent=joules(s.U);$('totalCombined').textContent=joules(s.total);
+    $('massKFill').style.width=100*q+'%';
+    $('combinedKFill').style.width=100*q+'%';$('combinedUFill').style.width=100*(1-q)+'%';
+    $('massBar').setAttribute('aria-label','Mass kinetic energy '+joules(s.K));
+    $('combinedBar').setAttribute('aria-label','Kinetic energy '+joules(s.K)+', spring energy '+joules(s.U)+', total '+joules(s.total));
+    $('totalBar').setAttribute('aria-label','Constant total energy '+joules(s.total));
+    $('stage').setAttribute('aria-label','Compression '+s.c.toFixed(2)+' metres; spring force '+s.force.toFixed(1)+' newtons to the right; mass velocity '+s.velocity.toFixed(2)+' metres per second to the right. Selected system: '+(system==='mass'?'mass only':'mass plus spring')+'.');
+    $('progress').value=s.progress*100;$('progressOut').textContent=Math.round(100*s.progress)+'%';
+    if(S)drawStage(s);
+  }
+  function frame(now) {
+    const dt=Math.min(.05,Math.max(0,(now-last)/1000));last=now;
+    if(running){elapsed=Math.min(duration(),elapsed+dt*P.speed);if(elapsed>=duration())setRunning(false);}
+    render();requestAnimationFrame(frame);
+  }
+  ['m','k','A'].forEach(id=>{
+    const update=()=>{P[id]=+$(id).value;$(id+'Out').textContent=P[id].toFixed(id==='k'?0:id==='A'?2:1)+(id==='m'?' kg':id==='k'?' N/m':' m');};
+    update();$(id).addEventListener('input',()=>{update();reset();});
+  });
+  $('progress').addEventListener('input',()=>{elapsed=timeAtProgress(+$('progress').value/100);setRunning(false);render();});
+  document.querySelectorAll('[data-system]').forEach(btn=>btn.addEventListener('click',()=>chooseSystem(btn.dataset.system)));
+  document.querySelectorAll('[data-speed]').forEach(btn=>btn.addEventListener('click',()=>{
+    P.speed=+btn.dataset.speed;document.querySelectorAll('[data-speed]').forEach(b=>b.setAttribute('aria-pressed',b===btn?'true':'false'));
+  }));
+  $('play').addEventListener('click',play);$('reset').addEventListener('click',reset);
+  $('theme').addEventListener('click',theme);$('hide').addEventListener('click',()=>clean(true));$('reveal').addEventListener('click',()=>clean(false));
+  document.addEventListener('keydown',e=>{
+    if(e.ctrlKey||e.metaKey||e.altKey||e.target?.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName||''))return;
+    const key=e.key.toLowerCase();if(e.key===' '&&e.target?.tagName!=='BUTTON'){e.preventDefault();play();}
+    else if(key==='r')reset();else if(key==='h')clean(!document.body.classList.contains('clean'));else if(key==='t')theme();
+  });
+  document.addEventListener('visibilitychange',()=>{last=performance.now();});
+  readColors();resize();reset();requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
