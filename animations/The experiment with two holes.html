@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The experiment with two holes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#e9ece8; --board:#f8f9f6; --ink:#1e2a26; --muted:#56635d; --rule:#c4cbc6;
+  --c1:#1d68a8; --c2:#b8336a; --c12:#9a6e00; --wall:#4a5651; --sand:#d9cfb4;
+  --wTrough:#5f8fa6; --wMid:#c3d9e3; --wCrest:#f4fafc;
+  --btn:#ffffff; --btnOn:#1e2a26; --btnOnInk:#f8f9f6;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#18211e; --board:#22302b; --ink:#ecebe2; --muted:#a2aca5; --rule:#3a4a44;
+    --c1:#8cc3ec; --c2:#f2a2c0; --c12:#f1d777; --wall:#cfcbbd; --sand:#4b4636;
+    --wTrough:#0e1d20; --wMid:#1c3638; --wCrest:#a6d4e0;
+    --btn:#2a3a34; --btnOn:#ecebe2; --btnOnInk:#22302b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#18211e; --board:#22302b; --ink:#ecebe2; --muted:#a2aca5; --rule:#3a4a44;
+  --c1:#8cc3ec; --c2:#f2a2c0; --c12:#f1d777; --wall:#cfcbbd; --sand:#4b4636;
+  --wTrough:#0e1d20; --wMid:#1c3638; --wCrest:#a6d4e0;
+  --btn:#2a3a34; --btnOn:#ecebe2; --btnOnInk:#22302b;
+  color-scheme: dark;
+}
+:root{ box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+*,*::before,*::after{ box-sizing:inherit; }
+html{ scroll-padding-top:env(safe-area-inset-top,0px); }
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size:1.0625rem; line-height:1.55;
+}
+.wrap{ max-width:1180px; margin:0 auto; padding:1.25rem 1rem 3rem; }
+header h1{
+  font-family:"Kalam", "Comic Sans MS", cursive; font-weight:700;
+  font-size:clamp(1.9rem, 4vw, 2.8rem); line-height:1.1; margin:0 0 .25rem;
+}
+header p{ margin:0; color:var(--muted); max-width:70ch; }
+header p cite{ font-style:italic; }
+
+.tabs{ display:flex; flex-wrap:wrap; gap:.25rem; margin:1.25rem 0 0; }
+.tabs button{
+  font:inherit; font-size:1rem; cursor:pointer;
+  background:transparent; color:var(--muted);
+  border:1px solid var(--rule); border-bottom:none; border-radius:10px 10px 0 0;
+  padding:.5rem 1rem .45rem;
+}
+.tabs button[aria-selected="true"]{ background:var(--board); color:var(--ink); font-weight:600; }
+.tabs button:focus-visible, .ctl button:focus-visible, .ctl input:focus-visible, canvas:focus-visible{
+  outline:3px solid var(--c1); outline-offset:2px;
+}
+
+.stage{ background:var(--board); border:1px solid var(--rule); border-radius:0 12px 12px 12px; overflow:hidden; }
+canvas{ display:block; width:100%; height:auto; touch-action:none; }
+
+.ctl{
+  display:flex; flex-wrap:wrap; align-items:center; gap:.6rem 1.1rem;
+  padding:.8rem 1rem; border-top:1px solid var(--rule);
+}
+.ctl .grp{ display:flex; align-items:center; gap:.4rem; flex-wrap:wrap; }
+.ctl button{
+  font:inherit; font-size:.95rem; cursor:pointer; color:var(--ink);
+  background:var(--btn); border:1px solid var(--rule); border-radius:999px; padding:.3rem .85rem;
+}
+.ctl button[aria-pressed="true"]{ background:var(--btnOn); color:var(--btnOnInk); border-color:var(--btnOn); }
+.ctl button.h1[aria-pressed="true"]{ background:var(--c1); border-color:var(--c1); color:var(--board); }
+.ctl button.h2[aria-pressed="true"]{ background:var(--c2); border-color:var(--c2); color:var(--board); }
+.ctl label{ font-size:.95rem; color:var(--muted); display:flex; align-items:center; gap:.45rem; }
+.ctl input[type=range]{ width:150px; accent-color:var(--ink); }
+.ctl output{ font-variant-numeric:tabular-nums; color:var(--ink); min-width:6.5ch; }
+.ctl input[type=checkbox]{ accent-color:var(--ink); width:1.05rem; height:1.05rem; }
+.tally{ display:flex; gap:1rem; font-variant-numeric:tabular-nums; }
+.tally span b{ font-weight:600; }
+.sw{ display:inline-block; width:.7rem; height:.7rem; border-radius:50%; margin-right:.3rem; vertical-align:baseline; }
+[hidden]{ display:none !important; }
+
+.below{ display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:2rem; margin-top:1.5rem; }
+@media (max-width:820px){ .below{ grid-template-columns:1fr; } }
+.story h2{ font-family:"Kalam", cursive; font-weight:700; font-size:1.6rem; margin:0 0 .4rem; }
+.story p{ margin:0 0 .8rem; max-width:62ch; }
+.law{
+  font-size:1.2rem; margin:.4rem 0 1rem; padding:.55rem .9rem; border-left:4px solid var(--c12);
+  background:var(--board); border-radius:0 8px 8px 0; display:inline-block;
+}
+.try{ color:var(--muted); font-style:italic; }
+
+.fig31 h3{ font-family:"Kalam", cursive; font-weight:400; font-size:1.25rem; margin:0 0 .5rem; color:var(--muted); }
+.tablewrap{ overflow-x:auto; }
+table{ border-collapse:collapse; width:100%; min-width:420px; font-size:.97rem; }
+th, td{ text-align:left; vertical-align:top; padding:.5rem .6rem; border-bottom:1px solid var(--rule); }
+th{ font-family:"Kalam", cursive; font-size:1.1rem; font-weight:700; }
+td.on, th.on{ background:var(--board); }
+th.on{ box-shadow:inset 0 3px 0 var(--c12); }
+.keys{ margin-top:2rem; color:var(--muted); font-size:.9rem; }
+kbd{ font-family:inherit; border:1px solid var(--rule); border-radius:4px; padding:0 .3rem; background:var(--board); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>The experiment with two holes</h1>
+    <p>Feynman's thought experiment from <cite>The Character of Physical Law</cite>, lecture 6, "Probability and Uncertainty". The same apparatus, run three times: with bullets, with water waves, and with electrons. Then we try to watch the electrons.</p>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="Which experiment">
+    <button role="tab" data-mode="bullets" aria-selected="true">Bullets</button>
+    <button role="tab" data-mode="water" aria-selected="false">Water waves</button>
+    <button role="tab" data-mode="electrons" aria-selected="false">Electrons</button>
+    <button role="tab" data-mode="watched" aria-selected="false">Electrons, watched</button>
+  </div>
+
+  <div class="stage">
+    <canvas id="cv" tabindex="0" aria-label="Two-hole experiment"></canvas>
+    <div class="ctl">
+      <div class="grp">
+        <button class="h1" id="hole1" aria-pressed="true">Hole 1 open</button>
+        <button class="h2" id="hole2" aria-pressed="true">Hole 2 open</button>
+      </div>
+      <label><span id="rateLabel">Bullets per second</span>
+        <input type="range" id="rate" min="0" max="100" value="35">
+        <output id="rateOut">5</output></label>
+      <div class="grp">
+        <button id="pause" aria-pressed="false">Pause</button>
+        <button id="one" data-lumps>Fire one</button>
+        <button id="clear" data-lumps>Clear</button>
+        <button id="sound" aria-pressed="false" data-lumps>Clicks</button>
+      </div>
+      <div class="grp">
+        <label><input type="checkbox" id="showTotal"> Predicted curve</label>
+        <label><input type="checkbox" id="showSingle"> Single-hole curves</label>
+      </div>
+      <div class="grp" data-watched hidden>
+        <label>Light brightness
+          <input type="range" id="light" min="0" max="100" value="100">
+          <output id="lightOut">100%</output></label>
+      </div>
+      <div class="grp" data-watched hidden role="group" aria-label="Which electrons to plot">
+        <button class="filt" data-f="all" aria-pressed="true">All</button>
+        <button class="filt" data-f="seen" aria-pressed="false">Only seen</button>
+        <button class="filt" data-f="unseen" aria-pressed="false">Only not seen</button>
+      </div>
+      <div class="tally" id="tally" data-lumps></div>
+    </div>
+  </div>
+
+  <div class="below">
+    <section class="story" id="story" aria-live="polite"></section>
+    <section class="fig31">
+      <h3>Feynman's summary table (his figure 31)</h3>
+      <div class="tablewrap">
+      <table id="fig31">
+        <thead><tr><th></th><th data-col="0">Bullets</th><th data-col="1">Water waves</th><th data-col="2">Electrons (photons)</th></tr></thead>
+        <tbody>
+          <tr><td>What arrives</td><td data-col="0">Lumps</td><td data-col="1">Any amount at all</td><td data-col="2">Lumps</td></tr>
+          <tr><td>What we measure</td><td data-col="0">Probability of arrival</td><td data-col="1">Intensity of the waves</td><td data-col="2">Probability of arrival</td></tr>
+          <tr><td>Both holes open</td><td data-col="0">N₁₂ = N₁ + N₂<br>no interference</td><td data-col="1">I₁₂ ≠ I₁ + I₂<br>interference</td><td data-col="2">N₁₂ ≠ N₁ + N₂<br>interference</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+  </div>
+  <p class="keys">Keys: <kbd>1</kbd>–<kbd>4</kbd> switch experiment, <kbd>Space</kbd> pause, <kbd>A</kbd>/<kbd>B</kbd> toggle hole 1/2, <kbd>F</kbd> fire one, <kbd>C</kbd> clear, <kbd>P</kbd> predicted curve, <kbd>S</kbd> single-hole curves. In the water experiment, drag along the backstop to move the cork.</p>
+</div>
+
+<script>
+(() => {
+"use strict";
+// ---------- geometry (logical units) ----------
+const W = 1000, H = 560;
+const SRC = { x: 70, y: 280 };
+const WALL_X = 400, WALL_T = 12;
+const HY = [225, 335];          // hole centres
+const HW = 26;                  // hole width
+const SCREEN_X = 820, STRIP = 16;
+const PX0 = 840, PW = 145;      // plot region (to the right of the backstop)
+const LAMBDA = 18, K = 2 * Math.PI / LAMBDA;
+const NB = 112, BH = H / NB;
+const R_SH = Math.hypot(WALL_X - SRC.x, HY[0] - SRC.y);
+
+// amplitude from hole j at point (x,y), beyond the wall
+function holeAmp(j, x, y) {
+  const dx = x - (WALL_X + WALL_T), dy = y - HY[j];
+  const r = Math.hypot(dx, dy);
+  const s = dy / r;
+  const a = K * HW * s / 2;
+  const env = Math.abs(a) < 1e-6 ? 1 : Math.sin(a) / a;
+  return { A: env * Math.sqrt(60 / (r + 30)), r };
+}
+
+// ---------- theory on the screen ----------
+const P1 = new Float64Array(NB), P2 = new Float64Array(NB), P12 = new Float64Array(NB);
+const scrA = [new Float64Array(NB), new Float64Array(NB)], scrR = [new Float64Array(NB), new Float64Array(NB)];
+(function () {
+  const sub = 10;
+  for (let b = 0; b < NB; b++) {
+    let s1 = 0, s2 = 0, s12 = 0;
+    for (let i = 0; i < sub; i++) {
+      const y = (b + (i + 0.5) / sub) * BH;
+      const a = holeAmp(0, SCREEN_X, y), c = holeAmp(1, SCREEN_X, y);
+      const re = a.A * Math.cos(K * a.r) + c.A * Math.cos(K * c.r);
+      const im = a.A * Math.sin(K * a.r) + c.A * Math.sin(K * c.r);
+      s1 += a.A * a.A; s2 += c.A * c.A; s12 += re * re + im * im;
+    }
+    P1[b] = s1 / sub; P2[b] = s2 / sub; P12[b] = s12 / sub;
+    const yc = (b + 0.5) * BH;
+    for (let j = 0; j < 2; j++) { const h = holeAmp(j, SCREEN_X, yc); scrA[j][b] = h.A; scrR[j][b] = h.r; }
+  }
+  let z = 0; for (let b = 0; b < NB; b++) z += P1[b];
+  for (let b = 0; b < NB; b++) { P1[b] /= z; P2[b] /= z; P12[b] /= z; }
+})();
+const sumArr = a => { let s = 0; for (const v of a) s += v; return s; };
+const S12 = sumArr(P12);
+function makeCdf(p) { const c = new Float64Array(NB); let s = 0; for (let b = 0; b < NB; b++) { s += p[b]; c[b] = s; } for (let b = 0; b < NB; b++) c[b] /= s; return c; }
+const CDF = [makeCdf(P1), makeCdf(P2), makeCdf(P12)];
+function sampleY(cdf) {
+  const u = Math.random(); let lo = 0, hi = NB - 1;
+  while (lo < hi) { const m = (lo + hi) >> 1; if (cdf[m] < u) lo = m + 1; else hi = m; }
+  return (lo + Math.random()) * BH;
+}
+function gauss() { return Math.sqrt(-2 * Math.log(1 - Math.random())) * Math.cos(2 * Math.PI * Math.random()); }
+
+// ---------- state ----------
+const MODES = ["bullets", "water", "electrons", "watched"];
+const RATE = { bullets: [1, 400], electrons: [1, 2000], watched: [1, 2000] };
+function freshLumps() {
+  return { bins: [new Float64Array(NB), new Float64Array(NB), new Float64Array(NB)], tally: [0, 0, 0], arrivals: [], parts: [], pending: [], acc: 0, holes: [true, true], rateV: 35, scale: 0 };
+}
+const st = { bullets: freshLumps(), electrons: freshLumps(), watched: freshLumps(),
+  water: { holes: [true, true], openT: [-1e9, -1e9], closeT: [Infinity, Infinity], I: new Float64Array(NB), wt: 0, rateV: 50, corkY: 280, warm: false } };
+let mode = "bullets", paused = false, light = 1, filter = "all", sound = false;
+let showTotal = false, showSingle = false;
+const sparks = [], flashes = [], recent = [];
+let simT = 0;
+
+// ---------- colours ----------
+let C = {};
+function hexRgb(h) { h = h.trim().replace("#", ""); if (h.length === 3) h = h.split("").map(x => x + x).join(""); const n = parseInt(h, 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+function readTheme() {
+  const cs = getComputedStyle(document.documentElement);
+  for (const k of ["board", "ink", "muted", "rule", "c1", "c2", "c12", "wall", "sand", "wTrough", "wMid", "wCrest"]) C[k] = cs.getPropertyValue("--" + k).trim();
+  C.rT = hexRgb(C.wTrough); C.rM = hexRgb(C.wMid); C.rC = hexRgb(C.wCrest);
+  redrawPlate();
+}
+const catCol = c => c === 0 ? C.c1 : c === 1 ? C.c2 : C.c12;
+
+// ---------- canvas ----------
+const cv = document.getElementById("cv"), ctx = cv.getContext("2d");
+const plate = document.createElement("canvas"), pctx = plate.getContext("2d");
+let scale = 1, dpr = 1;
+function resize() {
+  dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+  const w = cv.clientWidth || cv.parentElement.clientWidth;
+  scale = w / W;
+  cv.width = Math.round(w * dpr); cv.height = Math.round(H * scale * dpr);
+  cv.style.height = (H * scale) + "px";
+  plate.width = cv.width; plate.height = cv.height;
+  redrawPlate();
+}
+function plateDot(a) {
+  pctx.fillStyle = catCol(a.cat);
+  pctx.globalAlpha = 0.85;
+  pctx.beginPath(); pctx.arc(a.x, a.y, 1.35, 0, 7); pctx.fill();
+  pctx.globalAlpha = 1;
+}
+function redrawPlate() {
+  if (!plate.width) return;
+  pctx.setTransform(1, 0, 0, 1, 0, 0); pctx.clearRect(0, 0, plate.width, plate.height);
+  pctx.setTransform(scale * dpr, 0, 0, scale * dpr, 0, 0);
+  const s = st[mode]; if (!s.arrivals) return;
+  const arr = s.arrivals, start = Math.max(0, arr.length - 40000);
+  for (let i = start; i < arr.length; i++) if (catVisible(arr[i].cat)) plateDot(arr[i]);
+}
+
+// ---------- water field (precomputed geometry) ----------
+const FS = 4, FW = Math.ceil(SCREEN_X / FS), FH = Math.ceil(H / FS);
+const field = document.createElement("canvas"); field.width = FW; field.height = FH;
+const fctx = field.getContext("2d"); const img = fctx.createImageData(FW, FH);
+const N = FW * FH;
+const g_reg = new Uint8Array(N), g_rs = new Float32Array(N), g_as = new Float32Array(N);
+const g_r = [new Float32Array(N), new Float32Array(N)], g_a = [new Float32Array(N), new Float32Array(N)];
+for (let iy = 0; iy < FH; iy++) for (let ix = 0; ix < FW; ix++) {
+  const i = iy * FW + ix, x = (ix + 0.5) * FS, y = (iy + 0.5) * FS;
+  if (x < WALL_X) { g_reg[i] = 0; const r = Math.hypot(x - SRC.x, y - SRC.y); g_rs[i] = r; g_as[i] = Math.min(1.6, Math.sqrt(40 / (r + 6))); }
+  else if (x < WALL_X + WALL_T) g_reg[i] = 2;
+  else { g_reg[i] = 1; for (let j = 0; j < 2; j++) { const h = holeAmp(j, x, y); g_r[j][i] = h.r; g_a[j][i] = h.A; } }
+}
+const OMEGA = 2 * Math.PI / 0.7, CW = OMEGA / K; // wave speed px/s
+function holeLive(w, j, r) { return r < CW * (w.wt - w.openT[j]) && r > CW * (w.wt - w.closeT[j]); }
+function renderField(w) {
+  const d = img.data, t = w.wt, ph = OMEGA * t, gain = 1.25;
+  const rT = C.rT, rM = C.rM, rC = C.rC;
+  for (let i = 0; i < N; i++) {
+    let h = 0; const reg = g_reg[i];
+    if (reg === 0) h = g_as[i] * Math.cos(K * g_rs[i] - ph) * 0.75;
+    else if (reg === 1) {
+      for (let j = 0; j < 2; j++) { const r = g_r[j][i]; if (holeLive(w, j, r)) h += g_a[j][i] * Math.cos(K * (R_SH + r) - ph) * gain; }
+    }
+    if (h > 1) h = 1; else if (h < -1) h = -1;
+    let a, b, f; if (h >= 0) { a = rM; b = rC; f = h; } else { a = rM; b = rT; f = -h; }
+    const o = i * 4;
+    d[o] = a[0] + (b[0] - a[0]) * f; d[o + 1] = a[1] + (b[1] - a[1]) * f; d[o + 2] = a[2] + (b[2] - a[2]) * f; d[o + 3] = 255;
+  }
+  fctx.putImageData(img, 0, 0);
+}
+function screenH(w, b) {
+  let h = 0; const ph = OMEGA * w.wt;
+  for (let j = 0; j < 2; j++) { const r = scrR[j][b]; if (holeLive(w, j, r)) h += scrA[j][b] * Math.cos(K * (R_SH + r) - ph) * 1.25; }
+  return h;
+}
+const I_THEORY = [new Float64Array(NB), new Float64Array(NB), new Float64Array(NB)];
+let I_MAX = 0;
+for (let b = 0; b < NB; b++) {
+  const g = 1.25 * 1.25 / 2;
+  const a0 = scrA[0][b], a1 = scrA[1][b], r0 = scrR[0][b], r1 = scrR[1][b];
+  I_THEORY[0][b] = g * a0 * a0; I_THEORY[1][b] = g * a1 * a1;
+  const re = a0 * Math.cos(K * r0) + a1 * Math.cos(K * r1), im = a0 * Math.sin(K * r0) + a1 * Math.sin(K * r1);
+  I_THEORY[2][b] = g * (re * re + im * im); I_MAX = Math.max(I_MAX, I_THEORY[2][b]);
+}
+
+// ---------- sound ----------
+let actx = null, clickBuf = null, lastClick = 0;
+function initAudio() {
+  if (actx) return; try {
+    actx = new (window.AudioContext || window.webkitAudioContext)();
+    const n = Math.floor(actx.sampleRate * 0.012); clickBuf = actx.createBuffer(1, n, actx.sampleRate);
+    const d = clickBuf.getChannelData(0); for (let i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.exp(-i / (n / 6));
+  } catch (e) { actx = null; }
+}
+function click() {
+  if (!sound || !actx) return; const now = performance.now(); if (now - lastClick < 25) return; lastClick = now;
+  const s = actx.createBufferSource(); s.buffer = clickBuf; const g = actx.createGain(); g.gain.value = 0.6; s.connect(g).connect(actx.destination); s.start();
+}
+
+// ---------- lumps ----------
+function catVisible(c) {
+  if (mode !== "watched") return true;
+  if (filter === "all") return true;
+  if (filter === "seen") return c < 2;
+  return c === 2;
+}
+function arrive(s, y, cat) {
+  const b = Math.min(NB - 1, Math.max(0, Math.floor(y / BH)));
+  s.bins[cat][b]++; s.tally[cat]++;
+  const a = { x: SCREEN_X - STRIP + 2 + Math.random() * (STRIP - 4), y, cat };
+  s.arrivals.push(a); if (catVisible(cat)) plateDot(a);
+  if (recent.length < 400) recent.push({ x: a.x, y, cat, t: simT });
+  click();
+}
+function emitBullet(s) {
+  let aim = Math.random() < 0.6 ? HY[(Math.random() * 2) | 0] + gauss() * 14 : SRC.y + gauss() * 95;
+  const x0 = SRC.x + 30, y0 = SRC.y + (aim - SRC.y) * 0.08;
+  const L = Math.hypot(WALL_X - x0, aim - y0), sp = 650;
+  s.parts.push({ x: x0, y: y0, vx: (WALL_X - x0) / L * sp, vy: (aim - y0) / L * sp, ph: 0, aim, cat: -1 });
+  gunAim = aim;
+}
+let gunAim = SRC.y;
+function emitElectron(s) {
+  const open = s.holes.filter(Boolean).length; if (!open) { sparks.push({ t: simT }); return; }
+  sparks.push({ t: simT });
+  if (Math.random() > open / 2) return; // absorbed by the plate
+  let cat, y, hole = -1;
+  if (mode === "watched" && Math.random() < light) {
+    hole = open === 2 ? (Math.random() < 0.5 ? 0 : 1) : (s.holes[0] ? 0 : 1);
+    cat = hole; y = sampleY(CDF[hole]);
+  } else {
+    cat = 2; y = open === 2 ? sampleY(CDF[2]) : sampleY(CDF[s.holes[0] ? 0 : 1]);
+  }
+  s.pending.push({ tArr: simT + 0.45, tFlash: simT + 0.22, y, cat, hole, flashed: false });
+}
+function stepLumps(s, dt) {
+  const [lo, hi] = RATE[mode];
+  const rate = lo * Math.pow(hi / lo, s.rateV / 100);
+  s.acc += rate * dt;
+  let n = Math.floor(s.acc); s.acc -= n; if (n > 400) n = 400;
+  for (let i = 0; i < n; i++) (mode === "bullets" ? emitBullet : emitElectron)(s);
+  // bullets
+  const ps = s.parts;
+  for (let i = ps.length - 1; i >= 0; i--) {
+    const p = ps[i]; p.x += p.vx * dt; p.y += p.vy * dt;
+    if (p.ph === 0 && p.x >= WALL_X) {
+      let j = -1; for (let k = 0; k < 2; k++) if (s.holes[k] && Math.abs(p.aim - HY[k]) < HW / 2 - 1) j = k;
+      if (j < 0) { sparks.push({ t: simT, x: WALL_X, y: p.aim, wall: true }); ps.splice(i, 1); continue; }
+      p.ph = 1; p.cat = j; p.x = WALL_X + WALL_T; p.y = p.aim; p.ty = sampleY(CDF[j]);
+      const L = Math.hypot(SCREEN_X - STRIP - p.x, p.ty - p.y), sp = 650;
+      p.vx = (SCREEN_X - STRIP - p.x) / L * sp; p.vy = (p.ty - p.y) / L * sp;
+    } else if (p.ph === 1 && p.x >= SCREEN_X - STRIP) { arrive(s, p.ty, p.cat); ps.splice(i, 1); }
+  }
+  if (ps.length > 4000) ps.splice(0, ps.length - 4000);
+  // electrons
+  const pe = s.pending;
+  for (let i = pe.length - 1; i >= 0; i--) {
+    const e = pe[i];
+    if (!e.flashed && e.hole >= 0 && simT >= e.tFlash) { e.flashed = true; if (flashes.length < 200) flashes.push({ t: simT, hole: e.hole }); }
+    if (simT >= e.tArr) { arrive(s, e.y, e.cat); pe.splice(i, 1); }
+  }
+}
+
+// ---------- drawing ----------
+function setT() { ctx.setTransform(scale * dpr, 0, 0, scale * dpr, 0, 0); }
+function label(txt, x, y, opt = {}) {
+  ctx.font = `${opt.bold ? 700 : 400} ${opt.size || 17}px Kalam, "Comic Sans MS", cursive`;
+  ctx.fillStyle = opt.color || C.muted; ctx.textAlign = opt.align || "center"; ctx.textBaseline = opt.base || "alphabetic";
+  ctx.fillText(txt, x, y);
+}
+function drawWall(holes) {
+  ctx.fillStyle = C.wall;
+  let y = 0;
+  const gaps = [[HY[0] - HW / 2, HY[0] + HW / 2, holes[0]], [HY[1] - HW / 2, HY[1] + HW / 2, holes[1]]];
+  for (const [a, b, open] of gaps) {
+    ctx.fillRect(WALL_X, y, WALL_T, a - y);
+    if (!open) { ctx.globalAlpha = 0.55; ctx.fillRect(WALL_X - 4, a - 3, WALL_T + 8, b - a + 6); ctx.globalAlpha = 1; }
+    y = b;
+  }
+  ctx.fillRect(WALL_X, y, WALL_T, H - y);
+  label("1", WALL_X - 16, HY[0] + 6, { color: C.c1, bold: true, size: 20 });
+  label("2", WALL_X - 16, HY[1] + 6, { color: C.c2, bold: true, size: 20 });
+}
+function drawScreen(kind) {
+  ctx.fillStyle = kind === "bullets" ? C.sand : C.rule;
+  ctx.globalAlpha = kind === "bullets" ? 0.9 : 0.6;
+  ctx.fillRect(SCREEN_X - STRIP, 0, STRIP, H); ctx.globalAlpha = 1;
+  ctx.fillStyle = C.wall; ctx.fillRect(SCREEN_X, 0, 3, H);
+  // x axis arrow, as in Feynman's figures
+  ctx.strokeStyle = C.muted; ctx.lineWidth = 1.2;
+  ctx.beginPath(); ctx.moveTo(PX0 - 6, H - 12); ctx.lineTo(PX0 - 6, H - 70); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(PX0 - 11, H - 62); ctx.lineTo(PX0 - 6, H - 72); ctx.lineTo(PX0 - 1, H - 62); ctx.stroke();
+  label("x", PX0 + 6, H - 50, { align: "left", size: 18 });
+}
+function drawGun() {
+  const ang = Math.atan2(gunAim - SRC.y, 300) * 0.25 + Math.sin(simT * 31) * 0.03;
+  ctx.save(); ctx.translate(SRC.x, SRC.y); ctx.rotate(ang);
+  ctx.fillStyle = C.ink; ctx.fillRect(-30, -11, 38, 22); ctx.fillRect(8, -4, 26, 8); ctx.fillRect(-18, 9, 9, 16);
+  ctx.restore();
+  label("wobbly machine gun", SRC.x, SRC.y + 52);
+  label("armour plate", WALL_X + WALL_T + 10, 26, { align: "left" });
+  label("box of sand", SCREEN_X - STRIP - 8, 26, { align: "right" });
+}
+function drawFilament() {
+  const glow = sparks.length ? 1 : 0.4;
+  ctx.strokeStyle = C.c12; ctx.lineWidth = 2.5; ctx.globalAlpha = 0.5 + 0.5 * glow;
+  ctx.beginPath(); for (let i = 0; i <= 8; i++) { const yy = SRC.y - 24 + i * 6; ctx.lineTo(SRC.x + (i % 2 ? 8 : -8), yy); } ctx.stroke();
+  ctx.globalAlpha = 1;
+  for (const s of sparks) { const a = 1 - (simT - s.t) / 0.15; if (a <= 0 || s.wall) continue; ctx.globalAlpha = a * 0.7; ctx.fillStyle = C.c12; ctx.beginPath(); ctx.arc(SRC.x + 14, SRC.y + (Math.random() - 0.5) * 30, 3, 0, 7); ctx.fill(); }
+  ctx.globalAlpha = 1;
+  label("hot filament", SRC.x, SRC.y + 56);
+  label("tungsten plate", WALL_X + WALL_T + 10, 26, { align: "left" });
+  label("detector", SCREEN_X - STRIP - 8, 26, { align: "right" });
+  // the honest part: no path drawn
+  label("(no path drawn here,", (WALL_X + SCREEN_X) / 2, H - 46, { size: 15 });
+  label("we don't know it)", (WALL_X + SCREEN_X) / 2, H - 26, { size: 15 });
+}
+function drawLamp() {
+  const x = WALL_X + 95, y = SRC.y;
+  ctx.globalAlpha = 0.15 + 0.5 * light; ctx.fillStyle = C.c12;
+  ctx.beginPath(); ctx.arc(x, y, 34 * (0.4 + light), 0, 7); ctx.fill();
+  ctx.globalAlpha = 1; ctx.fillStyle = C.ink; ctx.beginPath(); ctx.arc(x, y, 8, 0, 7); ctx.fill();
+  label("light", x, y + 66);
+  for (const f of flashes) {
+    const a = 1 - (simT - f.t) / 0.25; if (a <= 0) continue;
+    ctx.globalAlpha = a; ctx.fillStyle = f.hole === 0 ? C.c1 : C.c2;
+    ctx.beginPath(); ctx.arc(WALL_X + WALL_T + 14, HY[f.hole], 9 + 8 * (1 - a), 0, 7); ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+}
+function drawBullets(s) {
+  for (const p of s.parts) {
+    ctx.fillStyle = p.cat < 0 ? C.ink : catCol(p.cat);
+    ctx.globalAlpha = 0.35; ctx.fillRect(p.x - p.vx * 0.012, p.y - p.vy * 0.012 - 1, p.vx * 0.012, 2); ctx.globalAlpha = 1;
+    ctx.beginPath(); ctx.arc(p.x, p.y, 2.6, 0, 7); ctx.fill();
+  }
+  for (const k of sparks) { if (!k.wall) continue; const a = 1 - (simT - k.t) / 0.3; if (a <= 0) continue; ctx.globalAlpha = a; ctx.fillStyle = C.muted; ctx.beginPath(); ctx.arc(k.x - 2, k.y, 3, 0, 7); ctx.fill(); }
+  ctx.globalAlpha = 1;
+}
+function drawRecent() {
+  for (const r of recent) { const a = 1 - (simT - r.t) / 0.35; if (a <= 0 || !catVisible(r.cat)) continue; ctx.globalAlpha = a; ctx.fillStyle = catCol(r.cat); ctx.beginPath(); ctx.arc(r.x, r.y, 3 + 5 * (1 - a), 0, 7); ctx.fill(); }
+  ctx.globalAlpha = 1;
+}
+function curve(arr, sc, color, dash, lw = 2.2) {
+  ctx.strokeStyle = color; ctx.lineWidth = lw; ctx.setLineDash(dash ? [6, 5] : []);
+  ctx.beginPath();
+  for (let b = 0; b < NB; b++) { const x = PX0 + arr[b] * sc, y = (b + 0.5) * BH; b ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
+  ctx.stroke(); ctx.setLineDash([]);
+}
+function predictions(s) {
+  const open = s.holes.filter(Boolean).length;
+  const t = s.tally, tot = new Float64Array(NB), sing = [null, null];
+  const scaled = (p, n) => { const a = new Float64Array(NB); for (let b = 0; b < NB; b++) a[b] = p[b] * n; return a; };
+  if (mode === "bullets") {
+    sing[0] = s.holes[0] ? scaled(P1, t[0]) : null; sing[1] = s.holes[1] ? scaled(P2, t[1]) : null;
+    for (let b = 0; b < NB; b++) tot[b] = P1[b] * t[0] + P2[b] * t[1];
+  } else {
+    const showSeen = mode === "watched" && filter !== "unseen";
+    const showUn = mode !== "watched" || filter !== "seen";
+    if (showSeen) for (let b = 0; b < NB; b++) tot[b] += P1[b] * t[0] + P2[b] * t[1];
+    if (showUn) {
+      const u = t[2];
+      if (open === 2) for (let b = 0; b < NB; b++) tot[b] += P12[b] / S12 * u;
+      else { const p = s.holes[0] ? P1 : P2; for (let b = 0; b < NB; b++) tot[b] += p[b] * u; }
+    }
+    if (mode === "electrons") {
+      const u = t[2];
+      if (open === 2) { sing[0] = scaled(P1, u / 2); sing[1] = scaled(P2, u / 2); }
+      else if (open === 1) { const j = s.holes[0] ? 0 : 1; sing[j] = scaled(j ? P2 : P1, u); }
+    } else if (mode === "watched" && showSeen) {
+      sing[0] = s.holes[0] ? scaled(P1, t[0]) : null; sing[1] = s.holes[1] ? scaled(P2, t[1]) : null;
+    }
+  }
+  return { tot, sing };
+}
+function drawLumpsPlot(s) {
+  let maxBar = 0, nvis = 0;
+  const vis = [0, 1, 2].map(catVisible);
+  for (let c = 0; c < 3; c++) if (vis[c]) nvis += s.tally[c];
+  const sums = new Float64Array(NB);
+  for (let b = 0; b < NB; b++) { let v = 0; for (let c = 0; c < 3; c++) if (vis[c]) v += s.bins[c][b]; sums[b] = v; if (v > maxBar) maxBar = v; }
+  const pr = predictions(s); let maxP = 0; for (const v of pr.tot) maxP = Math.max(maxP, v);
+  const target = Math.max(maxBar, (showTotal || showSingle) ? maxP : 0, 1e-9);
+  const want = PW * 0.95 / target;
+  s.scale = s.scale ? s.scale + (want - s.scale) * 0.15 : want;
+  if (s.scale > want * 1.0001 && maxBar * s.scale > PW) s.scale = want;
+  const sc = s.scale;
+  if (nvis > 0) {
+    for (let b = 0; b < NB; b++) {
+      let x = PX0;
+      for (let c = 0; c < 3; c++) {
+        if (!vis[c]) continue; const v = s.bins[c][b]; if (!v) continue;
+        const w = v * sc; ctx.fillStyle = catCol(c); ctx.globalAlpha = 0.8; ctx.fillRect(x, b * BH + 0.4, w, BH - 0.8); x += w;
+      }
+    }
+    ctx.globalAlpha = 1;
+    if (showSingle) { if (pr.sing[0]) curve(pr.sing[0], sc, C.c1, true); if (pr.sing[1]) curve(pr.sing[1], sc, C.c2, true); }
+    if (showTotal) curve(pr.tot, sc, C.ink, false, 2.4);
+  } else {
+    label("nothing has", PX0 + PW / 2, H / 2 - 10, { size: 16 });
+    label("arrived yet", PX0 + PW / 2, H / 2 + 12, { size: 16 });
+  }
+  ctx.strokeStyle = C.muted; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(PX0, 0); ctx.lineTo(PX0, H); ctx.stroke();
+  const cap = mode === "bullets" ? "bullets counted" : "electrons counted";
+  label(cap + " →", PX0 + 4, 26, { align: "left", size: 15 });
+}
+function drawWaterPlot(w) {
+  const sc = PW * 0.92 / I_MAX;
+  // measured (time-averaged energy of the cork)
+  ctx.fillStyle = C.c12; ctx.globalAlpha = 0.45;
+  ctx.beginPath(); ctx.moveTo(PX0, 0);
+  for (let b = 0; b < NB; b++) ctx.lineTo(PX0 + w.I[b] * sc, (b + 0.5) * BH);
+  ctx.lineTo(PX0, H); ctx.closePath(); ctx.fill(); ctx.globalAlpha = 1;
+  curve(w.I, sc, C.c12, false, 2);
+  if (showSingle) { curve(I_THEORY[0], sc, C.c1, true); curve(I_THEORY[1], sc, C.c2, true); }
+  if (showTotal) {
+    const o = w.holes; let arr = null;
+    if (o[0] && o[1]) arr = I_THEORY[2]; else if (o[0]) arr = I_THEORY[0]; else if (o[1]) arr = I_THEORY[1];
+    if (arr) curve(arr, sc, C.ink, false, 2.2);
+  }
+  ctx.strokeStyle = C.muted; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(PX0, 0); ctx.lineTo(PX0, H); ctx.stroke();
+  label("wave intensity →", PX0 + 4, 26, { align: "left", size: 15 });
+  // instantaneous height along the backstop
+  ctx.strokeStyle = C.ink; ctx.lineWidth = 1.5; ctx.beginPath();
+  for (let b = 0; b < NB; b++) { const x = SCREEN_X - STRIP / 2 + screenH(w, b) * 7, y = (b + 0.5) * BH; b ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
+  ctx.stroke();
+  // cork
+  const cb = Math.min(NB - 1, Math.max(0, Math.floor(w.corkY / BH)));
+  const hc = screenH(w, cb);
+  const ix = PX0 + w.I[cb] * sc;
+  ctx.strokeStyle = C.ink; ctx.setLineDash([2, 3]); ctx.beginPath(); ctx.moveTo(SCREEN_X, w.corkY); ctx.lineTo(ix, w.corkY); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle = C.ink; ctx.beginPath(); ctx.arc(ix, w.corkY, 4, 0, 7); ctx.fill();
+  ctx.fillStyle = C.c12; ctx.strokeStyle = C.ink; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.arc(SCREEN_X - STRIP / 2 + hc * 7, w.corkY, 6 + hc * 1.5, 0, 7); ctx.fill(); ctx.stroke();
+  label("cork", SCREEN_X - STRIP - 10, w.corkY + 5, { align: "right", color: C.ink, size: 16 });
+}
+function drawWater(w) {
+  renderField(w);
+  ctx.imageSmoothingEnabled = true;
+  ctx.drawImage(field, 0, 0, FW, FH, 0, 0, FW * FS, FH * FS);
+  ctx.fillStyle = C.board; ctx.fillRect(SCREEN_X, 0, W - SCREEN_X, H);
+  // source: a jiggling finger
+  const bob = Math.cos(OMEGA * w.wt) * 5;
+  ctx.fillStyle = C.ink; ctx.beginPath(); ctx.ellipse(SRC.x, SRC.y, 9 + bob * 0.4, 9 + bob * 0.4, 0, 0, 7); ctx.fill();
+  label("jiggling finger", SRC.x, SRC.y + 46, { color: C.ink });
+  label("jetties", WALL_X + WALL_T + 10, 26, { color: C.ink, align: "left" });
+  label("backstop", SCREEN_X - STRIP - 8, 26, { color: C.ink, align: "right" });
+  drawWall(w.holes);
+  drawScreen("water");
+  drawWaterPlot(w);
+}
+function draw() {
+  setT();
+  ctx.fillStyle = C.board; ctx.fillRect(0, 0, W, H);
+  const s = st[mode];
+  if (mode === "water") { drawWater(s); return; }
+  drawScreen(mode);
+  drawWall(s.holes);
+  if (mode === "bullets") { drawGun(); drawBullets(s); }
+  else { drawFilament(); if (mode === "watched") drawLamp(); }
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.drawImage(plate, 0, 0); setT();
+  drawRecent();
+  drawLumpsPlot(s);
+}
+
+// ---------- loop ----------
+let last = performance.now(), tallyT = 0;
+function frame(now) {
+  let dt = Math.min(0.05, (now - last) / 1000); last = now;
+  if (paused) dt = 0;
+  simT += dt;
+  const s = st[mode];
+  if (mode === "water") {
+    const ts = 0.25 * Math.pow(12, s.rateV / 100);
+    const wdt = dt * ts; s.wt += wdt;
+    if (!s.warm) { for (let b = 0; b < NB; b++) s.I[b] = I_THEORY[2][b]; s.warm = true; }
+    const f = 1 - Math.exp(-wdt / 1.4);
+    for (let b = 0; b < NB; b++) { const h = screenH(s, b); s.I[b] += (h * h - s.I[b]) * f; }
+  } else stepLumps(s, dt);
+  for (const arr of [sparks, flashes, recent]) { let k = 0; while (k < arr.length && simT - arr[k].t > 0.4) k++; if (k) arr.splice(0, k); }
+  draw();
+  if (now - tallyT > 200) { tallyT = now; updateTally(); }
+  requestAnimationFrame(frame);
+}
+
+// ---------- UI ----------
+const $ = id => document.getElementById(id);
+const STORY = {
+  bullets: {
+    h: "Bullets",
+    p: ["A shaky machine gun sprays indestructible bullets at an armour plate with two holes. Some ricochet off the edges of a hole; all of them land whole in the box of sand behind. They arrive in lumps, one bang at a time.",
+        "Each bullet is coloured by the hole it came through, because for bullets we can always say which. Leave it running and the pile with both holes open is simply the hole 1 pile plus the hole 2 pile."],
+    law: "N₁₂ = N₁ + N₂  (no interference)",
+    try: "Try: close hole 2, let N₁ build, then reopen it. Turn on the single-hole curves and see that they add up to the total."
+  },
+  water: {
+    h: "Water waves",
+    p: ["Now a finger jiggles the water and ripples spread out. The jetties have the same two gaps, and a cork on the far side bobs up and down. Nothing here comes in lumps: the cork's motion can be any size at all.",
+        "The heights of the water add, so a crest from one gap can land on a trough from the other and cancel it. But what the cork measures is energy, which goes as the height squared. That squaring is what makes the bands."],
+    law: "h₁₂ = h₁ + h₂,  I = h²,  so  I₁₂ ≠ I₁ + I₂  (interference)",
+    try: "Try: drag the cork along the backstop. Close a gap and watch the change travel outward before the intensity settles."
+  },
+  electrons: {
+    h: "Electrons",
+    p: ["A hot filament sends electrons at a tungsten plate with the same two holes. The detector clicks, every click the same size, and two detectors never click at once. Electrons are lumps, just like bullets.",
+        "We don't draw a path between the plate and the detector, because that's exactly the thing we don't know. Count for long enough, though, and the lumps pile up in the water-wave pattern. Nature uses the wave arithmetic for the probability of arrival: add two amplitudes, then square."],
+    law: "N₁₂ = |a₁ + a₂|²  ≠  N₁ + N₂  (interference)",
+    try: "Try: slow it to one electron a second and turn on the clicks. Then speed up, and switch on the single-hole curves: in the dark bands, opening a second hole means fewer electrons arrive."
+  },
+  watched: {
+    h: "Electrons, watched",
+    p: ["To find out which hole each electron really uses, shine a light just behind the plate. Every time there is a click, we see a flash at hole 1 or at hole 2, never half a flash in each. Each electron gets written in a column: hole 1, hole 2, or didn't see.",
+        "The electrons we saw pile up as N₁ + N₂, the bullet pattern. Dimming the light doesn't make the disturbance gentler; it just means fewer photons, so more electrons slip by unseen. Those unseen ones still make the interference pattern."],
+    law: "seen → N₁ + N₂,   not seen → N₁₂",
+    try: "Try: start at full brightness, then dim the light. Use the filter to show only the seen electrons, then only the unseen ones."
+  }
+};
+function renderStory() {
+  const s = STORY[mode];
+  $("story").innerHTML = `<h2>${s.h}</h2>${s.p.map(x => `<p>${x}</p>`).join("")}<div class="law">${s.law}</div><p class="try">${s.try}</p>`;
+  const col = { bullets: 0, water: 1, electrons: 2, watched: 2 }[mode];
+  document.querySelectorAll("#fig31 [data-col]").forEach(el => el.classList.toggle("on", +el.dataset.col === col));
+  cv.setAttribute("aria-label", `Two-hole experiment with ${s.h.toLowerCase()}`);
+}
+function syncControls() {
+  const s = st[mode], lumps = mode !== "water";
+  $("hole1").setAttribute("aria-pressed", s.holes[0]); $("hole1").textContent = s.holes[0] ? "Hole 1 open" : "Hole 1 closed";
+  $("hole2").setAttribute("aria-pressed", s.holes[1]); $("hole2").textContent = s.holes[1] ? "Hole 2 open" : "Hole 2 closed";
+  document.querySelectorAll("[data-lumps]").forEach(el => el.hidden = !lumps);
+  document.querySelectorAll("[data-watched]").forEach(el => el.hidden = mode !== "watched");
+  $("one").textContent = mode === "bullets" ? "Fire one" : "Send one";
+  $("rateLabel").textContent = { bullets: "Bullets per second", water: "Wave speed", electrons: "Electrons per second", watched: "Electrons per second" }[mode];
+  $("rate").value = s.rateV; showRate();
+  document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.mode === mode));
+}
+function showRate() {
+  const s = st[mode];
+  if (mode === "water") { $("rateOut").textContent = (0.25 * Math.pow(12, s.rateV / 100)).toFixed(2) + "×"; return; }
+  const [lo, hi] = RATE[mode]; const r = lo * Math.pow(hi / lo, s.rateV / 100);
+  $("rateOut").textContent = (r < 10 ? r.toFixed(1) : Math.round(r)) + " /s";
+}
+function updateTally() {
+  if (mode === "water") return; const s = st[mode], t = s.tally;
+  let html;
+  if (mode === "bullets") html = `<span><i class="sw" style="background:var(--c1)"></i>Hole 1 <b>${t[0]}</b></span><span><i class="sw" style="background:var(--c2)"></i>Hole 2 <b>${t[1]}</b></span>`;
+  else if (mode === "electrons") html = `<span><i class="sw" style="background:var(--c12)"></i>Electrons <b>${t[2]}</b></span>`;
+  else html = `<span><i class="sw" style="background:var(--c1)"></i>Hole 1 <b>${t[0]}</b></span><span><i class="sw" style="background:var(--c2)"></i>Hole 2 <b>${t[1]}</b></span><span><i class="sw" style="background:var(--c12)"></i>Didn't see <b>${t[2]}</b></span>`;
+  $("tally").innerHTML = html;
+}
+function clearMode() {
+  const s = st[mode]; if (mode === "water") return;
+  const keep = { holes: s.holes, rateV: s.rateV };
+  st[mode] = Object.assign(freshLumps(), keep);
+  recent.length = 0; flashes.length = 0; redrawPlate(); updateTally();
+}
+function setMode(m) { mode = m; recent.length = 0; flashes.length = 0; sparks.length = 0; syncControls(); renderStory(); redrawPlate(); updateTally(); }
+function toggleHole(j) {
+  const s = st[mode];
+  s.holes[j] = !s.holes[j];
+  if (mode === "water") { if (s.holes[j]) { s.openT[j] = s.wt; s.closeT[j] = Infinity; } else s.closeT[j] = s.wt; }
+  else clearMode();
+  syncControls();
+}
+
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => setMode(b.dataset.mode)));
+$("hole1").onclick = () => toggleHole(0);
+$("hole2").onclick = () => toggleHole(1);
+$("rate").oninput = e => { st[mode].rateV = +e.target.value; showRate(); };
+$("pause").onclick = () => { paused = !paused; $("pause").setAttribute("aria-pressed", paused); $("pause").textContent = paused ? "Resume" : "Pause"; };
+$("one").onclick = () => { const s = st[mode]; if (mode === "bullets") emitBullet(s); else if (mode !== "water") emitElectron(s); };
+$("clear").onclick = clearMode;
+$("sound").onclick = () => { sound = !sound; if (sound) { initAudio(); if (actx && actx.state === "suspended") actx.resume(); } $("sound").setAttribute("aria-pressed", sound); };
+$("showTotal").onchange = e => { showTotal = e.target.checked; };
+$("showSingle").onchange = e => { showSingle = e.target.checked; };
+$("light").oninput = e => { light = +e.target.value / 100; $("lightOut").textContent = e.target.value + "%"; };
+document.querySelectorAll(".filt").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.f; document.querySelectorAll(".filt").forEach(x => x.setAttribute("aria-pressed", x === b)); redrawPlate();
+}));
+
+// cork dragging
+function corkFromEvent(e) {
+  if (mode !== "water") return; const r = cv.getBoundingClientRect();
+  const x = (e.clientX - r.left) / scale, y = (e.clientY - r.top) / scale;
+  if (x > SCREEN_X - 120) st.water.corkY = Math.max(4, Math.min(H - 4, y));
+}
+let dragging = false;
+cv.addEventListener("pointerdown", e => { dragging = true; cv.setPointerCapture(e.pointerId); corkFromEvent(e); });
+cv.addEventListener("pointermove", e => { if (dragging) corkFromEvent(e); });
+cv.addEventListener("pointerup", () => { dragging = false; });
+cv.addEventListener("keydown", e => {
+  if (mode === "water" && (e.key === "ArrowUp" || e.key === "ArrowDown")) { st.water.corkY = Math.max(4, Math.min(H - 4, st.water.corkY + (e.key === "ArrowUp" ? -5 : 5))); e.preventDefault(); }
+});
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT" && e.target.type === "range") return;
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const k = e.key.toLowerCase();
+  if ("1234".includes(k) && k.length === 1) setMode(MODES[+k - 1]);
+  else if (k === " ") { e.preventDefault(); $("pause").click(); }
+  else if (k === "a") toggleHole(0);
+  else if (k === "b") toggleHole(1);
+  else if (k === "f") $("one").click();
+  else if (k === "c") clearMode();
+  else if (k === "p") { $("showTotal").click(); }
+  else if (k === "s") { $("showSingle").click(); }
+});
+
+window.addEventListener("resize", resize);
+try { matchMedia("(prefers-color-scheme: dark)").addEventListener("change", readTheme); } catch (e) {}
+new MutationObserver(readTheme).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+resize(); readTheme(); syncControls(); renderStory(); updateTally();
+requestAnimationFrame(t => { last = t; requestAnimationFrame(frame); });
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => {});
+})();
+</script>
+</body>
+</html>
