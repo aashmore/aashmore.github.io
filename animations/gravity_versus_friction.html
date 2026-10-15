@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Returning to the starting point: gravity versus friction</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    color-scheme: light;
+    --bg: #e6ebf0;
+    --panel: #ffffff;
+    --ink: #0f1720;
+    --muted: #46535f;
+    --line: #c5ced6;
+    --track: #e3e8ed;
+    --ke: #d97706;
+    --spring: #0f7f73;
+    --grav: #6340c4;
+    --mass: #2a3850;
+    --mass-text: #f4f7fa;
+    --accent: #0f7f73;
+    --btn-bg: #0f1720;
+    --btn-ink: #ffffff;
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0b1015;
+    --panel: #141b22;
+    --ink: #f1f5f9;
+    --muted: #a9b6c2;
+    --line: #2b3641;
+    --track: #212b34;
+    --ke: #f5a43d;
+    --spring: #3fc9b8;
+    --grav: #a98ff5;
+    --mass: #a9bbd6;
+    --mass-text: #0b1015;
+    --accent: #3fc9b8;
+    --btn-bg: #f1f5f9;
+    --btn-ink: #0b1015;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 18px 14px 28px; }
+
+  /* header */
+  .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 16px; margin-bottom: 12px; }
+  h1 { font-size: 22px; line-height: 1.15; margin: 0 0 4px; font-weight: 650; letter-spacing: -0.01em; }
+  .facts { margin: 0; color: var(--muted); font-size: 13.5px; font-variant-numeric: tabular-nums; }
+  .side { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .readout { display: flex; align-items: baseline; gap: 10px; }
+  .readout .lbl { color: var(--muted); font-size: 13.5px; }
+  .readout .val { font-size: 24px; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+  .toolbar { display: flex; gap: 8px; }
+  button.ghost { font-weight: 500; color: var(--muted); padding: 6px 12px; min-height: 34px; font-size: 13px; }
+
+  /* panels */
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px; margin-bottom: 12px; }
+  .panel.graph { padding: 12px 10px 8px; }
+  .wrap { position: relative; width: 100%; }
+  .wrap canvas { position: absolute; left: 0; top: 0; display: block; }
+  .wrap.stage { height: 350px; }
+  .wrap.gwrap { height: 200px; }
+  h2 { font-size: 14px; margin: 0; font-weight: 600; }
+  .ghead { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 14px; margin-bottom: 4px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .legend i.line { height: 3px; width: 14px; }
+
+  /* controls */
+  .controls { display: grid; gap: 12px 22px; grid-template-columns: 1fr; padding: 14px 14px 12px; }
+  @media (min-width: 620px) { .controls { grid-template-columns: 1fr 1fr; } .btns { grid-column: 1 / -1; } }
+  .ctl { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 2px 8px; }
+  .ctl label { font-size: 13.5px; font-weight: 500; }
+  .ctl output { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .ctl input[type=range] { grid-column: 1 / -1; width: 100%; margin: 4px 0 0; accent-color: var(--accent); height: 28px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  button {
+    font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+    border: 1px solid var(--line); background: transparent; color: var(--ink);
+    border-radius: 8px; padding: 9px 16px; min-height: 40px;
+  }
+  button.primary { background: var(--btn-bg); color: var(--btn-ink); border-color: var(--btn-bg); min-width: 90px; }
+  button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .seg button { border: 0; border-radius: 0; padding: 9px 12px; font-weight: 500; color: var(--muted); }
+  .seg button + button { border-left: 1px solid var(--line); }
+  .seg button[aria-pressed="true"] { background: var(--track); color: var(--ink); font-weight: 600; }
+  .note { font-size: 12.5px; color: var(--muted); margin: 4px 2px 0; max-width: 62ch; }
+  .keys { display: none; }
+
+  /* hide controls (clean projection) */
+  .reveal { display: none; position: fixed; right: 14px; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); opacity: 0.4; min-height: 34px; padding: 6px 12px; font-size: 13px; background: var(--panel); }
+  .reveal:hover, .reveal:focus-visible { opacity: 1; }
+  body.clean .controls, body.clean .toolbar, body.clean .note, body.clean .keys { display: none; }
+  body.clean .reveal { display: block; }
+
+  /* ---- projector / desktop layout: fill the viewport, no scrolling ---- */
+  @media (min-width: 900px) and (min-height: 520px) {
+    body { font-size: clamp(15px, 1.05vw, 20px); overflow: hidden; }
+    main {
+      max-width: none; margin: 0;
+      height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+      padding: clamp(12px, 1.8vh, 26px) clamp(16px, 2vw, 40px);
+      display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; gap: clamp(10px, 1.6vh, 20px);
+    }
+    .head { margin: 0; flex-wrap: nowrap; }
+    h1 { font-size: clamp(22px, 2.3vw, 46px); margin-bottom: 6px; }
+    .facts { font-size: clamp(14px, 1.05vw, 20px); }
+    .side { gap: clamp(14px, 1.6vw, 30px); flex-wrap: nowrap; }
+    .readout { gap: 12px; }
+    .readout .lbl { font-size: clamp(14px, 1.1vw, 21px); }
+    .readout .val { font-size: clamp(28px, 2.7vw, 56px); }
+    button.ghost { font-size: clamp(13px, 0.95vw, 18px); min-height: clamp(34px, 2.8vw, 48px); padding: 6px clamp(12px, 1vw, 20px); }
+    .grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(10px, 1.4vw, 24px); min-height: 0; }
+    .panel { margin: 0; display: flex; flex-direction: column; min-height: 0; padding: clamp(10px, 1vw, 18px); border-radius: 12px; }
+    .wrap, .wrap.stage, .wrap.gwrap { flex: 1; min-height: 0; height: auto; }
+    h2 { font-size: clamp(16px, 1.3vw, 26px); }
+    .legend { font-size: clamp(13px, 1vw, 19px); gap: 4px clamp(12px, 1.2vw, 24px); }
+    .legend i { width: 1.1em; height: 1.1em; }
+    .legend i.line { height: 0.28em; width: 1.5em; }
+    .controls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: end; padding: clamp(10px, 1.2vh, 18px) clamp(14px, 1.4vw, 26px); gap: 10px clamp(16px, 1.8vw, 36px); }
+    .btns { grid-column: 1 / -1; gap: clamp(8px, 0.8vw, 14px); }
+    .ctl label, .ctl output { font-size: clamp(13.5px, 1vw, 19px); }
+    .ctl input[type=range] { height: clamp(26px, 2.2vw, 40px); }
+    button { font-size: clamp(14px, 1vw, 19px); min-height: clamp(40px, 3.2vw, 56px); padding: 6px clamp(14px, 1.3vw, 26px); }
+    .seg button { padding: 6px clamp(10px, 1vw, 20px); }
+    .note { display: none; }
+    .keys { display: block; margin: 0 2px; font-size: clamp(12px, 0.85vw, 16px); color: var(--muted); }
+    body.clean .keys { display: none; }
+    body.clean main { grid-template-rows: auto minmax(0, 1fr); padding-bottom: calc(clamp(12px, 1.8vh, 26px) + 44px); }
+  }
+  @media (min-width: 1280px) and (min-height: 520px) {
+    .controls { grid-template-columns: auto repeat(4, minmax(0, 1fr)); }
+    .btns { grid-column: auto; flex-wrap: nowrap; }
+  }
+
+  :root { --friction: #2467a6; --thermal: #b44454; }
+  :root[data-theme="dark"] { --friction: #72b6f1; --thermal: #ff8393; }
+  .wrap.stage { height: 580px; }
+  .wrap.gwrap { height: 290px; }
+  .wrap.ewrap { height: 160px; }
+  .energy-head { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 10px; }
+  .trip-stats { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; font-size: 13px; color: var(--muted); padding-top: 8px; }
+  .trip-stats strong { color: var(--ink); font-weight: 600; white-space: nowrap; }
+  .readout .val { min-width: 5.6ch; font-size: 24px; }
+  @media (min-width: 900px) and (min-height: 520px) {
+    .wrap.stage { height: auto; }
+    .wrap.gwrap { flex: 1.9; height: auto; min-height: 100px; }
+    .wrap.ewrap { flex: 0.8; height: auto; min-height: 80px; }
+    .trip-stats { font-size: clamp(13px, 1vw, 19px); }
+    .readout .val { font-size: clamp(24px, 2vw, 40px); }
+    .facts { max-width: 68ch; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="head">
+    <div class="title">
+      <h1>Returning to the starting point</h1>
+      <p class="facts">Gravity versus friction · an external motor drives both motions</p>
+    </div>
+    <div class="side">
+      <div class="readout"><span class="lbl">Trip</span><span class="val" id="phase">Outward</span></div>
+      <div class="toolbar">
+        <button type="button" class="ghost" id="theme">Dark mode</button>
+        <button type="button" class="ghost" id="hide">Hide controls</button>
+      </div>
+    </div>
+  </header>
+  <div class="grid">
+    <section class="panel" aria-label="A mass lifted and lowered, and a block dragged out and back">
+      <div class="wrap stage" id="stageWrap">
+        <canvas id="stage" role="img" aria-label="Gravity always points down. Kinetic friction reverses to oppose the motion. Work and force signs change along a round trip."></canvas>
+      </div>
+    </section>
+    <section class="panel graph" aria-label="Accumulated work and energy changes">
+      <div class="ghead">
+        <h2>Accumulated work</h2>
+        <div class="legend">
+          <span><i class="line" style="background:var(--grav)"></i>By gravity</span>
+          <span><i class="line" style="background:var(--friction)"></i>By friction</span>
+        </div>
+      </div>
+      <div class="wrap gwrap" id="graphWrap">
+        <canvas id="graph" role="img" aria-label="Work by gravity returns to zero over the round trip. Work by friction is negative on both legs."></canvas>
+      </div>
+      <div class="ghead energy-head"><h2>Energy changes</h2></div>
+      <div class="wrap ewrap" id="energyWrap">
+        <canvas id="energy" role="img" aria-label="Gravitational potential energy returns to its initial value. The thermal-energy increase of the block and surface remains."></canvas>
+      </div>
+      <div class="trip-stats">
+        <span>Displacement <strong id="displacement">0.00 m</strong></span>
+        <span>Distance travelled <strong id="distance">0.00 m</strong></span>
+      </div>
+    </section>
+  </div>
+  <section class="panel controls" id="controls" aria-label="Animation controls">
+    <div class="btns">
+      <button type="button" class="primary" id="play">Pause</button>
+      <button type="button" id="reset">Restart</button>
+      <div class="seg" role="group" aria-label="Playback speed">
+        <button type="button" data-speed="0.25" aria-pressed="false">0.25×</button>
+        <button type="button" data-speed="0.5" aria-pressed="false">0.5×</button>
+        <button type="button" data-speed="1" aria-pressed="true">1×</button>
+      </div>
+    </div>
+    <div class="ctl"><label for="m">Mass</label><output id="mOut" for="m"></output>
+      <input type="range" id="m" min="0.5" max="3" step="0.1" value="1"></div>
+    <div class="ctl"><label for="L">One-way distance</label><output id="LOut" for="L"></output>
+      <input type="range" id="L" min="0.5" max="3" step="0.1" value="1"></div>
+    <div class="ctl"><label for="mu">Friction coefficient</label><output id="muOut" for="mu"></output>
+      <input type="range" id="mu" min="0" max="0.8" step="0.05" value="0.3"></div>
+    <div class="ctl"><label for="journey">Trip progress</label><output id="journeyOut" for="journey">0%</output>
+      <input type="range" id="journey" min="0" max="100" step="0.1" value="0" aria-label="Scrub the round trip; 50 percent is the turnaround"></div>
+  </section>
+  <p class="note">Both objects follow a motor-driven round trip and stop at the turnaround and at the end. Arrows show gravity and kinetic friction, not the net force. Gravitational energy is measured from the starting height; thermal energy is the increase for the block and surface. Work is measured from the start of the trip.</p>
+  <p class="keys">Space pause or play · R restart · H hide controls · T light/dark · F11 full screen · Drag trip progress to inspect a moment.</p>
+  <button type="button" class="reveal" id="reveal">Show controls</button>
+</main>
+<script>
+(() => {
+  'use strict';
+  const g = 9.81, LEG = 6, HOLD = 1, TOTAL = 2 * LEG + HOLD;
+  const P = { m: 1, L: 1, mu: 0.3, speed: 1 };
+  const $ = id => document.getElementById(id);
+  const root = document.documentElement;
+  let elapsed = 0, running = true, last = performance.now(), C = {}, S, G, B;
+
+  // Prescribed, motor-driven motion: smooth starts/stops, with a dwell at the
+  // turnaround. The motor supplies/absorbs the work and kinetic-energy changes.
+  // The work displayed here is by gravity or kinetic friction, not net work.
+  function stateAt(time) {
+    const t = Math.max(0, Math.min(TOTAL, time));
+    let q, velocity, phase, direction;
+    if (t < LEG) {
+      const a = Math.PI * t / LEG;
+      q = (1 - Math.cos(a)) / 2;
+      velocity = P.L * Math.PI * Math.sin(a) / (2 * LEG);
+      phase = t === 0 ? 'Starting' : 'Outward'; direction = 1;
+    } else if (t <= LEG + HOLD) {
+      q = 1; velocity = 0; phase = 'Turnaround'; direction = 0;
+    } else {
+      const a = Math.PI * (t - LEG - HOLD) / LEG;
+      q = (1 + Math.cos(a)) / 2;
+      velocity = -P.L * Math.PI * Math.sin(a) / (2 * LEG);
+      phase = t === TOTAL ? 'Complete' : 'Returning'; direction = -1;
+    }
+    const position = P.L * q;
+    const distance = t <= LEG + HOLD ? position : P.L * (2 - q);
+    const Wg = -P.m * g * position;
+    const Wf = -P.mu * P.m * g * distance;
+    const K = 0.5 * P.m * velocity * velocity;
+    const moving = Math.abs(velocity) > 1e-8;
+    return { t, q, phase, direction, moving, velocity, position, distance, Wg, Wf,
+      Ug: -Wg, thermal: -Wf, K,
+      // Exact drive-work accounts, including temporary kinetic energy.
+      driveGravity: K - Wg, driveFriction: K - Wf,
+      Fg: -P.m * g, Ff: moving ? -Math.sign(velocity) * P.mu * P.m * g : null };
+  }
+  function readColors() {
+    const cs = getComputedStyle(root);
+    for (const key of ['ink','muted','line','track','mass','mass-text','ke','grav','friction','thermal']) C[key] = cs.getPropertyValue('--' + key).trim();
+    $('theme').textContent = root.dataset.theme === 'dark' ? 'Light mode' : 'Dark mode';
+  }
+  new MutationObserver(readColors).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+  function fit(id, canvasId) {
+    const wrap = $(id), canvas = $(canvasId), w = wrap.clientWidth, h = wrap.clientHeight;
+    if (w < 10 || h < 10) return null;
+    const dpr = Math.min(devicePixelRatio || 1, 3);
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+    const c = canvas.getContext('2d'); c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { c, w, h };
+  }
+  function resize() { S = fit('stageWrap','stage'); G = fit('graphWrap','graph'); B = fit('energyWrap','energy'); }
+  const observer = new ResizeObserver(resize);
+  ['stageWrap','graphWrap','energyWrap'].forEach(id => observer.observe($(id)));
+  const scale = () => Math.max(innerWidth>=900?1.15:1, Math.min(2.2, innerWidth / 1000, innerHeight / 620));
+  const font = (weight, size) => weight + ' ' + size.toFixed(1) + 'px "Instrument Sans", system-ui, sans-serif';
+  const fmt = (value, signed = false) => {
+    if (Math.abs(value) < 0.0005) value = 0;
+    return (signed && value > 0 ? '+' : '') + value.toFixed(1);
+  };
+  function text(c, value, x, y, size, colour = C.ink, weight = 500, align = 'left') {
+    c.fillStyle = colour; c.font = font(weight,size); c.textAlign = align; c.textBaseline = 'alphabetic'; c.fillText(value,x,y);
+  }
+  function line(c, x0,y0,x1,y1, colour, width = 1, dashed = false) {
+    c.strokeStyle = colour; c.lineWidth = width; c.setLineDash(dashed ? [5,5] : []);
+    c.beginPath(); c.moveTo(x0,y0); c.lineTo(x1,y1); c.stroke(); c.setLineDash([]);
+  }
+  function arrow(c,x0,y0,x1,y1,colour,u) {
+    const a = Math.atan2(y1-y0,x1-x0), d = 7*u;
+    line(c,x0,y0,x1,y1,colour,2.5*u);
+    c.fillStyle = colour; c.beginPath(); c.moveTo(x1,y1);
+    c.lineTo(x1-d*Math.cos(a-.45),y1-d*Math.sin(a-.45));
+    c.lineTo(x1-d*Math.cos(a+.45),y1-d*Math.sin(a+.45)); c.closePath(); c.fill();
+  }
+  function box(c,x,y,w,h,colour,u) {
+    c.fillStyle = colour; c.beginPath(); c.roundRect(x,y,w,h,5*u); c.fill();
+  }
+  function drawStage(s) {
+    const { c,w,h } = S, u = scale(), sh = h / 2;
+    c.clearRect(0,0,w,h);
+    line(c,0,sh,w,sh,C.line,u);
+    text(c,'Gravity',10*u,22*u,17*u,C.ink,600);
+    text(c,'W = '+fmt(s.Wg,true)+' J',w-10*u,22*u,14*u,C.grav,600,'right');
+    const x = w*.48, radius = Math.min(20*u,sh*.075);
+    const upper = Math.max(sh*.25,sh*.12+20*u+radius+6*u), lower = sh*.65;
+    const y = lower - s.q*(lower-upper);
+    // Motor and lifting cable make the external drive explicit.
+    box(c,x-33*u,sh*.12,66*u,20*u,C.track,u);
+    text(c,'Motor',x,sh*.12+14*u,10*u,C.muted,500,'center');
+    line(c,x,sh*.12+20*u,x,y-radius,C.muted,1.5*u);
+    line(c,x-55*u,upper,x+90*u,upper,C.line,u,true);
+    line(c,x-55*u,lower,x+90*u,lower,C.line,u,true);
+    arrow(c,25*u,lower,25*u,upper,C.muted,u);
+    text(c,'+y',25*u,upper-9*u,12*u,C.muted,600,'center');
+    text(c,fmt(P.L)+' m',45*u,upper+4*u,12*u,C.muted);
+    text(c,'0 m',45*u,lower+4*u,12*u,C.muted);
+    c.fillStyle=C.mass; c.beginPath(); c.arc(x,y,radius,0,Math.PI*2); c.fill();
+    text(c,P.m.toFixed(1),x,y+4*u,11*u,C['mass-text'],600,'center');
+    const forceX = x+radius+28*u, fl = Math.min(42*u,sh*.15);
+    arrow(c,forceX,y-fl*.35,forceX,y+fl*.65,C.grav,u);
+    text(c,'Fᵧ = −mg',forceX+10*u,y+4*u,12*u,C.grav,600);
+    if (s.moving) {
+      const dy = (s.direction>0?-1:1)*Math.min(28*u,sh*.13);
+      arrow(c,x-radius-20*u,y-dy/2,x-radius-20*u,y+dy/2,C.ke,u);
+    }
+    let gravityCaption, gravitySigns;
+    if (s.phase==='Complete') { gravityCaption='Back at start: gravity’s work cancels.'; gravitySigns='−mgL + mgL = 0'; }
+    else if (!s.moving) { gravityCaption=s.phase==='Starting'?'Lift, then lower the mass.':'At the top: stopped before returning.'; gravitySigns=s.phase==='Starting'?'Gravity points down on both legs.':'The gravitational force is still downward.'; }
+    else if (s.direction>0) { gravityCaption='Moving up: gravity does negative work.'; gravitySigns='(− force) × (+ displacement)'; }
+    else { gravityCaption='Moving down: gravity does positive work.'; gravitySigns='(− force) × (− displacement)'; }
+    text(c,gravityCaption,10*u,sh-22*u,12.5*u,C.ink,600);
+    text(c,gravitySigns,10*u,sh-5*u,11.5*u,C.muted);
+
+    c.save(); c.translate(0,sh);
+    text(c,'Friction',10*u,22*u,17*u,C.ink,600);
+    text(c,'W = '+fmt(s.Wf,true)+' J',w-10*u,22*u,14*u,C.friction,600,'right');
+    const left = w*.23, right = w*.76, floor = sh*.56, xb = left+s.q*(right-left);
+    const bw = 42*u, bh = 33*u;
+    line(c,10*u,floor,w-10*u,floor,C.muted,2*u);
+    for(let rx=12*u;rx<w-12*u;rx+=12*u) line(c,rx,floor+2*u,rx-5*u,floor+8*u,C.line,u);
+    line(c,left,floor+3*u,left,floor+10*u,C.muted,u);
+    line(c,right,floor+3*u,right,floor+10*u,C.muted,u);
+    text(c,'0 m',left,floor+24*u,12*u,C.muted,500,'center');
+    text(c,fmt(P.L)+' m',right,floor+24*u,12*u,C.muted,500,'center');
+    arrow(c,w-65*u,sh*.29,w-15*u,sh*.29,C.muted,u);
+    text(c,'+x',w-40*u,sh*.29-9*u,12*u,C.muted,600,'center');
+    box(c,xb-bw/2,floor-bh,bw,bh,C.mass,u);
+    text(c,P.m.toFixed(1),xb,floor-bh*.36,11*u,C['mass-text'],600,'center');
+    if (s.moving) {
+      arrow(c,xb-18*u*s.direction,floor-bh-22*u,xb+18*u*s.direction,floor-bh-22*u,C.ke,u);
+      if (P.mu>0) {
+        const fx = xb-s.direction*70*u;
+        arrow(c,xb,floor-bh*.5,fx,floor-bh*.5,C.friction,u);
+        text(c,'Fₓ',fx,floor-bh*.5-9*u,12*u,C.friction,600,'center');
+      }
+    }
+    let frictionCaption, frictionSigns;
+    if (s.phase==='Complete') { frictionCaption=P.mu>0?'Back at start: friction’s work stays negative.':'No friction: no thermal-energy increase.'; frictionSigns='W = −μₖmg(2L) = '+fmt(s.Wf,true)+' J'; }
+    else if (!s.moving) { frictionCaption=s.phase==='Starting'?'Drag the block out, then back.':'At the end of the outward leg: stopped.'; frictionSigns='Kinetic friction is shown only while sliding.'; }
+    else if (P.mu===0) { frictionCaption='No friction: the motor still drives the motion.'; frictionSigns='μₖ = 0, so work by friction is zero.'; }
+    else { frictionCaption='Friction does negative work on this leg.'; frictionSigns=s.direction>0?'(− force) × (+ displacement)':'(+ force) × (− displacement)'; }
+    text(c,frictionCaption,10*u,sh-22*u,12.5*u,C.ink,600);
+    text(c,frictionSigns,10*u,sh-5*u,11.5*u,C.muted);
+    c.restore();
+  }
+  function drawGraph(s) {
+    const {c,w,h} = G, u = scale(); c.clearRect(0,0,w,h);
+    const pad = {l:51*u,r:17*u,t:25*u,b:40*u};
+    const pw=w-pad.l-pad.r, ph=h-pad.t-pad.b;
+    const limit=P.m*g*P.L*Math.max(1,2*P.mu), X=d=>pad.l+pw*d/(2*P.L);
+    const Y=value=>pad.t-value/(limit*1.12)*ph;
+    [0,.5,1].forEach(f=>{
+      const v=-limit*f, yy=Y(v); line(c,pad.l,yy,w-pad.r,yy,C.line,u);
+      text(c,fmt(v),pad.l-7*u,yy+4*u,11.5*u,C.muted,500,'right');
+    });
+    text(c,'J',3*u,18*u,12*u,C.muted);
+    line(c,X(P.L),pad.t,X(P.L),h-pad.b,C.line,u,true);
+    text(c,'Turnaround',X(P.L),pad.t-9*u,11.5*u,C.muted,500,'center');
+    [0,P.L,2*P.L].forEach(d=>text(c,fmt(d),X(d),h-pad.b+17*u,11.5*u,C.muted,500,'center'));
+    text(c,'Distance travelled (m)',pad.l+pw/2,h-4*u,12*u,C.muted,500,'center');
+    function curve(work,colour) {
+      c.strokeStyle=colour;c.lineWidth=3*u;c.lineJoin='round';c.beginPath();
+      const count=Math.max(1,Math.ceil(s.distance/(2*P.L)*180));
+      for(let i=0;i<=count;i++){
+        const d=s.distance*i/count,xx=X(d),yy=Y(work(d));
+        if(i===0)c.moveTo(xx,yy);else c.lineTo(xx,yy);
+      }
+      c.stroke();c.fillStyle=colour;c.beginPath();c.arc(X(s.distance),Y(work(s.distance)),4*u,0,2*Math.PI);c.fill();
+    }
+    curve(d=>-P.m*g*(d<=P.L?d:2*P.L-d),C.grav);
+    curve(d=>-P.mu*P.m*g*d,C.friction);
+  }
+  function drawEnergy(s) {
+    const {c,w,h}=B,u=scale();c.clearRect(0,0,w,h);
+    const max=P.m*g*P.L*Math.max(1,2*P.mu), bx=10*u, end=w-12*u;
+    const rows=[['Gravitational · Earth + mass',s.Ug,C.grav],['Thermal increase · block + surface',s.thermal,C.thermal]];
+    rows.forEach(([label,value,colour],i)=>{
+      const y=i*h/2+16*u, bh=Math.min(14*u,h*.11);
+      text(c,label,bx,y,12*u,C.muted,500);
+      text(c,fmt(value)+' J',end,y,12*u,C.ink,600,'right');
+      box(c,bx,y+5*u,end-bx,bh,C.track,u);
+      if(value>1e-7)box(c,bx,y+5*u,(end-bx)*value/max,bh,colour,u);
+    });
+  }
+  function setRunning(on) {
+    running=on;last=performance.now();
+    $('play').textContent=on?'Pause':elapsed>=TOTAL?'Replay':'Play';
+  }
+  function reset() { elapsed=0;setRunning(true); }
+  function clean(on) { document.body.classList.toggle('clean',on); }
+  function theme() { root.dataset.theme=root.dataset.theme==='dark'?'light':'dark'; }
+  function render() {
+    const s=stateAt(elapsed);
+    $('phase').textContent=s.phase;
+    $('displacement').textContent=s.position.toFixed(2)+' m';
+    $('distance').textContent=s.distance.toFixed(2)+' m';
+    $('journey').value=elapsed/TOTAL*100;
+    $('journeyOut').textContent=Math.round(elapsed/TOTAL*100)+'%';
+    if(S)drawStage(s);if(G)drawGraph(s);if(B)drawEnergy(s);
+  }
+  function frame(now) {
+    const dt=Math.min(.05,Math.max(0,(now-last)/1000));last=now;
+    if(running){elapsed=Math.min(TOTAL,elapsed+dt*P.speed);if(elapsed>=TOTAL)setRunning(false);}
+    render();requestAnimationFrame(frame);
+  }
+  const formats={m:v=>v.toFixed(1)+' kg',L:v=>v.toFixed(1)+' m',mu:v=>v.toFixed(2)};
+  ['m','L','mu'].forEach(id=>{
+    const update=()=>{P[id]=+$(id).value;$(id+'Out').textContent=formats[id](P[id]);};
+    update();$(id).addEventListener('input',()=>{update();elapsed=0;last=performance.now();setRunning(running);});
+  });
+  $('journey').addEventListener('input',()=>{elapsed=+ $('journey').value/100*TOTAL;setRunning(false);render();});
+  $('play').addEventListener('click',()=>{if(elapsed>=TOTAL)elapsed=0;setRunning(!running);});
+  $('reset').addEventListener('click',reset);
+  $('hide').addEventListener('click',()=>clean(true));$('reveal').addEventListener('click',()=>clean(false));
+  $('theme').addEventListener('click',theme);
+  document.querySelectorAll('[data-speed]').forEach(btn=>btn.addEventListener('click',()=>{
+    P.speed=+btn.dataset.speed;
+    document.querySelectorAll('[data-speed]').forEach(b=>b.setAttribute('aria-pressed',b===btn?'true':'false'));
+  }));
+  document.addEventListener('keydown',e=>{
+    if(e.ctrlKey||e.metaKey||e.altKey||e.target?.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName||''))return;
+    const key=e.key.toLowerCase();
+    if(e.key===' '&&e.target?.tagName!=='BUTTON'){e.preventDefault();if(elapsed>=TOTAL)elapsed=0;setRunning(!running);}
+    else if(key==='r')reset();else if(key==='h')clean(!document.body.classList.contains('clean'));else if(key==='t')theme();
+  });
+  document.addEventListener('visibilitychange',()=>{last=performance.now();});
+  readColors();resize();render();requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
