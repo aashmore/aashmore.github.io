@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Potential energy curves</title>
+<style>
+:root{color-scheme:light;--bg:#e6ebf0;--panel:#fff;--ink:#0f1720;--muted:#46535f;--line:#c5ced6;--track:#e3e8ed;--ke:#d97706;--spring:#0f7f73;--grav:#6340c4;--general:#2467a6;--force:#b44454;--accent:#0f7f73;--mass:#2a3850;--massText:#fff;--potential:var(--spring)}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0b1015;--panel:#141b22;--ink:#f1f5f9;--muted:#a9b6c2;--line:#35424e;--track:#212b34;--ke:#f5a43d;--spring:#3fc9b8;--grav:#a98ff5;--general:#79b6ef;--force:#f28b9b;--accent:#3fc9b8;--mass:#b9cbe3;--massText:#0b1015}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.35 "Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}button,input,select{font:inherit}button,select{color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:8px;min-height:38px;padding:6px 12px}button{cursor:pointer;font-weight:550}button:hover{border-color:var(--accent)}button:focus-visible,input:focus-visible,select:focus-visible,svg:focus-visible{outline:3px solid var(--accent);outline-offset:2px}button.primary{background:var(--ink);color:var(--panel);border-color:var(--ink);min-width:85px}button[aria-pressed="true"]{background:var(--track)}button:disabled{opacity:.4;cursor:default}h1{font-size:clamp(24px,2.3vw,42px);line-height:1.1;margin:0 0 5px;font-weight:650;letter-spacing:-.02em}h2{font-size:clamp(16px,1.35vw,24px);margin:0;font-weight:600}p{margin:0}main{padding:16px;max-width:1500px;margin:auto;display:grid;gap:12px}.head{display:flex;align-items:center;justify-content:space-between;gap:12px}.subtitle{color:var(--muted);font-size:clamp(13px,1.1vw,19px)}.toolbar,.buttons,.options{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.toolbar button{font-size:14px;color:var(--muted)}.panels{display:grid;grid-template-columns:minmax(0,1.95fr) minmax(280px,1fr);gap:12px;min-height:0}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0;min-height:0}.graph-panel{display:flex;flex-direction:column}.graph-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}.legend{display:flex;flex-wrap:wrap;gap:5px 14px;color:var(--muted);font-size:14px}.legend span{white-space:nowrap}.swatch{display:inline-block;vertical-align:middle;width:22px;height:4px;margin-right:6px;background:var(--ink);border-radius:2px}.svg-wrap{position:relative;flex:1;min-height:280px}svg{display:block;width:100%;height:100%;overflow:hidden;font-family:inherit}.svg-wrap svg{position:absolute;inset:0;touch-action:none;cursor:crosshair}.graph-hint{font-size:13px;color:var(--muted);margin-top:4px}.sidebar{display:grid;grid-template-rows:minmax(175px,.92fr) minmax(190px,1fr);gap:12px;min-height:0}.motion-panel,.energy-panel{display:flex;flex-direction:column;gap:6px}.motion-wrap{flex:1;min-height:115px;position:relative}.motion-wrap svg{position:absolute;inset:0;touch-action:none;cursor:ew-resize}.readouts{display:flex;justify-content:space-between;gap:6px;flex-wrap:wrap;font-size:clamp(13px,1.05vw,19px);font-variant-numeric:tabular-nums}.readouts strong{font-weight:600}.readouts span{white-space:nowrap}.equation{font-size:clamp(18px,1.55vw,28px);font-weight:600}.bar-row{display:grid;grid-template-columns:22px 1fr 76px;gap:8px;align-items:center;font-size:clamp(15px,1.2vw,22px)}.bar-row strong{text-align:right;font-size:clamp(14px,1.05vw,20px);font-variant-numeric:tabular-nums;white-space:nowrap}.bar-track{height:18px;background:var(--track);border-radius:4px;position:relative}.bar-fill{height:100%;border-radius:4px;min-width:0}.energy-bars{display:grid;gap:9px;margin:8px 0}.state-note{font-size:clamp(13px,1.1vw,19px);color:var(--muted);min-height:2.7em}.controls{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px 20px}.ctl{display:grid;grid-template-columns:1fr auto;gap:3px 8px;align-content:start;min-width:0}.ctl label{font-size:14px;font-weight:550}.ctl output{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums}.ctl input,.ctl select{grid-column:1/-1;width:100%;min-width:0}input[type="range"]{accent-color:var(--accent);height:26px;margin:0}#preset{font-size:15px}.controls-bottom{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.options{font-size:14px;gap:8px 14px}.options label{display:flex;gap:5px;align-items:center}.options input{accent-color:var(--accent)}.seg{display:flex}.seg button{border-radius:0;padding:6px 9px}.seg button:first-child{border-radius:8px 0 0 8px}.seg button:last-child{border-radius:0 8px 8px 0}#equilibrium{max-width:190px;font-size:14px}.keys{color:var(--muted);font-size:12px}.reveal{display:none;position:fixed;right:14px;bottom:12px;z-index:5;font-size:13px;opacity:.6}.reveal:hover,.reveal:focus-visible{opacity:1}body.clean .controls,body.clean .toolbar,body.clean .keys{display:none}body.clean .reveal{display:block}
+@media(min-width:900px) and (min-height:560px){body{overflow:hidden}main{max-width:none;height:100dvh;padding:clamp(12px,1.8vh,24px) clamp(16px,2vw,38px);grid-template-rows:auto minmax(0,1fr) auto auto;gap:clamp(10px,1.5vh,17px)}.svg-wrap{min-height:0}.panel{padding:clamp(10px,1.1vw,20px)}.controls{padding:12px 16px;gap:10px 20px}.sidebar{grid-template-rows:minmax(165px,.8fr) minmax(205px,1.1fr)}.graph-hint{font-size:clamp(12px,.95vw,17px)}body.clean main{grid-template-rows:auto minmax(0,1fr);padding-bottom:54px}.motion-panel{padding-top:10px;padding-bottom:10px}.motion-wrap{min-height:90px}.state-note{font-size:clamp(13px,1vw,19px)}.energy-bars{gap:7px;margin:5px 0}}
+@media(min-width:1500px){button,select{min-height:44px;font-size:18px}.ctl label,.ctl output,.options,.legend,#preset,#equilibrium{font-size:18px}#equilibrium{max-width:250px}.keys{font-size:15px}.bar-track{height:24px}.energy-bars{gap:15px}}
+@media(max-width:899px){.panels{grid-template-columns:1fr}.sidebar{grid-template-columns:1fr 1fr;grid-template-rows:minmax(230px,auto)}.svg-wrap{height:380px;flex:auto}.controls{grid-template-columns:1fr 1fr}.controls .ctl:first-child{grid-column:1/-1}.toolbar{flex-wrap:nowrap}.head{align-items:flex-start}.sidebar .panel{padding:12px}}
+@media(max-width:550px){main{padding:12px;gap:10px}.head{flex-wrap:wrap}.sidebar{grid-template-columns:1fr;grid-template-rows:230px auto}.controls{grid-template-columns:1fr}.controls .ctl{grid-column:1/-1}.svg-wrap{height:340px}.panel{padding:10px}.legend{font-size:12px}.controls-bottom{align-items:flex-start}.buttons{gap:6px}.state-note{min-height:0}.graph-head{gap:6px}.energy-panel{min-height:240px}.keys{padding-bottom:15px}}
+</style>
+</head>
+<body>
+<main>
+ <header class="head"><div><h1>Potential energy curves</h1><p class="subtitle" id="model"></p></div><div class="toolbar"><button id="theme">Dark mode</button><button id="hide">Hide controls</button></div></header>
+ <div class="panels">
+  <section class="panel graph-panel" aria-label="Potential energy versus position">
+   <div class="graph-head"><h2 id="graphTitle">Energy and position</h2><div class="legend"><span><i class="swatch" style="background:var(--potential)"></i>Potential U</span><span><i class="swatch"></i>Total E</span><span><i class="swatch" style="background:var(--ke)"></i>Gap K</span></div></div>
+   <div class="svg-wrap" id="plotWrap"><svg id="plot" tabindex="0" role="img" aria-label="Interactive potential energy graph. Drag the particle to change position; drag the horizontal energy line to change total energy."></svg></div>
+   <p class="graph-hint">Drag the particle to explore at fixed E. Drag the E line to change energy. Shading: U &gt; E.</p>
+  </section>
+  <div class="sidebar">
+   <section class="panel motion-panel"><h2 id="motionTitle">Motion along x</h2><div class="motion-wrap" id="motionWrap"><svg id="motion" role="img" aria-label="Particle position, velocity arrow and force arrow"></svg></div><div class="readouts"><span id="posRead"></span><span id="velRead"></span><span id="forceRead"></span></div></section>
+   <section class="panel energy-panel"><h2>Energy account</h2><p class="equation">K = E − U = ½mv²</p><div class="energy-bars"><div class="bar-row"><span style="color:var(--potential)">U</span><div class="bar-track"><div class="bar-fill" id="uBar" style="background:var(--potential)"></div></div><strong id="uValue"></strong></div><div class="bar-row"><span style="color:var(--ke)">K</span><div class="bar-track"><div class="bar-fill" id="kBar" style="background:var(--ke)"></div></div><strong id="kValue"></strong></div><div class="bar-row"><span>E</span><div class="bar-track"><div class="bar-fill" id="eBar" style="background:var(--ink)"></div></div><strong id="eValue"></strong></div></div><p class="state-note" id="stateNote"></p></section>
+  </div>
+ </div>
+ <section class="panel controls" aria-label="Controls">
+  <div class="ctl"><label for="preset">Potential</label><select id="preset"><option value="spring">Spring</option><option value="gravity">Constant gravity</option><option value="well">Two unequal wells</option></select></div>
+  <div class="ctl"><label for="energy">Total energy E</label><output id="energyOut"></output><input id="energy" type="range" min="0" max="13" step="0.01" value="5"></div>
+  <div class="ctl"><label for="position">Position <span id="coordinate">x</span></label><output id="positionOut"></output><input id="position" type="range" min="-.55" max=".55" step=".0001" value="-.25"></div>
+  <div class="controls-bottom"><div class="buttons"><button class="primary" id="play">Play</button><button id="reset">Restart</button><button id="reverse" title="Reverse the velocity at the same position and energy">Reverse v</button><div class="seg" role="group" aria-label="Playback speed"><button data-speed="0.25" aria-pressed="true">0.25×</button><button data-speed="0.5" aria-pressed="false">0.5×</button><button data-speed="1" aria-pressed="false">1×</button></div></div><div class="options"><label><input id="showForce" type="checkbox" checked>Force / slope</label><label><input id="showPoints" type="checkbox" checked>Special points</label><label for="mass">m</label><select id="mass" aria-label="Particle mass"><option value="0.5">0.5 kg</option><option value="1" selected>1 kg</option><option value="2">2 kg</option></select></div></div>
+  <div class="controls-bottom"><div class="buttons"><select id="equilibrium" aria-label="Place particle at rest at an equilibrium"></select><button id="place">Place at rest</button><button id="rest">Release here from rest</button><button id="nudgeLeft" title="Displace slightly left and release from rest">Nudge ←</button><button id="nudgeRight" title="Displace slightly right and release from rest">Nudge →</button></div></div>
+ </section>
+ <div class="keys"><p id="actionNote">No friction. Dragging sets a new starting state.</p><p>Space: play/pause · R: restart · H: controls · T: theme · Arrow keys on graph: change position · F11: full screen</p></div>
+ <button class="reveal" id="reveal">Show controls</button>
+</main>
+<script>
+(() => {
+'use strict';
+const $ = id => document.getElementById(id);
+const presets = {
+ spring:{label:'Spring',coord:'x',unit:'m',lo:-.55,hi:.55,ymax:16,emax:13,E:5,x:-Math.sqrt(.1),color:'--spring',eq:[{x:0,stable:true,name:'Spring minimum'}],U:x=>50*x*x,dU:x=>100*x,formula:'U = ½kx² · k = 100 N/m · x = 0 at relaxed length'},
+ gravity:{label:'Constant gravity',coord:'y',unit:'m',lo:0,hi:2.4,ymax:25,emax:22,E:14.7,x:1.5,color:'--grav',eq:[],U:x=>9.8*s.m*x,dU:()=>9.8*s.m,formula:'U = mgy · g = 9.8 m/s² · upward is positive'},
+ // U' = 4 x (x + 1) (x - 1.4): stationary points exactly at -1, 0, 1.4 m.
+ well:{label:'Two unequal wells',coord:'x',unit:'m',lo:-1.9,hi:2.3,ymax:14,emax:11,E:2,x:1.4,color:'--general',eq:[{x:-1,stable:true,name:'Left minimum'},{x:0,stable:false,name:'Barrier top'},{x:1.4,stable:true,name:'Right minimum'}],U:x=>x**4-(1.6/3)*x**3-2.8*x*x+4,dU:x=>4*x*(x+1)*(x-1.4),formula:'Two unequal wells · a smooth model of the curve in the notes'}
+};
+const s={preset:'spring',m:1,x:0,v:0,E:5,running:false,speed:.25,time:0,escaped:false};
+let initial=null, geom=null, motionGeom=null, last=0, dragging=null, externalMessage='', plotSize={w:800,h:500}, motionSize={w:350,h:150};
+const p=()=>presets[s.preset], U=x=>p().U(x), F=x=>-p().dU(x), clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const fmt=(x,n=2)=>(Math.abs(x)<.5*10**-n?0:x).toFixed(n).replace('-', '−');
+const kin=()=>Math.max(0,s.E-U(s.x));
+const escapeText = () => s.preset==='gravity' ? 'Reached the bottom of the displayed range with nonzero speed; no collision is modelled.' : 'Left the displayed range with nonzero speed.';
+function setRunning(value){s.running=value;$('play').textContent=value?'Pause':'Play';}
+function remember(){initial={x:s.x,v:s.v,E:s.E};s.time=0;s.escaped=false;}
+function roots(){
+ const q=p(), cuts=[q.lo,...q.eq.map(e=>e.x),q.hi], out=[];
+ const add=x=>{if(!out.some(y=>Math.abs(x-y)<1e-7))out.push(x);};
+ for(const x of cuts)if(Math.abs(U(x)-s.E)<1e-9)add(x);
+ for(let i=0;i<cuts.length-1;i++){
+  let a=cuts[i],b=cuts[i+1],fa=U(a)-s.E,fb=U(b)-s.E;
+  if(fa*fb>=0)continue;
+  for(let j=0;j<55;j++){const c=(a+b)/2,fc=U(c)-s.E;if(fa*fc<=0){b=c;fb=fc;}else{a=c;fa=fc;}}
+  add((a+b)/2);
+ }
+ return out.sort((a,b)=>a-b);
+}
+function allowedIntervals(){
+ const q=p(),r=roots(),cuts=[q.lo,...r.filter(x=>x>q.lo+1e-8&&x<q.hi-1e-8),q.hi],out=[];
+ for(let i=0;i<cuts.length-1;i++)if(U((cuts[i]+cuts[i+1])/2)<=s.E+1e-10)out.push([cuts[i],cuts[i+1]]);
+ for(const x of r)if(!out.some(([a,b])=>x>=a-1e-8&&x<=b+1e-8))out.push([x,x]);
+ return out;
+}
+function nearestAllowed(x){
+ const intervals=allowedIntervals();let best=null,d=Infinity;
+ for(const [a,b] of intervals){const z=clamp(x,a,b);if(Math.abs(z-x)<d){d=Math.abs(z-x);best=z;}}
+ return best;
+}
+function setEnergy(E){
+ setRunning(false);s.E=clamp(E,0,p().emax*(s.preset==='gravity'?s.m:1));
+ let x=nearestAllowed(s.x);
+ if(x===null){const e=p().eq.reduce((a,b)=>U(a.x)<U(b.x)?a:b);s.E=U(e.x);x=e.x;}
+ s.x=x;s.v=(s.v<0?-1:1)*Math.sqrt(2*kin()/s.m);externalMessage='Energy changed: this sets a new motion.';remember();draw();
+}
+function setPosition(x){
+ setRunning(false);const next=nearestAllowed(clamp(x,p().lo,p().hi));
+ if(next===null)return;s.x=next;s.v=(s.v<0?-1:1)*Math.sqrt(2*kin()/s.m);externalMessage='Position changed at fixed E; release Play to follow the motion.';remember();draw();
+}
+function releaseAt(x,message){
+ setRunning(false);s.x=clamp(x,p().lo,p().hi);s.E=U(s.x);s.v=0;externalMessage=message;remember();draw();
+}
+function choosePreset(key){
+ s.preset=key;const q=p();s.m=Number($('mass').value);s.E=q.E*(key==='gravity'?s.m:1);s.x=q.x;s.v=key==='well'?Math.sqrt(2*kin()/s.m):0;setRunning(false);
+ $('equilibrium').innerHTML=q.eq.length?q.eq.map((e,i)=>`<option value="${i}">${e.name}</option>`).join(''):'<option>No equilibrium</option>';
+ $('place').disabled=$('equilibrium').disabled=!q.eq.length;
+ $('energy').max=q.emax*(key==='gravity'?s.m:1);$('position').min=q.lo;$('position').max=q.hi;$('coordinate').textContent=q.coord;
+ $('motionTitle').textContent=key==='gravity'?'Vertical motion along y':'Motion along x';$('model').textContent=q.formula;
+ document.documentElement.style.setProperty('--potential',`var(${q.color})`);externalMessage='No friction. Dragging sets a new starting state.';remember();draw();
+}
+// Exact solutions for gravity and the spring. A small-step velocity Verlet
+// integrator handles the general potential; no artificial reflection at E = U.
+function advance(dt){
+ if(s.escaped)return;
+ const q=p(),oldx=s.x;
+ if(s.preset==='spring'){
+  const w=Math.sqrt(100/s.m),c=Math.cos(w*dt),sn=Math.sin(w*dt),x=s.x;
+  s.x=x*c+s.v*sn/w;s.v=s.v*c-x*w*sn;
+ }else if(s.preset==='gravity'){
+  s.x+=s.v*dt-4.9*dt*dt;s.v-=9.8*dt;
+ }else{
+  const n=Math.max(1,Math.ceil(dt/.00025)),h=dt/n;
+  for(let i=0;i<n;i++){
+   // At exactly the barrier energy, the approach to x = 0 is asymptotic.
+   // Integrate the energy equation locally to avoid numerical barrier crossing.
+   if(Math.abs(s.E-4)<1e-10&&Math.abs(s.x)<.15&&s.x*s.v<0){
+    const sign=Math.sign(s.v),velocity=x=>sign*Math.abs(x)*Math.sqrt(2*(2.8+(1.6/3)*x-x*x)/s.m);
+    const a=velocity(s.x),b=velocity(s.x+h*a/2),c=velocity(s.x+h*b/2),d=velocity(s.x+h*c);
+    s.x+=h*(a+2*b+2*c+d)/6;s.v=velocity(s.x);
+   }else{const a=F(s.x)/s.m;s.x+=s.v*h+.5*a*h*h;s.v+=.5*(a+F(s.x)/s.m)*h;}
+  }
+ }
+ s.time+=dt;
+ if(s.x<q.lo||s.x>q.hi){
+  s.x=clamp(s.x,q.lo,q.hi);s.v=(s.v<0?-1:1)*Math.sqrt(2*kin()/s.m);s.escaped=true;setRunning(false);externalMessage=escapeText();
+ }
+ if(!Number.isFinite(s.x)||!Number.isFinite(s.v)){s.x=oldx;setRunning(false);throw Error('Nonfinite state');}
+}
+function tag(name,attrs={},body=''){return `<${name} ${Object.entries(attrs).map(([k,v])=>`${k}="${v}"`).join(' ')}>${body}</${name}>`;}
+function text(x,y,str,attrs={}){return tag('text',{x,y,fill:'var(--ink)','font-size':16,...attrs},str);}
+function line(x1,y1,x2,y2,attrs={}){return tag('line',{x1,y1,x2,y2,stroke:'var(--line)','stroke-width':1,...attrs});}
+function arrow(x1,y1,x2,y2,color,width=3){
+ const a=Math.atan2(y2-y1,x2-x1),l=8;
+ if(Math.hypot(x2-x1,y2-y1)<2)return '';
+ return line(x1,y1,x2,y2,{stroke:color,'stroke-width':width})+tag('path',{d:`M${x2-l*Math.cos(a-.45)},${y2-l*Math.sin(a-.45)}L${x2},${y2}L${x2-l*Math.cos(a+.45)},${y2-l*Math.sin(a+.45)}`,fill:'none',stroke:color,'stroke-width':width});
+}
+function plot(){
+ const q=p(),w=plotSize.w,h=plotSize.h,small=w<550,fs=small?13:Math.min(21,w/38),L=small?49:64,R=26,T=30,B=small?100:112;
+ const ymax=q.ymax*(s.preset==='gravity'?s.m:1), ymin=-ymax*.05;
+ const X=x=>L+(x-q.lo)/(q.hi-q.lo)*(w-L-R),Y=y=>h-B-(y-ymin)/(ymax-ymin)*(h-T-B);
+ geom={X,Y,L,R,T,B,w,h,ymin,ymax,invX:px=>q.lo+(px-L)/(w-L-R)*(q.hi-q.lo),invY:py=>ymin+(h-B-py)/(h-T-B)*(ymax-ymin)};
+ let a=`<defs><clipPath id="plotClip"><rect x="${L}" y="${T}" width="${w-L-R}" height="${h-T-B}"/></clipPath><pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M0,9L9,0" stroke="var(--muted)" stroke-opacity=".12"/></pattern></defs>`;
+ const ints=allowedIntervals(),cuts=[q.lo,...roots(),q.hi];
+ for(let i=0;i<cuts.length-1;i++)if(U((cuts[i]+cuts[i+1])/2)>s.E+1e-8)a+=tag('rect',{x:X(cuts[i]),y:T,width:Math.max(0,X(cuts[i+1])-X(cuts[i])),height:h-T-B,fill:'url(#hatch)'});
+ const yt=s.preset==='gravity'?5*s.m:2;
+ for(let v=0;v<=ymax;v+=yt){a+=line(L,Y(v),w-R,Y(v),{'stroke-opacity':.6});a+=text(L-10,Y(v)+fs*.35,fmt(v,0),{'text-anchor':'end','font-size':fs,fill:'var(--muted)'});}
+ const step=s.preset==='spring'?.2:.5;
+ for(let x=Math.ceil(q.lo/step)*step;x<=q.hi+1e-8;x+=step){a+=line(X(x),T,X(x),h-B,{'stroke-opacity':.45});a+=text(X(x),h-B+fs+10,fmt(x,1),{'text-anchor':'middle','font-size':fs,fill:'var(--muted)'});}
+ a+=line(L,T,L,h-B,{stroke:'var(--muted)'});a+=line(L,h-B,w-R,h-B,{stroke:'var(--muted)'});
+ a+=text(L,T-4,'Energy (J)',{'font-size':fs});a+=text((L+w-R)/2,h-9,`${q.coord==='y'?'Vertical position y':'Position x'} (m)`,{'text-anchor':'middle','font-size':fs+1});
+ let curve='';for(let i=0;i<=650;i++){const x=q.lo+(q.hi-q.lo)*i/650;curve+=`${i?'L':'M'}${X(x)},${Y(U(x))}`;}
+ a+='<g clip-path="url(#plotClip)">';
+ for(const [lo,hi] of ints)a+=line(X(lo),h-B-3,X(hi),h-B-3,{stroke:'var(--potential)','stroke-width':5,'stroke-opacity':.6});
+ a+=tag('path',{d:curve,fill:'none',stroke:'var(--potential)','stroke-width':3.5});
+ a+=line(L,Y(s.E),w-R,Y(s.E),{stroke:'var(--ink)','stroke-width':2.5});
+ // Wide invisible target makes the energy line usable with a pointer or touch.
+ a+=line(L,Y(s.E),w-R,Y(s.E),{stroke:'transparent','stroke-width':22,'data-drag':'energy'});
+ if($('showPoints').checked){
+  for(const e of q.eq){a+=line(X(e.x),Y(U(e.x)),X(e.x),h-B,{stroke:'var(--muted)','stroke-dasharray':'3 5'});a+=tag(e.stable?'circle':'rect',e.stable?{cx:X(e.x),cy:Y(U(e.x)),r:5,fill:'var(--panel)',stroke:'var(--potential)','stroke-width':2}:{x:X(e.x)-4,y:Y(U(e.x))-4,width:8,height:8,fill:'var(--panel)',stroke:'var(--force)','stroke-width':2});}
+  for(const x of roots()){const eq=q.eq.find(e=>Math.abs(e.x-x)<1e-6);if(eq)continue;a+=line(X(x),Y(s.E),X(x),h-B,{stroke:'var(--ink)','stroke-dasharray':'6 5','stroke-opacity':.6});a+=tag('circle',{cx:X(x),cy:Y(s.E),r:5,fill:'var(--panel)',stroke:'var(--ink)','stroke-width':2});}
+ }
+ const px=X(s.x),py=Y(U(s.x)),ey=Y(s.E), gap=py-ey;
+ if($('showForce').checked){const dx=(q.hi-q.lo)*.055,slope=q.dU(s.x);a+=line(X(s.x-dx),Y(U(s.x)-slope*dx),X(s.x+dx),Y(U(s.x)+slope*dx),{stroke:'var(--force)','stroke-width':2.5,'stroke-dasharray':'6 4'});}
+ a+=line(px,py,px,ey,{stroke:'var(--ke)','stroke-width':5});
+ a+=line(px-7,ey,px+7,ey,{stroke:'var(--ke)','stroke-width':3});
+ a+=line(px,py,px,h-B,{stroke:'var(--muted)','stroke-width':1.5,'stroke-dasharray':'3 5'});
+ a+=tag('circle',{cx:px,cy:py,r:10,fill:'var(--mass)',stroke:'var(--panel)','stroke-width':2.5,'data-drag':'particle'});
+ a+=tag('circle',{cx:px,cy:py,r:22,fill:'transparent','data-drag':'particle'});
+ a+='</g>';
+ // Labels stay inside the plot even at a turning point or frame boundary.
+ a+=text(w-R-7,clamp(ey-9,T+fs,h-B-5),`E = ${fmt(s.E)} J`,{'text-anchor':'end','font-size':fs,'font-weight':600,'paint-order':'stroke',stroke:'var(--panel)','stroke-width':5,'data-drag':'energy',style:'cursor:ns-resize'});
+ if(gap>25){const left=px>w*.68;a+=text(px+(left?-12:12),(py+ey)/2+fs*.3,`K = ${fmt(kin())}`,{'text-anchor':left?'end':'start','font-size':fs,fill:'var(--ke)','font-weight':600,'paint-order':'stroke',stroke:'var(--panel)','stroke-width':5});}
+ if($('showPoints').checked){
+  for(const e of q.eq)a+=text(X(e.x),h-B+2*fs+20,e.stable?'stable':'unstable',{'text-anchor':'middle','font-size':fs-1,fill:e.stable?'var(--potential)':'var(--force)'});
+  // Turning labels sit at the top, separated from equilibrium labels below.
+  const rr=roots().filter(x=>!q.eq.some(e=>Math.abs(x-e.x)<1e-6));
+  for(let i=0;i<rr.length;i++){const x=rr[i];a+=text(clamp(X(x),L+49,w-R-49),T+fs+(i%2)* (fs+3),'turning point',{'text-anchor':'middle','font-size':fs-2,fill:'var(--muted)'});}
+ }
+ $('plot').setAttribute('viewBox',`0 0 ${w} ${h}`);$('plot').innerHTML=a;
+}
+function motion(){
+ const q=p(),w=motionSize.w,h=motionSize.h,vertical=s.preset==='gravity',fs=w<340?13:Math.min(20,w/23),X=x=>30+(x-q.lo)/(q.hi-q.lo)*(w-60),Y=x=>h-20-(x-q.lo)/(q.hi-q.lo)*(h-46);
+ let a='',px=vertical?w*.43:X(s.x),py=vertical?Y(s.x):h*.52;
+ motionGeom={vertical,inv:v=>vertical?q.lo+(h-20-v)/(h-46)*(q.hi-q.lo):q.lo+(v-30)/(w-60)*(q.hi-q.lo)};
+ if(vertical){a+=arrow(px,h-16,px,15,'var(--line)',2);a+=text(px-12,20,'+y',{'text-anchor':'end','font-size':fs});a+=text(px-12,h-14,'0',{'text-anchor':'end','font-size':fs});}
+ else{a+=arrow(20,py,w-16,py,'var(--line)',2);a+=text(w-17,py+27,'+x',{'text-anchor':'end','font-size':fs});for(const e of q.eq)a+=line(X(e.x),py-5,X(e.x),py+5,{stroke:'var(--muted)','stroke-width':2});}
+ a+=tag('circle',{cx:px,cy:py,r:10,fill:'var(--mass)',stroke:'var(--panel)','stroke-width':2});
+ // Separate vector scales. Vectors are along the actual coordinate, never the graph tangent.
+ const force=F(s.x),frange=s.preset==='spring'?55:s.preset==='gravity'?9.8*s.m:50,vrange=Math.sqrt(2*p().emax*(s.preset==='gravity'?s.m:1)/s.m);
+ if(vertical){
+  const vl=clamp(s.v/vrange,-1,1)*Math.max(20,(h-50)*.48),fl=clamp(force/frange,-1,1)*Math.max(20,(h-50)*.48);
+  a+=arrow(px+30,py,px+30,py-vl,'var(--ke)');a+=text(px+42,clamp(py-vl-4,16,h-8),Math.abs(s.v)<.005?'v = 0':'v',{'font-size':fs,fill:'var(--ke)'});
+  if($('showForce').checked){a+=arrow(px+76,py,px+76,py-fl,'var(--force)');a+=text(px+88,clamp(py-fl,16,h-8),'F',{'font-size':fs,fill:'var(--force)'});}
+ }else{
+  const room=Math.max(25,(w-65)*.27),vl=clamp(s.v/vrange,-1,1)*room,fl=clamp(force/frange,-1,1)*room;
+  // Arrows can cross the particle but remain within the panel.
+  const vector=(len,y,color,label)=>{const start=clamp(px,14+Math.max(0,-len),w-14-Math.max(0,len));return arrow(start,y,start+len,y,color)+text(clamp(start+len,18,w-18),y-10,label,{'text-anchor':'middle','font-size':fs,fill:color});};
+  a+=vector(vl,Math.max(32,py-28),'var(--ke)',Math.abs(s.v)<.005?'v = 0':'v');
+  if($('showForce').checked)a+=vector(fl,Math.min(h-7,py+34),'var(--force)',Math.abs(force)<.005?'F = 0':'F');
+ }
+ if(vertical)a+=text(w-5,h-3,'Upward is positive',{'text-anchor':'end','font-size':Math.max(11,fs-3),fill:'var(--muted)'});
+ $('motion').setAttribute('viewBox',`0 0 ${w} ${h}`);$('motion').innerHTML=a;
+}
+function draw(){
+ const q=p(),u=U(s.x),k=kin(),scale=q.ymax*(s.preset==='gravity'?s.m:1);
+ $('uBar').style.width=`${clamp(u/scale*100,0,100)}%`;$('kBar').style.width=`${clamp(k/scale*100,0,100)}%`;$('eBar').style.width=`${clamp(s.E/scale*100,0,100)}%`;
+ $('uValue').textContent=`${fmt(u)} J`;$('kValue').textContent=`${fmt(k)} J`;$('eValue').textContent=`${fmt(s.E)} J`;
+ $('posRead').innerHTML=`${q.coord} <strong>${fmt(s.x)} m</strong>`;$('velRead').innerHTML=`v <strong>${fmt(s.v)} m/s</strong>`;$('forceRead').innerHTML=`F <strong>${fmt(F(s.x))} N</strong>`;
+ $('energy').value=s.E;$('energyOut').textContent=`${fmt(s.E)} J`;$('position').value=s.x;$('positionOut').textContent=`${fmt(s.x,3)} m`;
+ const eq=q.eq.find(e=>Math.abs(e.x-s.x)<1e-6);
+ let message;
+ if(s.escaped)message=escapeText();
+ else if(s.preset==='well'&&Math.abs(s.E-4)<1e-10&&Math.abs(s.x)<.02&&s.x*s.v<0)message='Approaching the barrier top: speed tends to zero; it is reached only in infinite time.';
+ else if(eq&&Math.abs(s.v)<1e-5)message=eq.stable?'Stable equilibrium: F = 0. Nudge and play to see oscillation.':'Unstable equilibrium: F = 0. It stays here exactly; nudge and play to see it move away.';
+ else if(k<1e-4&&Math.abs(F(s.x))>.001)message='Turning point: K = 0, but F is nonzero. The object reverses direction.';
+ else if(eq)message='Passing an equilibrium: F = 0 here; the object can still have nonzero speed.';
+ else if(F(s.x)*s.v<-.005)message='Force opposes velocity: the object slows down as U increases.';
+ else if(F(s.x)*s.v>.005)message='Force and velocity have the same sign: the object speeds up as U decreases.';
+ else message='F = −dU/d'+q.coord+'. Zero slope means zero force; E − U gives kinetic energy.';
+ $('stateNote').textContent=message;$('actionNote').textContent=externalMessage;
+ plot();motion();
+}
+function pointerCoords(event,el){const r=el.getBoundingClientRect();return {x:event.clientX-r.left,y:event.clientY-r.top};}
+function pointerDown(e){
+ if(e.button!==0)return;const el=e.currentTarget,pt=pointerCoords(e,el);setRunning(false);
+ if(el===$('plot')){const target=e.target.dataset.drag;dragging={el,mode:target==='energy'?'energy':'position'};}
+ else dragging={el,mode:'motion'};
+ el.setPointerCapture(e.pointerId);pointerMove(e);e.preventDefault();
+}
+function pointerMove(e){
+ if(!dragging)return;const pt=pointerCoords(e,dragging.el);
+ if(dragging.mode==='energy')setEnergy(geom.invY(pt.y));
+ else if(dragging.mode==='position')setPosition(geom.invX(pt.x));
+ else setPosition(motionGeom.inv(motionGeom.vertical?pt.y:pt.x));
+}
+for(const id of ['plot','motion']){const el=$(id);el.addEventListener('pointerdown',pointerDown);el.addEventListener('pointermove',pointerMove);el.addEventListener('pointerup',()=>dragging=null);el.addEventListener('pointercancel',()=>dragging=null);el.addEventListener('lostpointercapture',()=>dragging=null);}
+$('preset').addEventListener('change',()=>choosePreset($('preset').value));
+$('energy').addEventListener('input',()=>setEnergy(Number($('energy').value)));
+$('position').addEventListener('input',()=>setPosition(Number($('position').value)));
+$('mass').addEventListener('change',()=>{s.m=Number($('mass').value);$('energy').max=p().emax*(s.preset==='gravity'?s.m:1);setEnergy(s.E);});
+$('play').addEventListener('click',()=>{if(s.escaped){s.x=initial.x;s.v=initial.v;s.E=initial.E;s.escaped=false;}externalMessage='No friction. Play follows the force; total energy is conserved.';setRunning(!s.running);draw();});
+$('reset').addEventListener('click',()=>{setRunning(false);Object.assign(s,initial);s.time=0;s.escaped=false;externalMessage='Returned to the last starting state.';draw();});
+$('reverse').addEventListener('click',()=>{setRunning(false);s.v=-s.v;externalMessage='Velocity reversed; force and energy are unchanged.';remember();draw();});
+$('rest').addEventListener('click',()=>releaseAt(s.x,'Released from rest: total energy is now U at this position.'));
+$('place').addEventListener('click',()=>{const e=p().eq[Number($('equilibrium').value)];if(e)releaseAt(e.x,'Placed exactly at equilibrium with zero speed.');});
+for(const [id,dir] of [['nudgeLeft',-1],['nudgeRight',1]])$(id).addEventListener('click',()=>releaseAt(s.x+dir*(p().hi-p().lo)*.015,'Displaced slightly and released from rest; this changes total energy.'));
+for(const el of document.querySelectorAll('[data-speed]'))el.addEventListener('click',()=>{s.speed=Number(el.dataset.speed);document.querySelectorAll('[data-speed]').forEach(b=>b.setAttribute('aria-pressed',b===el?'true':'false'));});
+for(const id of ['showForce','showPoints'])$(id).addEventListener('change',draw);
+function theme(){document.documentElement.dataset.theme=document.documentElement.dataset.theme==='light'?'dark':'light';$('theme').textContent=document.documentElement.dataset.theme==='light'?'Dark mode':'Light mode';draw();}
+function hide(){document.body.classList.toggle('clean');}
+$('theme').addEventListener('click',theme);$('hide').addEventListener('click',hide);$('reveal').addEventListener('click',hide);
+document.addEventListener('keydown',e=>{
+ if(e.target.isContentEditable||/^(INPUT|SELECT|TEXTAREA|BUTTON)$/.test(e.target.tagName))return;
+ if(e.code==='Space'){e.preventDefault();$('play').click();}
+ else if(e.key.toLowerCase()==='r')$('reset').click();else if(e.key.toLowerCase()==='h')hide();else if(e.key.toLowerCase()==='t')theme();
+ else if(e.target===$('plot')&&['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();setPosition(s.x+(e.key==='ArrowRight'?1:-1)*(p().hi-p().lo)*.01);}
+});
+new ResizeObserver(entries=>{for(const e of entries){const r=e.contentRect;if(e.target===$('plotWrap'))plotSize={w:r.width,h:r.height};else motionSize={w:r.width,h:r.height};}draw();}).observe($('plotWrap'));
+new ResizeObserver(entries=>{const r=entries[0].contentRect;motionSize={w:r.width,h:r.height};draw();}).observe($('motionWrap'));
+function frame(now){const dt=last?Math.min(.05,(now-last)/1000):0;last=now;if(s.running&&!dragging){advance(dt*s.speed);draw();}requestAnimationFrame(frame);}
+choosePreset('spring');requestAnimationFrame(frame);
+// Small, read-only-by-convention hook for local physics and layout verification.
+window.potentialDemo={state:s,presets,advance,choosePreset,setEnergy,setPosition,releaseAt,roots,allowedIntervals,draw,setRunning,get initial(){return {...initial};}};
+})();
+</script>
+</body>
+</html>
