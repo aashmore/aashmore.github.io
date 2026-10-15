@@ -20,7 +20,7 @@
  <header class="head"><div><h1>Potential energy curves</h1><p class="subtitle" id="model"></p></div><div class="toolbar"><button id="theme">Dark mode</button><button id="hide">Hide controls</button></div></header>
  <div class="panels">
   <section class="panel graph-panel" aria-label="Potential energy versus position">
-   <div class="graph-head"><h2 id="graphTitle">Energy and position</h2><div class="legend"><span><i class="swatch" style="background:var(--potential)"></i>Potential U</span><span><i class="swatch"></i>Total E</span><span><i class="swatch" style="background:var(--ke)"></i>Gap K</span></div></div>
+   <div class="graph-head"><h2 id="graphTitle">Energy and position</h2><div class="legend"><span><i class="swatch" style="background:var(--potential)"></i>Potential U</span><span><i class="swatch"></i>Total E</span><span><i class="swatch" style="background:var(--ke)"></i><span id="kineticLegend">Gap K</span></span></div></div>
    <div class="svg-wrap" id="plotWrap"><svg id="plot" tabindex="0" role="img" aria-label="Interactive potential energy graph. Drag the particle to change position; drag the horizontal energy line to change total energy."></svg></div>
    <p class="graph-hint">Drag the particle to explore at fixed E. Drag the E line to change energy. Shading: U &gt; E.</p>
   </section>
@@ -33,7 +33,7 @@
   <div class="ctl"><label for="preset">Potential</label><select id="preset"><option value="spring">Spring</option><option value="gravity">Constant gravity</option><option value="well">Two unequal wells</option></select></div>
   <div class="ctl"><label for="energy">Total energy E</label><output id="energyOut"></output><input id="energy" type="range" min="0" max="13" step="0.01" value="5"></div>
   <div class="ctl"><label for="position">Position <span id="coordinate">x</span></label><output id="positionOut"></output><input id="position" type="range" min="-.55" max=".55" step=".0001" value="-.25"></div>
-  <div class="controls-bottom"><div class="buttons"><button class="primary" id="play">Play</button><button id="reset">Restart</button><button id="reverse" title="Reverse the velocity at the same position and energy">Reverse v</button><div class="seg" role="group" aria-label="Playback speed"><button data-speed="0.25" aria-pressed="true">0.25×</button><button data-speed="0.5" aria-pressed="false">0.5×</button><button data-speed="1" aria-pressed="false">1×</button></div></div><div class="options"><label><input id="showForce" type="checkbox" checked>Force / slope</label><label><input id="showPoints" type="checkbox" checked>Special points</label><label for="mass">m</label><select id="mass" aria-label="Particle mass"><option value="0.5">0.5 kg</option><option value="1" selected>1 kg</option><option value="2">2 kg</option></select></div></div>
+  <div class="controls-bottom"><div class="buttons"><button class="primary" id="play">Play</button><button id="reset">Restart</button><button id="reverse" title="Reverse the velocity at the same position and energy">Reverse v</button><div class="seg" role="group" aria-label="Playback speed"><button data-speed="0.25" aria-pressed="true">0.25×</button><button data-speed="0.5" aria-pressed="false">0.5×</button><button data-speed="1" aria-pressed="false">1×</button></div></div><div class="options"><label><input id="showKinetic" type="checkbox">Kinetic energy curve</label><label><input id="showForce" type="checkbox" checked>Force / slope</label><label><input id="showPoints" type="checkbox" checked>Special points</label><label for="mass">m</label><select id="mass" aria-label="Particle mass"><option value="0.5">0.5 kg</option><option value="1" selected>1 kg</option><option value="2">2 kg</option></select></div></div>
   <div class="controls-bottom"><div class="buttons"><select id="equilibrium" aria-label="Place particle at rest at an equilibrium"></select><button id="place">Place at rest</button><button id="rest">Release here from rest</button><button id="nudgeLeft" title="Displace slightly left and release from rest">Nudge ←</button><button id="nudgeRight" title="Displace slightly right and release from rest">Nudge →</button></div></div>
  </section>
  <div class="keys"><p id="actionNote">No friction. Dragging sets a new starting state.</p><p>Space: play/pause · R: restart · H: controls · T: theme · Arrow keys on graph: change position · F11: full screen</p></div>
@@ -155,6 +155,16 @@ function plot(){
  a+='<g clip-path="url(#plotClip)">';
  for(const [lo,hi] of ints)a+=line(X(lo),h-B-3,X(hi),h-B-3,{stroke:'var(--potential)','stroke-width':5,'stroke-opacity':.6});
  a+=tag('path',{d:curve,fill:'none',stroke:'var(--potential)','stroke-width':3.5});
+ if($('showKinetic').checked){
+  a+='<g id="kineticCurve" aria-label="Kinetic energy K(x) = E - U(x), shown only where K is nonnegative" pointer-events="none">';
+  for(const [lo,hi] of ints){
+   const steps=Math.max(1,Math.ceil(650*(hi-lo)/(q.hi-q.lo)));let path='';
+   for(let i=0;i<=steps;i++){const x=lo+(hi-lo)*i/steps;path+=`${i?'L':'M'}${X(x)},${Y(Math.max(0,s.E-U(x)))}`;}
+   a+=tag('path',{d:path,fill:'none',stroke:'var(--ke)','stroke-width':3,'stroke-dasharray':'9 5'});
+  }
+  a+=tag('circle',{id:'kineticPoint',cx:X(s.x),cy:Y(kin()),r:5,fill:'var(--ke)',stroke:'var(--panel)','stroke-width':1.5});
+  a+='</g>';
+ }
  a+=line(L,Y(s.E),w-R,Y(s.E),{stroke:'var(--ink)','stroke-width':2.5});
  // Wide invisible target makes the energy line usable with a pointer or touch.
  a+=line(L,Y(s.E),w-R,Y(s.E),{stroke:'transparent','stroke-width':22,'data-drag':'energy'});
@@ -206,6 +216,7 @@ function motion(){
 }
 function draw(){
  const q=p(),u=U(s.x),k=kin(),scale=q.ymax*(s.preset==='gravity'?s.m:1);
+ $('kineticLegend').textContent=$('showKinetic').checked?'Gap / curve K':'Gap K';
  $('uBar').style.width=`${clamp(u/scale*100,0,100)}%`;$('kBar').style.width=`${clamp(k/scale*100,0,100)}%`;$('eBar').style.width=`${clamp(s.E/scale*100,0,100)}%`;
  $('uValue').textContent=`${fmt(u)} J`;$('kValue').textContent=`${fmt(k)} J`;$('eValue').textContent=`${fmt(s.E)} J`;
  $('posRead').innerHTML=`${q.coord} <strong>${fmt(s.x)} m</strong>`;$('velRead').innerHTML=`v <strong>${fmt(s.v)} m/s</strong>`;$('forceRead').innerHTML=`F <strong>${fmt(F(s.x))} N</strong>`;
@@ -248,7 +259,7 @@ $('rest').addEventListener('click',()=>releaseAt(s.x,'Released from rest: total 
 $('place').addEventListener('click',()=>{const e=p().eq[Number($('equilibrium').value)];if(e)releaseAt(e.x,'Placed exactly at equilibrium with zero speed.');});
 for(const [id,dir] of [['nudgeLeft',-1],['nudgeRight',1]])$(id).addEventListener('click',()=>releaseAt(s.x+dir*(p().hi-p().lo)*.015,'Displaced slightly and released from rest; this changes total energy.'));
 for(const el of document.querySelectorAll('[data-speed]'))el.addEventListener('click',()=>{s.speed=Number(el.dataset.speed);document.querySelectorAll('[data-speed]').forEach(b=>b.setAttribute('aria-pressed',b===el?'true':'false'));});
-for(const id of ['showForce','showPoints'])$(id).addEventListener('change',draw);
+for(const id of ['showKinetic','showForce','showPoints'])$(id).addEventListener('change',draw);
 function theme(){document.documentElement.dataset.theme=document.documentElement.dataset.theme==='light'?'dark':'light';$('theme').textContent=document.documentElement.dataset.theme==='light'?'Dark mode':'Light mode';draw();}
 function hide(){document.body.classList.toggle('clean');}
 $('theme').addEventListener('click',theme);$('hide').addEventListener('click',hide);$('reveal').addEventListener('click',hide);
