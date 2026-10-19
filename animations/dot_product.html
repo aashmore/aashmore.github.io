@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>The dot product of two vectors</title>
+<style>
+:root{color-scheme:light;--bg:#e6ebf0;--panel:#fff;--ink:#0f1720;--muted:#46535f;--line:#c5ced6;--grid:#e8edf1;--track:#f2f5f7;--accent:#0f7f73;--v:#c52b42;--w:#2467a6;--angle:#667382}
+:root[data-theme=dark]{color-scheme:dark;--bg:#0b1015;--panel:#141b22;--ink:#f1f5f9;--muted:#a9b6c2;--line:#35434f;--grid:#26323c;--track:#1d2832;--accent:#3fc9b8;--v:#ff8697;--w:#7db9f3;--angle:#b3bec9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.35 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}main{max-width:1700px;margin:auto;padding:16px;display:grid;gap:12px}h1{margin:0 0 5px;font-size:clamp(24px,2.3vw,42px);line-height:1.1;letter-spacing:-.02em}h2{margin:0;font-size:clamp(17px,1.25vw,24px);font-weight:650}p{margin:0}.muted,.subtitle{color:var(--muted)}.subtitle{font-size:clamp(14px,1vw,19px)}.head{display:flex;justify-content:space-between;align-items:center;gap:16px}.toolbar{display:flex;gap:8px;flex-shrink:0}button,input{font:inherit}button{color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:8px;min-height:38px;padding:7px 13px;cursor:pointer;font-size:clamp(14px,1vw,18px);font-weight:550}button:hover{border-color:var(--accent)}button[aria-pressed=true]{background:var(--track);border-color:var(--accent)}button:focus-visible,input:focus-visible,[data-head]:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0;min-height:0}.content{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(350px,1fr);gap:12px;min-height:0}.graph-panel{display:flex;flex-direction:column;gap:6px}.graph-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.legend{display:flex;gap:15px;font-size:14px}.legend span{display:flex;align-items:center;gap:5px}.swatch{height:3px;width:22px;display:inline-block}.plot-wrap{position:relative;flex:1;min-height:380px;overflow:hidden}.plot-wrap svg{position:absolute;inset:0;width:100%;height:100%;touch-action:none;user-select:none}.math-label{position:absolute;pointer-events:none;white-space:nowrap;line-height:1;z-index:1}.math-label math{margin:0}.angle-label{background:var(--panel);padding:2px 5px;border-radius:5px}.hint{color:var(--muted);font-size:clamp(12px,.95vw,17px)}.sidebar{display:grid;grid-template-rows:auto auto minmax(0,1fr);gap:10px;min-height:0}.vectors{display:grid;grid-template-columns:1fr 1fr;gap:10px}.vector-card{border-top:4px solid var(--v);padding:9px 12px;display:grid;gap:6px;align-content:start}.vector-card.w{border-color:var(--w)}math{font-family:"Cambria Math","STIX Two Math",math;font-weight:400}.vector-card math{font-size:clamp(21px,1.5vw,30px);margin:0;width:max-content}.magnitude math{font-size:clamp(19px,1.35vw,26px)}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:10px 14px}.fact{display:flex;align-items:center;justify-content:space-between;gap:8px}.fact math{font-size:clamp(22px,1.5vw,30px)}.fact strong{font-size:clamp(24px,2vw,38px);font-variant-numeric:tabular-nums;font-weight:650}.calculation{display:flex;flex-direction:column;gap:8px}.calculation h2{font-size:clamp(17px,1.15vw,22px)}.method{display:grid;gap:4px}.method+.method{border-top:1px solid var(--line);padding-top:8px}.method-label{font-size:clamp(12px,.9vw,16px);color:var(--muted)}.math-line{min-width:0;min-height:1.6em}.math-line math{width:max-content;margin:0;font-size:clamp(20px,1.4vw,28px)}.numeric math{font-size:clamp(18px,1.2vw,24px)}.answer{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:8px;margin-top:auto}.answer math{font-size:clamp(26px,1.8vw,36px)}#dotValue{font-size:clamp(32px,2.5vw,50px);font-weight:650;font-variant-numeric:tabular-nums;line-height:1.1}.sign-note{font-size:clamp(13px,1vw,18px);color:var(--muted);min-height:1.35em}.controls{display:grid;grid-template-columns:1fr 1fr 1.35fr;gap:10px 24px;align-items:center}.coordinate-inputs{display:flex;gap:10px;align-items:center}.coordinate-inputs .name{font-size:23px;font-weight:650;margin-right:4px}.coordinate-inputs label{display:flex;gap:5px;align-items:center;font-size:15px}.coordinate-inputs input{width:80px;min-width:0;min-height:38px;border:1px solid var(--line);border-radius:6px;padding:6px 7px;color:var(--ink);background:var(--panel);font-variant-numeric:tabular-nums}.options{display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}.options label{display:inline-flex;align-items:center;gap:6px;font-size:14px}.options input{accent-color:var(--accent);width:17px;height:17px}.bottom-controls{grid-column:1/-1;display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.examples,.selection{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.examples>span,.selection>span{color:var(--muted);font-size:13px}.selection button{padding:6px 11px}.footer{color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:16px}.reveal{display:none;position:fixed;right:14px;bottom:12px;z-index:5;opacity:.65}.reveal:hover{opacity:1}body.clean .controls,body.clean .toolbar,body.clean .footer{display:none}body.clean .reveal{display:block}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:900px) and (min-height:600px){body{overflow:hidden}main{max-width:none;height:100dvh;grid-template-rows:auto minmax(0,1fr) auto auto;padding:clamp(12px,1.6vh,24px) clamp(16px,1.7vw,34px);gap:clamp(9px,1.3vh,16px)}.plot-wrap{min-height:0}.panel{padding:clamp(10px,1vw,18px)}.vector-card{padding:8px 12px}.facts{padding:9px 12px}.controls{padding:10px 14px}.clean main{grid-template-rows:auto minmax(0,1fr);padding-bottom:50px}.calculation{padding:10px 14px}}
+@media(min-width:1500px){.coordinate-inputs input{width:105px}.coordinate-inputs label,.options label,.legend{font-size:18px}.footer,.examples>span,.selection>span{font-size:15px}.sidebar{gap:12px}.calculation{gap:12px}}
+@media(max-width:1100px){.controls{grid-template-columns:1fr 1fr}.options{grid-column:1/-1}.bottom-controls{gap:8px}.examples{gap:5px}.examples button{padding:6px 9px}.selection>span{display:none}.facts{gap:8px}.fact strong{font-size:26px}}
+@media(max-width:899px){.content{grid-template-columns:1fr}.plot-wrap{min-height:440px}.sidebar{grid-template-rows:auto auto auto}.head{align-items:flex-start}.toolbar{flex-wrap:wrap;justify-content:flex-end}.footer{display:block}.footer p+p{margin-top:4px}.calculation{min-height:290px}}
+@media(max-width:550px){main{padding:12px;gap:10px}.head{flex-wrap:wrap}.toolbar{justify-content:flex-start}.plot-wrap{min-height:370px}.graph-head{flex-wrap:wrap}.controls{grid-template-columns:1fr}.coordinate-inputs{justify-content:space-between}.coordinate-inputs input{width:95px}.vectors{gap:8px}.vector-card{padding:8px}.facts{gap:12px}.fact{gap:5px}.fact strong{font-size:24px}.fact math{font-size:22px}.bottom-controls{align-items:flex-start}.selection{margin-top:5px}.clean .plot-wrap{min-height:480px}}
+[data-head]:focus{outline:none}[data-head]:focus-visible{stroke:var(--accent);stroke-width:2;stroke-dasharray:3 4}
+.facts{display:flex;flex-wrap:wrap;gap:12px 28px}.fact,.answer{justify-content:flex-start;align-items:baseline;gap:8px}
+</style>
+</head>
+<body>
+<main>
+<header class="head"><div><h1>The dot product of two vectors</h1><p class="subtitle">Drag the heads of <span style="color:var(--v)">v</span> and <span style="color:var(--w)">w</span> to change their lengths and directions.</p></div><div class="toolbar"><button id="theme">Dark mode</button><button id="hide">Hide controls</button></div></header>
+<div class="content">
+<section class="panel graph-panel" aria-label="Two vectors and their opening angle"><div class="graph-head"><h2>Vectors and opening angle</h2><div class="legend"><span><i class="swatch" style="background:var(--v)"></i>v</span><span><i class="swatch" style="background:var(--w)"></i>w</span></div></div><div class="plot-wrap" id="plotWrap"><svg id="plot" role="group" aria-label="Draggable vectors on coordinate axes"></svg><div id="vLabel" class="math-label" style="color:var(--v)"></div><div id="wLabel" class="math-label" style="color:var(--w)"></div><div id="vxLabel" class="math-label" style="color:var(--v)"></div><div id="vyLabel" class="math-label" style="color:var(--v)"></div><div id="wxLabel" class="math-label" style="color:var(--w)"></div><div id="wyLabel" class="math-label" style="color:var(--w)"></div><div id="angleLabel" class="math-label angle-label"></div></div><p class="hint">The two tails stay at the origin. The shaded region marks the opening angle.</p></section>
+<aside class="sidebar" aria-label="Components and dot product">
+<div class="vectors"><section class="panel vector-card"><div id="vColumn"></div><div class="magnitude" id="vMagnitude"></div></section><section class="panel vector-card w"><div id="wColumn"></div><div class="magnitude" id="wMagnitude"></div></section></div>
+<section class="panel facts" aria-label="Angle and cosine"><div class="fact"><math><mi>θ</mi><mo>=</mo></math><strong id="thetaValue"></strong></div><div class="fact"><math><mi mathvariant="normal">cos</mi><mo>&#x2061;</mo><mspace width="0.167em"/><mi>θ</mi><mo>=</mo></math><strong id="cosValue"></strong></div></section>
+<section class="panel calculation"><h2>Two equivalent calculations</h2><div class="method"><p class="method-label">From components</p><div class="math-line" id="componentFormula"></div><div class="math-line numeric" id="componentNumbers"></div></div><div class="method"><p class="method-label">From lengths and opening angle</p><div class="math-line" id="angleFormula"></div><div class="math-line numeric" id="angleNumbers"></div></div><div class="answer"><div id="dotSymbol"></div><strong id="dotValue"></strong></div><p class="sign-note" id="signNote"></p></section>
+</aside>
+</div>
+<section class="panel controls" aria-label="Vector controls">
+<div class="coordinate-inputs"><span class="name" style="color:var(--v)">v</span><label>x <input id="vx" type="number" min="-5" max="5" step="0.1" value="4" aria-label="v x component"></label><label>y <input id="vy" type="number" min="-5" max="5" step="0.1" value="1" aria-label="v y component"></label></div>
+<div class="coordinate-inputs"><span class="name" style="color:var(--w)">w</span><label>x <input id="wx" type="number" min="-5" max="5" step="0.1" value="1" aria-label="w x component"></label><label>y <input id="wy" type="number" min="-5" max="5" step="0.1" value="3" aria-label="w y component"></label></div>
+<div class="options"><label><input id="components" type="checkbox">Component guides</label><label><input id="snap" type="checkbox" checked>Snap to 0.5</label><label><input id="radians" type="checkbox" aria-label="Show opening angle in radians">Radians</label></div>
+<div class="bottom-controls"><div class="examples"><span>Examples</span><button data-example="initial" id="reset">Reset</button><button data-example="aligned">Aligned</button><button data-example="perpendicular">Perpendicular</button><button data-example="opposite">Opposite</button><button data-example="exercise">From the notes</button></div><div class="selection"><span>Overlapping heads:</span><button data-select="v" aria-pressed="false">Select v</button><button data-select="w" aria-pressed="true">Select w</button></div></div>
+</section>
+<footer class="footer"><p>Focus a head and use arrow keys to nudge it (Shift: larger steps). V / W selects a vector when heads overlap.</p><p>R: reset · H: controls · T: theme · F11: full screen</p></footer>
+</main>
+<button class="reveal" id="show">Show controls (H)</button><p class="sr-only" id="announcement" role="status"></p>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const state={v:{x:4,y:1},w:{x:1,y:3},selected:'w',components:false,snap:true,radians:false};
+const examples={initial:[[4,1],[1,3]],aligned:[[4,0],[3,0]],perpendicular:[[4,0],[0,3]],opposite:[[4,0],[-3,0]],exercise:[[2,2],[2,-2]]};
+let geometry=null,dragging=null;
+const mi=x=>'<mi>'+x+'</mi>',mn=x=>'<mn>'+String(x).replace('-','−')+'</mn>',mo=x=>'<mo>'+x+'</mo>';
+const row=x=>'<mrow>'+x+'</mrow>',sub=(a,b)=>'<msub>'+mi(a)+mi(b)+'</msub>';
+const vec=x=>'<mover accent="true">'+mi(x)+'<mo>→</mo></mover>';
+const magnitude=x=>row(mo('|')+vec(x)+mo('|'));
+const dot=()=>vec('v')+mo('·')+vec('w');
+const math=x=>'<math xmlns="http://www.w3.org/1998/Math/MathML">'+x+'</math>';
+const fmt=(x,d=3)=>{if(Math.abs(x)<.5*10**(-d))x=0;return String(Number(x.toFixed(d))).replace('-','−');};
+const number=(x,d=3)=>mn(fmt(x,d));
+const angleText=theta=>state.radians?fmt(theta,3)+' rad':fmt(theta*180/Math.PI,1)+'°';
+const angleMath=theta=>state.radians?number(theta,3)+'<mspace width="0.167em"/><mtext>rad</mtext>':number(theta*180/Math.PI,1)+mo('°');
+const paren=x=>row(mo('(')+number(x,2)+mo(')'));
+const clamp=x=>Math.max(-5,Math.min(5,x));
+function values(v=state.v,w=state.w){
+ const a=Math.hypot(v.x,v.y),b=Math.hypot(w.x,w.y),x=v.x*w.x,y=v.y*w.y,dot=x+y,defined=a>1e-12&&b>1e-12;
+ const cos=defined?Math.max(-1,Math.min(1,dot/(a*b))):null;
+ // atan2 is accurate at both parallel and perpendicular configurations.
+ const cross=v.x*w.y-v.y*w.x,turn=defined?Math.atan2(cross,dot):null,theta=defined?Math.abs(turn):null;
+ return {a,b,x,y,dot,defined,cos,cross,turn,theta};
+}
+function setVector(name,x,y){state[name]={x:Math.round(clamp(x)*100)/100,y:Math.round(clamp(y)*100)/100};render();}
+function choose(name,announce=false){state.selected=name;document.querySelectorAll('[data-select]').forEach(el=>el.setAttribute('aria-pressed',el.dataset.select===name));if(announce)$('announcement').textContent='Vector '+name+' selected.';render();}
+function useExample(name){const [v,w]=examples[name];state.v={x:v[0],y:v[1]};state.w={x:w[0],y:w[1]};render();}
+function column(name){const q=state[name];return vec(name)+mo('=')+row(mo('(')+'<mtable><mtr><mtd>'+number(q.x,2)+'</mtd></mtr><mtr><mtd>'+number(q.y,2)+'</mtd></mtr></mtable>'+mo(')'));}
+function fill(id,body){const el=$(id);if(el._body!==body){el.innerHTML=math(body);el._body=body;}}
+function fitMath(){document.querySelectorAll('.math-line math').forEach(el=>{el.style.fontSize='';const width=el.getBoundingClientRect().width,available=el.parentElement.clientWidth;if(width>available&&available>0){const base=parseFloat(getComputedStyle(el).fontSize);el.style.fontSize=Math.max(13,Math.floor(base*available/width))+'px';}});}
+function showMath(id,body,x,y,align='center',size=18){const el=$(id);el.style.display=body?'block':'none';if(!body)return;fill(id,body);el.style.fontSize=size+'px';el.style.left=x+'px';el.style.top=y+'px';el.style.transform='translate('+(align==='center'?'-50%':align==='right'?'-100%':'0')+', -50%)';}
+function render(){
+ const m=values();
+ document.querySelectorAll('[data-select]').forEach(el=>el.setAttribute('aria-pressed',el.dataset.select===state.selected));
+ for(const name of ['v','w']){fill(name+'Column',column(name));fill(name+'Magnitude',magnitude(name)+mo('=')+number(name==='v'?m.a:m.b));for(const c of ['x','y'])if(document.activeElement!==$(name+c))$(name+c).value=state[name][c];}
+ $('thetaValue').textContent=m.defined?angleText(m.theta):'—';$('cosValue').textContent=m.defined?fmt(m.cos):'—';
+ fill('componentFormula',dot()+mo('=')+sub('v','x')+sub('w','x')+mo('+')+sub('v','y')+sub('w','y'));
+ fill('componentNumbers',paren(state.v.x)+paren(state.w.x)+mo('+')+paren(state.v.y)+paren(state.w.y)+mo('=')+number(m.dot,4));
+ fill('angleFormula',dot()+mo('=')+magnitude('v')+magnitude('w')+'<mspace width="0.167em"/><mi mathvariant="normal">cos</mi><mo>&#x2061;</mo><mspace width="0.167em"/>'+mi('θ'));
+ fill('angleNumbers',m.defined?number(m.a)+mo('×')+number(m.b)+mo('×')+row(mo('(')+number(m.cos)+mo(')'))+mo('≈')+number(m.dot,4):'<mtext>Angle undefined at zero length.</mtext>');
+ fill('dotSymbol',dot()+mo('='));$('dotValue').textContent=fmt(m.dot,4);
+ const eps=1e-10*m.a*m.b;
+ $('signNote').textContent=!m.defined?'One vector has zero length; the dot product is 0.':Math.abs(m.dot)<=eps?'Perpendicular vectors: the dot product is 0.':m.dot>0?'Acute opening angle: the dot product is positive.':'Obtuse opening angle: the dot product is negative.';
+ if(m.defined&&Math.abs(m.theta)<1e-10)$('signNote').textContent='Aligned vectors: the dot product is positive.';
+ if(m.defined&&Math.abs(m.theta-Math.PI)<1e-10)$('signNote').textContent='Opposite directions: the dot product is negative.';
+ draw(m);fitMath();
+}
+function draw(m=values()){
+ const wrap=$('plotWrap'),W=wrap.clientWidth,H=wrap.clientHeight;if(W<1||H<1)return;
+ const scale=Math.max(1,Math.min((W-80)/11,(H-66)/11)),cx=W/2,cy=H/2,X=x=>cx+x*scale,Y=y=>cy-y*scale;
+ geometry={W,H,scale,cx,cy};
+ const font=Math.max(13,Math.min(20,W/43)),labelSize=Math.max(15,Math.min(23,W/36));
+ let svg='<title>Two vectors v and w</title><desc>Drag either circular head. Components range from minus five to five. Use arrow keys when a head has focus.</desc>';
+ for(let n=-5;n<=5;n++){
+  svg+='<path d="M '+X(n)+' '+Y(-5.2)+' V '+Y(5.2)+' M '+X(-5.2)+' '+Y(n)+' H '+X(5.2)+'" stroke="var(--grid)" stroke-width="1" fill="none"/>';
+  if(n!==0)svg+='<text x="'+X(n)+'" y="'+(cy+font+5)+'" text-anchor="middle" fill="var(--muted)" font-size="'+font+'">'+n+'</text><text x="'+(cx-9)+'" y="'+(Y(n)+font*.35)+'" text-anchor="end" fill="var(--muted)" font-size="'+font+'">'+n+'</text>';
+ }
+ svg+='<path d="M '+X(-5.35)+' '+cy+' H '+X(5.4)+' M '+cx+' '+Y(-5.35)+' V '+Y(5.4)+'" stroke="var(--muted)" stroke-width="1.4" fill="none"/>';
+ svg+='<path d="M '+(X(5.4)-7)+' '+(cy-4)+' L '+X(5.4)+' '+cy+' L '+(X(5.4)-7)+' '+(cy+4)+' M '+(cx-4)+' '+(Y(5.4)+7)+' L '+cx+' '+Y(5.4)+' L '+(cx+4)+' '+(Y(5.4)+7)+'" fill="none" stroke="var(--muted)"/>';
+ svg+='<text x="'+(X(5.4)+9)+'" y="'+(cy-8)+'" fill="var(--ink)" font-size="'+(font+2)+'">x</text><text x="'+(cx+11)+'" y="'+Y(5.4)+'" fill="var(--ink)" font-size="'+(font+2)+'">y</text><text x="'+(cx-9)+'" y="'+(cy+font+5)+'" text-anchor="end" fill="var(--muted)" font-size="'+font+'">0</text>';
+ if(m.defined&&m.theta>1e-8){
+  const a=Math.atan2(state.v.y,state.v.x),r=Math.min(68,Math.max(20,Math.min(m.a,m.b)*scale*.3)),b=a+m.turn;
+  const p=[cx+r*Math.cos(a),cy-r*Math.sin(a)],q=[cx+r*Math.cos(b),cy-r*Math.sin(b)],sweep=m.turn>0?0:1;
+  svg+='<path d="M '+cx+' '+cy+' L '+p.join(' ')+' A '+r+' '+r+' 0 0 '+sweep+' '+q.join(' ')+' Z" fill="var(--angle)" opacity=".17"/>';
+  svg+='<path d="M '+p.join(' ')+' A '+r+' '+r+' 0 0 '+sweep+' '+q.join(' ')+'" stroke="var(--angle)" stroke-width="1.7" fill="none"/>';
+ }
+ const order=state.selected==='v'?['w','v']:['v','w'];
+ for(const name of order){const q=state[name],x=X(q.x),y=Y(q.y),length=Math.hypot(q.x,q.y)*scale;
+  if(state.components)svg+='<path d="M '+cx+' '+y+' H '+x+' V '+cy+'" stroke="var(--'+name+')" stroke-width="1.8" stroke-dasharray="6 5" opacity=".65" fill="none"/><circle cx="'+x+'" cy="'+cy+'" r="3" fill="var(--'+name+')"/><circle cx="'+cx+'" cy="'+y+'" r="3" fill="var(--'+name+')"/>';
+  if(length>1e-8){const ux=q.x/(length/scale),uy=-q.y/(length/scale),head=Math.min(17,Math.max(7,length*.2)),half=head*.42,bx=x-head*ux,by=y-head*uy;
+   svg+='<path d="M '+cx+' '+cy+' L '+bx+' '+by+'" stroke="var(--'+name+')" stroke-width="'+(name===state.selected?4.5:3.5)+'" fill="none"/><polygon points="'+x+','+y+' '+(bx-half*uy)+','+(by+half*ux)+' '+(bx+half*uy)+','+(by-half*ux)+'" fill="var(--'+name+')"/>';
+  }
+  svg+='<circle cx="'+x+'" cy="'+y+'" r="12" fill="none" stroke="var(--'+name+')" opacity=".45" stroke-width="1.5"/>';
+ }
+ // The selected head is last so it can be dragged even when both heads coincide.
+ for(const name of order){const q=state[name];svg+='<circle data-head="'+name+'" cx="'+X(q.x)+'" cy="'+Y(q.y)+'" r="23" fill="transparent" tabindex="0" role="button" aria-label="Vector '+name+' head: x '+q.x+', y '+q.y+'. Drag or use arrow keys." style="cursor:grab"/>';}
+ const focused=document.activeElement?.dataset?.head;
+ $('plot').setAttribute('viewBox','0 0 '+W+' '+H);$('plot').innerHTML=svg;
+ if(focused&&!dragging)$('plot').querySelector('[data-head="'+focused+'"]').focus({preventScroll:true});
+ for(const name of ['v','w']){const q=state[name],a=Math.atan2(q.y,q.x),side=name==='v'?-1:1;
+  let lx=X(q.x)+18*Math.cos(a)+side*20*Math.sin(a),ly=Y(q.y)-18*Math.sin(a)+side*20*Math.cos(a);
+  if(Math.hypot(q.x,q.y)<1e-12){lx=cx+side*28;ly=cy-30;}
+  showMath(name+'Label',vec(name),Math.max(20,Math.min(W-20,lx)),Math.max(19,Math.min(H-19,ly)),'center',labelSize+3);
+  const other=state[name==='v'?'w':'v'],gap=labelSize*1.5+6,extraX=name==='w'&&Math.abs(q.x-other.x)*scale<labelSize*4.5?gap:0,extraY=name==='w'&&Math.abs(q.y-other.y)*scale<gap?(q.y>=0?-gap:gap):0;
+  showMath(name+'xLabel',state.components?sub(name,'x')+mo('=')+number(q.x,2):null,Math.max(48,Math.min(W-48,X(q.x))),cy+(q.y>=0?1:-1)*(33+extraX),'center',labelSize-1);
+  showMath(name+'yLabel',state.components?sub(name,'y')+mo('=')+number(q.y,2):null,cx+(q.x>=0?-1:1)*32,Math.max(20,Math.min(H-20,Y(q.y)+extraY)),q.x>=0?'right':'left',labelSize-1);
+ }
+ if(m.defined){const a=Math.atan2(state.v.y,state.v.x)+m.turn/2,r=Math.min(68,Math.max(20,Math.min(m.a,m.b)*scale*.3))+34;
+  showMath('angleLabel',mi('θ')+mo('=')+angleMath(m.theta),cx+r*Math.cos(a)+(m.theta<.04?24*Math.sin(a):0),cy-r*Math.sin(a)+(m.theta<.04?24*Math.cos(a):0),'center',labelSize);
+ }else showMath('angleLabel',null);
+}
+function point(e){const r=$('plot').getBoundingClientRect();return {x:(e.clientX-r.left-geometry.cx)/geometry.scale,y:-(e.clientY-r.top-geometry.cy)/geometry.scale};}
+$('plot').addEventListener('pointerdown',e=>{const target=e.target.closest('[data-head]');if(!target||e.button!==0)return;e.preventDefault();dragging=target.dataset.head;state.selected=dragging;choose(dragging);$('plot').setPointerCapture(e.pointerId);});
+$('plot').addEventListener('pointermove',e=>{if(!dragging)return;const p=point(e),snap=x=>state.snap?Math.round(x*2)/2:x;setVector(dragging,snap(p.x),snap(p.y));});
+function finishDrag(){if(!dragging)return;const name=dragging;dragging=null;$('plot').querySelector('[data-head="'+name+'"]').focus({preventScroll:true});}
+$('plot').addEventListener('pointerup',finishDrag);$('plot').addEventListener('pointercancel',finishDrag);$('plot').addEventListener('lostpointercapture',finishDrag);
+$('plot').addEventListener('keydown',e=>{const name=e.target.dataset.head;if(!name||!e.key.startsWith('Arrow'))return;e.preventDefault();const step=e.shiftKey?1:(state.snap ? .5 : .1),q=state[name];state.selected=name;setVector(name,q.x+(e.key==='ArrowRight'?step:e.key==='ArrowLeft'?-step:0),q.y+(e.key==='ArrowUp'?step:e.key==='ArrowDown'?-step:0));});
+for(const name of ['v','w'])for(const c of ['x','y'])$(name+c).addEventListener('change',()=>{const input=$(name+c),q=state[name],value=Number(input.value);if(!Number.isFinite(value)){input.value=q[c];return;}setVector(name,c==='x'?value:q.x,c==='y'?value:q.y);input.value=state[name][c];});
+document.querySelectorAll('[data-example]').forEach(el=>el.addEventListener('click',()=>useExample(el.dataset.example)));
+document.querySelectorAll('[data-select]').forEach(el=>el.addEventListener('click',()=>choose(el.dataset.select,true)));
+$('components').addEventListener('change',()=>{state.components=$('components').checked;render();});$('snap').addEventListener('change',()=>{state.snap=$('snap').checked;});
+$('radians').addEventListener('change',()=>{state.radians=$('radians').checked;render();});
+function toggleControls(){document.body.classList.toggle('clean');requestAnimationFrame(render);}
+function toggleTheme(){const light=document.documentElement.dataset.theme==='light';document.documentElement.dataset.theme=light?'dark':'light';$('theme').textContent=light?'Light mode':'Dark mode';}
+$('hide').addEventListener('click',toggleControls);$('show').addEventListener('click',toggleControls);$('theme').addEventListener('click',toggleTheme);
+document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey||e.target.isContentEditable||/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;const k=e.key.toLowerCase();if(k==='r')useExample('initial');else if(k==='h')toggleControls();else if(k==='t')toggleTheme();else if(k==='v'||k==='w'){choose(k,true);$('plot').querySelector('[data-head="'+k+'"]').focus({preventScroll:true});}});
+new ResizeObserver(()=>requestAnimationFrame(render)).observe($('plotWrap'));
+window.dotDemo={state,values,setVector,useExample,render,get geometry(){return geometry;}};
+render();
+</script>
+</body>
+</html>
