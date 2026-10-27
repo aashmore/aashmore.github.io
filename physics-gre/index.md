@@ -45,13 +45,15 @@ Practice papers:
 - [2017 Physics GRE](pdfs/2017_exam.pdf)
 - [Current-format ETS Physics Practice Book](pdfs/practice-book-physics.pdf)
 
+Alternative sources: [Harvey Mudd College's past-exam collection](https://www.hmc.edu/physics/students/resources/gre/) and [ETS's current-format practice book](https://www.ets.org/pdfs/gre/practice-book-physics.pdf). External resource links checked October 27, 2026.
+
 Save the current-format ETS practice book for your final full practice test. Complete it last and allow yourself **2 hours**. ETS also posts current test information on its [Physics GRE content and structure page](https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html).
 
 Some solutions to the older exams can be found at [GREPhysics.NET: All-solutions list](https://grephysics.net/ans/all-solutions_list.php).
 
 ## Study Materials
 
-- [Conquering the Physics GRE](pdfs/textbook.pdf) (includes three sample exams, slightly harder than the real test)
+- [Conquering the Physics GRE, third edition — Amazon](https://www.amazon.com/Conquering-Physics-GRE-Yoni-Kahn/dp/1108409563) (includes three full-length practice exams with worked solutions). See also the [Cambridge University Press book page](https://www.cambridge.org/core/books/conquering-the-physics-gre/246A74EF5DF0A31A404539325CA16A59) and [co-author Yoni Kahn's book information](https://kahn-group.physics.utoronto.ca/teaching/physics-gre/), which links to the authors' resources and errata. The book predates the current computer-delivered format.
 - [How to ace the GRE and Physics GRE - Jaan Li](https://jaan.io/how-to-ace-the-gre-and-physics-gre/)
 - [Guide to Applying to US Science PhD Programmes and Fellowships - DJ Strouse](https://djstrouse.com/guide-to-applying-to-us-science-phd-programs-and-fellowships)
 - [APS video: Preparing for the Physics GRE](https://www.youtube.com/watch?v=fCSNKstJcUM)
