@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>A ball bouncing from a wall: momentum and forces</title>
+<style>
+:root{color-scheme:light;--bg:#e6ebf0;--panel:#fff;--ink:#0f1720;--muted:#46535f;--line:#c5ced6;--grid:#e5eaee;--accent:#0f7f73;--initial:#b24b3e;--final:#2467a6;--change:#0f7f73;--force:#2467a6;--weight:#6340c4;--wall:#ccd3da;--ball:#de445d;--track:#edf1f4}
+:root[data-theme=dark]{color-scheme:dark;--bg:#0b1015;--panel:#141b22;--ink:#f1f5f9;--muted:#a9b6c2;--line:#35434f;--grid:#26323c;--accent:#3fc9b8;--initial:#ff9d87;--final:#82bcf2;--change:#3fc9b8;--force:#82bcf2;--weight:#b6a0f7;--wall:#46525e;--ball:#ff8396;--track:#202d38}
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 "Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1900px;margin:auto;padding:16px;display:grid;gap:12px}.head{display:flex;align-items:center;justify-content:space-between;gap:18px}h1{font-size:clamp(25px,2.2vw,43px);line-height:1.12;margin:0 0 5px;letter-spacing:-.02em}h2{font-size:clamp(17px,1.25vw,25px);margin:0;font-weight:650}.subtitle,.hint{margin:0;color:var(--muted);font-size:clamp(13px,.98vw,18px)}.toolbar,.buttons,.checks{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.toolbar{flex-shrink:0}
+button,select,input{font:inherit}button,select{border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);padding:7px 12px;min-height:37px;font-size:clamp(14px,.98vw,19px)}button{font-weight:550;cursor:pointer}button:hover{border-color:var(--accent)}button.primary{background:var(--ink);color:var(--panel);min-width:86px}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}input[type=range],input[type=checkbox]{accent-color:var(--accent)}
+.parameters{display:inline-block;margin-left:6px}.content{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:12px;min-height:0}.left{display:grid;grid-template-rows:minmax(190px,1.75fr) minmax(165px,1fr);gap:12px;min-width:0;min-height:0}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;min-width:0;min-height:0}.motion,.vectors{display:flex;flex-direction:column;gap:7px}.panel-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}.phase{font-size:clamp(13px,.95vw,18px);color:var(--muted);font-variant-numeric:tabular-nums}.plot-wrap{position:relative;flex:1;min-height:240px}.plot-wrap svg{position:absolute;inset:0;width:100%;height:100%;display:block}.math-label{position:absolute;transform:translate(-50%,-50%);pointer-events:none;white-space:nowrap;font-size:clamp(19px,1.4vw,29px);background:var(--panel);border-radius:4px;padding:1px 3px}.math-label.hidden{display:none}.legend{display:flex;flex-wrap:wrap;gap:5px 18px;font-size:clamp(13px,.95vw,18px)}.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{display:inline-block;width:22px;height:3px;background:currentColor}.initial{color:var(--initial)}.final{color:var(--final)}.change{color:var(--change)}
+.forces{display:flex;flex-direction:column;gap:3px}.force-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,.8fr);gap:8px;flex:1;min-height:0;align-items:center}.force-plot{min-height:115px;position:relative;height:100%}.force-plot svg{width:100%;height:100%;position:absolute;inset:0}.force-plot .math-label{font-size:clamp(16px,1.15vw,23px);padding:0 2px}.force-values{display:grid;gap:4px;align-content:center}.force-values .value{font-size:clamp(19px,1.4vw,29px);font-variant-numeric:tabular-nums}.force-values .status{font-size:clamp(13px,.95vw,18px);color:var(--muted)}.force-note{font-size:clamp(11px,.82vw,15px);color:var(--muted);margin:0}.no-forces .forces{display:none}.no-forces .left{grid-template-rows:minmax(0,1fr)}
+math{font-family:"Cambria Math","STIX Two Math",math;font-weight:400}math[display=block]{margin:0}.relation{font-size:clamp(25px,1.8vw,35px);text-align:center;min-height:38px}.values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;border-top:1px solid var(--line);padding-top:7px}.value-cell{display:grid;gap:3px;justify-items:center;align-content:center;font-size:clamp(18px,1.3vw,27px)}.value-cell .name{font-size:clamp(12px,.9vw,17px);color:var(--muted)}.values.hidden{display:none}.vector-note{font-size:clamp(12px,.92vw,17px);color:var(--muted);margin:0;min-height:1.4em}
+.controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:8px 22px;align-items:center}.setting{display:grid;grid-template-columns:1fr auto;gap:1px 8px;font-size:clamp(13px,.96vw,18px)}.setting label{font-weight:550}.setting output{color:var(--muted);font-variant-numeric:tabular-nums}.setting input{grid-column:1/-1;width:100%;height:25px;margin:0}.playback{display:flex;align-items:center;gap:8px;justify-content:flex-end;flex-wrap:wrap}.playback label{font-size:clamp(13px,.96vw,18px)}.timeline{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;grid-column:1/-1;font-size:clamp(13px,.96vw,18px)}.timeline input{width:100%;height:24px;margin:0}.timeline output{min-width:65px;font-variant-numeric:tabular-nums}.bottom{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:8px 18px;flex-wrap:wrap}.checks{gap:8px 20px}.checks label{display:inline-flex;align-items:center;gap:5px;font-size:clamp(13px,.95vw,18px)}.checks input{width:17px;height:17px;margin:0}.footer{display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:clamp(11px,.8vw,15px)}.footer p{margin:0}.reveal{display:none;position:fixed;right:12px;bottom:10px;z-index:5;opacity:.8}.clean .toolbar,.clean .controls,.clean .footer{display:none}.clean .reveal{display:block}.clean main{grid-template-rows:auto minmax(0,1fr);padding-bottom:48px}
+@media(min-width:900px) and (min-height:600px){body{overflow:hidden}main{max-width:none;height:100dvh;grid-template-rows:auto minmax(0,1fr) auto auto;padding:clamp(10px,1.5vh,22px) clamp(14px,1.6vw,32px);gap:clamp(8px,1.1vh,14px)}.plot-wrap{min-height:0}.panel{padding:clamp(10px,.8vw,16px)}.left{gap:10px}.content{gap:12px}}
+@media(min-width:1500px){.force-plot{min-height:160px}.left{grid-template-rows:minmax(0,1.8fr) minmax(210px,1fr)}.force-note{font-size:15px}.controls{gap:10px 30px}.checks input{width:19px;height:19px}}
+@media(max-width:1100px){.controls{grid-template-columns:1fr 1fr}.playback{grid-column:1/-1;justify-content:flex-start}.playback select{min-height:30px;padding:3px 8px}.bottom{gap:6px}.buttons button{padding:5px 10px;min-height:32px}.head{gap:10px}.toolbar button{padding:6px 9px}.force-body{grid-template-columns:minmax(0,1fr) 145px}.force-values .value{font-size:19px}.force-note{font-size:11px}.force-plot{min-height:108px}.left{grid-template-rows:minmax(180px,1.8fr) minmax(158px,1fr)}}
+@media(max-width:899px){main{padding:12px}.head{flex-wrap:wrap}.content{grid-template-columns:1fr}.left{grid-template-rows:350px 225px}.vectors .plot-wrap{min-height:360px}.controls{grid-template-columns:1fr 1fr}.force-body{grid-template-columns:minmax(0,1fr) 165px}.force-note{font-size:13px}.force-values .value{font-size:24px}.footer{display:block;font-size:12px}.footer p+p{margin-top:5px}.clean .left{grid-template-rows:430px 225px}.no-forces .left{grid-template-rows:400px}}
+@media(max-width:540px){h1{font-size:26px}.subtitle{font-size:14px}.toolbar{width:100%}.left{grid-template-rows:350px 225px}.vectors .plot-wrap{min-height:310px}.force-body{grid-template-columns:minmax(0,1fr) 140px}.force-values .value{font-size:20px}.controls{grid-template-columns:1fr}.setting,.playback{grid-column:1/-1}.checks{gap:12px}.checks label{font-size:14px}.bottom{gap:15px}.values{gap:3px}.value-cell{font-size:19px}.panel{padding:10px}.legend{gap:5px 12px}.timeline{gap:6px}.vector-note{font-size:13px}.clean .vectors .plot-wrap{min-height:370px}}
+</style>
+</head>
+<body>
+<main>
+<header class="head"><div><h1>A ball bouncing from a wall</h1><p class="subtitle">Smooth wall · same speed before and after <span id="parameters" class="parameters"></span></p></div><div class="toolbar"><button id="theme">Dark mode</button><button id="hide">Hide controls</button></div></header>
+<div class="content">
+<div class="left">
+<section class="panel motion" aria-label="Ball motion seen from overhead">
+ <div class="panel-head"><h2>Motion: overhead view</h2><span class="phase" id="phase">Before contact</span></div>
+ <div class="plot-wrap" id="motionWrap"><svg id="motion" role="img" aria-label="A ball approaching a smooth wall and rebounding"></svg><div id="currentLabel" class="math-label"></div></div>
+ <p class="hint">x points towards the wall; y runs along it. Both are horizontal.</p>
+</section>
+<section class="panel forces" aria-label="Free-body diagram seen from the side">
+ <h2>Forces on the ball: side view (x–z)</h2>
+ <div class="force-body"><div class="force-plot" id="forceWrap"><svg id="forces" role="img" aria-label="Weight, floor support and the wall's normal force"></svg><div id="floorLabel" class="math-label" style="color:var(--force)"></div><div id="weightLabel" class="math-label" style="color:var(--weight)"></div><div id="wallLabel" class="math-label" style="color:var(--force)"></div></div><div class="force-values"><div id="forceMath" class="value"></div><div id="forceStatus" class="status">No wall contact</div><div class="status">Floor support = weight<br>9.8 N each</div></div></div>
+ <p class="force-note">z is vertically upward. Arrows show force directions, not a common scale.</p>
+</section>
+</div>
+<section class="panel vectors" aria-label="Initial momentum, final momentum and their difference">
+ <div class="panel-head"><h2>Comparing the momentum vectors</h2><span class="phase">Axes in N·s</span></div>
+ <div class="legend"><span class="initial"><i></i>Initial</span><span class="final"><i></i>Final</span><span class="change" id="changeLegend" hidden><i></i>Change</span></div>
+ <div class="plot-wrap" id="vectorWrap"><svg id="vectors" role="img" aria-label="Momentum vectors drawn from a common origin"></svg><div id="piLabel" class="math-label initial"></div><div id="pfLabel" class="math-label final"></div><div id="dpLabel" class="math-label change hidden"></div><div id="pyLabel" class="math-label hidden"></div></div>
+ <div id="relation" class="relation"></div>
+ <div id="values" class="values hidden"><div class="value-cell initial"><span class="name">Initial (N·s)</span><div id="piValue"></div></div><div class="value-cell final"><span class="name">Final (N·s)</span><div id="pfValue"></div></div><div class="value-cell change"><span class="name">Change (N·s)</span><div id="dpValue"></div></div></div>
+ <p id="vectorNote" class="vector-note">Both momentum arrows start at the same origin. The dot follows p(t).</p>
+</section>
+</div>
+<section class="panel controls" aria-label="Playback and display controls">
+ <div class="setting"><label for="angle">Angle from +x</label><output id="angleOut" for="angle">30°</output><input id="angle" type="range" min="0" max="75" step="1" value="30"></div>
+ <div class="setting"><label for="speed">Speed before and after</label><output id="speedOut" for="speed">4.0 m/s</output><input id="speed" type="range" min="1" max="6" step="0.1" value="4"></div>
+ <div class="playback"><label for="rate">Playback</label><select id="rate"><option value="0.1">0.1×</option><option value="0.25">0.25×</option><option value="0.5" selected>0.5×</option><option value="1">1×</option></select></div>
+ <div class="timeline"><label for="time">Time</label><input id="time" type="range" min="0" max="1.52" step="0.001" value="0"><output id="timeOut" for="time">0.000 s</output></div>
+ <div class="bottom"><div class="buttons"><button id="play" class="primary">Play</button><button id="restart">Restart</button><button id="before">Before</button><button id="contact">Contact</button><button id="after">After</button></div><div class="checks"><label><input id="change" type="checkbox">Show Δp</label><label><input id="components" type="checkbox">Components</label><label><input id="showForces" type="checkbox" checked>Forces</label><label><input id="pauseContact" type="checkbox" checked>Pause at contact</label></div></div>
+</section>
+<footer class="footer"><p>Elastic contact lasts 0.12 s. Ball size is enlarged; speed may change during contact. No friction or air resistance.</p><p>Space: play/pause · R: restart · H: controls · T: theme · F11: full screen</p></footer>
+</main>
+<button id="show" class="reveal">Show controls</button>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const C=Object.freeze({mass:1,gravity:9.8,hit:.7,contact:.12,end:1.52,maxSpeed:6});
+const state={t:0,speed:4,angle:30,rate:.5,playing:false,change:false,components:false,forces:true,pauseContact:true,contactPaused:false};
+let last=null;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const f=(v,n=2)=>{const x=Math.abs(v)<.5*10**(-n)?0:v;return x.toFixed(n).replace('-', '−')};
+const colour=name=>getComputedStyle(document.documentElement).getPropertyValue('--'+name).trim();
+const vec=(symbol='p',sub='')=>sub?`<msub><mover><mi>${symbol}</mi><mo>→</mo></mover><mi mathvariant="normal">${sub}</mi></msub>`:`<mover><mi>${symbol}</mi><mo>→</mo></mover>`;
+const dp=`<mrow><mi>Δ</mi>${vec()}</mrow>`;
+const math=body=>`<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow>${body}</mrow></math>`;
+const column=(x,y)=>math(`<mrow><mo>(</mo><mtable rowspacing="0.1em"><mtr><mtd><mn>${f(x)}</mn></mtd></mtr><mtr><mtd><mn>${f(y)}</mn></mtd></mtr></mtable><mo>)</mo></mrow>`);
+
+// The normal motion during contact is half an exact harmonic cycle.
+// F_x = -m v_x,i omega sin(omega tau), whose integral is -2m v_x,i.
+function sample(t,speed=state.speed,angle=state.angle){
+ const a=angle*Math.PI/180,vx0=speed*Math.cos(a),vy=speed*Math.sin(a),omega=Math.PI/C.contact;
+ t=clamp(t,0,C.end);
+ let x,vx,normal=0,q=0,phase='before';
+ if(t<C.hit){x=vx0*(t-C.hit);vx=vx0}
+ else if(t<C.hit+C.contact){q=(t-C.hit)/C.contact;phase='contact';x=vx0/omega*Math.sin(Math.PI*q);vx=vx0*Math.cos(Math.PI*q);normal=C.mass*vx0*omega*Math.sin(Math.PI*q)}
+ else{q=1;phase='after';x=-vx0*(t-C.hit-C.contact);vx=-vx0}
+ return {t,x,y:vy*(t-C.hit),vx,vy,px:C.mass*vx,py:C.mass*vy,normal,phase,q,vx0,omega};
+}
+function endpoints(speed=state.speed,angle=state.angle){const a=angle*Math.PI/180,px=C.mass*speed*Math.cos(a),py=C.mass*speed*Math.sin(a);return {pi:[px,py],pf:[-px,py],dp:[-2*px,0]}}
+
+function line(x1,y1,x2,y2,c,width=2,dash=''){return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${width}" ${dash?`stroke-dasharray="${dash}"`:''} fill="none"/>`}
+function arrow(x1,y1,x2,y2,c,width=3,dash=''){
+ const dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy);if(len<.3)return '';
+ const head=Math.min(12,Math.max(6,len*.19)),ux=dx/len,uy=dy/len,bx=x2-head*ux,by=y2-head*uy;
+ return line(x1,y1,x2,y2,c,width,dash)+`<path d="M ${bx-head*.43*uy} ${by+head*.43*ux} L ${x2} ${y2} L ${bx+head*.43*uy} ${by-head*.43*ux}" fill="none" stroke="${c}" stroke-width="${width}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+function text(x,y,value,c=colour('muted'),size=15,anchor='start'){return `<text x="${x}" y="${y}" fill="${c}" font-family="system-ui,Segoe UI,sans-serif" font-size="${size}" text-anchor="${anchor}">${value}</text>`}
+function label(id,x,y,visible=true){const e=$(id);e.style.left=x+'px';e.style.top=y+'px';e.classList.toggle('hidden',!visible)}
+function box(id){const r=$(id).getBoundingClientRect();return {w:r.width,h:r.height}}
+
+function drawMotion(s){
+ const {w,h}=box('motionWrap');if(w<5||h<5)return;
+ const ink=colour('ink'),muted=colour('muted'),wall=colour('wall'),initial=colour('initial'),final=colour('final');
+ const E=endpoints(),vx=E.pi[0]/C.mass,vy=E.pi[1]/C.mass;
+ const xmin=-C.hit*vx,ymin=-C.hit*vy,ymax=(C.contact+C.hit)*vy,indent=vx*s.omega**-1;
+ const margin=52,scale=Math.min((w-2*margin)/Math.max(.8,-xmin+indent+.32),(h-2*margin)/Math.max(.8,ymax-ymin+.3));
+ const r=Math.max(clamp(Math.min(w,h)*.055,13,25),indent*scale+7);
+ const wx=(w-xmin*scale-20)/2,cy=h*.5+(ymin+ymax)*scale*.5;
+ const X=x=>wx+x*scale,Y=y=>cy-y*scale;
+ const ballX=X(s.x),ballY=Y(s.y),rx=r-(s.phase==='contact'?s.x*scale:0);
+ let out=`<rect x="${wx+r}" y="15" width="20" height="${h-35}" rx="2" fill="${wall}"/>`;
+ for(let y=20;y<h-20;y+=15)out+=line(wx+r+2,y,wx+r+17,y+10,colour('line'),1);
+ out+=text(wx+r+10,12,'Wall',muted,13,'middle');
+ const incoming=`M ${X(xmin)} ${Y(ymin)} L ${X(0)} ${Y(0)}`;
+ const outgoing=`M ${X(0)} ${Y(vy*C.contact)} L ${X(xmin)} ${Y(ymax)}`;
+ out+=`<path d="${incoming}" fill="none" stroke="${initial}" stroke-width="2" stroke-dasharray="6 6" opacity=".5"/><path d="${outgoing}" fill="none" stroke="${final}" stroke-width="2" stroke-dasharray="6 6" opacity=".5"/>`;
+ out+=`<ellipse cx="${ballX}" cy="${ballY}" rx="${Math.max(5,rx)}" ry="${r}" fill="${colour('ball')}" stroke="${ink}" stroke-width="1.4"/>`;
+ const ps=Math.min(w,h)*.25/C.maxSpeed,ax=ballX+s.px*ps,ay=ballY-s.py*ps;
+ out+=arrow(ballX,ballY,ax,ay,ink,3.5);
+ const L=Math.max(34,Math.min(52,w*.09)),x0=25,y0=h-24;
+ out+=arrow(x0,y0,x0+L,y0,muted,1.7)+arrow(x0,y0,x0,y0-L,muted,1.7)+text(x0+L+7,y0+5,'+x',muted,13)+text(x0,y0-L-8,'+y',muted,13,'middle');
+ out+=text(100,h-12,'p(t): current momentum',muted,12);
+ $('motion').setAttribute('viewBox',`0 0 ${w} ${h}`);$('motion').innerHTML=out;
+ $('currentLabel').innerHTML=math(`${vec()}<mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>${Math.hypot(s.px,s.py)<1e-7?'<mo>=</mo><mn>0</mn>':''}`);
+ label('currentLabel',clamp(ax+Math.sign(s.px||1)*17,48,w-48),clamp(ay-23,25,h-35));
+}
+
+function drawVectors(s){
+ const {w,h}=box('vectorWrap');if(w<5||h<5)return;
+ const ink=colour('ink'),muted=colour('muted'),grid=colour('grid'),ci=colour('initial'),cf=colour('final'),cd=colour('change');
+ const E=endpoints(),scale=Math.min((w-92)/13,(h-75)/7),ox=w/2,oy=h-38;
+ const X=x=>ox+x*scale,Y=y=>oy-y*scale,pi={x:X(E.pi[0]),y:Y(E.pi[1])},pf={x:X(E.pf[0]),y:Y(E.pf[1])};
+ let out='';
+ for(let x=-6;x<=6;x++){out+=line(X(x),Y(0),X(x),Y(6),grid,1);if(x!==0&&x%2===0)out+=text(X(x),oy+19,String(x),muted,12,'middle')}
+ for(let y=0;y<=6;y++){out+=line(X(-6),Y(y),X(6),Y(y),grid,1);if(y>0&&y%2===0)out+=text(ox-8,Y(y)+4,String(y),muted,12,'end')}
+ out+=arrow(X(-6.35),oy,X(6.35),oy,muted,1.5)+arrow(ox,oy+9,ox,Y(6.35),muted,1.5)+text(X(6.2),oy+32,'pₓ',muted,14,'middle')+text(ox+13,Y(6.3),'pᵧ',muted,14);
+ if(state.components){
+  out+=arrow(ox,oy,pi.x,oy,ci,2,'5 4')+arrow(ox,oy,pf.x,oy,cf,2,'5 4');
+  out+=line(pi.x,oy,pi.x,pi.y,ci,1.5,'4 4')+line(pf.x,oy,pf.x,pf.y,cf,1.5,'4 4');
+  out+=arrow(ox,oy,ox,pi.y,muted,2,'5 4')+line(pf.x,pi.y,pi.x,pi.y,muted,1,'3 5');
+ }
+ out+=arrow(ox,oy,pi.x,pi.y,ci,3.5)+arrow(ox,oy,pf.x,pf.y,cf,3.5);
+ if(state.change)out+=arrow(pi.x,pi.y,pf.x,pf.y,cd,4);
+ out+=`<circle cx="${X(s.px)}" cy="${Y(s.py)}" r="5" fill="${ink}" stroke="${colour('panel')}" stroke-width="1.5"/>`;
+ $('vectors').setAttribute('viewBox',`0 0 ${w} ${h}`);$('vectors').innerHTML=out;
+ label('piLabel',pi.x+17,pi.y+(E.pi[1]<.1?-17:17));label('pfLabel',pf.x-17,pf.y+(E.pi[1]<.1?-17:17));
+ label('dpLabel',ox,Math.max(18,pi.y-21),state.change);
+ label('pyLabel',ox+32,(oy+pi.y)/2,state.components&&E.pi[1]>.15&&Math.abs(pi.x-ox)>42);
+}
+
+function drawForces(s){
+ if(!state.forces)return;
+ const {w,h}=box('forceWrap');if(w<5||h<5)return;
+ const ink=colour('ink'),fc=colour('force'),weight=colour('weight'),muted=colour('muted'),cx=w*.6,cy=h*.5,L=Math.min(43,h*.31),wallContact=s.normal>1e-6;
+ let out=arrow(cx,cy,cx,cy-L,fc,3)+arrow(cx,cy,cx,cy+L,weight,3);
+ if(wallContact)out+=arrow(cx,cy,Math.max(18,cx-85),cy,fc,4);
+ out+=`<circle cx="${cx}" cy="${cy}" r="6" fill="${ink}"/>`;
+ out+=arrow(w-44,h-18,w-17,h-18,muted,1.3)+arrow(w-44,h-18,w-44,h-45,muted,1.3)+text(w-14,h-14,'x',muted,12)+text(w-44,h-50,'z',muted,12,'middle');
+ $('forces').setAttribute('viewBox',`0 0 ${w} ${h}`);$('forces').innerHTML=out;
+ label('floorLabel',cx+34,cy-L+1);label('weightLabel',cx+24,cy+L);label('wallLabel',Math.max(43,cx-65),cy-18,wallContact);
+ $('forceMath').innerHTML=math(`<msub><mi>N</mi><mi mathvariant="normal">wall</mi></msub><mo>=</mo><mn>${f(s.normal,1)}</mn><mspace width=".2em"/><mi mathvariant="normal">N</mi>`);
+ $('forceStatus').textContent=wallContact?'Wall pushes in the −x direction':'No force from the wall';
+}
+
+function render(){
+ const s=sample(state.t),E=endpoints();
+ $('parameters').innerHTML=math(`<mi>m</mi><mo>=</mo><mn>1</mn><mspace width=".15em"/><mi mathvariant="normal">kg</mi><mo>,</mo><mspace width=".3em"/><mi>v</mi><mo>=</mo><mn>${f(state.speed,1)}</mn><mspace width=".15em"/><mi mathvariant="normal">m/s</mi><mo>,</mo><mspace width=".3em"/><mi>θ</mi><mo>=</mo><mn>${state.angle}</mn><mo>°</mo>`);
+ $('phase').textContent=s.phase==='before'?'Before contact':s.phase==='contact'?'During contact':'After contact';
+ $('time').value=state.t;$('timeOut').textContent=f(state.t,3)+' s';$('play').textContent=state.playing?'Pause':state.t>=C.end?'Replay':'Play';
+ $('angleOut').textContent=state.angle+'°';$('speedOut').textContent=f(state.speed,1)+' m/s';
+ $('dpLabel').classList.toggle('hidden',!state.change);$('changeLegend').hidden=!state.change;$('values').classList.toggle('hidden',!state.components);
+ $('piValue').innerHTML=column(...E.pi);$('pfValue').innerHTML=column(...E.pf);$('dpValue').innerHTML=state.change?column(...E.dp):math('<mo>?</mo>');
+ $('vectorNote').textContent=state.change?'Δp runs from the initial arrowhead to the final arrowhead.':'Both momentum arrows start at the same origin. The dot follows p(t).';
+ drawMotion(s);drawVectors(s);drawForces(s);
+}
+function pause(){state.playing=false;last=null}
+function jump(t){pause();state.t=clamp(t,0,C.end);state.contactPaused=state.t>=C.hit+C.contact/2;render()}
+function restart(){state.contactPaused=false;jump(0)}
+function togglePlay(){if(state.t>=C.end){state.t=0;state.contactPaused=false}if(state.playing)pause();else{state.playing=true;last=null}render()}
+function toggleControls(){document.body.classList.toggle('clean');requestAnimationFrame(render)}
+function toggleTheme(){const dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('theme').textContent=dark?'Light mode':'Dark mode';render()}
+function tick(now){
+ if(state.playing&&last!==null){let next=Math.min(C.end,state.t+Math.min((now-last)/1000,.05)*state.rate);const mid=C.hit+C.contact/2;
+  if(state.pauseContact&&!state.contactPaused&&state.t<mid&&next>=mid){next=mid;state.contactPaused=true;pause()}
+  state.t=next;if(state.t>=C.end)pause();render();
+ }
+ last=state.playing?now:null;requestAnimationFrame(tick);
+}
+$('play').addEventListener('click',togglePlay);$('restart').addEventListener('click',restart);
+$('before').addEventListener('click',()=>jump(C.hit-.02));$('contact').addEventListener('click',()=>jump(C.hit+C.contact/2));$('after').addEventListener('click',()=>jump(C.hit+C.contact+.03));
+$('time').addEventListener('input',e=>jump(Number(e.target.value)));
+for(const id of ['angle','speed'])$(id).addEventListener('input',e=>{state[id]=Number(e.target.value);restart()});
+$('rate').addEventListener('change',e=>{state.rate=Number(e.target.value);last=null});
+for(const id of ['change','components','pauseContact'])$(id).addEventListener('change',e=>{state[id]=e.target.checked;render()});
+$('showForces').addEventListener('change',e=>{state.forces=e.target.checked;document.body.classList.toggle('no-forces',!state.forces);requestAnimationFrame(render)});
+$('theme').addEventListener('click',toggleTheme);$('hide').addEventListener('click',toggleControls);$('show').addEventListener('click',toggleControls);
+document.addEventListener('keydown',e=>{if(e.defaultPrevented||e.target.closest('input,select,button'))return;const k=e.key.toLowerCase();if(k===' '){e.preventDefault();togglePlay()}else if(k==='r')restart();else if(k==='h')toggleControls();else if(k==='t')toggleTheme()});
+document.addEventListener('visibilitychange',()=>{last=null});
+new ResizeObserver(render).observe($('motionWrap'));new ResizeObserver(render).observe($('vectorWrap'));new ResizeObserver(()=>drawForces(sample(state.t))).observe($('forceWrap'));
+$('piLabel').innerHTML=math(vec('p','i'));$('pfLabel').innerHTML=math(vec('p','f'));$('dpLabel').innerHTML=math(dp);$('pyLabel').innerHTML=math('<msub><mi>p</mi><mi>y</mi></msub>');
+$('floorLabel').innerHTML=math('<msub><mi>N</mi><mi mathvariant="normal">floor</mi></msub>');$('wallLabel').innerHTML=math('<msub><mi>N</mi><mi mathvariant="normal">wall</mi></msub>');$('weightLabel').innerHTML=math('<mi>m</mi><mi>g</mi>');
+$('relation').innerHTML=math(`${vec('p','i')}<mo>+</mo>${dp}<mo>=</mo>${vec('p','f')}`);
+window.wallBounceModel=Object.freeze({sample,endpoints,constants:C,getState:()=>({...state})});
+render();requestAnimationFrame(tick);
+</script>
+</body>
+</html>
