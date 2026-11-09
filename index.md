@@ -11,6 +11,10 @@ If you're interested in working with us, get in touch!
 
 ## 2026
 
+#### November
+
+Anthony Ashmore presented [Supersymmetric deformations, RG flows and their supergravity duals](talks/pdfs/2026_duke_ashmore.pdf) at the Southeastern regional mathematical string theory meeting at Duke University.
+
 #### July
 
 The lab took a break from summer research for an ice cream outing to Dairy Haus.
