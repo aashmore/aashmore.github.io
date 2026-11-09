@@ -1,5 +1,11 @@
 - year: 2026
   talks:
+    - title: Supersymmetric deformations, RG flows and their supergravity duals
+      venue: Southeastern regional mathematical string theory meeting
+      location: Duke University, Durham, NC
+      date: 2026-11-07
+      author: "Anthony Ashmore"
+      slides: "pdfs/2026_duke_ashmore.pdf"
     - title: Phases of quantum D(N) theories via neural quantum states
       venue: Faculty Student Summer Research Program
       location: Skidmore College, USA
