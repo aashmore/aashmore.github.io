@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Moment of inertia: masses on a bar</title>
+<style>
+:root{color-scheme:light;--bg:#e6ebf0;--panel:#fff;--ink:#0f1720;--muted:#46535f;--line:#c5ced6;--grid:#e3e8ed;--accent:#0f7f73;--bar:#4d93da;--block:#315f8e;--block-edge:#173f67;--soft:#f2f6f8;--point:#0f7f73}
+:root[data-theme=dark]{color-scheme:dark;--bg:#0b1015;--panel:#141b22;--ink:#f1f5f9;--muted:#a9b6c2;--line:#394651;--grid:#28333e;--accent:#3fc9b8;--bar:#79b5ee;--block:#437eb7;--block-edge:#b9ddff;--soft:#1d2832;--point:#3fc9b8}
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.4 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:2000px;margin:auto;padding:16px;display:flex;flex-direction:column;gap:12px;height:100dvh}h1,h2,p{margin:0}h1{font-size:clamp(24px,2.2vw,40px);font-weight:650;line-height:1.15;letter-spacing:-.02em}h2{font-size:clamp(19px,1.4vw,27px);font-weight:650}.muted{color:var(--muted)}header{display:flex;align-items:center;justify-content:space-between;gap:12px}header p{margin-top:6px;font-size:clamp(15px,1.1vw,21px)}.toolbar,.buttons,.options{display:flex;gap:8px 14px;align-items:center;flex-wrap:wrap}button,input{font:inherit}button{padding:8px 13px;min-height:40px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);cursor:pointer}button.primary{background:var(--ink);border-color:var(--ink);color:var(--panel)}button:focus-visible,input:focus-visible,svg [tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}.content{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(340px,1fr);gap:12px;flex:1;min-height:0}.scene{display:flex;flex-direction:column;min-height:0}.scene-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}.scene-head span,.hint{font-size:15px;color:var(--muted)}.plot{flex:1;min-height:0}svg{width:100%;height:100%;display:block;touch-action:none;user-select:none}.handle{cursor:ew-resize;outline:none}.handle:focus-visible{outline:none}.handle:focus-visible .focus-ring{stroke:var(--accent);stroke-width:3}.results{display:flex;flex-direction:column;min-height:0;gap:10px}.inertia{font-size:clamp(35px,3.2vw,58px);font-weight:650;line-height:1.1;font-variant-numeric:tabular-nums}.inertia small{font-size:.43em;font-weight:500;white-space:nowrap}.contributions{width:100%;border-collapse:collapse;font-size:clamp(16px,1.2vw,22px);font-variant-numeric:tabular-nums}.contributions td{padding:5px 0;border-bottom:1px solid var(--grid)}.contributions td:last-child{text-align:right}.swatch{display:inline-block;background:var(--bar);width:16px;height:10px;margin-right:8px}.swatch.block{background:var(--block)}.chart-section{flex:1;min-height:150px;display:flex;flex-direction:column;border-top:1px solid var(--line);padding-top:10px}.chart-section h2{font-size:clamp(17px,1.2vw,23px)}.chart{flex:1;min-height:0}.chart-note{font-size:13px;color:var(--muted)}.calculation{font-size:clamp(16px,1.3vw,22px);line-height:1.4;background:var(--soft);padding:10px;border-radius:8px;min-height:0}.calculation p{margin:0 0 7px}.calculation math{margin:7px 0;font-size:1em}.calculation .hint{font-size:.82em}math{font-family:"Cambria Math","STIX Two Math",math;font-weight:400}.controls{display:grid;grid-template-columns:1fr 1fr;gap:8px 26px;padding:12px 16px}.control{display:grid;grid-template-columns:1fr auto;align-items:center;gap:3px 10px}.control>label{font-weight:600}.control input[type=range]{grid-column:1/-1;width:100%;height:28px;margin:2px 0;accent-color:var(--accent)}input[type=number]{width:5.5em;padding:4px 6px;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:6px;font-variant-numeric:tabular-nums}.options{grid-column:1/-1;justify-content:space-between;gap:8px 16px}.checks{display:flex;gap:12px 18px;flex-wrap:wrap}.checks label{display:flex;align-items:center;gap:7px;white-space:nowrap}input[type=checkbox]{accent-color:var(--accent);width:19px;height:19px}.keys{font-size:13px;color:var(--muted)}.reveal{display:none;position:fixed;bottom:12px;right:16px;opacity:.75}.reveal:hover,.reveal:focus-visible{opacity:1}.clean .controls,.clean .toolbar,.clean .keys{display:none}.clean .reveal{display:block}.clean main{padding-bottom:60px}dialog{max-width:660px;max-height:85dvh;overflow:auto;padding:24px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--ink);line-height:1.5}dialog::backdrop{background:#0008}dialog p{margin:14px 0}dialog table{width:100%;border-collapse:collapse}dialog td,dialog th{padding:6px 8px;text-align:left;border-bottom:1px solid var(--line)}dialog math{font-size:1.2em}dialog button{margin-top:14px}
+@media(min-width:1500px) and (min-height:850px){main{padding:22px;gap:16px}.panel{padding:20px}.controls{padding:16px 20px}.control,.options{font-size:20px}.control input[type=range]{height:34px}.hint,.scene-head span{font-size:18px}}
+@media(max-width:899px),(max-height:559px){main{height:auto;min-height:100dvh}header{flex-wrap:wrap}.content{grid-template-columns:1fr}.plot{height:410px;flex:auto}.results{min-height:500px}.chart-section{min-height:250px}.controls{grid-template-columns:1fr}.options{align-items:flex-start;justify-content:flex-start}.clean .plot{height:60vh;min-height:360px}}
+@media(max-width:500px){main{padding:10px;gap:10px}.panel{padding:12px}.plot{height:350px}h1{font-size:27px}.toolbar{gap:6px}button{padding:7px 10px}.hint,.scene-head span{font-size:13px}.control>label{font-size:15px}.options{font-size:15px}.inertia{font-size:40px}}
+@media(min-width:900px) and (max-height:800px){.results{gap:8px}.chart-section{min-height:145px}.inertia{font-size:36px}.calculation{font-size:17px}.calculation math{margin:5px 0}}
+</style>
+</head>
+<body><main>
+<header><div><h1>Moment of inertia: masses on a bar</h1><p class="muted">Drag either metal block. Both move symmetrically about the midpoint.</p></div><div class="toolbar"><button id="about">Model</button><button id="theme">Dark mode</button><button id="hide">Hide controls</button></div></header>
+<div class="content">
+<section class="panel scene" aria-label="A bar with symmetric sliding blocks and a movable rotation axis"><div class="scene-head"><h2>Move the masses or the axis</h2><span>Axis perpendicular to the page</span></div><div class="plot"><svg id="scene" aria-label="Two identical metal blocks on a horizontal bar. Drag either block or the black axis handle."></svg></div><p class="hint">Bar: 1 kg, length 4 m. Each block: 1 kg. Distances are measured to the blocks' centers.</p></section>
+<section class="panel results" aria-label="Moment of inertia and its contributions"><h2>Moment of inertia about this axis</h2><p class="inertia"><span id="inertia"></span> <small>kg m<sup>2</sup></small></p><table class="contributions" aria-label="Contributions to moment of inertia in kilograms metres squared"><tbody><tr><td><i class="swatch"></i>Bar</td><td id="barI"></td></tr><tr><td><i class="swatch block"></i>Left block</td><td id="leftI"></td></tr><tr><td><i class="swatch block"></i>Right block</td><td id="rightI"></td></tr></tbody></table>
+<div class="chart-section" id="chartSection"><h2>Inertia as the masses move</h2><div class="chart"><svg id="chart" role="img" aria-label="Total moment of inertia versus distance of either block from the midpoint, for the current axis position"></svg></div><p class="chart-note">Curve: current axis position. Dot: current mass positions.</p></div>
+<div class="calculation" id="calculation" hidden></div>
+</section>
+</div>
+<section class="panel controls" aria-label="Position and display controls">
+<div class="control"><label for="distance">Each mass from midpoint, d</label><span><input type="number" id="distanceValue" aria-label="Distance of each block from the midpoint in metres" min="0.25" max="1.75" step="0.01" value="1.75"> m</span><input type="range" id="distance" aria-label="Move both masses symmetrically, distance from midpoint in metres" min="0.25" max="1.75" step="0.01" value="1.75"></div>
+<div class="control"><label for="axis">Axis position, a</label><span><input type="number" id="axisValue" aria-label="Axis position from the midpoint in metres" min="-2" max="2" step="0.01" value="0"> m</span><input type="range" id="axis" aria-label="Move rotation axis along the bar, metres from midpoint" min="-2" max="2" step="0.01" value="0"></div>
+<div class="options"><div class="buttons"><button id="reset" class="primary">Reset</button><button id="ends">Masses at ends</button><button id="center">Masses near center</button><button id="centerAxis">Center axis</button></div><div class="checks"><label><input type="checkbox" id="snap" checked>Snap to 0.25 m grid</label><label><input type="checkbox" id="showCalculation">Show calculation</label></div></div>
+</section>
+<p class="keys">Tab to a mass or the axis and use Left/Right to move. R reset · H controls · T theme · F11 full screen.</p>
+<button id="show" class="reveal">Show controls</button>
+<dialog id="model"><h2>The bar and the metal blocks</h2><p>The two equal blocks slide along the bar. Their centers stay at -d and +d, measured from the bar's midpoint, so the center of mass of the whole system stays at the midpoint. The axis is perpendicular to the page and can move along the bar.</p><table><thead><tr><th>Object</th><th>Mass</th><th>Dimensions in the page</th></tr></thead><tbody><tr><td>Uniform bar</td><td>1 kg</td><td>4 m by 0.10 m</td></tr><tr><td>Each uniform block</td><td>1 kg</td><td>0.50 m by 0.30 m</td></tr></tbody></table><p>The masses can move from d = 1.75 m, with their outer edges at the bar's ends, to d = 0.25 m, where they meet at the midpoint. They do not overlap.</p><p>Finite block size and the bar's own inertia are included. For a uniform rectangle of mass m, width w and height h, about an axis perpendicular to the rectangle:</p><math display="block"><msub><mi>I</mi><mtext>CM</mtext></msub><mo>=</mo><mfrac><mi>m</mi><mn>12</mn></mfrac><mo>(</mo><msup><mi>w</mi><mn>2</mn></msup><mo>+</mo><msup><mi>h</mi><mn>2</mn></msup><mo>)</mo><mo>,</mo><mspace width="1em"/><mi>I</mi><mo>=</mo><msub><mi>I</mi><mtext>CM</mtext></msub><mo>+</mo><mi>m</mi><msup><mi>r</mi><mn>2</mn></msup></math><p>Each distance r runs from the axis to that object's center of mass.</p><button id="close">Close</button></dialog>
+</main>
+<script>
+'use strict';
+const BarInertiaPhysics=Object.freeze({
+  length:4,barWidth:.10,barMass:1,blockWidth:.50,blockHeight:.30,blockMass:1,minD:.25,maxD:1.75,minAxis:-2,maxAxis:2,
+  calculate(d,a){
+    const barCM=this.barMass*(this.length**2+this.barWidth**2)/12;
+    const blockCM=this.blockMass*(this.blockWidth**2+this.blockHeight**2)/12;
+    const bar=barCM+this.barMass*a*a,left=blockCM+this.blockMass*(d+a)**2,right=blockCM+this.blockMass*(d-a)**2;
+    return {barCM,blockCM,bar,left,right,total:bar+left+right,rLeft:Math.abs(d+a),rRight:Math.abs(d-a),centered:barCM+2*blockCM+2*this.blockMass*d*d};
+  }
+});
+if(typeof window!=='undefined')(()=>{
+const $=id=>document.getElementById(id),P=BarInertiaPhysics,scene=$('scene'),chart=$('chart'),NS='http://www.w3.org/2000/svg';
+const state={d:1.75,a:0,snap:true,calculation:false};
+const fmt=(n,p=2)=>Number(n.toFixed(p)).toString(),clamp=(n,lo,hi)=>Math.max(lo,Math.min(hi,n));
+let view={w:700,h:400,s:130,left:350,y:150},drag=null;
+function el(tag,attrs={},text=''){const node=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))node.setAttribute(k,v);if(text)node.textContent=text;return node}
+function line(parent,x1,y1,x2,y2,attrs={}){parent.append(el('line',{x1,y1,x2,y2,...attrs}))}
+const X=x=>view.left+x*view.s;
+const bg=el('g'),body=el('g'),dimensions=el('g'),massLayer=el('g'),axisLayer=el('g');scene.append(bg,body,dimensions,massLayer,axisLayer);
+const masses=[-1,1].map((sign,i)=>{
+ const g=el('g',{class:'handle',tabindex:0,role:'button','data-mass':i});
+ g.append(el('rect',{class:'focus-ring',fill:'transparent',stroke:'transparent',rx:4}),el('rect',{fill:'var(--block)',stroke:'var(--block-edge)','stroke-width':2}),el('line',{stroke:'var(--panel)','stroke-width':2,opacity:.8}));
+ massLayer.append(g);bindHandle(g,sign<0?'left':'right');return g;
+});
+const axisHandle=el('g',{class:'handle',tabindex:0,role:'button',id:'axisHandle'});axisLayer.append(axisHandle);bindHandle(axisHandle,'axis');
+function value(key,raw,fromDrag=false){
+ const min=key==='d'?P.minD:P.minAxis,max=key==='d'?P.maxD:P.maxAxis;
+ let v=raw;if(state.snap)v=Math.round(v/.25)*.25;state[key]=+clamp(v,min,max).toFixed(2);update(fromDrag?null:document.activeElement);
+}
+function toLocal(e){const p=scene.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(scene.getScreenCTM().inverse())}
+function bindHandle(g,kind){
+ g.addEventListener('pointerdown',e=>{if(e.button!==0||drag)return;e.preventDefault();g.focus({preventScroll:true});const x=kind==='axis'?state.a:kind==='left'?-state.d:state.d;drag={kind,id:e.pointerId,offset:toLocal(e).x-X(x)};g.setPointerCapture(e.pointerId)});
+ g.addEventListener('pointermove',e=>{if(!drag||drag.kind!==kind||drag.id!==e.pointerId)return;const x=(toLocal(e).x-drag.offset-view.left)/view.s;value(kind==='axis'?'a':'d',kind==='left'?-x:x,true)});
+ const end=e=>{if(drag&&drag.id===e.pointerId)drag=null};g.addEventListener('pointerup',end);g.addEventListener('pointercancel',end);g.addEventListener('lostpointercapture',end);
+ g.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight'].includes(e.key))return;e.preventDefault();e.stopPropagation();const step=state.snap ? .25 : e.shiftKey ? .25 : .05,dx=e.key==='ArrowLeft'?-step:step;value(kind==='axis'?'a':'d',kind==='axis'?state.a+dx:state.d+(kind==='left'?-dx:dx),true)});
+}
+function dimension(x1,x2,y,label){
+ const a=X(x1),b=X(x2);line(dimensions,a,view.y+20,a,y+5,{stroke:'var(--line)','stroke-width':1,'stroke-dasharray':'3 4'});line(dimensions,b,view.y+20,b,y+5,{stroke:'var(--line)','stroke-width':1,'stroke-dasharray':'3 4'});
+ line(dimensions,a,y,b,y,{stroke:'var(--muted)','stroke-width':1.8});for(const x of[a,b])line(dimensions,x,y-5,x,y+5,{stroke:'var(--muted)','stroke-width':1.8});
+ const text=el('text',{x:clamp((a+b)/2,70,view.w-70),y:y-9,'text-anchor':'middle','font-size':17,fill:'var(--ink)'},label);dimensions.append(text);
+}
+function drawScene(){
+ const rect=scene.getBoundingClientRect();if(!rect.width||!rect.height)return;
+ const w=rect.width,h=rect.height,s=(w-110)/4.5;view={w,h,s,left:w/2,y:Math.max(95,Math.min(h*.40,h-170))};scene.setAttribute('viewBox',`0 0 ${w} ${h}`);bg.replaceChildren();body.replaceChildren();dimensions.replaceChildren();
+ const ruler=view.y+145;
+ for(let n=-8;n<=8;n++){
+  const x=X(n*.25);line(bg,x,view.y-28,x,ruler+7,{stroke:n%4===0?'var(--line)':'var(--grid)','stroke-width':1});
+  line(bg,x,ruler-4,x,ruler+(n%2===0?8:4),{stroke:'var(--muted)','stroke-width':1});
+  if(n%2===0)bg.append(el('text',{x,y:ruler+28,'text-anchor':'middle','font-size':15,fill:'var(--muted)'},fmt(n*.25)));
+ }
+ line(bg,X(-2),ruler,X(2),ruler,{stroke:'var(--muted)','stroke-width':1.5});bg.append(el('text',{x:view.left,y:ruler+51,'text-anchor':'middle','font-size':16,fill:'var(--muted)'},'Position from midpoint (m)'));
+ line(bg,X(0),view.y-65,X(0),view.y+30,{stroke:'var(--muted)','stroke-width':1,'stroke-dasharray':'4 5'});
+ body.append(el('rect',{x:X(-2),y:view.y-P.barWidth*s/2,width:4*s,height:P.barWidth*s,fill:'var(--bar)',stroke:'var(--block-edge)','stroke-width':1.5}));
+ masses.forEach((g,i)=>{
+  const sign=i===0?-1:1,x=X(sign*state.d),bw=P.blockWidth*s,bh=P.blockHeight*s;g.setAttribute('transform',`translate(${x} ${view.y})`);
+  const [focus,rect,tick]=g.children;for(const node of[focus,rect]){node.setAttribute('x',-bw/2-(node===focus?5:0));node.setAttribute('y',-bh/2-(node===focus?7:0));node.setAttribute('width',bw+(node===focus?10:0));node.setAttribute('height',bh+(node===focus?14:0))}
+  tick.setAttribute('x1',0);tick.setAttribute('x2',0);tick.setAttribute('y1',-bh/2+3);tick.setAttribute('y2',bh/2-3);
+  g.setAttribute('aria-label',`${i===0?'Left':'Right'} block, 1 kilogram, position ${fmt(sign*state.d)} metres. Left and Right arrow keys move both blocks symmetrically.`);
+  if(2*state.d*s>90)body.append(el('text',{x,y:view.y-bh/2-13,'text-anchor':'middle','font-size':18,'font-weight':600,fill:'var(--block-edge)'},'1 kg'));
+ });
+ if(2*state.d*s<=90)body.append(el('text',{x:view.left,y:view.y-P.blockHeight*s/2-13,'text-anchor':'middle','font-size':18,'font-weight':600,fill:'var(--block-edge)'},'1 kg each'));
+ const axisHit=Math.min(Math.abs(state.a+state.d),Math.abs(state.a-state.d))*s>P.blockWidth*s/2+25?'auto':'none';
+ const ax=X(state.a);axisHandle.setAttribute('transform',`translate(${ax} ${view.y})`);axisHandle.replaceChildren();
+ axisHandle.append(el('rect',{x:-45,y:-91,width:90,height:34,rx:7,fill:'var(--panel)',stroke:'var(--ink)','stroke-width':1.5,class:'focus-ring'}),el('text',{x:0,y:-69,'text-anchor':'middle','font-size':18,'font-weight':650,fill:'var(--ink)'},'Drag axis'),el('line',{x1:0,y1:-57,x2:0,y2:-15,stroke:'var(--ink)','stroke-width':1.5,'stroke-dasharray':'4 4'}),el('circle',{r:25,fill:'transparent','pointer-events':axisHit}),el('circle',{r:13,fill:'var(--panel)',stroke:'var(--ink)','stroke-width':3,'pointer-events':axisHit}),el('circle',{r:4,fill:'var(--ink)','pointer-events':axisHit}));
+ axisHandle.setAttribute('aria-label',`Rotation axis perpendicular to page, position ${fmt(state.a)} metres. Use Left and Right arrow keys.`);
+ const v=P.calculate(state.d,state.a);dimension(-state.d,state.a,view.y+58,`rL = ${fmt(v.rLeft)} m`);dimension(state.d,state.a,view.y+103,`rR = ${fmt(v.rRight)} m`);
+}
+function drawChart(){
+ const box=chart.getBoundingClientRect();if(!box.width||!box.height)return;const w=box.width,h=box.height;chart.setAttribute('viewBox',`0 0 ${w} ${h}`);chart.replaceChildren();
+ const left=47,right=w-18,top=23,bottom=h-38;const x=d=>left+(d/2)*(right-left),y=I=>bottom-(I/20)*(bottom-top);
+ for(let n=0;n<=20;n+=5){line(chart,left,y(n),right,y(n),{stroke:'var(--grid)','stroke-width':1});chart.append(el('text',{x:left-8,y:y(n)+4,'text-anchor':'end','font-size':13,fill:'var(--muted)'},String(n)))}
+ for(let n=0;n<=2;n+=.5){line(chart,x(n),bottom,x(n),bottom+5,{stroke:'var(--muted)'});chart.append(el('text',{x:x(n),y:bottom+21,'text-anchor':'middle','font-size':13,fill:'var(--muted)'},fmt(n)))}
+ line(chart,left,top,left,bottom,{stroke:'var(--muted)','stroke-width':1.2});line(chart,left,bottom,right,bottom,{stroke:'var(--muted)','stroke-width':1.2});
+ chart.append(el('text',{x:left,y:15,'font-size':14,fill:'var(--muted)'},'I (kg m²)'),el('text',{x:right,y:h-2,'text-anchor':'end','font-size':14,fill:'var(--muted)'},'d (m)'));
+ let path='';for(let i=0;i<=100;i++){const d=P.minD+(P.maxD-P.minD)*i/100;path+=(i?' L':'M')+x(d)+','+y(P.calculate(d,state.a).total)}chart.append(el('path',{d:path,fill:'none',stroke:'var(--ink)','stroke-width':3}));
+ const I=P.calculate(state.d,state.a).total;line(chart,x(state.d),bottom,x(state.d),y(I),{stroke:'var(--accent)','stroke-width':1.5,'stroke-dasharray':'4 4'});chart.append(el('circle',{cx:x(state.d),cy:y(I),r:6,fill:'var(--point)',stroke:'var(--panel)','stroke-width':2}));
+}
+function calculation(){
+ const v=P.calculate(state.d,state.a),term=(name,cm,dist,I)=>`<p><strong>${name}</strong></p><math display="block"><mi>I</mi><mo>=</mo><mn>${cm.toFixed(3)}</mn><mo>+</mo><mn>1</mn><mo>×</mo><msup><mrow><mo>(</mo><mn>${fmt(dist)}</mn><mo>)</mo></mrow><mn>2</mn></msup><mo>≈</mo><mn>${I.toFixed(3)}</mn></math>`;
+ $('calculation').innerHTML=term('Bar',v.barCM,Math.abs(state.a),v.bar)+term('Left block',v.blockCM,v.rLeft,v.left)+term('Right block',v.blockCM,v.rRight,v.right)+'<p class="hint">Each term uses I = I<sub>CM</sub> + m r². Masses in kg, distances in m; results in kg m². The fixed I<sub>CM</sub> values above are rounded. See Model for dimensions.</p>';
+}
+function update(active=null){
+ const v=P.calculate(state.d,state.a);$('inertia').textContent=v.total.toFixed(3);$('barI').textContent=v.bar.toFixed(3);$('leftI').textContent=v.left.toFixed(3);$('rightI').textContent=v.right.toFixed(3);
+ for(const[id,key]of [['distance','d'],['distanceValue','d'],['axis','a'],['axisValue','a']])if($(id)!==active)$(id).value=state[key];
+ $('chartSection').hidden=state.calculation;document.querySelector('.contributions').hidden=state.calculation;$('calculation').hidden=!state.calculation;if(state.calculation)calculation();drawScene();drawChart();
+}
+for(const[id,key]of [['distance','d'],['distanceValue','d'],['axis','a'],['axisValue','a']]){
+ const input=$(id);input.addEventListener('input',()=>{const v=input.valueAsNumber;if(!Number.isFinite(v)||v<+input.min||v>+input.max)return;value(key,v);if(input.type==='range')input.value=state[key]});
+ input.addEventListener('change',()=>{const v=input.valueAsNumber;if(Number.isFinite(v))value(key,v);update()});
+}
+function reset(){state.d=P.maxD;state.a=0;update()}
+function clean(){document.body.classList.toggle('clean');requestAnimationFrame(()=>{drawScene();drawChart()})}
+function theme(){const dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('theme').textContent=dark?'Light mode':'Dark mode'}
+$('reset').onclick=reset;$('ends').onclick=()=>{state.d=P.maxD;update()};$('center').onclick=()=>{state.d=P.minD;update()};$('centerAxis').onclick=()=>{state.a=0;update()};$('snap').onchange=e=>{state.snap=e.target.checked;if(state.snap){state.d=Math.round(state.d*4)/4;state.a=Math.round(state.a*4)/4}update()};$('showCalculation').onchange=e=>{state.calculation=e.target.checked;update()};
+$('theme').onclick=theme;$('hide').onclick=clean;$('show').onclick=clean;$('about').onclick=()=>$('model').showModal();$('close').onclick=()=>$('model').close();
+document.addEventListener('keydown',e=>{if($('model').open||e.ctrlKey||e.metaKey||e.altKey||/INPUT|SELECT|TEXTAREA|BUTTON/.test(e.target.tagName))return;const key=e.key.toLowerCase();if(key==='r')reset();if(key==='h')clean();if(key==='t')theme()});
+new ResizeObserver(()=>{drawScene();drawChart()}).observe(scene.parentElement);new ResizeObserver(drawChart).observe(chart.parentElement);update();
+window.barInertiaDemo={state,physics:P,update,reset,point:x=>({x:X(x),y:view.y}),view:()=>({...view})};
+})();
+</script>
+</body></html>
