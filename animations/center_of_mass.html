@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Center of mass: three particles</title>
+<style>
+:root{color-scheme:light;--bg:#e6ebf0;--panel:#fff;--ink:#0f1720;--muted:#46535f;--line:#c5ced6;--grid:#e3e8ed;--accent:#0f7f73;--red:#cc3347;--blue:#2467a6;--green:#4e821b;--soft:#f2f6f8}
+:root[data-theme=dark]{color-scheme:dark;--bg:#0b1015;--panel:#141b22;--ink:#f1f5f9;--muted:#a9b6c2;--line:#394651;--grid:#28333e;--accent:#3fc9b8;--red:#ff7e8e;--blue:#76bbff;--green:#a6d86d;--soft:#1d2832}
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.4 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:2000px;margin:auto;padding:16px;display:flex;flex-direction:column;gap:12px;height:100dvh}h1,h2,p{margin:0}h1{font-size:clamp(24px,2.2vw,40px);line-height:1.15;font-weight:650;letter-spacing:-.02em}h2{font-size:clamp(19px,1.45vw,27px);font-weight:650}.muted{color:var(--muted)}header{display:flex;align-items:center;justify-content:space-between;gap:16px}header p{font-size:clamp(15px,1.15vw,21px);margin-top:6px}.toolbar,.options{display:flex;gap:10px;align-items:center;flex-wrap:wrap}button,input{font:inherit}button{padding:8px 14px;min-height:40px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}button.primary{background:var(--ink);color:var(--panel);border-color:var(--ink)}button:focus-visible,input:focus-visible,.particle:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}.content{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(330px,1fr);gap:12px;flex:1;min-height:0}.scene{display:flex;flex-direction:column;min-height:0}.scene-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}.scene-head span{font-size:15px;color:var(--muted)}.plot{flex:1;min-height:0;position:relative}svg{display:block;width:100%;height:100%;touch-action:none;user-select:none}.particle{cursor:grab;outline:none}.particle.dragging{cursor:grabbing}.particle:focus-visible .focus-ring{stroke:var(--accent);stroke-width:3}.hint{font-size:14px;color:var(--muted)}.results{display:flex;flex-direction:column;gap:10px;min-height:0;overflow:auto}.com-value{font-size:clamp(29px,2.7vw,48px);font-variant-numeric:tabular-nums;font-weight:650;letter-spacing:-.02em}.com-caption{display:flex;align-items:center;gap:10px}.marker{display:inline-block;width:22px;height:22px;border:3px solid var(--ink);border-radius:50%;position:relative}.marker:before,.marker:after{content:"";position:absolute;background:var(--ink)}.marker:before{height:2px;width:26px;left:-5px;top:7px}.marker:after{width:2px;height:26px;top:-5px;left:7px}.summary{font-size:clamp(16px,1.25vw,22px)}table{border-collapse:collapse;width:100%;font-size:clamp(16px,1.3vw,23px);font-variant-numeric:tabular-nums}th,td{padding:5px 5px;text-align:right;border-bottom:1px solid var(--grid);white-space:nowrap}th{font-size:.78em;font-weight:500;color:var(--muted)}th:first-child,td:first-child{text-align:left}.mass-name{font-weight:650;color:var(--c)}.formula{border-top:1px solid var(--line);padding-top:12px;font-size:clamp(18px,1.5vw,26px)}math{font-family:"Cambria Math","STIX Two Math",math;font-weight:400}math[display=block]{margin:10px 0;text-align:left}.calculation{padding:10px;border-radius:8px;background:var(--soft);font-size:clamp(16px,1.2vw,21px)}.calculation math{max-width:100%;font-size:1em;margin:5px 0}.results>.hint{display:none}.controls{padding:12px 14px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 22px}.mass-control{min-width:0;border-left:4px solid var(--c);padding-left:12px}.mass-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.mass-top label{font-weight:650;color:var(--c)}input[type=number]{width:5.2em;padding:4px 6px;border:1px solid var(--line);border-radius:6px;color:var(--ink);background:var(--panel);font-variant-numeric:tabular-nums}input[type=range]{accent-color:var(--c);width:100%;height:28px;margin:4px 0}.coords{display:flex;gap:8px;align-items:center;font-size:15px;flex-wrap:wrap}.coords input{width:4.3em}.options{grid-column:1/-1;gap:12px 22px;font-size:16px}.options label{display:flex;align-items:center;gap:7px;white-space:nowrap}input[type=checkbox]{accent-color:var(--accent);width:19px;height:19px}.keys{font-size:13px;color:var(--muted)}.reveal{display:none;position:fixed;right:16px;bottom:12px;opacity:.7}.reveal:hover,.reveal:focus-visible{opacity:1}.clean .controls,.clean .toolbar,.clean .keys{display:none}.clean .reveal{display:block}.clean main{padding-bottom:60px}.clean .hint{display:none}
+@media(min-width:1500px){main{padding:22px;gap:16px}.panel{padding:20px}.controls{padding:16px 20px}.mass-top,.options{font-size:20px}.coords{font-size:18px}.hint,.scene-head span{font-size:18px}input[type=range]{height:34px}}
+@media(max-width:899px),(max-height:559px){main{height:auto;min-height:100dvh}.content{grid-template-columns:1fr}.plot{height:480px;flex:auto}.results{overflow:visible}.controls{grid-template-columns:1fr}.options{align-items:flex-start;gap:10px 18px}header{flex-wrap:wrap}.clean .plot{height:65vh;min-height:360px}}
+@media(max-width:500px){main{padding:10px;gap:10px}.panel{padding:12px}.plot{height:370px}h1{font-size:27px}.toolbar{gap:6px}button{padding:7px 11px}.scene-head span{font-size:13px}.com-value{font-size:33px}.calculation{font-size:15px}}
+@media(min-width:900px) and (max-height:800px){.results{gap:8px;padding:12px}.com-value{font-size:32px}.calculation{font-size:17px}.calculation math{margin:4px 0}}
+</style>
+</head>
+<body>
+<main>
+<header><div><h1>Center of mass: three particles</h1><p class="muted">Move the particles. Change their masses. Where is the center of mass?</p></div><div class="toolbar"><button id="theme">Dark mode</button><button id="hide">Hide controls</button></div></header>
+<div class="content">
+<section class="panel scene" aria-label="Positions of three particles and their center of mass"><div class="scene-head"><h2>Drag any particle</h2><span>Equal scales on both axes</span></div><div class="plot"><svg id="scene" aria-label="Coordinate grid in metres with three movable particles"></svg></div><p class="hint">Tab to a particle and use the arrow keys to move it. Hold Shift for larger steps.</p></section>
+<section class="panel results" aria-label="Center of mass and current values">
+<div class="com-caption"><i class="marker" aria-hidden="true"></i><h2>Center of mass</h2></div>
+<div id="answer"><p class="com-value" id="comValue"></p><p class="muted">Coordinates (x, y) in metres</p></div>
+<p id="prediction" class="summary" hidden>Predict the position, then select <strong>Show center of mass</strong>.</p>
+<p class="summary">Total mass: <strong id="total"></strong></p>
+<table aria-label="Current mass and coordinates"><thead><tr><th>Particle</th><th>Mass (kg)</th><th>x (m)</th><th>y (m)</th></tr></thead><tbody id="values"></tbody></table>
+
+<div class="calculation" id="calculation" hidden></div>
+<p class="hint">The circles mark point particles; their drawn sizes do not represent physical sizes.</p>
+</section>
+</div>
+<section class="panel controls" id="controls" aria-label="Mass and position controls">
+<div id="massControls" style="display:contents"></div>
+<div class="options"><button class="primary" id="reset">Reset exercise</button><label><input id="showCom" type="checkbox" checked>Show center of mass</label><label><input id="showCalculation" type="checkbox">Show calculation</label><label><input id="snap" type="checkbox">Snap to 0.5 m grid</label></div>
+</section>
+<p class="keys">Keys: R reset exercise · H hide or show controls · T light or dark · F11 full screen. Masses: 0.1-50 kg. Positions: -1 to 6 m.</p>
+<button class="reveal" id="show">Show controls</button>
+</main>
+<script>
+'use strict';
+const CenterOfMassPhysics = Object.freeze({
+  initial: [{m:2,x:0,y:0},{m:4,x:4,y:2},{m:8,x:2,y:4}],
+  calculate(particles) {
+    const M=particles.reduce((sum,p)=>sum+p.m,0);
+    return {M,x:particles.reduce((sum,p)=>sum+p.m*p.x,0)/M,y:particles.reduce((sum,p)=>sum+p.m*p.y,0)/M};
+  }
+});
+if(typeof window!=='undefined') (()=>{
+const $=id=>document.getElementById(id), svg=$('scene'), NS='http://www.w3.org/2000/svg';
+const state={particles:CenterOfMassPhysics.initial.map(p=>({...p})),showCom:true,showCalculation:false,snap:false};
+const colors=['var(--red)','var(--blue)','var(--green)'];
+const subs=['₁','₂','₃'];
+const fmt=(n,d=1)=>Number(n.toFixed(d)).toString();
+const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
+let view={w:600,h:450,s:50,left:70,top:20}, drag=null;
+const point=p=>({x:view.left+(p.x+1)*view.s,y:view.top+(6-p.y)*view.s});
+function el(tag,attrs={},text=''){const n=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,v);if(text)n.textContent=text;return n}
+function line(parent,x1,y1,x2,y2,attrs={}){parent.append(el('line',{x1,y1,x2,y2,...attrs}))}
+for(let i=0;i<3;i++){
+ const p=state.particles[i], box=document.createElement('div');box.className='mass-control';box.style.setProperty('--c',colors[i]);
+ box.innerHTML=`<div class="mass-top"><label for="mass${i}">Particle m${subs[i]}</label><span><input id="mass${i}" aria-label="Mass of particle ${i+1} in kilograms" type="number" min="0.1" max="50" step="0.1" value="${p.m}"> kg</span></div><input id="range${i}" aria-label="Mass slider for particle ${i+1}, kilograms" type="range" min="0.1" max="50" step="0.1" value="${p.m}"><div class="coords"><label for="x${i}">x</label><input id="x${i}" aria-label="x coordinate of particle ${i+1} in metres" type="number" min="-1" max="6" step="0.01" value="${p.x}"><label for="y${i}">y</label><input id="y${i}" aria-label="y coordinate of particle ${i+1} in metres" type="number" min="-1" max="6" step="0.01" value="${p.y}"><span>m</span></div>`;
+ $('massControls').append(box);
+ for(const id of ['mass','range','x','y']){
+  const input=$(id+i),key=id==='mass'||id==='range'?'m':id;
+  input.addEventListener('input',()=>{const v=input.valueAsNumber;if(!Number.isFinite(v)||v<+input.min||v>+input.max)return;state.particles[i][key]=+v.toFixed(key==='m'?1:2);update(input)});
+  input.addEventListener('change',()=>{const v=input.valueAsNumber;if(Number.isFinite(v))state.particles[i][key]=+clamp(v,+input.min,+input.max).toFixed(key==='m'?1:2);update()});
+ }
+}
+const grid=el('g'), guides=el('g'), com=el('g',{'pointer-events':'none'}), particles=el('g'), labels=el('g',{'pointer-events':'none'});
+svg.append(grid,guides,com,particles,labels);
+const handles=state.particles.map((p,i)=>{
+ const g=el('g',{class:'particle',tabindex:0,role:'button','data-particle':i});
+ g.append(el('circle',{r:29,fill:'transparent',class:'focus-ring',stroke:'transparent'}),el('circle',{r:19,fill:colors[i],stroke:'var(--panel)','stroke-width':3}),el('text',{'text-anchor':'middle','dominant-baseline':'central',fill:'var(--panel)','font-size':17,'font-weight':700},String(i+1)));
+ g.addEventListener('pointerdown',e=>{
+  if(e.button!==0)return;e.preventDefault();if(drag) return;g.focus({preventScroll:true});
+  const loc=svgPoint(e),screen=point(state.particles[i]);drag={i,id:e.pointerId,dx:loc.x-screen.x,dy:loc.y-screen.y};g.setPointerCapture(e.pointerId);g.classList.add('dragging');
+ });
+ g.addEventListener('pointermove',e=>{if(!drag||drag.i!==i||drag.id!==e.pointerId)return;const loc=svgPoint(e);let x=(loc.x-drag.dx-view.left)/view.s-1,y=6-(loc.y-drag.dy-view.top)/view.s;if(state.snap){x=Math.round(x*2)/2;y=Math.round(y*2)/2}state.particles[i].x=clamp(Math.round(x*100)/100,-1,6);state.particles[i].y=clamp(Math.round(y*100)/100,-1,6);update()});
+ const end=e=>{if(drag&&drag.id===e.pointerId){drag=null;g.classList.remove('dragging')}};
+ g.addEventListener('pointerup',end);g.addEventListener('pointercancel',end);g.addEventListener('lostpointercapture',end);
+ g.addEventListener('keydown',e=>{const delta={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowDown:[0,-1],ArrowUp:[0,1]}[e.key];if(!delta)return;e.preventDefault();e.stopPropagation();const step=state.snap ? 0.5 : e.shiftKey ? 1 : 0.1;state.particles[i].x=clamp(+(state.particles[i].x+delta[0]*step).toFixed(2),-1,6);state.particles[i].y=clamp(+(state.particles[i].y+delta[1]*step).toFixed(2),-1,6);update()});
+ particles.append(g);return g;
+});
+function svgPoint(e){const pt=svg.createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;return pt.matrixTransform(svg.getScreenCTM().inverse())}
+function drawGrid(){
+ const rect=svg.getBoundingClientRect();if(!rect.width||!rect.height)return;
+ const w=rect.width,h=rect.height,s=Math.max(1,Math.min((w-110)/7,(h-86)/7));view={w,h,s,left:(w-7*s)/2,top:(h-7*s)/2-5};svg.setAttribute('viewBox',`0 0 ${w} ${h}`);grid.replaceChildren();
+ const a=point({x:-1,y:-1}),b=point({x:6,y:6}),o=point({x:0,y:0});
+ for(let i=-1;i<=6;i++){
+  const t=point({x:i,y:i});line(grid,t.x,b.y,t.x,a.y,{stroke:'var(--grid)','stroke-width':1});line(grid,a.x,t.y,b.x,t.y,{stroke:'var(--grid)','stroke-width':1});
+  grid.append(el('text',{x:t.x,y:a.y+25,'text-anchor':'middle',fill:'var(--muted)','font-size':16},String(i)),el('text',{x:a.x-14,y:t.y+5,'text-anchor':'end',fill:'var(--muted)','font-size':16},String(i)));
+ }
+ line(grid,a.x,o.y,b.x+12,o.y,{stroke:'var(--muted)','stroke-width':2});line(grid,o.x,a.y,o.x,b.y-12,{stroke:'var(--muted)','stroke-width':2});
+ grid.append(el('path',{d:`M${b.x+12},${o.y}l-9,-5v10z M${o.x},${b.y-12}l-5,9h10z`,fill:'var(--muted)'}));
+ grid.append(el('text',{x:b.x+14,y:o.y+24,'text-anchor':'end',fill:'var(--ink)','font-size':17},'x (m)'),el('text',{x:o.x+14,y:b.y-16,fill:'var(--ink)','font-size':17},'y (m)'));
+ if(state.showCom&&state.showCalculation){const c=CenterOfMassPhysics.calculate(state.particles);$('calculation').innerHTML=numericMath('x',c)+numericMath('y',c)}draw();
+}
+function draw(){
+ const c=CenterOfMassPhysics.calculate(state.particles),q=point(c),o=point({x:0,y:0});guides.replaceChildren();com.replaceChildren();labels.replaceChildren();
+ if(state.showCom){
+  line(guides,q.x,o.y,q.x,q.y,{stroke:'var(--ink)','stroke-width':1.5,'stroke-dasharray':'5 6',opacity:.5});line(guides,o.x,q.y,q.x,q.y,{stroke:'var(--ink)','stroke-width':1.5,'stroke-dasharray':'5 6',opacity:.5});
+  const near=state.particles.some(p=>{const t=point(p);return Math.hypot(t.x-q.x,t.y-q.y)<31});const radius=near?28:13,arm=near?36:20;com.append(el('circle',{cx:q.x,cy:q.y,r:radius,fill:'var(--panel)',stroke:'var(--ink)','stroke-width':3}));line(com,q.x-arm,q.y,q.x+arm,q.y,{stroke:'var(--ink)','stroke-width':3});line(com,q.x,q.y-arm,q.x,q.y+arm,{stroke:'var(--ink)','stroke-width':3});
+ }
+ const points=state.particles.map(point),placed=[{x:o.x+10,y:view.top-38,w:65,h:28},{x:view.left+7*view.s-45,y:o.y+8,w:65,h:26}];
+ // Try several sides of each point, avoiding particles, other labels and the CM.
+ const addLabel=(p,text,color,isCom=false)=>{
+  const width=text.length*8.4+16,height=27;
+  const candidates=[[26,-36],[26,16],[-width-26,-36],[-width-26,16],[-width/2,-53],[-width/2,30],[32,-13],[-width-32,-13]];
+  let best=null,bestScore=Infinity;
+  for(const [dx,dy]of candidates){const r={x:clamp(p.x+dx,4,view.w-width-4),y:clamp(p.y+dy,3,view.h-height-3),w:width,h:height};let score=0;
+   for(const a of placed)score+=Math.max(0,Math.min(r.x+r.w,a.x+a.w)-Math.max(r.x,a.x))*Math.max(0,Math.min(r.y+r.h,a.y+a.h)-Math.max(r.y,a.y));
+   for(const a of [...points,...(state.showCom?[q]:[])]){const dx=a.x-clamp(a.x,r.x,r.x+r.w),dy=a.y-clamp(a.y,r.y,r.y+r.h);if(Math.hypot(dx,dy)<25)score+=3000;}
+   if(score<bestScore){best=r;bestScore=score}if(!score)break;
+  }
+  placed.push(best);labels.append(el('rect',{x:best.x,y:best.y,width,height,rx:5,fill:'var(--panel)',opacity:.94}),el('text',{x:best.x+8,y:best.y+19,fill:color,'font-size':17,'font-weight':isCom?700:600},text));
+ };
+ state.particles.forEach((p,i)=>{const t=points[i];handles[i].setAttribute('transform',`translate(${t.x} ${t.y})`);handles[i].setAttribute('aria-label',`Particle ${i+1}, ${fmt(p.m)} kilograms, x ${fmt(p.x,2)}, y ${fmt(p.y,2)} metres. Use arrow keys to move.`);addLabel(t,`m${subs[i]} = ${fmt(p.m)} kg`,colors[i])});
+ if(state.showCom)addLabel(q,'CM','var(--ink)',true);
+}
+function numericMath(axis,c){
+ const products=state.particles.map(p=>`<mrow><mo>(</mo><mn>${fmt(p.m)}</mn><mo>)</mo><mo>(</mo><mn>${fmt(p[axis],2)}</mn><mo>)</mo></mrow>`);
+ const chars=state.particles.reduce((n,p)=>n+fmt(p.m).length+fmt(p[axis],2).length+4,0)+4;
+ const size=parseFloat(getComputedStyle($('calculation')).fontSize),available=$('calculation').clientWidth-22;
+ const stacked=available>0&&chars*size*.55+70>available;
+ const terms=stacked?`<mtable columnalign="right" rowspacing="0.1em">${products.map((term,i)=>`<mtr><mtd>${i?'<mo>+</mo>':''}${term}</mtd></mtr>`).join('')}</mtable>`:products.join('<mo>+</mo>');
+ return `<math display="block"><msub><mi>${axis}</mi><mtext>CM</mtext></msub><mo>=</mo><mfrac><mrow>${terms}</mrow><mn>${fmt(c.M,2)}</mn></mfrac><mspace width=".3em"/><mtext>m</mtext></math><math display="block"><mo>≈</mo><mn>${c[axis].toFixed(2)}</mn><mspace width=".3em"/><mtext>m</mtext></math>`;
+}
+function update(active=null){
+ const c=CenterOfMassPhysics.calculate(state.particles);$('total').textContent=fmt(c.M,2)+' kg';$('comValue').textContent=`(${c.x.toFixed(2)}, ${c.y.toFixed(2)})`;$('answer').hidden=!state.showCom;$('prediction').hidden=state.showCom;
+ $('calculation').hidden=!(state.showCom&&state.showCalculation);$('showCalculation').disabled=!state.showCom;document.querySelector('table').hidden=state.showCom&&state.showCalculation;
+ $('calculation').innerHTML=numericMath('x',c)+numericMath('y',c);
+ $('values').innerHTML=state.particles.map((p,i)=>`<tr><td class="mass-name" style="--c:${colors[i]}">m${subs[i]}</td><td>${fmt(p.m)}</td><td>${fmt(p.x,2)}</td><td>${fmt(p.y,2)}</td></tr>`).join('');
+ state.particles.forEach((p,i)=>{for(const[id,k]of [['mass','m'],['range','m'],['x','x'],['y','y']])if($(id+i)!==active)$(id+i).value=p[k]});draw();
+}
+function reset(){state.particles=CenterOfMassPhysics.initial.map(p=>({...p}));update()}
+function clean(){document.body.classList.toggle('clean');$('hide').setAttribute('aria-expanded',String(!document.body.classList.contains('clean')));requestAnimationFrame(drawGrid)}
+function theme(){const dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('theme').textContent=dark?'Light mode':'Dark mode'}
+$('showCom').onchange=e=>{state.showCom=e.target.checked;update()};$('showCalculation').onchange=e=>{state.showCalculation=e.target.checked;update()};$('snap').onchange=e=>state.snap=e.target.checked;
+$('reset').onclick=reset;$('hide').onclick=clean;$('show').onclick=clean;$('theme').onclick=theme;
+document.addEventListener('keydown',e=>{if(e.ctrlKey||e.altKey||e.metaKey||/INPUT|SELECT|TEXTAREA|BUTTON/.test(e.target.tagName))return;const key=e.key.toLowerCase();if(key==='r')reset();if(key==='h')clean();if(key==='t')theme()});
+new ResizeObserver(drawGrid).observe(svg.parentElement);update();drawGrid();
+window.centerOfMassDemo={state,reset,update,point,physics:CenterOfMassPhysics};
+})();
+</script>
+</body>
+</html>
