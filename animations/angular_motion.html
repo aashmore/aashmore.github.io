@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Angular and tangential motion</title>
+<style>
+:root{color-scheme:light;--bg:#e6ebf0;--panel:#fff;--ink:#0f1720;--muted:#46535f;--line:#c5ced6;--grid:#e8edf1;--accent:#0f7f73;--blue:#2467a6;--orange:#d97706;--purple:#8058a3;--wheel:#607280}
+:root[data-theme=dark]{color-scheme:dark;--bg:#0b1015;--panel:#141b22;--ink:#f1f5f9;--muted:#a9b6c2;--line:#35434f;--grid:#26323c;--accent:#3fc9b8;--blue:#7db9f3;--orange:#ffb34f;--purple:#c0a1e8;--wheel:#a9b9c4}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif}main{padding:16px;display:grid;gap:12px;max-width:1900px;margin:auto}h1,h2,p{margin:0}h1{font-size:clamp(25px,2.2vw,42px);line-height:1.1}h2{font-size:clamp(18px,1.3vw,25px)}.head,.toolbar,.buttons,.controls-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.head{justify-content:space-between}.sub{color:var(--muted);font-size:clamp(14px,1vw,19px);margin-top:5px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0;min-height:0}.content{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:12px;min-height:0}.scene,.graph{display:flex;flex-direction:column;gap:8px}.svgwrap{position:relative;flex:1;min-height:310px}.svgwrap svg{position:absolute;width:100%;height:100%;inset:0;touch-action:none}.stats{display:flex;flex-wrap:wrap;gap:7px 20px;color:var(--muted);font-variant-numeric:tabular-nums;font-size:clamp(14px,1vw,19px)}.stats strong{color:var(--ink)}.hint{font-size:clamp(14px,1vw,18px);color:var(--muted)}.legend{display:flex;flex-wrap:wrap;gap:8px 16px;color:var(--muted)}.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:18px;height:4px;display:inline-block}.controls{display:grid;gap:8px 18px;grid-template-columns:auto 1fr auto;align-items:center}button,select,input{font:inherit}button,select{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;min-height:40px;padding:7px 12px}button{cursor:pointer;font-weight:600}button.primary{background:var(--ink);color:var(--panel);min-width:84px}button:hover{border-color:var(--accent)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}input[type=range]{accent-color:var(--accent);width:100%;min-width:100px}.timeline{display:grid;grid-template-columns:auto minmax(120px,1fr) auto;gap:10px;align-items:center}.controls-row{grid-column:1/-1;justify-content:space-between}.parameter{display:grid;grid-template-columns:auto minmax(90px,150px) auto;align-items:center;gap:8px;font-size:clamp(14px,1vw,18px)}.parameter output{min-width:5.3em;font-variant-numeric:tabular-nums}.equations{font-size:clamp(17px,1.2vw,24px);display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center}math{font-family:"Cambria Math","STIX Two Math",math}.foot{color:var(--muted);font-size:13px}.reveal{display:none;position:fixed;right:14px;bottom:12px;z-index:4}body.clean .toolbar,body.clean .controls,body.clean .foot{display:none}body.clean .reveal{display:block}[hidden]{display:none!important}
+@media(min-width:900px) and (min-height:520px){body{overflow:hidden}main{max-width:none;height:100dvh;grid-template-rows:auto minmax(0,1fr) auto auto;padding:clamp(12px,1.4vh,22px) clamp(16px,1.7vw,34px);gap:clamp(8px,1vh,14px)}.svgwrap{min-height:0}.panel{padding:clamp(10px,.8vw,16px)}body.clean main{grid-template-rows:auto minmax(0,1fr);padding-bottom:50px}}
+@media(max-width:899px){.content{grid-template-columns:1fr}.svgwrap{min-height:390px}.controls{grid-template-columns:1fr}.controls-row{grid-column:auto}.timeline{width:100%}}
+@media(max-width:520px){main{padding:10px}.svgwrap{min-height:320px}.controls-row{align-items:stretch;flex-direction:column}.parameter{grid-template-columns:auto 1fr auto}.foot{font-size:12px}}
+</style>
+</head><body>
+<main>
+<header class="head"><div><h1>Angular and tangential motion</h1><p class="sub" id="subtitle">Follow a marked point as the wheel turns.</p></div><div class="toolbar"><button id="theme">Dark mode</button><button id="hide">Hide controls</button></div></header>
+<div class="content">
+<section class="panel scene"><h2>Rotating wheel</h2><div class="svgwrap" id="wheelWrap"><svg id="wheel" role="img" aria-label="A wheel rotating about a fixed axle"></svg></div><div class="stats" id="stats"></div><div class="equations" id="equations"></div></section>
+<section class="panel graph"><h2 id="graphTitle">Angular position</h2><div class="legend" id="legend"></div><div class="svgwrap" id="graphWrap"><svg id="graph" role="img" aria-label="Graph of angular motion"></svg></div><p class="hint" id="graphHint"></p></section>
+</div>
+<section class="panel controls" aria-label="Animation controls">
+<label>View <select id="mode"><option value="angle">Angular displacement</option><option value="radii">Angular and tangential motion</option><option value="acceleration">Angular acceleration</option></select></label>
+<label class="timeline">Time <input id="time" type="range" min="0" max="8" step="0.01" value="0"><output id="timeValue">0.00 s</output></label>
+<div class="buttons"><button id="play" class="primary" aria-pressed="false">Play</button><button id="reset">Restart</button></div>
+<div class="controls-row">
+<label class="parameter">Initial angular velocity <input id="omega" type="range" min="-3" max="3" step="0.1" value="1"><output id="omegaValue"></output></label>
+<label class="parameter" id="alphaControl">Angular acceleration <input id="alpha" type="range" min="-1" max="1" step="0.1" value="0"><output id="alphaValue"></output></label>
+<label>Playback <select id="rate"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+</div>
+<div class="controls-row" id="radiusControls">
+<label class="parameter">Inner radius <input id="r1" type="range" min="0.1" max="1" step="0.05" value="0.35"><output id="r1Value"></output></label>
+<label class="parameter">Outer radius <input id="r2" type="range" min="0.1" max="1" step="0.05" value="0.8"><output id="r2Value"></output></label>
+</div>
+</section>
+<footer class="foot">Space: play/pause · R: restart · H: controls · T: theme · F11: full screen</footer>
+</main><button class="reveal" id="show">Show controls (H)</button>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg', duration=8;
+const spokeDotRadius=9, radiusDotRadius=10, dotStrokeWidth=3;
+const state={mode:'angle',t:0,playing:false,omega:1,alpha:0,r1:.35,r2:.8,rate:1};
+const format=(x,n=2)=>(Math.abs(x)<.5*10**(-n)?0:x).toFixed(n).replace('-','−');
+const position=t=>state.omega*t+.5*state.alpha*t*t;
+const velocity=t=>state.omega+state.alpha*t;
+function node(parent,tag,attrs={}){const e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);parent.append(e);return e}
+function label(parent,x,y,text,attrs={}){const e=node(parent,'text',Object.assign({x,y,fill:'var(--muted)','font-size':16},attrs));e.textContent=text;return e}
+function math(content){return '<math xmlns="http://www.w3.org/1998/Math/MathML">'+content+'</math>'}
+function drawWheel(){
+ const svg=$('wheel'),W=$('wheelWrap').clientWidth,H=$('wheelWrap').clientHeight;if(!W||!H)return;
+ svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.replaceChildren();
+ const cx=W*.5,cy=H*.51,R=Math.min(W*.37,H*.40),q=position(state.t),X=(r,a)=>cx+r*R*Math.cos(a),Y=(r,a)=>cy-r*R*Math.sin(a);
+ node(svg,'circle',{cx,cy,r:R,fill:'var(--grid)',stroke:'var(--wheel)','stroke-width':3});
+ for(let i=0;i<12;i++){let a=q+i*Math.PI/6;node(svg,'line',{x1:cx,y1:cy,x2:X(1,a),y2:Y(1,a),stroke:'var(--line)','stroke-width':2})}
+ node(svg,'line',{x1:cx,y1:cy,x2:X(1,q),y2:Y(1,q),stroke:'var(--ink)','stroke-width':4,'stroke-linecap':'round'});
+ node(svg,'circle',{cx,cy,r:5,fill:'var(--ink)'});
+ node(svg,'line',{x1:cx,y1:cy,x2:cx+R*1.12,y2:cy,stroke:'var(--muted)','stroke-width':1.5,'stroke-dasharray':'5 5'});
+ label(svg,cx+R*1.13,cy-8,'0',{'font-size':15});
+ if(state.mode==='angle'){
+  let d='',limit=Math.min(Math.abs(q),Math.PI*2),sign=Math.sign(q)||1;
+  for(let i=0;i<=160;i++){let a=sign*limit*i/160;d+=(i?'L':'M')+X(.27,a)+' '+Y(.27,a)+' '}
+  node(svg,'path',{d,fill:'none',stroke:'var(--accent)','stroke-width':4});
+  node(svg,'circle',{cx:X(1,q),cy:Y(1,q),r:spokeDotRadius,fill:'var(--accent)',stroke:'var(--panel)','stroke-width':dotStrokeWidth});
+  label(svg,cx,Math.max(22,cy-R-12),'Marked spoke',{'text-anchor':'middle',fill:'var(--ink)'});
+ }else{
+  for(const [key,color,name] of [['r1','var(--blue)','Inner'],['r2','var(--orange)','Outer']]){
+   const r=state[key],px=X(r,q),py=Y(r,q),v=r*velocity(state.t),len=Math.min(R*.52,Math.abs(v)*R*.22),direction=Math.sign(v);
+   if(len>1){let dx=-Math.sin(q)*direction*len,dy=-Math.cos(q)*direction*len;node(svg,'line',{x1:px,y1:py,x2:px+dx,y2:py+dy,stroke:color,'stroke-width':4,'stroke-linecap':'round'});let a=Math.atan2(dy,dx),tipx=px+dx,tipy=py+dy;node(svg,'path',{d:'M '+tipx+' '+tipy+' l '+(-10*Math.cos(a-.5))+' '+(-10*Math.sin(a-.5))+' l '+(10*Math.cos(a-.5)-10*Math.cos(a+.5))+' '+(10*Math.sin(a-.5)-10*Math.sin(a+.5))+' Z',fill:color})}
+   const g=node(svg,'circle',{cx:px,cy:py,r:radiusDotRadius,fill:color,stroke:'var(--panel)','stroke-width':dotStrokeWidth,tabindex:0,role:'slider','aria-label':name+' radius','aria-valuemin':.1,'aria-valuemax':1,'aria-valuenow':r,'data-radius':key});g.style.cursor='grab';
+  }
+ }
+}
+function piTickLabel(multiple,denominator){
+ if(multiple===0)return '0';
+ let coefficient=Math.abs(multiple);
+ while(denominator>1&&coefficient%2===0){
+  coefficient/=2;
+  denominator/=2;
+ }
+ return (multiple<0?'−':'')+(coefficient===1?'':coefficient)+'π'+(denominator>1?'/'+denominator:'');
+}
+function drawGraph(){
+ const svg=$('graph'),W=$('graphWrap').clientWidth,H=$('graphWrap').clientHeight;if(!W||!H)return;
+ svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.replaceChildren();
+ const L=state.mode==='radii'?60:72,R=20,T=15,B=36,w=W-L-R,h=H-T-B,fs=Math.max(12,Math.min(18,W/35));
+ const anglePlot={title:'θ (rad)',color:'var(--accent)',fn:position,piDenominator:2};
+ const plots=state.mode==='acceleration'?[
+  anglePlot,
+  {title:'ω (rad/s)',color:'var(--blue)',fn:velocity,piDenominator:4},
+  {title:'α (rad/s²)',color:'var(--purple)',fn:()=>state.alpha,piDenominator:16}
+ ]:state.mode==='radii'?[{title:'s (m)',color:'var(--blue)',fn:t=>state.r1*position(t),second:t=>state.r2*position(t)}]:[anglePlot];
+ const gap=plots.length===3?24:0,ph=(h-gap*(plots.length-1))/plots.length;
+ plots.forEach((p,index)=>{
+  const top=T+index*(ph+gap),values=[];for(let i=0;i<=160;i++){values.push(p.fn(duration*i/160));if(p.second)values.push(p.second(duration*i/160))}
+  const piInterval=p.piDenominator?Math.PI/p.piDenominator:0;
+  let min=Math.min(0,...values),max=Math.max(0,...values);
+  if(piInterval&&max-min<piInterval){
+   if(min===0&&max===0){min=-piInterval;max=piInterval}
+   else if(max>=-min)max=piInterval;
+   else min=-piInterval;
+  }
+  if(!piInterval&&max-min<.2){min-=.5;max+=.5}
+  else{const pad=(max-min)*.12;min-=pad;max+=pad}
+  const x=t=>L+w*t/duration,y=v=>top+ph-(v-min)*ph/(max-min);
+  for(let i=0;i<=4;i++){let t=duration*i/4;node(svg,'line',{x1:x(t),y1:top,x2:x(t),y2:top+ph,stroke:'var(--grid)'});if(index===plots.length-1)label(svg,x(t),top+ph+20,String(t),{'text-anchor':'middle','font-size':fs})}
+  function tick(value,caption){
+   node(svg,'line',{x1:L,y1:y(value),x2:L+w,y2:y(value),stroke:'var(--grid)'});
+   label(svg,L-8,y(value)+4,caption,{'text-anchor':'end','font-size':fs});
+  }
+  if(piInterval){
+   // Double the spacing when the labels would crowd.
+   const maxIntervals=Math.max(1,ph/(fs+9));
+   const step=2**Math.max(0,Math.ceil(Math.log2((max-min)/(piInterval*maxIntervals))));
+   const first=Math.ceil(min/(step*piInterval))*step;
+   const last=Math.floor(max/(step*piInterval))*step;
+   for(let multiple=first;multiple<=last;multiple+=step){
+    tick(multiple*piInterval,piTickLabel(multiple,p.piDenominator));
+   }
+  }else{
+   for(let i=0;i<=2;i++){
+    const value=min+(max-min)*i/2;
+    tick(value,format(value,1));
+   }
+  }
+  if(min<0&&max>0)node(svg,'line',{x1:L,y1:y(0),x2:L+w,y2:y(0),stroke:'var(--line)','stroke-width':1.5});
+  function curve(fn,color){let d='';for(let i=0;i<=160;i++){let t=duration*i/160;d+=(i?'L':'M')+x(t)+' '+y(fn(t))+' '}node(svg,'path',{d,fill:'none',stroke:color,'stroke-width':3});node(svg,'circle',{cx:x(state.t),cy:y(fn(state.t)),r:state.mode==='radii'?radiusDotRadius:spokeDotRadius,fill:color,stroke:'var(--panel)','stroke-width':dotStrokeWidth})}
+  curve(p.fn,p.color);if(p.second)curve(p.second,'var(--orange)');
+  node(svg,'line',{x1:x(state.t),y1:top,x2:x(state.t),y2:top+ph,stroke:'var(--muted)','stroke-width':1,'stroke-dasharray':'4 4'});
+  label(svg,L+4,top+fs,p.title,{'font-size':fs,fill:p.color,'font-weight':'600'});
+ });
+ label(svg,L+w,T+h+35,'t (s)',{'text-anchor':'end','font-size':fs});
+}
+function render(){
+ const q=position(state.t),w=velocity(state.t);
+ $('time').value=state.t;$('timeValue').value=format(state.t)+' s';$('omegaValue').value=format(state.omega,1)+' rad/s';$('alphaValue').value=format(state.alpha,1)+' rad/s²';$('r1Value').value=format(state.r1)+' m';$('r2Value').value=format(state.r2)+' m';
+ $('radiusControls').hidden=state.mode!=='radii';$('alphaControl').hidden=state.mode!=='acceleration';
+ $('subtitle').textContent=state.mode==='angle'?'Follow a marked point as the wheel turns.':state.mode==='radii'?'Compare points at different distances from the axle.':'Watch angular position, velocity and acceleration change together.';
+ $('graphTitle').textContent=state.mode==='angle'?'Angular position over time':state.mode==='radii'?'Signed position along each circle':'Angular quantities over time';
+ $('graphHint').textContent=state.mode==='angle'?'The angle keeps counting through complete revolutions.':state.mode==='radii'?'Both points sweep through the same angle. Drag a point or use the radius controls.':'A negative angular velocity means clockwise rotation.';
+ $('stats').innerHTML='<span>Time <strong>'+format(state.t)+' s</strong></span><span>Angular position <strong>'+format(q)+' rad</strong></span><span>Angular velocity <strong>'+format(w)+' rad/s</strong></span>'+(state.mode==='angle'?'<span>Turns <strong>'+format(q/(2*Math.PI))+'</strong></span>':state.mode==='radii'?'<span style="color:var(--blue)">Inner Δs <strong>'+format(state.r1*q)+' m</strong>, speed <strong>'+format(Math.abs(state.r1*w))+' m/s</strong></span><span style="color:var(--orange)">Outer Δs <strong>'+format(state.r2*q)+' m</strong>, speed <strong>'+format(Math.abs(state.r2*w))+' m/s</strong></span>':'<span>Angular acceleration <strong>'+format(state.alpha)+' rad/s²</strong></span>');
+ $('equations').innerHTML=state.mode==='angle'?math('<mn>1</mn><mspace width="0.25em"/><mtext>rev</mtext><mo>=</mo><mn>2</mn><mi>π</mi><mspace width="0.25em"/><mtext>rad</mtext>'):state.mode==='radii'?math('<mi>s</mi><mo>=</mo><mi>r</mi><mi>θ</mi><mspace width="1em"/><msub><mi>v</mi><mi>t</mi></msub><mo>=</mo><mi>r</mi><mi>ω</mi>'):math('<mi>ω</mi><mo>=</mo><msub><mi>ω</mi><mi>i</mi></msub><mo>+</mo><mi>α</mi><mi>t</mi>');
+ $('legend').innerHTML=state.mode==='radii'?'<span><i style="background:var(--blue)"></i>Inner point</span><span><i style="background:var(--orange)"></i>Outer point</span>':'';
+ drawWheel();drawGraph();
+}
+function playing(on){state.playing=on;$('play').textContent=on?'Pause':'Play';$('play').setAttribute('aria-pressed',String(on));last=null}
+function restart(){playing(false);state.t=0;render()}
+function setMode(mode){state.mode=mode;$('mode').value=mode;state.alpha=mode==='acceleration'?-.3:0;state.omega=1;$('omega').value=state.omega;$('alpha').value=state.alpha;restart()}
+$('mode').addEventListener('change',e=>setMode(e.target.value));
+for(const id of ['omega','alpha','r1','r2'])$(id).addEventListener('input',e=>{state[id]=Number(e.target.value);if(id==='r1'&&state.r1>state.r2){state.r2=state.r1;$('r2').value=state.r2}if(id==='r2'&&state.r2<state.r1){state.r1=state.r2;$('r1').value=state.r1}if(id==='omega'||id==='alpha')state.t=0;playing(false);render()});
+$('time').addEventListener('input',e=>{playing(false);state.t=Number(e.target.value);render()});
+$('rate').addEventListener('change',e=>state.rate=Number(e.target.value));
+$('play').addEventListener('click',()=>{if(state.t>=duration)state.t=0;playing(!state.playing);render()});$('reset').addEventListener('click',restart);
+$('theme').addEventListener('click',()=>{const dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('theme').textContent=dark?'Light mode':'Dark mode'});
+function controls(hidden){document.body.classList.toggle('clean',hidden);requestAnimationFrame(render)}
+$('hide').addEventListener('click',()=>controls(true));$('show').addEventListener('click',()=>controls(false));
+let drag=null;
+$('wheel').addEventListener('pointerdown',e=>{const key=e.target.dataset.radius;if(!key)return;drag=key;$('wheel').setPointerCapture(e.pointerId);playing(false)});
+$('wheel').addEventListener('pointermove',e=>{if(!drag)return;const rect=$('wheel').getBoundingClientRect(),W=rect.width,H=rect.height,R=Math.min(W*.37,H*.40),q=position(state.t),dx=e.clientX-rect.left-W*.5,dy=e.clientY-rect.top-H*.51;let r=Math.max(.1,Math.min(1,(dx*Math.cos(q)-dy*Math.sin(q))/R));r=Math.round(r*20)/20;if(drag==='r1')r=Math.min(r,state.r2);else r=Math.max(r,state.r1);state[drag]=r;$(drag).value=r;render()});
+$('wheel').addEventListener('pointerup',()=>drag=null);$('wheel').addEventListener('pointercancel',()=>drag=null);
+$('wheel').addEventListener('keydown',e=>{const key=e.target.dataset.radius;if(!key||!['ArrowLeft','ArrowDown','ArrowRight','ArrowUp'].includes(e.key))return;e.preventDefault();const d=['ArrowRight','ArrowUp'].includes(e.key)?.05:-.05;state[key]=Math.round(Math.max(key==='r1'?.1:state.r1,Math.min(key==='r1'?state.r2:1,state[key]+d))*20)/20;$(key).value=state[key];render();$('wheel').querySelector('[data-radius="'+key+'"]').focus()});
+document.addEventListener('keydown',e=>{if(['INPUT','SELECT','BUTTON'].includes(e.target.tagName))return;if(e.code==='Space'){e.preventDefault();$('play').click()}else if(e.key.toLowerCase()==='r')restart();else if(e.key.toLowerCase()==='h')controls(!document.body.classList.contains('clean'));else if(e.key.toLowerCase()==='t')$('theme').click()});
+let last=null;function tick(now){if(state.playing){if(last!==null){state.t=Math.min(duration,state.t+(now-last)/1000*state.rate);if(state.t>=duration)playing(false);render()}last=now}requestAnimationFrame(tick)}
+new ResizeObserver(()=>{drawWheel();drawGraph()}).observe($('graphWrap'));new ResizeObserver(drawWheel).observe($('wheelWrap'));setMode('angle');requestAnimationFrame(tick);
+</script></body></html>
