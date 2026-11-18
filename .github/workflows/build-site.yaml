@@ -11,6 +11,7 @@ on:
 # variables
 env:
   PREVIEWS_FOLDER: preview
+  CFLAGS: -Wno-error=incompatible-pointer-types
 
 permissions:
   contents: write
