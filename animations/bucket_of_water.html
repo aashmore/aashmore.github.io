@@ -1,284 +1,338 @@
-<!doctype html>
-<html lang="en" data-theme="light">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Swinging a bucket of water</title>
-<style>
-:root { color-scheme:light; --bg:#e6ebf0; --panel:#fff; --ink:#0f1720; --muted:#46535f; --line:#c5ced6; --accent:#0f7f73; --normal:#2467a6; --gravity:#6340c4; --motion:#d97706; --radial:#6d7d39; --water:#24badd; }
-:root[data-theme=dark] { color-scheme:dark; --bg:#0b1015; --panel:#141b22; --ink:#f1f5f9; --muted:#a9b6c2; --line:#3a4855; --accent:#3fc9b8; --normal:#7db9f3; --gravity:#b6a0f3; --motion:#ffb34f; --radial:#b8cc79; --water:#49d7ee; }
-* { box-sizing:border-box; }
-[hidden] { display:none!important; }
-body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.4 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif; }
-main { max-width:1900px; margin:auto; padding:16px; display:grid; gap:12px; }
-h1,h2,p { margin:0; } h1 { font-size:clamp(25px,2.1vw,42px); line-height:1.15; } h2 { font-size:clamp(19px,1.35vw,27px); }
-.head,.toolbar,.buttons,.options,.legend { display:flex; align-items:center; flex-wrap:wrap; gap:10px 18px; }
-.head { justify-content:space-between; } .subtitle,.hint,.legend { color:var(--muted); font-size:clamp(14px,1vw,19px); }
-.subtitle { margin-top:5px; } .content { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:12px; min-height:0; }
-.panel { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; min-width:0; min-height:0; }
-.visual { display:flex; flex-direction:column; gap:8px; }
-.canvas-wrap { position:relative; flex:1; min-height:330px; } canvas { position:absolute; inset:0; width:100%; height:100%; }
-.legend span { display:inline-flex; gap:7px; align-items:center; }.legend i { display:inline-block; width:22px; height:4px; background:var(--normal); }
-.legend .grav { background:var(--gravity); } .legend .motion { background:var(--motion); }
-.stats { display:flex; gap:8px 25px; flex-wrap:wrap; font-variant-numeric:tabular-nums; font-size:clamp(16px,1.25vw,24px); }
-.status { min-height:1.5em; font-size:clamp(16px,1.15vw,22px); font-weight:600; }
-.equation { font-size:clamp(18px,1.35vw,27px); min-height:2.4em; display:flex; align-items:center; justify-content:center; }
-math { font-family:"Cambria Math","STIX Two Math",math; }
-.controls { display:grid; grid-template-columns:1fr 1fr auto; gap:12px 24px; align-items:center; }
-.parameter { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:10px; }
-.position { grid-column:1/-1; }.options { grid-column:1/-1; justify-content:space-between; }.checks { display:flex; gap:10px 22px; flex-wrap:wrap; }
-button,select,input { font:inherit; } button,select { background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:8px 12px; min-height:40px; }
-button { cursor:pointer; font-weight:600; } button.primary { background:var(--ink); color:var(--panel); min-width:86px; }
-button:focus-visible,input:focus-visible,select:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
-input[type=range] { width:100%; min-width:60px; accent-color:var(--accent); height:26px; } input[type=checkbox] { accent-color:var(--accent); width:18px; height:18px; vertical-align:middle; }
-output { font-variant-numeric:tabular-nums; min-width:5em; text-align:right; }
-.foot { font-size:13px; color:var(--muted); }.reveal { display:none; position:fixed; right:14px; bottom:12px; z-index:5; }
-body.clean .controls,body.clean .toolbar,body.clean .foot { display:none; } body.clean .reveal { display:block; }
-dialog { max-width:650px; max-height:85vh; overflow:auto; padding:24px; background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:12px; } dialog p { margin:12px 0; } dialog::backdrop { background:#0007; }
-@media(min-width:900px) and (min-height:520px) { body { overflow:hidden; } main { height:100dvh; max-width:none; grid-template-rows:auto minmax(0,1fr) auto auto; padding:clamp(12px,1.4vh,24px) clamp(16px,1.6vw,32px); } .canvas-wrap { min-height:0; } .controls { font-size:clamp(14px,1vw,19px); } body.clean main { grid-template-rows:auto minmax(0,1fr); padding-bottom:52px; } }
-@media(max-width:899px) { .content { grid-template-columns:1fr; }.controls { grid-template-columns:1fr; }.options,.position { grid-column:auto; } }
-@media(max-width:520px) { main { padding:10px; }.toolbar { gap:8px; }.panel { padding:12px; }.parameter { grid-template-columns:auto 1fr auto; gap:6px; }.canvas-wrap { min-height:320px; }.options { align-items:flex-start; }.buttons { gap:8px; } }
-</style>
-</head>
-<body>
-<main>
-<header class="head"><div><h1>Swinging a bucket of water</h1><p class="subtitle">The bucket moves at a constant speed. Follow the forces on the water.</p></div><div class="toolbar"><button id="model">Model</button><button id="theme">Dark mode</button><button id="hide">Hide controls</button></div></header>
-<div class="content">
-<section class="panel visual"><h2>The bucket's path</h2><div class="canvas-wrap"><canvas id="scene" role="img" aria-label="A cutaway bucket of water moving anticlockwise in a vertical circle"></canvas></div><div class="stats"><span id="speedReadout"></span><span id="threshold"></span></div><p class="status" id="status" aria-live="polite"></p></section>
-<section class="panel visual"><h2>Forces on the water</h2><div class="legend"><span><i></i>Normal force from bucket</span><span><i class="grav"></i>Gravity</span><span id="velocityLegend" hidden><i class="motion"></i>Velocity</span></div><div class="canvas-wrap"><canvas id="forces" role="img" aria-label="An enlarged free-body diagram of the water"></canvas></div><div class="stats"><span id="normalReadout"></span><span id="gravityReadout"></span></div><div class="equation" id="equation"></div><p class="hint">At the top and bottom, the bucket pushes radially. At other positions, its side walls also push to keep the speed constant.</p></section>
-</div>
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Swinging a bucket of water</title>
+<style>
+:root { color-scheme:light; --bg:#e6ebf0; --panel:#fff; --ink:#0f1720; --muted:#46535f; --line:#c5ced6; --accent:#0f7f73; --normal:#2467a6; --gravity:#6340c4; --motion:#d97706; --radial:#6d7d39; --water:#24badd; }
+:root[data-theme=dark] { color-scheme:dark; --bg:#0b1015; --panel:#141b22; --ink:#f1f5f9; --muted:#a9b6c2; --line:#3a4855; --accent:#3fc9b8; --normal:#7db9f3; --gravity:#b6a0f3; --motion:#ffb34f; --radial:#b8cc79; --water:#49d7ee; }
+* { box-sizing:border-box; }
+[hidden] { display:none!important; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.4 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif; }
+main { max-width:1900px; margin:auto; padding:16px; display:grid; gap:12px; }
+h1,h2,p { margin:0; } h1 { font-size:clamp(25px,2.1vw,42px); line-height:1.15; } h2 { font-size:clamp(19px,1.35vw,27px); }
+.head,.toolbar,.buttons,.options,.legend { display:flex; align-items:center; flex-wrap:wrap; gap:10px 18px; }
+.head { justify-content:space-between; } .subtitle,.hint,.legend { color:var(--muted); font-size:clamp(14px,1vw,19px); }
+.subtitle { margin-top:5px; } .content { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:12px; min-height:0; }
+.panel { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; min-width:0; min-height:0; }
+.visual { display:flex; flex-direction:column; gap:8px; }
+.canvas-wrap { position:relative; flex:1; min-height:330px; } canvas { position:absolute; inset:0; width:100%; height:100%; }
+.legend span { display:inline-flex; gap:7px; align-items:center; }.legend i { display:inline-block; width:22px; height:4px; background:var(--normal); }
+.legend .grav { background:var(--gravity); } .legend .motion { background:var(--motion); }
+.stats { display:flex; gap:8px 25px; flex-wrap:wrap; font-variant-numeric:tabular-nums; font-size:clamp(16px,1.25vw,24px); }
+.status { min-height:1.5em; font-size:clamp(16px,1.15vw,22px); font-weight:600; }
+.equation { font-size:clamp(18px,1.35vw,27px); min-height:2.4em; display:flex; align-items:center; justify-content:center; }
+math { font-family:"Cambria Math","STIX Two Math",math; }
+.controls { display:grid; grid-template-columns:1fr 1fr auto; gap:12px 24px; align-items:center; }
+.parameter { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:10px; }
+.position { grid-column:1/-1; }.options { grid-column:1/-1; justify-content:space-between; }.checks { display:flex; gap:10px 22px; flex-wrap:wrap; }
+button,select,input { font:inherit; } button,select { background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:8px 12px; min-height:40px; }
+button { cursor:pointer; font-weight:600; } button.primary { background:var(--ink); color:var(--panel); min-width:86px; }
+button:focus-visible,input:focus-visible,select:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+input[type=range] { width:100%; min-width:60px; accent-color:var(--accent); height:26px; } input[type=checkbox] { accent-color:var(--accent); width:18px; height:18px; vertical-align:middle; }
+output { font-variant-numeric:tabular-nums; min-width:5em; text-align:right; }
+.foot { font-size:13px; color:var(--muted); }.reveal { display:none; position:fixed; right:14px; bottom:12px; z-index:5; }
+body.clean .controls,body.clean .toolbar,body.clean .foot { display:none; } body.clean .reveal { display:block; }
+dialog { max-width:650px; max-height:85vh; overflow:auto; padding:24px; background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:12px; } dialog p { margin:12px 0; } dialog::backdrop { background:#0007; }
+@media(min-width:900px) and (min-height:520px) { body { overflow:hidden; } main { height:100dvh; max-width:none; grid-template-rows:auto minmax(0,1fr) auto auto; padding:clamp(12px,1.4vh,24px) clamp(16px,1.6vw,32px); } .canvas-wrap { min-height:0; } .controls { font-size:clamp(14px,1vw,19px); } body.clean main { grid-template-rows:auto minmax(0,1fr); padding-bottom:52px; } }
+@media(max-width:899px) { .content { grid-template-columns:1fr; }.controls { grid-template-columns:1fr; }.options,.position { grid-column:auto; } }
+@media(max-width:520px) { main { padding:10px; }.toolbar { gap:8px; }.panel { padding:12px; }.parameter { grid-template-columns:auto 1fr auto; gap:6px; }.canvas-wrap { min-height:320px; }.options { align-items:flex-start; }.buttons { gap:8px; } }
+</style>
+</head>
+<body>
+<main>
+<header class="head"><div><h1>Swinging a bucket of water</h1><p class="subtitle" id="subtitle">Gravity changes the speed. Follow the forces on the water.</p></div><div class="toolbar"><button id="model">Model</button><button id="theme">Dark mode</button><button id="hide">Hide controls</button></div></header>
+<div class="content">
+<section class="panel visual"><h2>The bucket's path</h2><div class="canvas-wrap"><canvas id="scene" role="img" aria-label="A cutaway bucket of water moving anticlockwise in a vertical circle"></canvas></div><div class="stats"><span id="speedReadout"></span><span id="threshold"></span></div><p class="status" id="status" aria-live="polite"></p></section>
+<section class="panel visual"><h2>Forces on the water</h2><div class="legend"><span><i></i>Normal force from bucket</span><span><i class="grav"></i>Gravity</span><span id="velocityLegend" hidden><i class="motion"></i>Velocity</span></div><div class="canvas-wrap"><canvas id="forces" role="img" aria-label="An enlarged free-body diagram of the water"></canvas></div><div class="stats"><span id="normalReadout"></span><span id="gravityReadout"></span></div><div class="equation" id="equation"></div><p class="hint" id="forceHint">At the top and bottom, the bucket pushes radially. At other positions, its side walls also push to keep the speed constant.</p></section>
+</div>
 <section class="panel controls" aria-label="Animation controls">
-<label class="parameter">Bucket speed <input id="speed" type="range" min="1" max="6" step="0.05" value="4"><output id="speedValue"></output></label>
-<label class="parameter">Radius <input id="radius" type="range" min="0.5" max="2" step="0.05" value="1"><output id="radiusValue"></output></label>
-<div class="buttons"><button class="primary" id="play" aria-pressed="false">Play</button><button id="reset">Restart</button><button id="step">Step</button></div>
-<label class="parameter position">Position <input id="angle" type="range" min="0" max="360" step="0.1" value="0"><output id="angleValue"></output></label>
-<div class="options"><div class="checks"><label><input id="showForces" type="checkbox" checked> Forces</label><label><input id="showUnits" type="checkbox"> Unit vectors</label><label><input id="showVelocity" type="checkbox"> Velocity</label></div><div class="buttons"><button id="bottom">Bottom</button><button id="top">Top</button><button id="minimum">Minimum speed at top</button><label>Playback <select id="rate"><option value="0.1">0.1×</option><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option></select></label></div></div>
-</section>
-<footer class="foot">Space: play/pause · R: restart · H: controls · T: theme · F11: full screen</footer>
-</main>
-<button id="show" class="reveal">Show controls (H)</button>
-<dialog id="modelDialog"><h2>Model</h2><p>The water is represented by a small mass of 1 kg at radius r. The bucket is driven at constant speed, and rotates so that its base faces away from the center.</p><p>F<sub>N</sub> is the combined normal force from the bucket's base and side walls. Away from the top and bottom, the side walls supply the tangential force that balances the tangential component of gravity.</p><p>The animation pauses when the force from the base first reaches zero below the minimum speed. Press Play again to follow the water in free fall. This part treats the water as a small drop and neglects subsequent collisions with the bucket and splashing until it reaches the floor. Real water can slosh and spill earlier.</p><p>The radial unit vector points outwards from the center. The tangential unit vector points anticlockwise. After contact is lost, these vectors remain attached to the bucket's circular path.</p><p>The arrows share a force scale within each panel. The enlarged diagram has its own scale. The bucket size is exaggerated to show the water.</p><button id="closeModel">Close</button></dialog>
-<script>
-'use strict';
-const G = 9.8;
-const TAU = 2 * Math.PI;
-const $ = id => document.getElementById(id);
-const state = { speed:4, radius:1, angle:0, playing:false, rate:1, lossPaused:false };
-let lastFrame = null;
-const number = (value, digits=2) => (Math.abs(value) < 0.0005 ? 0 : value).toFixed(digits);
-
-function releaseAngle(speed, radius) {
-  const ratio = speed * speed / (radius * G);
-  return ratio < 1 - 1e-10 ? Math.acos(-ratio) : Infinity;
+<label class="position">Motion <select id="motion"><option value="varying" selected>Speed changes under gravity</option><option value="constant">Constant speed</option></select></label>
+<label class="parameter"><span id="speedLabel">Speed at top</span> <input id="speed" type="range" min="1" max="6" step="0.05" value="4"><output id="speedValue"></output></label>
+<label class="parameter">Radius <input id="radius" type="range" min="0.5" max="2" step="0.05" value="1"><output id="radiusValue"></output></label>
+<div class="buttons"><button class="primary" id="play" aria-pressed="false">Play</button><button id="reset">Restart</button><button id="step">Step</button></div>
+<label class="parameter position">Position <input id="angle" type="range" min="0" max="360" step="0.1" value="0"><output id="angleValue"></output></label>
+<div class="options"><div class="checks"><label><input id="showForces" type="checkbox" checked> Forces</label><label><input id="showUnits" type="checkbox"> Unit vectors</label><label><input id="showVelocity" type="checkbox"> Velocity</label></div><div class="buttons"><button id="bottom">Bottom</button><button id="top">Top</button><button id="minimum">Minimum speed at top</button><label>Playback <select id="rate"><option value="0.1">0.1×</option><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option></select></label></div></div>
+</section>
+<footer class="foot">Space: play/pause · R: restart · H: controls · T: theme · F11: full screen</footer>
+</main>
+<button id="show" class="reveal">Show controls (H)</button>
+<dialog id="modelDialog"><h2>Model</h2>
+<p>The water is represented by a small mass of 1 kg at radius r. The bucket rotates so that its base faces away from the center.</p>
+<p>In the default mode, gravity changes the speed. The normal force is radial and does no work. The water moves faster at the bottom and slower at the top. The speed control sets the speed at the top; conservation of energy determines the speed elsewhere.</p>
+<p>In constant speed mode, F<sub>N</sub> combines normal forces from the base and side walls. The side walls supply the tangential force that balances the tangential component of gravity.</p>
+<p>In either mode the minimum speed at the top is &radic;(gr). At that setting, gravity alone supplies the centripetal force at the top. Below that setting, the animation pauses when the force from the base first reaches zero. Press Play again to follow the water in free fall. The bucket continues along the chosen motion.</p>
+<p>The free-fall part treats the water as a small drop and neglects later collisions with the bucket and splashing until it reaches the floor. Real water can slosh and spill earlier.</p>
+<p>The radial unit vector points outwards from the center. The tangential unit vector points anticlockwise. After contact is lost, these vectors remain attached to the bucket's circular path.</p>
+<p>The arrows share a force scale within each panel. The enlarged diagram has its own scale. The bucket size is exaggerated to show the water.</p><button id="closeModel">Close</button></dialog>
+<script>
+'use strict';
+const G = 9.8;
+const TAU = 2 * Math.PI;
+const $ = id => document.getElementById(id);
+const state = { mode:'varying', speed:4, radius:1, angle:0, playing:false, rate:1, lossPaused:false };
+let lastFrame = null;
+const number = (value, digits=2) => (Math.abs(value) < 0.0005 ? 0 : value).toFixed(digits);
+
+// The speed setting is the speed at the top in either mode.
+function speedAtAngle(angle, speed=state.speed, radius=state.radius, mode=state.mode) {
+  if (mode==='constant') return speed;
+  return Math.sqrt(speed*speed + 2*G*radius*(1+Math.cos(angle)));
 }
-
-function sample(angle, speed=state.speed, radius=state.radius) {
-  const s = Math.sin(angle), c = Math.cos(angle);
-  const acceleration = speed * speed / radius;
-  const release = releaseAngle(speed, radius);
-  const released = angle >= release;
-  let x = radius*s, y = -radius*c;
-  let vx = speed*c, vy = speed*s;
-  let fx = -acceleration*s, fy = acceleration*c+G;
-  let landed = false;
+function maximumForce() {
+  return state.speed**2/state.radius + (state.mode==='varying' ? 5 : 1)*G;
+}
+function releaseAngle(speed, radius, mode=state.mode) {
+  const ratio = speed*speed/(radius*G);
+  if (ratio >= 1-1e-10) return Infinity;
+  return Math.acos(mode==='varying' ? -(ratio+2)/3 : -ratio);
+}
+function travelTime(start, end, speed, radius, mode) {
+  if (mode==='constant') return (end-start)*radius/speed;
+  // Simpson integration converts the bucket position into elapsed time.
+  const steps = Math.max(2, 2*Math.ceil(Math.abs(end-start)/0.04));
+  const step = (end-start)/steps;
+  let sum = 0;
+  for (let i=0; i<=steps; i++) {
+    let weight = 2;
+    if (i===0 || i===steps) weight=1;
+    else if (i%2===1) weight=4;
+    sum += weight*radius/speedAtAngle(start+i*step,speed,radius,mode);
+  }
+  return sum*step/3;
+}
+function sample(angle, speed=state.speed, radius=state.radius, mode=state.mode) {
+  const s=Math.sin(angle), c=Math.cos(angle);
+  const currentSpeed=speedAtAngle(angle,speed,radius,mode);
+  const acceleration=currentSpeed*currentSpeed/radius;
+  const baseForce=acceleration+G*c;
+  const release=releaseAngle(speed,radius,mode);
+  const released=angle>=release;
+  let x=radius*s, y=-radius*c;
+  let vx=currentSpeed*c, vy=currentSpeed*s;
+  let fx=-baseForce*s, fy=baseForce*c;
+  if (mode==='constant') {
+    fx=-acceleration*s;
+    fy=acceleration*c+G;
+  }
+  let landed=false;
   if (released) {
-    const elapsed = (angle-release)*radius/speed;
-    x = radius*Math.sin(release) + speed*Math.cos(release)*elapsed;
-    y = -radius*Math.cos(release) + speed*Math.sin(release)*elapsed - 0.5*G*elapsed*elapsed;
-    vx = speed*Math.cos(release);
-    vy = speed*Math.sin(release) - G*elapsed;
-    fx = 0;
-    fy = 0;
-    landed = y <= -1.55*radius;
-    y = Math.max(y, -1.55*radius);
+    const elapsed=travelTime(release,angle,speed,radius,mode);
+    const releaseSpeed=speedAtAngle(release,speed,radius,mode);
+    x=radius*Math.sin(release)+releaseSpeed*Math.cos(release)*elapsed;
+    y=-radius*Math.cos(release)+releaseSpeed*Math.sin(release)*elapsed-0.5*G*elapsed*elapsed;
+    vx=releaseSpeed*Math.cos(release);
+    vy=releaseSpeed*Math.sin(release)-G*elapsed;
+    fx=0;
+    fy=0;
+    landed=y<=-1.55*radius;
+    y=Math.max(y,-1.55*radius);
   }
-  return { x,y,vx,vy,fx,fy,release,released,landed, baseForce:acceleration+G*c };
+  return {x,y,vx,vy,fx,fy,release,released,landed,baseForce,currentSpeed};
 }
 
-function prepare(canvas) {
-  const box = canvas.getBoundingClientRect();
-  const density = window.devicePixelRatio || 1;
-  canvas.width = Math.round(box.width*density);
-  canvas.height = Math.round(box.height*density);
-  const ctx = canvas.getContext('2d');
-  ctx.scale(density,density);
-  ctx.lineCap = 'round';
-  ctx.lineJoin = 'round';
-  return {ctx,w:box.width,h:box.height};
-}
-function color(name) { return getComputedStyle(document.documentElement).getPropertyValue('--'+name).trim(); }
-function line(ctx,x1,y1,x2,y2,ink,width=2) {
-  ctx.strokeStyle=ink; ctx.lineWidth=width; ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();
-}
-function label(ctx,x,y,text,ink,size=20,align='center') {
-  ctx.fillStyle=ink; ctx.font=`500 ${size}px system-ui, sans-serif`; ctx.textAlign=align; ctx.textBaseline='middle';
-  if (text==='Fₙ' || text==='Fɡ') {
-    ctx.font=`italic ${size+2}px 'Cambria Math',serif`;
-    ctx.fillText('F',x-4,y);
-    ctx.font=`${size*0.7}px 'Cambria Math',serif`;
-    ctx.fillText(text==='Fₙ'?'N':'g',x+9,y+7);
-  } else ctx.fillText(text,x,y);
-}
-function arrow(ctx,x,y,dx,dy,ink,text,labelSide=1) {
-  const length=Math.hypot(dx,dy);
-  if (length<1) return;
-  const ux=dx/length, uy=dy/length, head=Math.min(11,length*0.4);
-  line(ctx,x,y,x+dx,y+dy,ink,3);
-  line(ctx,x+dx,y+dy,x+dx-head*ux-head*0.45*uy,y+dy-head*uy+head*0.45*ux,ink,3);
-  line(ctx,x+dx,y+dy,x+dx-head*ux+head*0.45*uy,y+dy-head*uy-head*0.45*ux,ink,3);
-  if (text) label(ctx,x+dx+uy*17*labelSide+ux*14,y+dy-ux*17*labelSide+uy*14,text,ink,20);
-}
-
-function drawBucket(ctx,x,y,angle,size,wet) {
-  ctx.save(); ctx.translate(x,y); ctx.rotate(angle); ctx.scale(size/60,size/60);
-  // The water's center is the origin; the handle faces the circle's center.
-  ctx.strokeStyle=color('muted'); ctx.lineWidth=2;
-  ctx.beginPath(); ctx.ellipse(0,-57,29,31,0,Math.PI,TAU); ctx.stroke();
-  const metal=ctx.createLinearGradient(-32,0,32,0);
-  metal.addColorStop(0,'#8998a3'); metal.addColorStop(0.4,'#e1e6e9'); metal.addColorStop(1,'#9cabb5');
-  ctx.fillStyle=metal; ctx.beginPath(); ctx.moveTo(-32,-57); ctx.lineTo(32,-57); ctx.lineTo(23,17); ctx.quadraticCurveTo(0,25,-23,17); ctx.closePath(); ctx.fill(); ctx.stroke();
-  ctx.fillStyle=color('panel'); ctx.beginPath(); ctx.moveTo(-25,-50); ctx.lineTo(25,-50); ctx.lineTo(18,12); ctx.quadraticCurveTo(0,18,-18,12); ctx.closePath(); ctx.fill();
-  if (wet) { ctx.fillStyle=color('water'); ctx.beginPath(); ctx.moveTo(-20,-6); ctx.lineTo(20,-6); ctx.lineTo(18,12); ctx.quadraticCurveTo(0,18,-18,12); ctx.closePath(); ctx.fill(); line(ctx,-20,-6,20,-6,'#087ba0',1.5); }
-  ctx.beginPath(); ctx.ellipse(0,-57,32,7,0,0,TAU); ctx.stroke();
-  ctx.restore();
-}
-
-function drawVectors(ctx,x,y,q,forceScale,data,unitLength,showUnits=true) {
-  if ($('showForces').checked) {
-    // Separate nearly parallel arrows enough to keep both visible.
-    const parallel=Math.abs(data.fx)<0.5 && data.fy<0;
-    arrow(ctx,x+(parallel?-8:0),y,data.fx*forceScale,-data.fy*forceScale,color('normal'),'Fₙ',-1);
-    arrow(ctx,x+(parallel?8:0),y,0,G*forceScale,color('gravity'),'Fɡ',1);
-  }
-  if (showUnits && $('showUnits').checked) {
-    const offset=unitLength*0.16;
-    arrow(ctx,x+offset,y,unitLength*Math.sin(q),unitLength*Math.cos(q),color('radial'),'r̂',-1);
-    arrow(ctx,x+offset,y,unitLength*Math.cos(q),-unitLength*Math.sin(q),color('accent'),'θ̂',1);
-  }
-  ctx.fillStyle=color('ink'); ctx.beginPath(); ctx.arc(x,y,5,0,TAU); ctx.fill();
-}
-
-function drawScene(data) {
-  const {ctx,w,h}=prepare($('scene'));
-  const r=Math.min(w*0.29,h*0.33), cx=w*0.51, cy=h*0.43;
-  const scale=r/state.radius, q=state.angle;
-  const bx=cx+r*Math.sin(q), by=cy+r*Math.cos(q);
-  ctx.strokeStyle=color('line'); ctx.lineWidth=2; ctx.setLineDash([7,7]);
-  ctx.beginPath(); ctx.arc(cx,cy,r,0,TAU); ctx.stroke(); ctx.setLineDash([]);
-  const bucketSize=Math.max(28,Math.min(60,r*0.45));
-  const handleDistance=88*bucketSize/60;
-  line(ctx,cx,cy,bx-handleDistance*Math.sin(q),by-handleDistance*Math.cos(q),'#a38658',2.5);
-  ctx.fillStyle=color('ink'); ctx.beginPath(); ctx.arc(cx,cy,4,0,TAU); ctx.fill();
-  label(ctx,cx-12,cy+19,'Center',color('muted'),15,'right');
-  label(ctx,cx-r*0.45,cy+39,`r = ${number(state.radius)} m`,color('muted'),16);
-  drawBucket(ctx,bx,by,-q,bucketSize,!data.released);
-  const px=cx+data.x*scale, py=cy-data.y*scale;
-  if (data.released) {
-    ctx.fillStyle=color('water'); ctx.beginPath(); ctx.ellipse(px,py,data.landed?19:7,data.landed?3:9,0,0,TAU); ctx.fill();
-    line(ctx,0,cy+1.55*r+5,w,cy+1.55*r+5,color('line'));
-    label(ctx,16,cy+1.55*r-13,'Floor',color('muted'),14,'left');
-  }
-  const maxForce=state.speed**2/state.radius+G;
-  const forceScale=Math.min(r*0.58/maxForce, r*0.055);
-  drawVectors(ctx,px,py,q,forceScale,data,Math.min(66,r*0.43),!data.released);
-  if (data.released && $('showUnits').checked) {
-    // Unit vectors describe the bucket coordinates after the water leaves.
-    ctx.save(); ctx.globalAlpha=0.6;
-    arrow(ctx,bx,by,45*Math.sin(q),45*Math.cos(q),color('radial'),'r̂');
-    arrow(ctx,bx,by,45*Math.cos(q),-45*Math.sin(q),color('accent'),'θ̂'); ctx.restore();
-  }
-  if ($('showVelocity').checked && !data.landed) arrow(ctx,px,py,data.vx*scale*0.16,-data.vy*scale*0.16,color('motion'),'v',-1);
-  label(ctx,16,20,'Anticlockwise',color('muted'),15,'left');
-}
-
-function drawForces(data) {
-  const {ctx,w,h}=prepare($('forces'));
-  const size=Math.min(w,h), maxForce=state.speed**2/state.radius+G;
-  const forceScale=size*0.39/maxForce;
-  const x=w/2, y=h/2;
-  if ($('showForces').checked || $('showUnits').checked) drawVectors(ctx,x,y,state.angle,forceScale,data,size*0.25);
-  else { ctx.fillStyle=color('ink');ctx.beginPath();ctx.arc(x,y,7,0,TAU);ctx.fill(); }
-  if ($('showVelocity').checked && !data.landed) arrow(ctx,x,y,data.vx/state.speed*size*0.40,-data.vy/state.speed*size*0.40,color('motion'),'v',-1);
-  if (data.released) label(ctx,w/2,24,data.landed?'Water has reached the floor':'Water in free fall',color('muted'),18);
-}
-
-function equation(content) {
-  $('equation').innerHTML='<math xmlns="http://www.w3.org/1998/Math/MathML">'+content+'</math>';
-}
-function render() {
-  const data=sample(state.angle);
-  drawScene(data); drawForces(data);
-  $('speedValue').textContent=number(state.speed)+' m/s';
-  $('radiusValue').textContent=number(state.radius)+' m';
-  $('angle').value=(state.angle/TAU*360)%360;
-  $('angleValue').textContent=number(state.angle/TAU*360%360,0)+'°';
-  $('speedReadout').textContent='Bucket speed '+number(state.speed)+' m/s';
-  $('threshold').textContent='Minimum at top '+number(Math.sqrt(G*state.radius))+' m/s';
-  $('normalReadout').innerHTML='F<sub>N</sub> = '+number(Math.hypot(data.fx,data.fy),1)+' N';
-  $('gravityReadout').innerHTML='F<sub>g</sub> = 9.8 N (1 kg of water)';
-  $('normalReadout').hidden=!$('showForces').checked;
-  $('gravityReadout').hidden=!$('showForces').checked;
-  $('velocityLegend').hidden=!$('showVelocity').checked;
-  let message='Water stays against the bottom of the bucket.';
-  if (data.released) message=data.landed?'Water has reached the floor. Restart to try again.':state.lossPaused?'Contact is lost. Play to follow the water.':'Water has left the bottom of the bucket.';
-  else if (Math.abs(state.angle%TAU-Math.PI)<0.015 && Math.abs(data.baseForce)<1e-7) message='At the top: gravity alone supplies the centripetal force.';
-  $('status').textContent=message;
-  $('status').dataset.phase=data.landed?'landed':data.released?'released':'contact';
-  if (data.released) equation('<msub><mi>F</mi><mi mathvariant="normal">N</mi></msub><mo>=</mo><mn>0</mn><mspace width="1em"/><msub><mi>F</mi><mi>g</mi></msub><mo>=</mo><mi>mg</mi>');
-  else if (Math.abs(state.angle%TAU-Math.PI)<0.015) equation('<msub><mi>F</mi><mi mathvariant="normal">N</mi></msub><mo>=</mo><mi>m</mi><mo>(</mo><mfrac><msubsup><mi>v</mi><mi mathvariant="normal">t</mi><mn>2</mn></msubsup><mi>r</mi></mfrac><mo>−</mo><mi>g</mi><mo>)</mo>');
-  else if (Math.min(state.angle%TAU,TAU-state.angle%TAU)<0.015) equation('<msub><mi>F</mi><mi mathvariant="normal">N</mi></msub><mo>=</mo><mi>m</mi><mo>(</mo><mfrac><msubsup><mi>v</mi><mi mathvariant="normal">t</mi><mn>2</mn></msubsup><mi>r</mi></mfrac><mo>+</mo><mi>g</mi><mo>)</mo>');
-  else equation('<msub><mi>F</mi><mrow><mi mathvariant="normal">net</mi><mo>,</mo><mi>r</mi></mrow></msub><mo>=</mo><mo>−</mo><mi>m</mi><mfrac><msubsup><mi>v</mi><mi mathvariant="normal">t</mi><mn>2</mn></msubsup><mi>r</mi></mfrac>');
-}
-
-function playing(on) {
-  state.playing=on; lastFrame=null;
-  $('play').textContent=on?'Pause':'Play'; $('play').setAttribute('aria-pressed',String(on));
-}
-function setAngle(q) { playing(false); state.angle=q; state.lossPaused=false; render(); }
+function prepare(canvas) {
+  const box = canvas.getBoundingClientRect();
+  const density = window.devicePixelRatio || 1;
+  canvas.width = Math.round(box.width*density);
+  canvas.height = Math.round(box.height*density);
+  const ctx = canvas.getContext('2d');
+  ctx.scale(density,density);
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  return {ctx,w:box.width,h:box.height};
+}
+function color(name) { return getComputedStyle(document.documentElement).getPropertyValue('--'+name).trim(); }
+function line(ctx,x1,y1,x2,y2,ink,width=2) {
+  ctx.strokeStyle=ink; ctx.lineWidth=width; ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();
+}
+function label(ctx,x,y,text,ink,size=20,align='center') {
+  ctx.fillStyle=ink; ctx.font=`500 ${size}px system-ui, sans-serif`; ctx.textAlign=align; ctx.textBaseline='middle';
+  if (text==='Fₙ' || text==='Fɡ') {
+    ctx.font=`italic ${size+2}px 'Cambria Math',serif`;
+    ctx.fillText('F',x-4,y);
+    ctx.font=`${size*0.7}px 'Cambria Math',serif`;
+    ctx.fillText(text==='Fₙ'?'N':'g',x+9,y+7);
+  } else ctx.fillText(text,x,y);
+}
+function arrow(ctx,x,y,dx,dy,ink,text,labelSide=1) {
+  const length=Math.hypot(dx,dy);
+  if (length<1) return;
+  const ux=dx/length, uy=dy/length, head=Math.min(11,length*0.4);
+  line(ctx,x,y,x+dx,y+dy,ink,3);
+  line(ctx,x+dx,y+dy,x+dx-head*ux-head*0.45*uy,y+dy-head*uy+head*0.45*ux,ink,3);
+  line(ctx,x+dx,y+dy,x+dx-head*ux+head*0.45*uy,y+dy-head*uy-head*0.45*ux,ink,3);
+  if (text) label(ctx,x+dx+uy*17*labelSide+ux*14,y+dy-ux*17*labelSide+uy*14,text,ink,20);
+}
+
+function drawBucket(ctx,x,y,angle,size,wet) {
+  ctx.save(); ctx.translate(x,y); ctx.rotate(angle); ctx.scale(size/60,size/60);
+  // The water's center is the origin; the handle faces the circle's center.
+  ctx.strokeStyle=color('muted'); ctx.lineWidth=2;
+  ctx.beginPath(); ctx.ellipse(0,-57,29,31,0,Math.PI,TAU); ctx.stroke();
+  const metal=ctx.createLinearGradient(-32,0,32,0);
+  metal.addColorStop(0,'#8998a3'); metal.addColorStop(0.4,'#e1e6e9'); metal.addColorStop(1,'#9cabb5');
+  ctx.fillStyle=metal; ctx.beginPath(); ctx.moveTo(-32,-57); ctx.lineTo(32,-57); ctx.lineTo(23,17); ctx.quadraticCurveTo(0,25,-23,17); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle=color('panel'); ctx.beginPath(); ctx.moveTo(-25,-50); ctx.lineTo(25,-50); ctx.lineTo(18,12); ctx.quadraticCurveTo(0,18,-18,12); ctx.closePath(); ctx.fill();
+  if (wet) { ctx.fillStyle=color('water'); ctx.beginPath(); ctx.moveTo(-20,-6); ctx.lineTo(20,-6); ctx.lineTo(18,12); ctx.quadraticCurveTo(0,18,-18,12); ctx.closePath(); ctx.fill(); line(ctx,-20,-6,20,-6,'#087ba0',1.5); }
+  ctx.beginPath(); ctx.ellipse(0,-57,32,7,0,0,TAU); ctx.stroke();
+  ctx.restore();
+}
+
+function drawVectors(ctx,x,y,q,forceScale,data,unitLength,showUnits=true) {
+  if ($('showForces').checked) {
+    // Separate nearly parallel arrows enough to keep both visible.
+    const parallel=Math.abs(data.fx)<0.5 && data.fy<0;
+    arrow(ctx,x+(parallel?-8:0),y,data.fx*forceScale,-data.fy*forceScale,color('normal'),'Fₙ',-1);
+    arrow(ctx,x+(parallel?8:0),y,0,G*forceScale,color('gravity'),'Fɡ',1);
+  }
+  if (showUnits && $('showUnits').checked) {
+    const offset=unitLength*0.16;
+    arrow(ctx,x+offset,y,unitLength*Math.sin(q),unitLength*Math.cos(q),color('radial'),'r̂',-1);
+    arrow(ctx,x+offset,y,unitLength*Math.cos(q),-unitLength*Math.sin(q),color('accent'),'θ̂',1);
+  }
+  ctx.fillStyle=color('ink'); ctx.beginPath(); ctx.arc(x,y,5,0,TAU); ctx.fill();
+}
+
+function drawScene(data) {
+  const {ctx,w,h}=prepare($('scene'));
+  const r=Math.min(w*0.29,h*0.33), cx=w*0.51, cy=h*0.43;
+  const scale=r/state.radius, q=state.angle;
+  const bx=cx+r*Math.sin(q), by=cy+r*Math.cos(q);
+  ctx.strokeStyle=color('line'); ctx.lineWidth=2; ctx.setLineDash([7,7]);
+  ctx.beginPath(); ctx.arc(cx,cy,r,0,TAU); ctx.stroke(); ctx.setLineDash([]);
+  const bucketSize=Math.max(28,Math.min(60,r*0.45));
+  const handleDistance=88*bucketSize/60;
+  line(ctx,cx,cy,bx-handleDistance*Math.sin(q),by-handleDistance*Math.cos(q),'#a38658',2.5);
+  ctx.fillStyle=color('ink'); ctx.beginPath(); ctx.arc(cx,cy,4,0,TAU); ctx.fill();
+  label(ctx,cx-12,cy+19,'Center',color('muted'),15,'right');
+  label(ctx,cx-r*0.45,cy+39,`r = ${number(state.radius)} m`,color('muted'),16);
+  drawBucket(ctx,bx,by,-q,bucketSize,!data.released);
+  const px=cx+data.x*scale, py=cy-data.y*scale;
+  if (data.released) {
+    ctx.fillStyle=color('water'); ctx.beginPath(); ctx.ellipse(px,py,data.landed?19:7,data.landed?3:9,0,0,TAU); ctx.fill();
+    line(ctx,0,cy+1.55*r+5,w,cy+1.55*r+5,color('line'));
+    label(ctx,16,cy+1.55*r-13,'Floor',color('muted'),14,'left');
+  }
+  const maxForce=maximumForce();
+  const forceScale=Math.min(r*0.58/maxForce, r*0.055);
+  drawVectors(ctx,px,py,q,forceScale,data,Math.min(66,r*0.43),!data.released);
+  if (data.released && $('showUnits').checked) {
+    // Unit vectors describe the bucket coordinates after the water leaves.
+    ctx.save(); ctx.globalAlpha=0.6;
+    arrow(ctx,bx,by,45*Math.sin(q),45*Math.cos(q),color('radial'),'r̂');
+    arrow(ctx,bx,by,45*Math.cos(q),-45*Math.sin(q),color('accent'),'θ̂'); ctx.restore();
+  }
+  if ($('showVelocity').checked && !data.landed) arrow(ctx,px,py,data.vx*scale*0.16,-data.vy*scale*0.16,color('motion'),'v',-1);
+  label(ctx,16,20,'Anticlockwise',color('muted'),15,'left');
+}
+
+function drawForces(data) {
+  const {ctx,w,h}=prepare($('forces'));
+  const size=Math.min(w,h), maxForce=maximumForce();
+  const forceScale=size*0.39/maxForce;
+  const x=w/2, y=h/2;
+  if ($('showForces').checked || $('showUnits').checked) drawVectors(ctx,x,y,state.angle,forceScale,data,size*0.25);
+  else { ctx.fillStyle=color('ink');ctx.beginPath();ctx.arc(x,y,7,0,TAU);ctx.fill(); }
+  if ($('showVelocity').checked && !data.landed) arrow(ctx,x,y,data.vx/speedAtAngle(0)*size*0.40,-data.vy/speedAtAngle(0)*size*0.40,color('motion'),'v',-1);
+  if (data.released) label(ctx,w/2,24,data.landed?'Water has reached the floor':'Water in free fall',color('muted'),18);
+}
+
+function equation(content) {
+  $('equation').innerHTML='<math xmlns="http://www.w3.org/1998/Math/MathML">'+content+'</math>';
+}
+function render() {
+  const data=sample(state.angle);
+  drawScene(data); drawForces(data);
+  $('speedValue').textContent=number(state.speed)+' m/s';
+  $('radiusValue').textContent=number(state.radius)+' m';
+  $('angle').value=(state.angle/TAU*360)%360;
+  $('angleValue').textContent=number(state.angle/TAU*360%360,0)+'°';
+  $('speedReadout').textContent='Bucket speed '+number(data.currentSpeed)+' m/s';
+  const varying=state.mode==='varying';
+  $('speedLabel').textContent=varying?'Speed at top':'Bucket speed';
+  $('subtitle').textContent=varying?'Gravity changes the speed. Follow the forces on the water.':'The bucket moves at a constant speed. Follow the forces on the water.';
+  $('forceHint').textContent=varying?'The normal force points radially inward. Gravity slows the water as it rises and speeds it up as it falls.':"At the top and bottom, the bucket pushes radially. At other positions, its side walls also push to keep the speed constant.";
+  $('threshold').textContent='Minimum at top '+number(Math.sqrt(G*state.radius))+' m/s';
+  $('normalReadout').innerHTML='F<sub>N</sub> = '+number(Math.hypot(data.fx,data.fy),1)+' N';
+  $('gravityReadout').innerHTML='F<sub>g</sub> = 9.8 N (1 kg of water)';
+  $('normalReadout').hidden=!$('showForces').checked;
+  $('gravityReadout').hidden=!$('showForces').checked;
+  $('velocityLegend').hidden=!$('showVelocity').checked;
+  let message='Water stays against the bottom of the bucket.';
+  if (data.released) message=data.landed?'Water has reached the floor. Restart to try again.':state.lossPaused?'Contact is lost. Play to follow the water.':'Water has left the bottom of the bucket.';
+  else if (Math.abs(state.angle%TAU-Math.PI)<0.015 && Math.abs(data.baseForce)<1e-7) message='At the top: gravity alone supplies the centripetal force.';
+  $('status').textContent=message;
+  $('status').dataset.phase=data.landed?'landed':data.released?'released':'contact';
+  if (data.released) equation('<msub><mi>F</mi><mi mathvariant="normal">N</mi></msub><mo>=</mo><mn>0</mn><mspace width="1em"/><msub><mi>F</mi><mi>g</mi></msub><mo>=</mo><mi>mg</mi>');
+  else if (Math.abs(state.angle%TAU-Math.PI)<0.015) equation('<msub><mi>F</mi><mi mathvariant="normal">N</mi></msub><mo>=</mo><mi>m</mi><mo>(</mo><mfrac><msubsup><mi>v</mi><mi mathvariant="normal">t</mi><mn>2</mn></msubsup><mi>r</mi></mfrac><mo>−</mo><mi>g</mi><mo>)</mo>');
+  else if (Math.min(state.angle%TAU,TAU-state.angle%TAU)<0.015) equation('<msub><mi>F</mi><mi mathvariant="normal">N</mi></msub><mo>=</mo><mi>m</mi><mo>(</mo><mfrac><msubsup><mi>v</mi><mi mathvariant="normal">t</mi><mn>2</mn></msubsup><mi>r</mi></mfrac><mo>+</mo><mi>g</mi><mo>)</mo>');
+  else equation('<msub><mi>F</mi><mrow><mi mathvariant="normal">net</mi><mo>,</mo><mi>r</mi></mrow></msub><mo>=</mo><mo>−</mo><mi>m</mi><mfrac><msubsup><mi>v</mi><mi mathvariant="normal">t</mi><mn>2</mn></msubsup><mi>r</mi></mfrac>');
+}
+
+function playing(on) {
+  state.playing=on; lastFrame=null;
+  $('play').textContent=on?'Pause':'Play'; $('play').setAttribute('aria-pressed',String(on));
+}
+function setAngle(q) { playing(false); state.angle=q; state.lossPaused=false; render(); }
 function advance(dt) {
-  const next=state.angle+state.speed/state.radius*dt;
   const release=releaseAngle(state.speed,state.radius);
-  if (state.angle<release && next>=release) {
-    state.angle=release; state.lossPaused=true; playing(false);
-  } else {
-    state.lossPaused=false;
+  // Small midpoint steps follow the changing angular speed without energy drift.
+  const steps=Math.max(1,Math.ceil(dt*240));
+  const step=dt/steps;
+  state.lossPaused=false;
+  for (let i=0; i<steps; i++) {
+    const midpoint=state.angle+0.5*step*speedAtAngle(state.angle)/state.radius;
+    const next=state.angle+step*speedAtAngle(midpoint)/state.radius;
+    if (state.angle<release && next>=release) {
+      state.angle=release;
+      state.lossPaused=true;
+      playing(false);
+      break;
+    }
     state.angle=next;
     if (release===Infinity) state.angle%=TAU;
-    if (sample(state.angle).landed) playing(false);
+    if (sample(state.angle).landed) {
+      playing(false);
+      break;
+    }
   }
   render();
 }
-$('play').addEventListener('click',()=>{ if (sample(state.angle).landed) state.angle=0; playing(!state.playing); render(); });
-$('reset').addEventListener('click',()=>setAngle(0));
-$('step').addEventListener('click',()=>{playing(false); if (!sample(state.angle).landed) advance(1/60);});
-for (const id of ['speed','radius']) $(id).addEventListener('input',()=>{state[id]=Number($(id).value);setAngle(0);});
-$('angle').addEventListener('input',()=>setAngle(Number($('angle').value)*Math.PI/180));
-$('top').addEventListener('click',()=>setAngle(Math.PI));
-$('bottom').addEventListener('click',()=>setAngle(0));
-$('minimum').addEventListener('click',()=>{state.speed=Math.sqrt(G*state.radius);$('speed').value=state.speed;setAngle(Math.PI);});
-$('rate').addEventListener('change',()=>{state.rate=Number($('rate').value);});
-for (const id of ['showForces','showUnits','showVelocity']) $(id).addEventListener('change',render);
-function controls(hidden) { document.body.classList.toggle('clean',hidden);requestAnimationFrame(render); }
-$('hide').addEventListener('click',()=>controls(true));$('show').addEventListener('click',()=>controls(false));
-function theme() { const dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('theme').textContent=dark?'Light mode':'Dark mode';render(); }
-$('theme').addEventListener('click',theme);
-$('model').addEventListener('click',()=>{playing(false);$('modelDialog').showModal();});
-$('closeModel').addEventListener('click',()=>$('modelDialog').close());
-document.addEventListener('keydown',event=>{
-  if (/INPUT|SELECT|BUTTON|TEXTAREA/.test(event.target.tagName) || $('modelDialog').open || event.ctrlKey || event.metaKey || event.altKey) return;
-  const key=event.key.toLowerCase();
-  if (key===' ') { event.preventDefault();$('play').click(); }
-  if (key==='r') setAngle(0);
-  if (key==='h') controls(!document.body.classList.contains('clean'));
-  if (key==='t') theme();
-});
-function tick(now) {
-  if (state.playing) { if (lastFrame!==null) advance(Math.min((now-lastFrame)/1000,0.05)*state.rate);lastFrame=now; }
-  requestAnimationFrame(tick);
-}
-new ResizeObserver(render).observe(document.querySelector('.content'));
-render(); requestAnimationFrame(tick);
-</script>
-</body>
-</html>
+
+$('play').addEventListener('click',()=>{ if (sample(state.angle).landed) state.angle=0; playing(!state.playing); render(); });
+$('reset').addEventListener('click',()=>setAngle(0));
+$('step').addEventListener('click',()=>{playing(false); if (!sample(state.angle).landed) advance(1/60);});
+for (const id of ['speed','radius']) $(id).addEventListener('input',()=>{state[id]=Number($(id).value);setAngle(0);});
+$('angle').addEventListener('input',()=>setAngle(Number($('angle').value)*Math.PI/180));
+$('top').addEventListener('click',()=>setAngle(Math.PI));
+$('bottom').addEventListener('click',()=>setAngle(0));
+$('minimum').addEventListener('click',()=>{state.speed=Math.sqrt(G*state.radius);$('speed').value=state.speed;setAngle(Math.PI);});
+$('motion').addEventListener('change',()=>{state.mode=$('motion').value;setAngle(0);});
+$('rate').addEventListener('change',()=>{state.rate=Number($('rate').value);});
+for (const id of ['showForces','showUnits','showVelocity']) $(id).addEventListener('change',render);
+function controls(hidden) { document.body.classList.toggle('clean',hidden);requestAnimationFrame(render); }
+$('hide').addEventListener('click',()=>controls(true));$('show').addEventListener('click',()=>controls(false));
+function theme() { const dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('theme').textContent=dark?'Light mode':'Dark mode';render(); }
+$('theme').addEventListener('click',theme);
+$('model').addEventListener('click',()=>{playing(false);$('modelDialog').showModal();});
+$('closeModel').addEventListener('click',()=>$('modelDialog').close());
+document.addEventListener('keydown',event=>{
+  if (/INPUT|SELECT|BUTTON|TEXTAREA/.test(event.target.tagName) || $('modelDialog').open || event.ctrlKey || event.metaKey || event.altKey) return;
+  const key=event.key.toLowerCase();
+  if (key===' ') { event.preventDefault();$('play').click(); }
+  if (key==='r') setAngle(0);
+  if (key==='h') controls(!document.body.classList.contains('clean'));
+  if (key==='t') theme();
+});
+function tick(now) {
+  if (state.playing) { if (lastFrame!==null) advance(Math.min((now-lastFrame)/1000,0.05)*state.rate);lastFrame=now; }
+  requestAnimationFrame(tick);
+}
+new ResizeObserver(render).observe(document.querySelector('.content'));
+render(); requestAnimationFrame(tick);
+</script>
+</body>
+</html>
