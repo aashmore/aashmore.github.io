@@ -54,7 +54,7 @@ dialog { max-width:650px; max-height:85vh; overflow:auto; padding:24px; backgrou
 <label class="parameter">Radius <input id="radius" type="range" min="0.5" max="2" step="0.05" value="1"><output id="radiusValue"></output></label>
 <div class="buttons"><button class="primary" id="play" aria-pressed="false">Play</button><button id="reset">Restart</button><button id="step">Step</button></div>
 <label class="parameter position">Position <input id="angle" type="range" min="0" max="360" step="0.1" value="0"><output id="angleValue"></output></label>
-<div class="options"><div class="checks"><label><input id="showForces" type="checkbox" checked> Forces</label><label><input id="showUnits" type="checkbox"> Unit vectors</label><label><input id="showVelocity" type="checkbox"> Velocity</label></div><div class="buttons"><button id="bottom">Bottom</button><button id="top">Top</button><button id="minimum">Minimum speed at top</button><label>Playback <select id="rate"><option value="0.1">0.1×</option><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option></select></label></div></div>
+<div class="options"><div class="checks"><label><input id="showForces" type="checkbox" checked> Forces</label><label><input id="showUnits" type="checkbox"> Unit vectors</label><label id="angleOption"><input id="showAngle" type="checkbox" checked> Angle</label><label><input id="showVelocity" type="checkbox"> Velocity</label></div><div class="buttons"><button id="bottom">Bottom</button><button id="top">Top</button><button id="minimum">Minimum speed at top</button><label>Playback <select id="rate"><option value="0.1">0.1×</option><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option></select></label></div></div>
 </section>
 <footer class="foot">Space: play/pause · R: restart · H: controls · T: theme · F11: full screen</footer>
 </main>
@@ -65,6 +65,7 @@ dialog { max-width:650px; max-height:85vh; overflow:auto; padding:24px; backgrou
 <p>In constant speed mode, F<sub>N</sub> combines normal forces from the base and side walls. The side walls supply the tangential force that balances the tangential component of gravity.</p>
 <p>In either mode the minimum speed at the top is &radic;(gr). At that setting, gravity alone supplies the centripetal force at the top. Below that setting, the animation pauses when the force from the base first reaches zero. Press Play again to follow the water in free fall. The bucket continues along the chosen motion.</p>
 <p>The free-fall part treats the water as a small drop and neglects later collisions with the bucket and splashing until it reaches the floor. Real water can slosh and spill earlier.</p>
+<p>In varying speed mode, the orange angle θ is the acute angle between gravity and the radial line, from 0° to 90°. The radial component of gravity is +mg cos(θ) in the lower half and −mg cos(θ) in the upper half. At the top and bottom, θ = 0° and the equation omits the cosine.</p>
 <p>The radial unit vector points outwards from the center. The tangential unit vector points anticlockwise. After contact is lost, these vectors remain attached to the bucket's circular path.</p>
 <p>The arrows share a force scale within each panel. The enlarged diagram has its own scale. The bucket size is exaggerated to show the water.</p><button id="closeModel">Close</button></dialog>
 <script>
@@ -229,11 +230,40 @@ function drawScene(data) {
   label(ctx,16,20,'Anticlockwise',color('muted'),15,'left');
 }
 
+function gravityAngle(angle) {
+  return Math.acos(Math.min(1,Math.abs(Math.cos(angle))));
+}
+function drawForceAngle(ctx,x,y,size,data) {
+  if (state.mode!=='varying' || !$('showForces').checked || !$('showAngle').checked || data.released) return;
+  // Use the half of the radial line that makes an acute angle with gravity.
+  const direction=Math.cos(state.angle)>=0 ? 1 : -1;
+  const radial=Math.atan2(direction*Math.cos(state.angle),direction*Math.sin(state.angle));
+  const delta=Math.atan2(Math.sin(Math.PI/2-radial),Math.cos(Math.PI/2-radial));
+  const radius=Math.min(50,size*0.18);
+  ctx.save();
+  ctx.setLineDash([3,5]);
+  line(ctx,x-Math.cos(radial)*(radius+12),y-Math.sin(radial)*(radius+12),x+Math.cos(radial)*(radius+12),y+Math.sin(radial)*(radius+12),color('muted'),1);
+  line(ctx,x,y,x,y+radius+12,color('muted'),1);
+  ctx.setLineDash([]);
+  ctx.strokeStyle=color('motion');
+  ctx.lineWidth=1.8;
+  ctx.beginPath();
+  ctx.arc(x,y,radius,radial,radial+delta,delta<0);
+  ctx.stroke();
+  const middle=radial+delta/2;
+  const labelSide=Math.cos(middle)>=0 ? 1 : -1;
+  const textX=x+labelSide*(radius+80);
+  const textY=y+radius*0.85;
+  label(ctx,textX,textY,'θ = '+number(gravityAngle(state.angle)*180/Math.PI,0)+'°',color('motion'),18);
+  ctx.restore();
+}
+
 function drawForces(data) {
   const {ctx,w,h}=prepare($('forces'));
   const size=Math.min(w,h), maxForce=maximumForce();
   const forceScale=size*0.39/maxForce;
   const x=w/2, y=h/2;
+  drawForceAngle(ctx,x,y,size,data);
   if ($('showForces').checked || $('showUnits').checked) drawVectors(ctx,x,y,state.angle,forceScale,data,size*0.25);
   else { ctx.fillStyle=color('ink');ctx.beginPath();ctx.arc(x,y,7,0,TAU);ctx.fill(); }
   if ($('showVelocity').checked && !data.landed) arrow(ctx,x,y,data.vx/speedAtAngle(0)*size*0.40,-data.vy/speedAtAngle(0)*size*0.40,color('motion'),'v',-1);
@@ -254,7 +284,8 @@ function render() {
   const varying=state.mode==='varying';
   $('speedLabel').textContent=varying?'Speed at top':'Bucket speed';
   $('subtitle').textContent=varying?'Gravity changes the speed. Follow the forces on the water.':'The bucket moves at a constant speed. Follow the forces on the water.';
-  $('forceHint').textContent=varying?'The normal force points radially inward. Gravity slows the water as it rises and speeds it up as it falls.':"At the top and bottom, the bucket pushes radially. At other positions, its side walls also push to keep the speed constant.";
+  $('angleOption').hidden=!varying;
+  $('forceHint').textContent=varying?'θ is the acute angle between gravity and the radial line. Gravity points outward in the lower half and inward in the upper half.':'At the top and bottom, the bucket pushes radially. At other positions, its side walls also push to keep the speed constant.';
   $('threshold').textContent='Minimum at top '+number(Math.sqrt(G*state.radius))+' m/s';
   $('normalReadout').innerHTML='F<sub>N</sub> = '+number(Math.hypot(data.fx,data.fy),1)+' N';
   $('gravityReadout').innerHTML='F<sub>g</sub> = 9.8 N (1 kg of water)';
@@ -267,9 +298,17 @@ function render() {
   $('status').textContent=message;
   $('status').dataset.phase=data.landed?'landed':data.released?'released':'contact';
   if (data.released) equation('<msub><mi>F</mi><mi mathvariant="normal">N</mi></msub><mo>=</mo><mn>0</mn><mspace width="1em"/><msub><mi>F</mi><mi>g</mi></msub><mo>=</mo><mi>mg</mi>');
-  else if (Math.abs(state.angle%TAU-Math.PI)<0.015) equation('<msub><mi>F</mi><mi mathvariant="normal">N</mi></msub><mo>=</mo><mi>m</mi><mo>(</mo><mfrac><msubsup><mi>v</mi><mi mathvariant="normal">t</mi><mn>2</mn></msubsup><mi>r</mi></mfrac><mo>−</mo><mi>g</mi><mo>)</mo>');
-  else if (Math.min(state.angle%TAU,TAU-state.angle%TAU)<0.015) equation('<msub><mi>F</mi><mi mathvariant="normal">N</mi></msub><mo>=</mo><mi>m</mi><mo>(</mo><mfrac><msubsup><mi>v</mi><mi mathvariant="normal">t</mi><mn>2</mn></msubsup><mi>r</mi></mfrac><mo>+</mo><mi>g</mi><mo>)</mo>');
-  else equation('<msub><mi>F</mi><mrow><mi mathvariant="normal">net</mi><mo>,</mo><mi>r</mi></mrow></msub><mo>=</mo><mo>−</mo><mi>m</mi><mfrac><msubsup><mi>v</mi><mi mathvariant="normal">t</mi><mn>2</mn></msubsup><mi>r</mi></mfrac>');
+  else {
+    let forces='';
+    if (varying) {
+      const sign=Math.cos(state.angle)>=0 ? '+' : '−';
+      const aligned=Math.abs(Math.sin(state.angle))<1e-10;
+      const projection=aligned ? '' : '<mi mathvariant="normal">cos</mi><mi>θ</mi>';
+      forces='<mo>−</mo><msub><mi>F</mi><mi mathvariant="normal">N</mi></msub><mo>'+sign+'</mo><mi>mg</mi>'+projection+'<mo>≡</mo>';
+    }
+    equation('<msub><mi>F</mi><mrow><mi mathvariant="normal">net</mi><mo>,</mo><mi>r</mi></mrow></msub><mo>=</mo>'+forces+'<mo>−</mo><mi>m</mi><msub><mi>a</mi><mi mathvariant="normal">c</mi></msub>');
+  }
+
 }
 
 function playing(on) {
@@ -312,7 +351,7 @@ $('bottom').addEventListener('click',()=>setAngle(0));
 $('minimum').addEventListener('click',()=>{state.speed=Math.sqrt(G*state.radius);$('speed').value=state.speed;setAngle(Math.PI);});
 $('motion').addEventListener('change',()=>{state.mode=$('motion').value;setAngle(0);});
 $('rate').addEventListener('change',()=>{state.rate=Number($('rate').value);});
-for (const id of ['showForces','showUnits','showVelocity']) $(id).addEventListener('change',render);
+for (const id of ['showForces','showUnits','showVelocity','showAngle']) $(id).addEventListener('change',render);
 function controls(hidden) { document.body.classList.toggle('clean',hidden);requestAnimationFrame(render); }
 $('hide').addEventListener('click',()=>controls(true));$('show').addEventListener('click',()=>controls(false));
 function theme() { const dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('theme').textContent=dark?'Light mode':'Dark mode';render(); }
