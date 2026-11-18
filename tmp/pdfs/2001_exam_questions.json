@@ -1,0 +1,1182 @@
+{
+  "source": "physics-gre\\pdfs\\2001_exam.pdf",
+  "questions": [
+    {
+      "number": 10,
+      "page": 4,
+      "bbox": [
+        306.0,
+        192.07040000000063,
+        594.0,
+        430.67040000000065
+      ],
+      "text": "predominantly in the test. A table of information (see\npage 10) representing various physical constants and a\nfew conversion factors among SI units is presented in\nthe test book. Whenever necessary, additional values\nof physical constants are printed with the text of the\nquestion.\nThe approximate percentages of the test on the\nmajor content topics have been set by the committee\nof examiners, with input from a nationwide survey of\nundergraduate physics curricula. The percentages\nreflect the committee\u2019s determination of the relative\nemphasis placed on each topic in a typical under-\ngraduate program. These percentages are given below\nalong with the major subtopics included in each content\ncategory. Nearly all the questions in the test will\nrelate to material in this listing; however, there may be\noccasional questions on other topics not explicitly\nlisted here"
+    },
+    {
+      "number": 1,
+      "page": 4,
+      "bbox": [
+        306.0,
+        429.67040000000065,
+        594.0,
+        760.0
+      ],
+      "text": "1. CLASSICAL MECHANICS (such as 20%\nkinematics, Newton\u2019s laws, work and\nenergy, oscillatory motion, rotational\nmotion about a fixed axis, dynamics of\nsystems of particles, central forces and\ncelestial mechanics, three-dimensional\nparticle dynamics, Lagrangian and\nHamiltonian formalism, noninertial\nreference frames, elementary topics in\nfluid dynamics)\nS TEST\nE BOOK"
+    },
+    {
+      "number": 3,
+      "page": 5,
+      "bbox": [
+        18.0,
+        133.13940000000025,
+        306.0,
+        207.4082000000002
+      ],
+      "text": "3. OPTICS AND WAVE PHENOMENA 9%\n(such as wave properties, superposition,\ninterference, diffraction,\ngeometrical optics, polarization,\nDoppler effect)"
+    },
+    {
+      "number": 4,
+      "page": 5,
+      "bbox": [
+        18.0,
+        206.4082000000002,
+        306.0,
+        320.27590000000004
+      ],
+      "text": "4. THERMODYNAMICS AND STA- 10%\nTISTICAL MECHANICS (such as\nthe laws of thermodynamics, thermo-\ndynamic processes, equations of state,\nideal gases, kinetic theory, ensembles,\nstatistical concepts and calculation of\nthermodynamic quantities, thermal\nexpansion and heat transfer)"
+    },
+    {
+      "number": 5,
+      "page": 5,
+      "bbox": [
+        18.0,
+        319.27590000000004,
+        306.0,
+        419.94469999999995
+      ],
+      "text": "5. QUANTUM MECHANICS (such as 12%\nfundamental concepts, solutions of\nthe Schr\u00f6dinger equation (including\nsquare wells, harmonic oscillators,\nand hydrogenic atoms), spin, angular\nmomentum, wave function symmetry,\nelementary perturbation theory)"
+    },
+    {
+      "number": 6,
+      "page": 5,
+      "bbox": [
+        18.0,
+        418.94469999999995,
+        306.0,
+        506.4134999999999
+      ],
+      "text": "6. ATOMIC PHYSICS (such as proper- 10%\nties of electrons, Bohr model, energy\nquantization, atomic structure, atomic\nspectra, selection rules, black-body\nradiation, x-rays, atoms in electric and\nmagnetic fields)"
+    },
+    {
+      "number": 7,
+      "page": 5,
+      "bbox": [
+        18.0,
+        505.4134999999999,
+        306.0,
+        592.8822999999998
+      ],
+      "text": "7. SPECIAL RELATIVITY (such as 6%\nintroductory concepts, time dilation,\nlength contraction, simultaneity,\nenergy and momentum, four-vectors\nand Lorentz transformation,\nvelocity addition)"
+    },
+    {
+      "number": 8,
+      "page": 5,
+      "bbox": [
+        18.0,
+        591.8822999999998,
+        306.0,
+        760.0
+      ],
+      "text": "8. LABORATORY METHODS (such as 6%\ndata and error analysis, electronics,\ninstrumentation, radiation detection,\ncounting statistics, interaction of\ncharged particles with matter, lasers\nand optical interferometers, dimensional\nanalysis, fundamental applications\nof probability and statistics)\nPHYSI\nPRACTI"
+    },
+    {
+      "number": 1,
+      "page": 12,
+      "bbox": [
+        18.0,
+        161.8232198257043,
+        306.0,
+        760.0
+      ],
+      "text": "1. Which of the following best illustrates the\nacceleration of a pendulum bob at points\na through e ?\n(A)\n(B)\n(C)\n(D)\n(E)\nUnauthorized copying or reuse of\nany part of this page is illegal.\n12"
+    },
+    {
+      "number": 2,
+      "page": 12,
+      "bbox": [
+        306.0,
+        161.82187597200607,
+        594.0,
+        303.83567260815767
+      ],
+      "text": "2. The coefficient of static friction between a small\ncoin and the surface of a turntable is 0.30. The\nturntable rotates at 33.3 revolutions per minute.\nWhat is the maximum distance from the center\nof the turntable at which the coin will not slide?\n(A) 0.024 m\n(B) 0.048 m\n(C) 0.121 m\n(D) 0.242 m\n(E) 0.484 m"
+    },
+    {
+      "number": 3,
+      "page": 12,
+      "bbox": [
+        306.0,
+        302.83567260815767,
+        594.0,
+        433.08601054528265
+      ],
+      "text": "3. A satellite of mass m orbits a planet of mass M\nin a circular orbit of radius R. The time required\nfor one revolution is\n(A) independent of M\n(B) proportional to m\n(C) linear in R\n(D) proportional to R3/2\n(E) proportional to R2"
+    },
+    {
+      "number": 4,
+      "page": 12,
+      "bbox": [
+        306.0,
+        432.08601054528265,
+        594.0,
+        760.0
+      ],
+      "text": "4. In a nonrelativistic, one-dimensional collision,\na particle of mass 2m collides with a particle of\nmass m at rest. If the particles stick together after\nthe collision, what fraction of the initial kinetic\nenergy is lost in the collision?\n(A) 0\n1\n(B)\n4\n1\n(C)\n3\n1\n(D)\n2\n2\n(E)\n3\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 5,
+      "page": 14,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        248.75095891095407
+      ],
+      "text": "5. A three-dimensional harmonic oscillator is in\nthermal equilibrium with a temperature reservoir\nat temperature T. The average total energy of the\noscillator is\n1\n(A) kT\n2\n(B) kT\n3\n(C) kT\n2\n(D) 3kT\n(E) 6kT"
+    },
+    {
+      "number": 7,
+      "page": 14,
+      "bbox": [
+        306.0,
+        163.262783548372,
+        594.0,
+        760.0
+      ],
+      "text": "7. Two long, identical bar magnets are placed under\na horizontal piece of paper, as shown in the figure\nabove. The paper is covered with iron filings.\nWhen the two north poles are a small distance\napart and touching the paper, the iron filings\nmove into a pattern that shows the magnetic field\nlines. Which of the following best illustrates the\npattern that results?\n(A)\n(B)\n(C)\n(D)\n(E)\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 6,
+      "page": 14,
+      "bbox": [
+        18.0,
+        247.75095891095407,
+        306.0,
+        760.0
+      ],
+      "text": "6. An ideal monatomic gas expands quasi-statically\nto twice its volume. If the process is isothermal,\nthe work done by the gas is W . If the process\ni\nis adiabatic, the work done by the gas is W .\na\nWhich of the following is true?\n(A) W = W\ni a\n(B) 0 = W < W\ni a\n(C) 0 < W < W\ni a\n(D) 0 = W < W\na i\n(E) 0 < W < W\na i\nUnauthorized copying or reuse of\nany part of this page is illegal.\n14"
+    },
+    {
+      "number": 11,
+      "page": 16,
+      "bbox": [
+        306.0,
+        142.62192137247757,
+        594.0,
+        467.6489689759136
+      ],
+      "text": "11. An object is located 40 centimeters from the\nfirst of two thin converging lenses of focal lengths\n20 centimeters and 10 centimeters, respectively,\nas shown in the figure above. The lenses are\nseparated by 30 centimeters. The final image\nformed by the two-lens system is located\n(A) 5.0 cm to the right of the second lens\n(B) 13.3 cm to the right of the second lens\n(C) infinitely far to the right of the second lens\n(D) 13.3 cm to the left of the second lens\n(E) 100 cm to the left of the second lens"
+    },
+    {
+      "number": 8,
+      "page": 16,
+      "bbox": [
+        18.0,
+        180.3050271292136,
+        306.0,
+        316.1999341643069
+      ],
+      "text": "8. A positive charge Q is located at a distance L\nabove an infinite grounded conducting plane,\nas shown in the figure above. What is the total\ncharge induced on the plane?\n(A) 2Q\n(B) Q\n(C) 0\n(D) -Q\n(E) -2Q"
+    },
+    {
+      "number": 9,
+      "page": 16,
+      "bbox": [
+        18.0,
+        315.1999341643069,
+        306.0,
+        480.0095690857574
+      ],
+      "text": "9. Five positive charges of magnitude q are\narranged symmetrically around the circumference\nof a circle of radius r. What is the magnitude of\nthe electric field at the center of the circle?\n(k = 1 4p(cid:1))\n0\n(A) 0\n(B) kq r2\n(C) 5kq r2\na f\n(D) (kq/r2) cos 2p/5\na f\n(E) (5kq/r2) cos 2p/5"
+    },
+    {
+      "number": 12,
+      "page": 16,
+      "bbox": [
+        306.0,
+        466.6489689759136,
+        594.0,
+        760.0
+      ],
+      "text": "12. A spherical, concave mirror is shown in the figure\nabove. The focal point F and the location of the\nobject O are indicated. At what point will the\nimage be located?\n(A) I\n(B) II\n(C) III\n(D) IV\n(E) V\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 10,
+      "page": 16,
+      "bbox": [
+        18.0,
+        479.0095690857574,
+        306.0,
+        760.0
+      ],
+      "text": "10. A 3-microfarad capacitor is connected in series\nwith a 6-microfarad capacitor. When a 300-volt\npotential difference is applied across this com-\nbination, the total energy stored in the two\ncapacitors is\n(A) 0.09 J\n(B) 0.18 J\n(C) 0.27 J\n(D) 0.41 J\n(E) 0.81 J\nUnauthorized copying or reuse of\nany part of this page is illegal.\n16"
+    },
+    {
+      "number": 13,
+      "page": 18,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        206.3868582091344
+      ],
+      "text": "13. Two stars are separated by an angle of\n3 \u00a5 10-5 radians. What is the diameter of the\nsmallest telescope that can resolve the two stars\nusing visible light ( l @ 600 nanometers) ?\n(Ignore any effects due to Earth\u2019s atmosphere.)\n(A) 1 mm\n(B) 2.5 cm\n(C) 10 cm\n(D) 2.5 m\n(E) 10 m"
+    },
+    {
+      "number": 15,
+      "page": 18,
+      "bbox": [
+        306.0,
+        60.65373580466394,
+        594.0,
+        760.0
+      ],
+      "text": "15. Five classes of students measure the height of a\nbuilding. Each class uses a different method and\neach measures the height many different times.\nThe data for each class are plotted below. Which\nclass made the most precise measurement?\n(A)\n(B)\n(C)\n(D)\n(E)\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 14,
+      "page": 18,
+      "bbox": [
+        18.0,
+        205.3868582091344,
+        306.0,
+        760.0
+      ],
+      "text": "14. An 8-centimeter-diameter by 8-centimeter-long\nNaI(Tl) detector detects gamma rays of a specific\nenergy from a point source of radioactivity. When\nthe source is placed just next to the detector at\nthe center of the circular face, 50 percent of all\nemitted gamma rays at that energy are detected.\nIf the detector is moved to 1 meter away, the\nfraction of detected gamma rays drops to\n(A) 10-4\n(B) 2 \u00a5 10-4\n(C) 4 \u00a5 10-4\n(D) 8p \u00a5 10-4\n(E) 16p \u00a5 10-4\nUnauthorized copying or reuse of\nany part of this page is illegal.\n18"
+    },
+    {
+      "number": 16,
+      "page": 20,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        245.51269381505153
+      ],
+      "text": "16. A student makes 10 one-second measurements\nof the disintegration of a sample of a long-lived\nradioactive isotope and obtains the following\nvalues.\n3, 0, 2, 1, 2, 4, 0, 1, 2, 5\nHow long should the student count to establish\nthe rate to an uncertainty of 1 percent?\n(A) 80 s\n(B) 160 s\n(C) 2,000 s\n(D) 5,000 s\n(E) 6,400 s"
+    },
+    {
+      "number": 19,
+      "page": 20,
+      "bbox": [
+        306.0,
+        60.65555017716349,
+        594.0,
+        191.74693667124598
+      ],
+      "text": "19. The primary source of the Sun\u2019s energy is a series\nof thermonuclear reactions in which the energy\nproduced is c2 times the mass difference between\n(A) two hydrogen atoms and one helium atom\n(B) four hydrogen atoms and one helium atom\n(C) six hydrogen atoms and two helium atoms\n(D) three helium atoms and one carbon atom\n(E) two hydrogen atoms plus two helium atoms\nand one carbon atom"
+    },
+    {
+      "number": 20,
+      "page": 20,
+      "bbox": [
+        306.0,
+        190.74693667124598,
+        594.0,
+        448.20948385512804
+      ],
+      "text": "20. In the production of X rays, the term\n\u201cbremsstrahlung\u201d refers to which of the\nfollowing?\n(A) The cut-off wavelength, l , of the\nmin\nX-ray tube\n(B) The discrete X-ray lines emitted when an\nelectron in an outer orbit fills a vacancy in\nan inner orbit of the atoms in the target\nmetal of the X-ray tube\n(C) The discrete X-ray lines absorbed when an\nelectron in an inner orbit fills a vacancy in\nan outer orbit of the atoms in the target\nmetal of the X-ray tube\n(D) The smooth, continuous X-ray spectra\nproduced by high-energy blackbody\nradiation from the X-ray tube\n(E) The smooth, continuous X-ray spectra\nproduced by rapidly decelerating electrons\nin the target metal of the X-ray tube"
+    },
+    {
+      "number": 17,
+      "page": 20,
+      "bbox": [
+        18.0,
+        244.51269381505153,
+        306.0,
+        405.36336134248637
+      ],
+      "text": "17. The ground state electron configuration\nfor phosphorus, which has 15 electrons, is\n(A) 1s2 2s2 2p6 3s1 3p4\n(B) 1s2 2s2 2p6 3s2 3p3\n(C) 1s2 2s2 2p6 3s2 3d3\n(D) 1s2 2s2 2p6 3s1 3d4\n(E) 1s2 2s2 2p6 3p2 3d3"
+    },
+    {
+      "number": 18,
+      "page": 20,
+      "bbox": [
+        18.0,
+        404.36336134248637,
+        306.0,
+        760.0
+      ],
+      "text": "18. The energy required to remove both electrons\nfrom the helium atom in its ground state is\n79.0 eV. How much energy is required to ionize\nhelium (i.e., to remove one electron) ?\n(A) 24.6 eV\n(B) 39.5 eV\n(C) 51.8 eV\n(D) 54.4 eV\n(E) 65.4 eV\nUnauthorized copying or reuse of\nany part of this page is illegal.\n20"
+    },
+    {
+      "number": 21,
+      "page": 20,
+      "bbox": [
+        306.0,
+        447.20948385512804,
+        594.0,
+        472.8120130829122
+      ],
+      "text": "21. In the hydrogen spectrum, the ratio of the\nwavelengths for Lyman-a radiation (n = 2 to"
+    },
+    {
+      "number": 1,
+      "page": 20,
+      "bbox": [
+        306.0,
+        471.8120130829122,
+        594.0,
+        760.0
+      ],
+      "text": "wavelengths for Lyman-a radiation (n = 2 to\nn = 1) to Balmer-a radiation (n = 3 to n = 2) is\n(A) 5/48\n(B) 5/27\n(C) 1/3\n(D) 3\n(E) 27/5\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 22,
+      "page": 22,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        760.0
+      ],
+      "text": "22. An astronomer observes a very small moon\norbiting a planet and measures the moon\u2019s\nminimum and maximum distances from the\nplanet\u2019s center and the moon\u2019s maximum orbital\nspeed. Which of the following CANNOT be\ncalculated from these measurements?\n(A) Mass of the moon\n(B) Mass of the planet\n(C) Minimum speed of the moon\n(D) Period of the orbit\n(E) Semimajor axis of the orbit\nUnauthorized copying or reuse of\nany part of this page is illegal.\n22"
+    },
+    {
+      "number": 23,
+      "page": 22,
+      "bbox": [
+        306.0,
+        60.655629030314344,
+        594.0,
+        760.0
+      ],
+      "text": "23. A particle is constrained to move in a circle with a\n10-meter radius. At one instant, the particle\u2019s\nspeed is 10 meters per second and is increasing at\na rate of 10 meters per second squared. The angle\nbetween the particle\u2019s velocity and acceleration\nvectors is\n(A) 0\u221e\n(B) 30\u221e\n(C) 45\u221e\n(D) 60\u221e\n(E) 90\u221e\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 24,
+      "page": 24,
+      "bbox": [
+        18.0,
+        310.0354921514504,
+        306.0,
+        760.0
+      ],
+      "text": "24. A stone is thrown at an angle of 45\u00b0 above the horizont\nignored, which of the velocity versus time graphs show\nrespectively?\nu vs. t u vs. t\nx y\n(A) I IV\n(B) II I\n(C) II III\n(D) II V\n(E) IV V\nUnauthorized copying or reuse of\nany part of this page is illegal.\n24"
+    },
+    {
+      "number": 27,
+      "page": 26,
+      "bbox": [
+        306.0,
+        60.65346549386277,
+        594.0,
+        240.34930119412695
+      ],
+      "text": "27. The eigenvalues of a Hermitian operator are\nalways\n(A) real\n(B) imaginary\n(C) degenerate\n(D) linear\n(E) positive\ny = 5 1 - 3 2 + 2 3\n1\ny = 1 - 5 2 + x 3\n2"
+    },
+    {
+      "number": 25,
+      "page": 26,
+      "bbox": [
+        18.0,
+        140.1016206652855,
+        306.0,
+        432.00518210710413
+      ],
+      "text": "25. Seven pennies are arranged in a hexagonal, planar\npattern so as to touch each neighbor, as shown in\nthe figure above. Each penny is a uniform disk of\nmass m and radius r. What is the moment of\ninertia of the system of seven pennies about an\naxis that passes through the center of the central\npenny and is normal to the plane of the pennies?\n(A) (7/2) mr2\n(B) (13/2) mr2\n(C) (29/2) mr2\n(D) (49/2) mr2\n(E) (55/2) mr2"
+    },
+    {
+      "number": 28,
+      "page": 26,
+      "bbox": [
+        306.0,
+        239.34930119412695,
+        594.0,
+        379.8141422739364
+      ],
+      "text": "28. The states 1 , 2 , and 3 are orthonormal.\nFor what value of x are the states y and\n1\ny given above orthogonal?\n2\n(A) 10\n(B) 5\n(C) 0\n(D) -5\n(E) -10\n1 1 1"
+    },
+    {
+      "number": 29,
+      "page": 26,
+      "bbox": [
+        306.0,
+        378.8141422739364,
+        594.0,
+        760.0
+      ],
+      "text": "29. The state w = 1 w + 1 w + 1 w\n6 \u22121 2 1 3 2\nis a linear combination of three orthonormal\neigenstates of the operator \u00d4 corresponding\nto eigenvalues -1, 1, and 2. What is the\nexpectation value of \u00d4 for this state?\n2\n(A)\n3\n7\n(B)\n6\n(C) 1\n4\n(D)\n3\n( 3 + 2 2 \u2212 1)\n(E)\n6\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 26,
+      "page": 26,
+      "bbox": [
+        18.0,
+        431.00518210710413,
+        306.0,
+        760.0
+      ],
+      "text": "26. A thin uniform rod of mass M and length L is\npositioned vertically above an anchored frictionless\npivot point, as shown above, and then allowed to\nfall to the ground. With what speed does the free\nend of the rod strike the ground?\n1\n(A) gL\n3\n(B) gL\n(C) 3gL\n(D) 12gL\n(E) 12 gL\nUnauthorized copying or reuse of\nany part of this page is illegal.\n26"
+    },
+    {
+      "number": 30,
+      "page": 28,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        235.43092601370813
+      ],
+      "text": "30. Which of the following functions could represent\nthe radial wave function for an electron in an\natom? (r is the distance of the electron from\nthe nucleus; A and b are constants.)\nI. A e-br\nII. A sin(br)\nIII. A/r\n(A) I only\n(B) II only\n(C) I and II only\n(D) I and III only\n(E) I, II, and III"
+    },
+    {
+      "number": 33,
+      "page": 28,
+      "bbox": [
+        306.0,
+        62.81500826566048,
+        594.0,
+        203.26667028140685
+      ],
+      "text": "33. If a charged pion that decays in 10-8 second in\nits own rest frame is to travel 30 meters in the\nlaboratory before decaying, the pion\u2019s speed must\nbe most nearly\n(A) 0.43 \u00a5 108 m/s\n(B) 2.84 \u00a5 108 m/s\n(C) 2.90 \u00a5 108 m/s\n(D) 2.98 \u00a5 108 m/s\n(E) 3.00 \u00a5 108 m/s"
+    },
+    {
+      "number": 34,
+      "page": 28,
+      "bbox": [
+        306.0,
+        202.26667028140685,
+        594.0,
+        373.0818660754804
+      ],
+      "text": "34. In an inertial reference frame S, two events occur\non the x-axis separated in time by Dt and in\nspace by Dx. In another inertial reference frame\nS\u00a2, moving in the x-direction relative to S, the two\nevents could occur at the same time under which,\nif any, of the following conditions?\n(A) For any values of Dx and Dt\n(B) Only if \u2126Dx/Dt\u2126< c\n(C) Only if \u2126Dx/Dt\u2126> c\n(D) Only if \u2126Dx/Dt\u2126= c\n(E) Under no condition"
+    },
+    {
+      "number": 31,
+      "page": 28,
+      "bbox": [
+        18.0,
+        234.43092601370813,
+        306.0,
+        401.0472518776438
+      ],
+      "text": "31. Positronium is an atom formed by an electron\nand a positron (antielectron). It is similar to the\nhydrogen atom, with the positron replacing the\nproton. If a positronium atom makes a transition\nfrom the state with n = 3 to a state with n = 1,\nthe energy of the photon emitted in this transition\nis closest to\n(A) 6.0 eV\n(B) 6.8 eV\n(C) 12.2 eV\n(D) 13.6 eV\n(E) 24.2 eV"
+    },
+    {
+      "number": 35,
+      "page": 28,
+      "bbox": [
+        306.0,
+        372.0818660754804,
+        594.0,
+        760.0
+      ],
+      "text": "35. If the absolute temperature of a blackbody is\nincreased by a factor of 3, the energy radiated per\nsecond per unit area does which of the following?\n(A) Decreases by a factor of 81.\n(B) Decreases by a factor of 9.\n(C) Increases by a factor of 9.\n(D) Increases by a factor of 27.\n(E) Increases by a factor of 81.\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 32,
+      "page": 28,
+      "bbox": [
+        18.0,
+        400.0472518776438,
+        306.0,
+        760.0
+      ],
+      "text": "32. If the total energy of a particle of mass m is\nequal to twice its rest energy, then the magnitude\nof the particle\u2019s relativistic momentum is\n(A) mc/2\n(B) mc / 2\n(C) mc\n(D) 3mc\n(E) 2mc\nUnauthorized copying or reuse of\nany part of this page is illegal.\n28"
+    },
+    {
+      "number": 36,
+      "page": 30,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        402.1226880503561
+      ],
+      "text": "36. Consider the quasi-static adiabatic expansion\nof an ideal gas from an initial state i to a final\nstate f. Which of the following statements is\nNOT true?\n(A) No heat flows into or out of the gas.\n(B) The entropy of state i equals the entropy\nof state f.\n(C) Thez change of internal energy of the gas is\n- PdV.\n(D) Thze mechanical work done by the gas is\nPdV.\n(E) The temperature of the gas remains constant."
+    },
+    {
+      "number": 38,
+      "page": 30,
+      "bbox": [
+        306.0,
+        171.06425788282957,
+        594.0,
+        337.67947965264744
+      ],
+      "text": "38. An AC circuit consists of the elements shown\nabove, with R = 10,000 ohms, L = 25 millihenries,\nand C an adjustable capacitance. The AC voltage\ngenerator supplies a signal with an amplitude of\n40 volts and angular frequency of 1,000 radians\nper second. For what value of C is the amplitude\nof the current maximized?\n(A) 4 nF\n(B) 40 nF\n(C) 4 mF\n(D) 40 mF\n(E) 400 mF"
+    },
+    {
+      "number": 39,
+      "page": 30,
+      "bbox": [
+        306.0,
+        336.67947965264744,
+        594.0,
+        760.0
+      ],
+      "text": "39. Which two of the following circuits are high-pass\nfilters?\n(A) I and II\n(B) I and III\n(C) I and IV\n(D) II and III\n(E) II and IV\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 37,
+      "page": 30,
+      "bbox": [
+        18.0,
+        401.1226880503561,
+        306.0,
+        760.0
+      ],
+      "text": "37. A constant amount of an ideal gas undergoes the\ncyclic process ABCA in the PV diagram shown\nabove. The path BC is isothermal. The work\ndone by the gas during one complete cycle,\nbeginning and ending at A, is most nearly\n(A) 600 kJ\n(B) 300 kJ\n(C) 0\n(D) -300 kJ\n(E) -600 kJ\nUnauthorized copying or reuse of\nany part of this page is illegal.\n30"
+    },
+    {
+      "number": 41,
+      "page": 34,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        760.0
+      ],
+      "text": "41. Maxwell\u2019s equations can be written in the form\nshown below. If magnetic charge exists and if it is\nconserved, which of these equations will have to\nbe changed?\nI. \u2207(cid:1)E = r/(cid:1)\no\nII. \u2207(cid:1)B = 0\n\u2202B\nIII. \u2207 \u00d7 E = \u2212\n\u2202t\n\u2202E\nIV. \u2207 \u00d7 B = \u00b5J + \u00b5(cid:1)\no o o \u2202t\n(A) I only\n(B) II only\n(C) III only\n(D) I and IV\n(E) II and III\nUnauthorized copying or reuse of\nany part of this page is illegal.\n34"
+    },
+    {
+      "number": 42,
+      "page": 34,
+      "bbox": [
+        306.0,
+        268.6324565522576,
+        594.0,
+        760.0
+      ],
+      "text": "42. Three wire loops and an observer are positioned\nas shown in the figure above. From the observer\u2019s\npoint of view, a current I flows counterclockwise\nin the middle loop, which is moving towards the\nobserver with a velocity u . Loops A and B are\nstationary. This same observer would notice that\n(A) clockwise currents are induced in loops\nA and B\n(B) counterclockwise currents are induced in\nloops A and B\n(C) a clockwise current is induced in loop A, but\na counterclockwise current is induced in\nloop B\n(D) a counterclockwise current is induced in\nloop A, but a clockwise current is induced\nin loop B\n(E) a counterclockwise current is induced in loop\nA, but no current is induced in loop B\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 43,
+      "page": 36,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        309.5952549018695
+      ],
+      "text": "43. The components of the orbital angular momentum\noperator L = (L , L , L ) satisfy the following\nx y z\ncommutation relations.\n[L , L ] = i(cid:61)L ,\nx y z\n[L , L ] = i(cid:61)L ,\ny z x\n[L , L ] = i(cid:61)L .\nz x y\nWhat is the value of the commutator [L L , L ] ?\nx y z\n(A) 2i(cid:61)L L\nx y\ne j\n(B) i(cid:61) L2 + L2\nx y\ne j\n(C) -i(cid:61) L2 + L2\nx y\ne j\n(D) i(cid:61) L2 - L2\nx y\ne j\n(E) -i(cid:61) L2 - L2\nx y"
+    },
+    {
+      "number": 45,
+      "page": 36,
+      "bbox": [
+        306.0,
+        61.854348729239405,
+        594.0,
+        368.3999975954918
+      ],
+      "text": "45. Let n \u00d2 represent the normalized nth energy\neigenstate of the one-dimensional harmonic\nF I\noscillator, H n \u00d2 = (cid:61)\u03c9Hn + 1K n \u00d2 . If \u03c8 \u00d2 is\n2\na normalized ensemble state that can be expanded\nas a linear combination\n1 2 3\n\u03c8 \u00d2 = 1 \u00d2 - 2 \u00d2 + 3 \u00d2 of the\n14 14 14\neigenstates, what is the expectation value of the\nenergy operator in this ensemble state?\n102\n(A) (cid:61)w\n14\n43\n(B) (cid:61)w\n14\n23\n(C) (cid:61)w\n14\n17\n(D) (cid:61)w\n14\n7\n(E) (cid:61)w\n14"
+    },
+    {
+      "number": 44,
+      "page": 36,
+      "bbox": [
+        18.0,
+        308.5952549018695,
+        306.0,
+        760.0
+      ],
+      "text": "44. The energy eigenstates for a particle of mass m\nin a box of length L have wave functions\nf (x) = 2/L sin(npx/L) and energies\nn\nE = n2p2(cid:61)2/2mL2, where n = 1, 2, 3, . . . .\nn\nAt time t = 0, the particle is in a state described\nas follows.\n1\nY(t = 0) = [f + 2f + 3f ]\n14 1 2 3\nWhich of the following is a possible result of a\nmeasurement of energy for the state Y ?\n(A) 2E\n1\n(B) 5E\n1\n(C) 7E\n1\n(D) 9E\n1\n(E) 14E\n1\nUnauthorized copying or reuse of\nany part of this page is illegal.\n36"
+    },
+    {
+      "number": 46,
+      "page": 36,
+      "bbox": [
+        306.0,
+        367.3999975954918,
+        594.0,
+        760.0
+      ],
+      "text": "46. A free particle with initial kinetic energy E and\nde Broglie wavelength l enters a region in\nwhich it has potential energy V. What is the\nparticle\u2019s new de Broglie wavelength?\n(A) l (1 + E/V)\n(B) l (1 - V/E)\n(C) l (1 - E/V)-1\n(D) l (1 + V/E)1/2\n(E) l (1 - V/E)-1/2\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 47,
+      "page": 38,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        266.0324494517222
+      ],
+      "text": "47. A sealed and thermally insulated container of total\nvolume V is divided into two equal volumes by\nan impermeable wall. The left half of the con-\ntainer is initially occupied by n moles of an ideal\ngas at temperature T. Which of the following\ngives the change in entropy of the system when\nthe wall is suddenly removed and the gas expands\nto fill the entire volume?\n(A) 2nR ln2\n(B) nR ln2\n1\n(C) nR ln2\n2\n(D) -nR ln2\n(E) -2nR ln2"
+    },
+    {
+      "number": 50,
+      "page": 38,
+      "bbox": [
+        306.0,
+        61.85411902006058,
+        594.0,
+        206.74739311553355
+      ],
+      "text": "50. At 20\u221eC, a pipe open at both ends resonates at a\nfrequency of 440 hertz. At what frequency does\nthe same pipe resonate on a particularly cold day\nwhen the speed of sound is 3 percent lower than\nit would be at 20\u221eC ?\n(A) 414 Hz\n(B) 427 Hz\n(C) 433 Hz\n(D) 440 Hz\n(E) 453 Hz"
+    },
+    {
+      "number": 51,
+      "page": 38,
+      "bbox": [
+        306.0,
+        205.74739311553355,
+        594.0,
+        539.1745855753452
+      ],
+      "text": "51. Unpolarized light of intensity I is incident on a\n0\nseries of three polarizing filters. The axis of the\nsecond filter is oriented at 45\u00b0 to that of the first\nfilter, while the axis of the third filter is oriented\nat 90\u00b0 to that of the first filter. What is the intensity\nof the light transmitted through the third filter?\n(A) 0\n(B) I\n0\n/8\n(C) I\n0\n/4\n(D) I\n0\n/2\n(E) I / 2\n0"
+    },
+    {
+      "number": 48,
+      "page": 38,
+      "bbox": [
+        18.0,
+        265.0324494517222,
+        306.0,
+        503.0518015665749
+      ],
+      "text": "48. A gaseous mixture of O (molecular mass 32 u)\n2\nand N (molecular mass 28 u) is maintained at\n2\nu (N )\nconstant temperature. What is the ratio rms 2\nu (O )\nrms 2\nof the root-mean-square speeds of the molecules?\n7\n(A)\n8\n7\n(B)\n8\n8\n(C)\n7\nF I\nH 8K 2\n(D)\n7\nF I\nH 8K\n(E) ln\n7"
+    },
+    {
+      "number": 49,
+      "page": 38,
+      "bbox": [
+        18.0,
+        502.0518015665749,
+        306.0,
+        760.0
+      ],
+      "text": "49. In a Maxwell-Boltzmann system with two states\nof energies (cid:1) and 2(cid:1), respectively, and a\ndegeneracy of 2 for each state, the partition\nfunction is\n(A) e-(cid:1) /kT\n(B) 2e-2(cid:1) /kT\n(C) 2e-3(cid:1) /kT\n(D) e-(cid:1) /kT + e-2(cid:1) /kT\n(E) 2[e-(cid:1) /kT + e-2(cid:1) /kT]\nUnauthorized copying or reuse of\nany part of this page is illegal.\n38"
+    },
+    {
+      "number": 52,
+      "page": 38,
+      "bbox": [
+        306.0,
+        538.1745855753452,
+        594.0,
+        760.0
+      ],
+      "text": "52. The conventional unit cell of a body-centered\ncubic Bravais lattice is shown in the figure above.\nThe conventional cell has volume a3 . What is\nthe volume of the primitive unit cell?\n(A) a3/8\n(B) a3/4\n(C) a3/2\n(D) a3\n(E) 2a3\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 53,
+      "page": 40,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        760.0
+      ],
+      "text": "53. Which of the following best represents the\ntemperature dependence of the resistivity\nof an undoped semiconductor?\n(A)\n(B)\n(C)\n(D)\n(E)\nUnauthorized copying or reuse of\nany part of this page is illegal.\n40"
+    },
+    {
+      "number": 54,
+      "page": 40,
+      "bbox": [
+        306.0,
+        192.42535118800993,
+        594.0,
+        435.3655163806961
+      ],
+      "text": "54. The figure above shows a plot of the time-\ndependent force F (t) acting on a particle in\nx\nmotion along the x-axis. What is the total impulse\ndelivered to the particle?\n(A) 0\n(B) 1 kg(cid:1)m/s\n(C) 2 kg(cid:1)m/s\n(D) 3 kg(cid:1)m/s\n(E) 4 kg(cid:1)m/s"
+    },
+    {
+      "number": 55,
+      "page": 40,
+      "bbox": [
+        306.0,
+        434.3655163806961,
+        594.0,
+        760.0
+      ],
+      "text": "55. A particle of mass m is moving along the x-axis\nwith speed u when it collides with a particle of\nmass 2m initially at rest. After the collision, the\nfirst particle has come to rest, and the second\nparticle has split into two equal-mass pieces that\nmove at equal angles q > 0 with the x-axis, as\nshown in the figure above. Which of the\nfollowing statements correctly describes the\nspeeds of the two pieces?\n(A) Each piece moves with speed u.\n(B) One of the pieces moves with speed u,\nthe other moves with speed less than u.\n(C) Each piece moves with speed u/2.\n(D) One of the pieces moves with speed u/2, the\nother moves with speed greater than u/2.\n(E) Each piece moves with speed greater\nthan u/2.\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 56,
+      "page": 42,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        379.56164914726554
+      ],
+      "text": "56. A balloon is to be filled with helium and used to\nsuspend a mass of 300 kilograms in air. If the\nmass of the balloon is neglected, which of the\nfollowing gives the approximate volume of\nhelium required? (The density of air is 1.29\nkilograms per cubic meter and the density of\nhelium is 0.18 kilogram per cubic meter.)\n(A) 50 m3\n(B) 95 m3\n(C) 135 m3\n(D) 270 m3\n(E) 540 m3"
+    },
+    {
+      "number": 58,
+      "page": 42,
+      "bbox": [
+        306.0,
+        60.65400931559293,
+        594.0,
+        255.9524921727242
+      ],
+      "text": "58. A proton moves in the +z-direction after\nbeing accelerated from rest through a potential\ndifference V. The proton then passes through\na region with a uniform electric field E in the\n+x-direction and a uniform magnetic field B in\nthe +y-direction, but the proton\u2019s trajectory is not\naffected. If the experiment were repeated using a\npotential difference of 2V, the proton would\nthen be\n(A) deflected in the +x-direction\n(B) deflected in the -x-direction\n(C) deflected in the +y-direction\n(D) deflected in the -y-direction\n(E) undeflected"
+    },
+    {
+      "number": 59,
+      "page": 42,
+      "bbox": [
+        306.0,
+        254.9524921727242,
+        594.0,
+        760.0
+      ],
+      "text": "59. For an inductor and capacitor connected in series,\nthe equation describing the motion of charge is\nd2Q\n1\nL + Q = 0,\ndt2 C\nwhere L is the inductance, C is the capacitance,\nand Q is the charge. An analogous equation can\nbe written for a simple harmonic oscillator with\nposition x, mass m, and spring constant k.\nWhich of the following correctly lists the\nmechanical analogs of L, C, and Q ?\nL C Q\n(A) m k x\n(B) m 1/k x\n(C) k x m\n(D) 1/k 1/m x\n(E) x 1/k 1/m\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 57,
+      "page": 42,
+      "bbox": [
+        18.0,
+        378.56164914726554,
+        306.0,
+        760.0
+      ],
+      "text": "57. A stream of water of density r, cross-sectional\narea A, and speed u strikes a wall that is\nperpendicular to the direction of the stream, as\nshown in the figure above. The water then flows\nsideways across the wall. The force exerted by the\nstream on the wall is\n(A) ru2A\n(B) ruA/2\n(C) rghA\n(D) u2A/r\n(E) u2A/2r\nUnauthorized copying or reuse of\nany part of this page is illegal.\n42"
+    },
+    {
+      "number": 60,
+      "page": 44,
+      "bbox": [
+        18.0,
+        194.70620257718952,
+        306.0,
+        760.0
+      ],
+      "text": "60. An infinite, uniformly charged sheet with surface-\ncharge density s cuts through a spherical\nGaussian surface of radius R at a distance x from\nits center, as shown in the figure above. The\nelectric flux F through the Gaussian surface is\n\u03c0R2\u03c3\n(A)\n(cid:1)\n0\n2\u03c0R2\u03c3\n(B)\n(cid:1)\n0\n\u03c0(R \u2212 x)2\u03c3\n(C)\n(cid:1)\n0\n\u03c0(R2 \u2212 x2)\u03c3\n(D)\n(cid:1)\n0\n2\u03c0(R2 \u2212 x2)\u03c3\n(E)\n(cid:1)\n0\nUnauthorized copying or reuse of\nany part of this page is illegal.\n44"
+    },
+    {
+      "number": 61,
+      "page": 44,
+      "bbox": [
+        306.0,
+        197.1060796724463,
+        594.0,
+        431.88583053800596
+      ],
+      "text": "61. An electromagnetic plane wave, propagating\nin vacuum, has an electric field given by\nE = E cos(kx - wt) and is normally incident\n0\non a perfect conductor at x = 0, as shown in the\nfigure above. Immediately to the left of the\nconductor, the total electric field E and the total\nmagnetic field B are given by which of the\nfollowing?\nE B\n(A) 0 0\n(B) 2E\n0\ncoswt 0\n(C) 0 (2E\n0\nc) coswt\n(D) 2E coswt (2E c) coswt\n0 0\n(E) 2E coswt (2E c)sinwt\n0 0"
+    },
+    {
+      "number": 62,
+      "page": 44,
+      "bbox": [
+        306.0,
+        430.88583053800596,
+        594.0,
+        760.0
+      ],
+      "text": "62. A nonrelativistic particle with a charge twice that\nof an electron moves through a uniform magnetic\nfield. The field has a strength of p 4 tesla and is\nperpendicular to the velocity of the particle. What\nis the particle\u2019s mass if it has a cyclotron frequency\nof 1,600 hertz?\n(A) 2.5 \u00a5 10-23 kg\n(B) 1.2 \u00a5 10-22 kg\n(C) 3.3 \u00a5 10-22 kg\n(D) 5.0 \u00a5 10-21 kg\n(E) 7.5 \u00a5 10-21 kg\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 65,
+      "page": 46,
+      "bbox": [
+        306.0,
+        107.69887120315582,
+        594.0,
+        255.95033783664053
+      ],
+      "text": "65. Einstein\u2019s formula for the molar heat capacity C\nof solids is given above. At high temperatures, C\napproaches which of the following?\n(A) 0\nF I\nhv\n(B) 3kN H K\nA kT\n(C) 3kN hv\nA\n(D) 3kN\nA\n(E) N hv\nA"
+    },
+    {
+      "number": 63,
+      "page": 46,
+      "bbox": [
+        18.0,
+        231.18894156918623,
+        306.0,
+        394.56436678190687
+      ],
+      "text": "63. The distribution of relative intensity I (l) of\nblackbody radiation from a solid object versus\nthe wavelength l is shown in the figure above.\nIf the Wien displacement law constant is\n2.9 \u00a5 10-3 m(cid:1)K, what is the approximate\ntemperature of the object?\n(A) 10 K\n(B) 50 K\n(C) 250 K\n(D) 1,500 K\n(E) 6,250 K"
+    },
+    {
+      "number": 66,
+      "page": 46,
+      "bbox": [
+        306.0,
+        254.95033783664053,
+        594.0,
+        398.2846310377263
+      ],
+      "text": "66. A sample of radioactive nuclei of a certain element\ncan decay only by g-emission and b-emission. If\nthe half-life for g-emission is 24 minutes and that\nfor b-emission is 36 minutes, the half-life for the\nsample is\n(A) 30 minutes\n(B) 24 minutes\n(C) 20.8 minutes\n(D) 14.4 minutes\n(E) 6 minutes"
+    },
+    {
+      "number": 64,
+      "page": 46,
+      "bbox": [
+        18.0,
+        393.56436678190687,
+        306.0,
+        760.0
+      ],
+      "text": "64. Electromagnetic radiation provides a means to\nprobe aspects of the physical universe. Which\nof the following statements regarding radiation\nspectra is NOT correct?\n(A) Lines in the infrared, visible, and ultraviolet\nregions of the spectrum reveal primarily the\nnuclear structure of the sample.\n(B) The wavelengths identified in an absorption\nspectrum of an element are among those in\nits emission spectrum.\n(C) Absorption spectra can be used to determine\nwhich elements are present in distant stars.\n(D) Spectral analysis can be used to identify the\ncomposition of galactic dust.\n(E) Band spectra are due to molecules.\nUnauthorized copying or reuse of\nany part of this page is illegal.\n46"
+    },
+    {
+      "number": 67,
+      "page": 46,
+      "bbox": [
+        306.0,
+        397.2846310377263,
+        594.0,
+        760.0
+      ],
+      "text": "67. The 238U nucleus has a binding energy of about\n7.6 MeV per nucleon. If the nucleus were to\nfission into two equal fragments, each would have\na kinetic energy of just over 100 MeV. From this,\nit can be concluded that\n(A) 238U cannot fission spontaneously\n(B) 238U has a large neutron excess\n(C) nuclei near A = 120 have masses greater than\nhalf that of 238U\n(D) nuclei near A = 120 must be bound by about\n6.7 MeV/nucleon\n(E) nuclei near A = 120 must be bound by about\n8.5 MeV/nucleon\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 68,
+      "page": 48,
+      "bbox": [
+        18.0,
+        62.814711253792325,
+        306.0,
+        169.54497216619495
+      ],
+      "text": "68. When 7Be transforms into 7Li, it does so by\n4 3\n(A) emitting an alpha particle only\n(B) emitting an electron only\n(C) emitting a neutron only\n(D) emitting a positron only\n(E) electron capture by the nucleus with emission\nof a neutrino"
+    },
+    {
+      "number": 69,
+      "page": 48,
+      "bbox": [
+        18.0,
+        168.54497216619495,
+        306.0,
+        335.16019393601283
+      ],
+      "text": "69. Blue light of wavelength 480 nanometers is\nmost strongly reflected off a thin film of oil on\na glass slide when viewed near normal incidence.\nAssuming that the index of refraction of the oil\nis 1.2 and that of the glass is 1.6, what is the\nminimum thickness of the oil film (other than\nzero) ?\n(A) 150 nm\n(B) 200 nm\n(C) 300 nm\n(D) 400 nm\n(E) 480 nm"
+    },
+    {
+      "number": 72,
+      "page": 48,
+      "bbox": [
+        306.0,
+        221.82848634034156,
+        594.0,
+        465.24801043744407
+      ],
+      "text": "72. Two identical blocks are connected by a spring.\nThe combination is suspended, at rest, from a\nstring attached to the ceiling, as shown in the\nfigure above. The string breaks suddenly.\nImmediately after the string breaks, what is the\ndownward acceleration of the upper block?\n(A) 0\n(B) g/2\n(C) g\n(D) 2 g\n(E) 2g"
+    },
+    {
+      "number": 70,
+      "page": 48,
+      "bbox": [
+        18.0,
+        334.16019393601283,
+        306.0,
+        488.5354283154786
+      ],
+      "text": "70. Light from a laser falls on a pair of very narrow\nslits separated by 0.5 micrometer, and bright\nfringes separated by 1.0 millimeter are observed\non a distant screen. If the frequency of the laser\nlight is doubled, what will be the separation of the\nbright fringes?\n(A) 0.25 mm\n(B) 0.5 mm\n(C) 1.0 mm\n(D) 2.0 mm\n(E) 2.5 mm"
+    },
+    {
+      "number": 73,
+      "page": 48,
+      "bbox": [
+        306.0,
+        464.24801043744407,
+        594.0,
+        760.0
+      ],
+      "text": "73. For the system consisting of the two blocks shown\nin the figure above, the minimum horizontal force\nF is applied so that block B does not fall under\nthe influence of gravity. The masses of A and B\nare 16.0 kilograms and 4.00 kilograms,\nrespectively. The horizontal surface is frictionless\nand the coefficient of friction between the two\nblocks is 0.50. The magnitude of F is most\nnearly\n(A) 50 N\n(B) 100 N\n(C) 200 N\n(D) 400 N\n(E) 1,600 N\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 71,
+      "page": 48,
+      "bbox": [
+        18.0,
+        487.5354283154786,
+        306.0,
+        760.0
+      ],
+      "text": "71. The ultraviolet Lyman alpha line of hydrogen\nwith wavelength 121.5 nanometers is emitted by\nan astronomical object. An observer on Earth\nmeasures the wavelength of the light received\nfrom the object to be 607.5 nanometers. The\nobserver can conclude that the object is moving\nwith a radial velocity of\n(A) 2.4 \u00a5 108 m/s toward Earth\n(B) 2.8 \u00a5 108 m/s toward Earth\n(C) 2.4 \u00a5 108 m/s away from Earth\n(D) 2.8 \u00a5 108 m/s away from Earth\n(E) 12 \u00a5 108 m/s away from Earth\nUnauthorized copying or reuse of\nany part of this page is illegal.\n48"
+    },
+    {
+      "number": 74,
+      "page": 50,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        376.56090574235054
+      ],
+      "text": "74. The Lagrangian for a mechanical system is\nL = aq(cid:5)2 + bq4,\nwhere q is a generalized coordinate and a\nand b are constants. The equation of motion\nfor this system is\nb\n(A) q(cid:5) = q2\na\n2b\n(B) q(cid:5) = q3\na\n2b\n(C) q(cid:5)(cid:5) = - q3\na\n2b\n(D) q(cid:5)(cid:5) = + q3\na\nb\n(E) q(cid:5)(cid:5) = q3\na\nF I L O F I\nG a x \u2032 J M 1/2 3/2 0P G a xJ\nGa\u2032 J = M\u2212 3/2 1/2 0P Ga J\nH yK NM QP H yK\na\u2032 0 0 1 a\nz z"
+    },
+    {
+      "number": 77,
+      "page": 50,
+      "bbox": [
+        306.0,
+        60.65670192318544,
+        594.0,
+        264.8316459195304
+      ],
+      "text": "77. An ensemble of systems is in thermal equilibrium\nwith a reservoir for which kT = 0.025 eV.\nState A has an energy that is 0.1 eV above that\nof state B. If it is assumed the systems obey\nMaxwell-Boltzmann statistics and that the\ndegeneracies of the two states are the same, then\nthe ratio of the number of systems in state A to\nthe number in state B is\n(A) e+4\n(B) e+0.25\n(C) 1\n(D) e-0.25\n(E) e-4"
+    },
+    {
+      "number": 78,
+      "page": 50,
+      "bbox": [
+        306.0,
+        263.8316459195304,
+        594.0,
+        414.125417860274
+      ],
+      "text": "78. The muon decays with a characteristic lifetime\nof about 10-6 second into an electron, a muon\nneutrino, and an electron antineutrino. The muon\nis forbidden from decaying into an electron and\njust a single neutrino by the law of conservation of\n(A) charge\n(B) mass\n(C) energy and momentum\n(D) baryon number\n(E) lepton number"
+    },
+    {
+      "number": 75,
+      "page": 50,
+      "bbox": [
+        18.0,
+        375.56090574235054,
+        306.0,
+        524.7745001209238
+      ],
+      "text": "75. The matrix shown above transforms the com-\nponents of a vector in one coordinate frame S to\nthe components of the same vector in a second\ncoordinate frame S\u2032. This matrix represents a\nrotation of the reference frame S by\n(A) 30\u00b0 clockwise about the x-axis\n(B) 30\u00b0 counterclockwise about the z-axis\n(C) 45\u00b0 clockwise about the z-axis\n(D) 60\u00b0 clockwise about the y-axis\n(E) 60\u00b0 counterclockwise about the z-axis"
+    },
+    {
+      "number": 79,
+      "page": 50,
+      "bbox": [
+        306.0,
+        413.125417860274,
+        594.0,
+        760.0
+      ],
+      "text": "79. A particle leaving a cyclotron has a total\nrelativistic energy of 10 GeV and a relativistic\nmomentum of 8 GeV/c. What is the rest mass\nof this particle?\n(A) 0.25 GeV/c2\n(B) 1.20 GeV/c2\n(C) 2.00 GeV/c2\n(D) 6.00 GeV/c2\n(E) 16.0 GeV/c2\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 76,
+      "page": 50,
+      "bbox": [
+        18.0,
+        523.7745001209238,
+        306.0,
+        760.0
+      ],
+      "text": "76. The mean kinetic energy of the conduction\nelectrons in metals is ordinarily much higher\nthan kT because\n(A) electrons have many more degrees of\nfreedom than atoms do\n(B) the electrons and the lattice are not in thermal\nequilibrium\n(C) the electrons form a degenerate Fermi gas\n(D) electrons in metals are highly relativistic\n(E) electrons interact strongly with phonons\nUnauthorized copying or reuse of\nany part of this page is illegal.\n50"
+    },
+    {
+      "number": 80,
+      "page": 52,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        202.66832157234796
+      ],
+      "text": "80. A tube of water is traveling at 1/2 c relative to the\nlab frame when a beam of light traveling in the\nsame direction as the tube enters it. What is the\nspeed of light in the water relative to the lab\nframe? (The index of refraction of water is 4/3.)\n(A) 1/2 c\n(B) 2/3 c\n(C) 5/6 c\n(D) 10/11 c\n(E) c"
+    },
+    {
+      "number": 83,
+      "page": 52,
+      "bbox": [
+        306.0,
+        63.894787311907066,
+        594.0,
+        543.9303802093051
+      ],
+      "text": "83. The state of a spin- 1 particle can be represented\n2\nA B\nusing the eigenstates and of the S\nz\noperator.\nS A = 1 (cid:61) A\nz 2\nS B = - 1 (cid:61) B\nz 2\n\u00ca0 1\u02c6\nGiven the Pauli matrix s x = \u00c1 \u00cb1 0 \u02dc \u00af , which of\nthe following is an eigenstate of S with\nx\neigenvalue - 1 (cid:61) ?\n2\nB\n(A)\n1 A B\n(B) ( + )\n2\n1 A B\n(C) ( - )\n2\n1 A B\n(D) ( + i )\n2\n1 A B\n(E) ( - i )\n2"
+    },
+    {
+      "number": 81,
+      "page": 52,
+      "bbox": [
+        18.0,
+        201.66832157234796,
+        306.0,
+        411.724623428362
+      ],
+      "text": "81. Which of the following is the orbital angular\nmomentum eigenfunction Ym(q, f) in a state for\n(cid:65)\nwhich the operators L2 and L have eigenvalues\nz\n6(cid:61)2 and -(cid:61), respectively?\n(A) Y1(q, f)\n2\n(B) Y-1(q, f)\n2\n1\n(C) [Y1(q, f) + Y-1(q, f)]\n2 2 2\n(D) Y2(q, f)\n3\n(E) Y-1(q, f)\n3"
+    },
+    {
+      "number": 82,
+      "page": 52,
+      "bbox": [
+        18.0,
+        410.724623428362,
+        306.0,
+        760.0
+      ],
+      "text": "82. Let \u03b1 \u00d2 represent the state of an electron with\nspin up and \u03b2 \u00d2 the state of an electron with\nspin down. Valid spin eigenfunctions for a triplet\nstate (3S) of a two-electron atom include which of\nthe following?\nI. \u03b1 \u00d2 \u03b1 \u00d2\n1 2\n1\nII. ( \u03b1 \u00d2 \u03b2 \u00d2 - \u03b1 \u00d2 \u03b2 \u00d2 )\n1 2 2 1\n2\n1\nIII. ( \u03b1 \u00d2 \u03b2 \u00d2 + \u03b1 \u00d2 \u03b2 \u00d2 )\n1 2 2 1\n2\n(A) I only\n(B) II only\n(C) III only\n(D) I and III\n(E) II and III\nUnauthorized copying or reuse of\nany part of this page is illegal.\n52"
+    },
+    {
+      "number": 84,
+      "page": 52,
+      "bbox": [
+        306.0,
+        542.9303802093051,
+        594.0,
+        760.0
+      ],
+      "text": "84. An energy-level diagram of the n = 1 and\nn = 2 levels of atomic hydrogen (including the\neffects of spin-orbit coupling and relativity) is\nshown in the figure above. Three transitions are\nlabeled A, B, and C. Which of the transitions\nwill be possible electric-dipole transitions?\n(A) B only\n(B) C only\n(C) A and C only\n(D) B and C only\n(E) A, B, and C\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 85,
+      "page": 54,
+      "bbox": [
+        18.0,
+        60.65452493619648,
+        306.0,
+        760.0
+      ],
+      "text": "85. One end of a Nichrome wire of length 2L and\ncross-sectional area A is attached to an end of\nanother Nichrome wire of length L and cross-\nsectional area 2A. If the free end of the longer\nwire is at an electric potential of 8.0 volts, and\nthe free end of the shorter wire is at an electric\npotential of 1.0 volt, the potential at the junction\nof the two wires is most nearly equal to\n(A) 2.4 V\n(B) 3.3 V\n(C) 4.5 V\n(D) 5.7 V\n(E) 6.6 V\nUnauthorized copying or reuse of\nany part of this page is illegal.\n54"
+    },
+    {
+      "number": 86,
+      "page": 54,
+      "bbox": [
+        306.0,
+        231.78852172745212,
+        594.0,
+        760.0
+      ],
+      "text": "86. A coil of 15 turns, each of radius 1 centimeter,\nis rotating at a constant angular velocity w = 300\nradians per second in a uniform magnetic field of\n0.5 tesla, as shown in the figure above. Assume\nat time t = 0 that the normal n(cid:3) to the coil plane\nis along the y-direction and that the self-\ninductance of the coil can be neglected. If the coil\nresistance is 9 ohms, what will be the magnitude\nof the induced current in milliamperes?\n(A) 225p sinwt\n(B) 250p sinwt\n(C) 0.08p coswt\n(D) 1.7p coswt\n(E) 25p coswt\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 88,
+      "page": 58,
+      "bbox": [
+        18.0,
+        129.03121875970203,
+        306.0,
+        760.0
+      ],
+      "text": "88. A segment of wire is bent into an arc of radius R\nand subtended angle q , as shown in the figure\nabove. Point P is at the center of the circular\nsegment. The wire carries current I. What is the\nmagnitude of the magnetic field at P ?\n(A) 0\nm Iq\n(B) a 0 f\n2\n2p R\nm Iq\n(C) 0\n4pR\nm Iq\n(D) 0\n4pR2\nm I\n(E) 0\n2qR2\nUnauthorized copying or reuse of\nany part of this page is illegal.\n58"
+    },
+    {
+      "number": 89,
+      "page": 58,
+      "bbox": [
+        306.0,
+        205.0769272847897,
+        594.0,
+        760.0
+      ],
+      "text": "89. A child is standing on the edge of a merry-go-\nround that has the shape of a solid disk, as shown\nin the figure above. The mass of the child is\n40 kilograms. The merry-go-round has a mass\nof 200 kilograms and a radius of 2.5 meters,\nand it is rotating with an angular velocity of\nw = 2.0 radians per second. The child then\nwalks slowly toward the center of the-merry-go-\nround. What will be the final angular velocity of\nthe merry-go-round when the child reaches the\ncenter? (The size of the child can be neglected.)\n(A) 2.0 rad/s\n(B) 2.2 rad/s\n(C) 2.4 rad/s\n(D) 2.6 rad/s\n(E) 2.8 rad/s\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 90,
+      "page": 60,
+      "bbox": [
+        18.0,
+        146.41723617719708,
+        306.0,
+        760.0
+      ],
+      "text": "90. Two identical springs with spring constant k are conn\nfigures above. The ratio of the period for the springs co\nconnected in series (Figure 2) is\n1\n(A)\n2\n1\n(B)\n2\n(C) 1\n(D) 2\n(E) 2\nUnauthorized copying or reuse of\nany part of this page is illegal.\n60"
+    },
+    {
+      "number": 91,
+      "page": 62,
+      "bbox": [
+        18.0,
+        144.857073835601,
+        306.0,
+        760.0
+      ],
+      "text": "91. The cylinder shown above, with mass M and\nradius R, has a radially dependent density. The\ncylinder starts from rest and rolls without slipping\ndown an inclined plane of height H. At the\nbottom of the plane its translational speed is\n(8gH/7)1/2. Which of the following is the\nrotational inertia of the cylinder?\n1\n(A) MR2\n2\n3\n(B) MR2\n4\n7\n(C) MR2\n8\n(D) MR2\n7\n(E) MR2\n4\nUnauthorized copying or reuse of\nany part of this page is illegal.\n62"
+    },
+    {
+      "number": 92,
+      "page": 62,
+      "bbox": [
+        306.0,
+        208.70257956006526,
+        594.0,
+        760.0
+      ],
+      "text": "92. Two small equal masses m are connected by an\nideal massless spring that has equilibrium length\n(cid:65) and force constant k, as shown in the figure\n0\nabove. The system is free to move without friction\nin the plane of the page. If p and p represent\n1 2\nthe magnitudes of the momenta of the two\nmasses, a Hamiltonian for this system is\nR| U|\n1 S p2 p2 a fV\n(A) | 1 + 2 \u2212 2 k (cid:65) \u2212 (cid:65) |\n2 T m m 0 W\nR U\n(B) 1 2 S T p m 1 2 + p m 2 2 + 2 k a (cid:65) - (cid:65) 0 f 2 V W\nR U\n1 S p2 p2 a fV\n(C) 2 T m 1 + m 2 - k (cid:65) - (cid:65) 0 W\nR U\n(D) 1 2 S T p m 1 2 + p m 2 2 - k a (cid:65) - (cid:65) 0 f 2 V W\nR U\n(E) 1 2 S T p m 1 2 + p m 2 2 + k a (cid:65) - (cid:65) 0 f 2 V W\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 93,
+      "page": 64,
+      "bbox": [
+        18.0,
+        62.814711253792325,
+        306.0,
+        271.07114588998627
+      ],
+      "text": "93. The solution to the Schr\u00f6dinger equation for the\nground state of hydrogen is\n1\nw = e-r/a 0,\n0 pa 3\n0\nwhere a is the Bohr radius and r is the distance\n0\nfrom the origin. Which of the following is the\nmost probable value for r ?\n(A) 0\n(B) a /2\n0\n(C) a\n0\n(D) 2a\n0\n(E) \u221e"
+    },
+    {
+      "number": 95,
+      "page": 64,
+      "bbox": [
+        306.0,
+        175.02461613242156,
+        594.0,
+        421.5647360735512
+      ],
+      "text": "95. An infinite slab of insulating material with\ndielectric constant K and permittivity e = Ke\n0\nis placed in a uniform electric field of magnitude\nE . The field is perpendicular to the surface\n0\nof the material, as shown in the figure above.\nThe magnitude of the electric field inside the\nmaterial is\nE\n(A) 0\nK\nE\n(B) 0\nKe\n0\n(C) E\n0\n(D) Ke E\n0 0\n(E) KE\n0"
+    },
+    {
+      "number": 94,
+      "page": 64,
+      "bbox": [
+        18.0,
+        270.07114588998627,
+        306.0,
+        760.0
+      ],
+      "text": "94. The raising and lowering operators for the\nquantum harmonic oscillator satisfy\na\u2020 n = n + 1 n + 1 , a n = n n - 1\nfor energy eigenstates \u2126n with energy E .\nn\nWhich of the following gives the first-order shift\nin the n = 2 energy level due to the perturbation\nDH = V(a + a\u2020)2,\nwhere V is a constant?\n(A) 0\n(B) V\n(C) 2V\n(D) 2 2V\n(E) 5V\nUnauthorized copying or reuse of\nany part of this page is illegal.\n64"
+    },
+    {
+      "number": 96,
+      "page": 64,
+      "bbox": [
+        306.0,
+        420.5647360735512,
+        594.0,
+        760.0
+      ],
+      "text": "96. A uniformly charged sphere of total charge Q\nexpands and contracts between radii R and R\n1 2\nat a frequency f. The total power radiated by the\nsphere is\n(A) proportional to Q\n(B) proportional to f 2\n(C) proportional to f 4\n(D) proportional to (R /R )\n2 1\n(E) zero\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 98,
+      "page": 66,
+      "bbox": [
+        306.0,
+        60.576952046507586,
+        594.0,
+        277.36701262276813
+      ],
+      "text": "98. Suppose that a system in quantum state i\nhas energy E . In thermal equilibrium, the\ni\nexpression\n\u00c2 E e-Ei /kT\ni\ni\n\u00c2 e\n-Ei /kT\ni\nrepresents which of the following?\n(A) The average energy of the system\n(B) The partition function\n(C) Unity\n(D) The probability to find the system with\nenergy E\ni\n(E) The entropy of the system"
+    },
+    {
+      "number": 97,
+      "page": 66,
+      "bbox": [
+        18.0,
+        238.80102568591315,
+        306.0,
+        760.0
+      ],
+      "text": "97. A beam of light has a small wavelength spread\ndl about a central wavelength l . The beam\ntravels in vacuum until it enters a glass plate at an\nangle q relative to the normal to the plate, as\nshown in the figure above. The index of refraction\nof the glass is given by n(l). The angular spread\ndq\u00a2 of the refracted beam is given by\n1\n(A) dq\u00a2 = dl\nn\ndn(l)\n(B) dq\u00a2 = dl\ndl\n1 dl\n(C) dq\u00a2 = dl\nl dn\nsin q dl\n(D) dq\u00a2 =\nsin q\u00a2 l\ntan q\u00a2 dn(l)\n(E) dq\u00a2 = dl\nn dl\nUnauthorized copying or reuse of\nany part of this page is illegal.\n66"
+    },
+    {
+      "number": 99,
+      "page": 66,
+      "bbox": [
+        306.0,
+        276.36701262276813,
+        594.0,
+        760.0
+      ],
+      "text": "99. A photon strikes an electron of mass m that is\ninitially at rest, creating an electron-positron pair.\nThe photon is destroyed and the positron and two\nelectrons move off at equal speeds along the\ninitial direction of the photon. The energy of the\nphoton was\n(A) mc2\n(B) 2mc2\n(C) 3mc2\n(D) 4mc2\n(E) 5mc2\nGO ON TO THE NEXT PAGE."
+    },
+    {
+      "number": 100,
+      "page": 68,
+      "bbox": [
+        18.0,
+        248.28245370863772,
+        306.0,
+        760.0
+      ],
+      "text": "100. A Michelson interferometer is configured as a waveme\ncounts may be used to compare the wavelengths of two\narm of the interferometer is translated through a distanc\ndetector for green light and 85,865 fringes pass across\nwavelength of the green laser light is\n(A) 500.33 nm\n(B) 543.37 nm\n(C) 590.19 nm\n(D) 736.99 nm\n(E) 858.65 nm\nIf you finish before time is called, yo\nUnauthorized copying or reuse of\nany part of this page is illegal.\n68"
+    }
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "source": "C:\\Users\\aashmore.LENOVO-15477\\Documents\\GitHub\\aashmore.github.io\\physics-gre\\pdfs\\1996_exam.pdf",
+  "pages": [
+    {
+      "page": 1,
+      "width": 594,
+      "height": 783,
+      "text": "This book is provided FREE with\ntest registration by the\nGraduate Record Examinations Board.\nGraduate Record Examinations\u00ae\nThis practice book\ncontains\nPHYSICS\n(cid:1) one actual full-length\nGRE Physics Test\n(cid:1) test-taking strategies\nTEST\nBecome familiar with\n(cid:1) test structure and content\nPRACTICE\n(cid:1) test instructions and\nanswering procedures\nBOOK\nCompare your practice\ntest results with the\nperformance of those\nwho took the test at a\nGRE administration.\nVisit GRE Online at www.gre.org"
+    },
+    {
+      "page": 2,
+      "width": 594,
+      "height": 783,
+      "text": "Note to Test Takers: Keep this practice book until you receive your score report.\nThe book contains important information about content specifications and scoring.\nCopyright (cid:2) 2001 by Educational Testing Service. All rights reserved.\nEDUCATIONAL TESTING SERVICE, ETS, the ETS logos, GRADUATE RECORD EXAMINATIONS,\nand GRE are registered trademarks of Educational Testing Service."
+    },
+    {
+      "page": 3,
+      "width": 594,
+      "height": 783,
+      "text": "the GRE Writing Assessment score, and GRE General\nTable of Contents\nTest scores. For information about the appropriate use\nof GRE scores, write to GRE Program, Educational\nPurpose of the GRE Subject Tests............................ 3\nTesting Service, Mail Stop 57-L, Princeton, NJ 08541,\nDevelopment of the Subject Tests............................ 3 or visit our Web site at www.gre.org/codelst.html.\nContent of the Physics Test ..................................... 4\nDevelopment of the\nPreparing for a Subject Test...................................... 5\nSubject Tests\nTest-Taking Strategies .............................................. 6\nWhat Your Scores Mean...........................................6\nEach new edition of a Subject Test is developed by a\nPractice Physics Test................................................. 9 committee of examiners composed of professors in the\nsubject who are on undergraduate and graduate facul-\nScoring Your Subject Test ...................................... 73\nties in different types of institutions and in different\nEvaluating Your Performance ................................. 76 regions of the United States and Canada. In selecting\nAnswer Sheet ......................................................... 77 members for each committee, the GRE Program seeks\nthe advice of the appropriate professional associations\nPurpose of the GRE in the subject.\nThe content and scope of each test are specified\nSubject Tests and reviewed periodically by the committee of examin-\ners. Test questions are written by the committee and by\nThe GRE Subject Tests are designed to help graduate other faculty who are also subject-matter specialists\nschool admission committees and fellowship sponsors and by subject-matter specialists at ETS. All questions\nassess the qualifications of applicants in specific fields proposed for the test are reviewed by the committee\nof study. The tests also provide you with an assessment and revised as necessary. The accepted questions are\nof your own qualifications. assembled into a test in accordance with the content\nScores on the tests are intended to indicate knowl- specifications developed by the committee to ensure\nedge of the subject matter emphasized in many under- adequate coverage of the various aspects of the field\ngraduate programs as preparation for graduate study. and, at the same time, to prevent overemphasis on any\nBecause past achievement is usually a good indicator of single topic. The entire test is then reviewed and\nfuture performance, the scores are helpful in predicting approved by the committee.\nsuccess in graduate study. Because the tests are stan- Subject-matter and measurement specialists on the\ndardized, the test scores permit comparison of students ETS staff assist the committee, providing information\nfrom different institutions with different undergraduate and advice about methods of test construction and\nprograms. For some Subject Tests, subscores are pro- helping to prepare the questions and assemble the test.\nvided in addition to the total score; these subscores In addition, each test question is reviewed to eliminate\nindicate the strengths and weaknesses of your prepara- language, symbols, or content considered potentially\ntion, and they may help you plan future studies. offensive, inappropriate for major subgroups of the test-\nThe GRE Board recommends that scores on the taking population, or likely to perpetuate any negative\nSubject Tests be considered in conjunction with other attitude that may be conveyed to these subgroups. The\nrelevant information about applicants. Because numer- test as a whole is also reviewed to ensure that the test\nous factors influence success in graduate school, questions, where applicable, include an appropriate\nreliance on a single measure to predict success is not balance of people in different groups and different roles.\nadvisable. Other indicators of competence typically Because of the diversity of undergraduate curricula,\ninclude undergraduate transcripts showing courses it is not possible for a single test to cover all the\ntaken and grades earned, letters of recommendation, material you may have studied. The examiners,\nPHYSICS TEST 3\nPRACTICE BOOK"
+    },
+    {
+      "page": 4,
+      "width": 594,
+      "height": 783,
+      "text": "therefore, select questions that test the basic knowl- The aim of the test is to determine the extent of\nedge and skills most important for successful graduate the examinees\u2019 grasp of fundamental principles and\nstudy in the particular field. The committee keeps the their ability to apply these principles in the solution\ntest up-to-date by regularly developing new editions of problems. Most test questions can be answered on\nand revising existing editions. In this way, the test the basis of a mastery of the first three years of under-\ncontent changes steadily but gradually, much like most graduate physics.\ncurricula. In addition, curriculum surveys are con- The International System (SI) of units is used\nducted periodically to ensure that the content of a test predominantly in the test. A table of information (see\nreflects what is currently being taught in the under- page 10) representing various physical constants and a\ngraduate curriculum. few conversion factors among SI units is presented in\nAfter a new edition of a Subject Test is first admin- the test book.\nistered, examinees\u2019 responses to each test question are The approximate percentages of the test on the\nanalyzed in a variety of ways to determine whether major content topics have been set by the committee\neach question functioned as expected. These analyses of examiners, with input from a nationwide survey of\nmay reveal that a question is ambiguous, requires undergraduate physics curricula. The percentages\nknowledge beyond the scope of the test, or is inappro- reflect the committee\u2019s determination of the relative\npriate for the total group or a particular subgroup of emphasis placed on each topic in a typical undergradu-\nexaminees taking the test. Answers to such questions ate program. These percentages are given below along\nare not used in computing scores. with the major subtopics included in each content\nFollowing this analysis, the new test edition is category. In each category, the subtopics are listed\nequated to an existing test edition. In the equating roughly in order of decreasing importance for inclusion\nprocess, statistical methods are used to assess the in the test. Nearly all the questions in the test will\ndifficulty of the new test. Then scores are adjusted so relate to material in this listing; however, there may be\nthat examinees who took a difficult edition of the test occasional questions on other topics not explicitly\nare not penalized, and examinees who took an easier listed here.\nedition of the test do not have an advantage. Varia-\n1. CLASSICAL MECHANICS (such as 20%\ntions in the number of questions in the different\nkinematics, Newton\u2019s laws, work and\neditions of the test are also taken into account in\nenergy, oscillatory motion, rotational\nthis process.\nmotion about a fixed axis, dynamics of\nScores on the Subject Tests are reported as three-\nsystems of particles, central forces and\ndigit scaled scores with the third digit always zero.\ncelestial mechanics, three-dimensional\nThe maximum possible range for all Subject Test total\nparticle dynamics, Lagrangian and\nscores is from 200 to 990. The actual range of scores for\nHamiltonian formalism, noninertial\na particular Subject Test, however, may be smaller. The\nreference frames, elementary topics in\nmaximum possible range of Subject Test subscores is\nfluid dynamics)\n20 to 99; however, the actual range of subscores for any\ntest or test edition may be smaller. Subject Test score 2. ELECTROMAGNETISM (such as 18%\ninterpretive information is provided in Interpreting Your electrostatics, currents and DC\nGRE Scores, which you will receive with your GRE circuits, magnetic fields in free space,\nscore report, and on the GRE Web site at www.gre.org/ Lorentz force, induction, Maxwell\u2019s\ncodelst.html. equations and their applications,\nelectromagnetic waves, AC circuits,\nContent of the Physics Test magnetic and electric fields in matter)\n3. OPTICS AND WAVE PHENOM- 9%\nThe test consists of about 100 five-choice questions, ENA (such as wave properties, super-\nsome of which are grouped in sets and based on such position, interference, diffraction,\nmaterials as diagrams, graphs, experimental data, and geometrical optics, polarization,\ndescriptions of physical situations. Doppler effect)\n4 PHYSICS TEST\nPRACTICE BOOK"
+    },
+    {
+      "page": 5,
+      "width": 594,
+      "height": 783,
+      "text": "4. THERMODYNAMICS AND STA- 10% Miscellaneous (e.g., astrophysics, mathemati-\nTISTICAL MECHANICS (such as cal methods, computer applications)\nthe laws of thermodynamics, thermo-\ndynamic processes, equations of state, Those taking the test should be familiar with\nideal gases, kinetic theory, ensembles, certain mathematical methods and their applications\nstatistical concepts and calculation of in physics. Such mathematical methods include single\nthermodynamic quantities, thermal and multivariate calculus, coordinate systems (rectan-\nexpansion and heat transfer) gular, cylindrical, and spherical), vector algebra and\nvector differential operators, Fourier series, partial\n5. QUANTUM MECHANICS (such as 12%\ndifferential equations, boundary value problems,\nfundamental concepts, solutions of\nmatrices and determinants, and functions of complex\nthe Schr\u00f6dinger equation (including\nvariables. These methods may appear in the test in the\nsquare wells, harmonic oscillators,\ncontext of various content categories as well as occa-\nand hydrogenic atoms), spin, angular\nsional questions concerning only mathematics in the\nmomentum, wave function symmetry,\nspecialized topics category above.\nelementary perturbation theory)\n6. ATOMIC PHYSICS (such as proper- 10%\nPreparing for a Subject Test\nties of electrons, Bohr model, energy\nquantization, atomic structure, atomic\nGRE Subject Test questions are designed to measure\nspectra, selection rules, black-body\nskills and knowledge gained over a long period of time.\nradiation, x-rays, atoms in electric and\nAlthough you might increase your scores to some\nmagnetic fields)\nextent through preparation a few weeks or months\n7. SPECIAL RELATIVITY (such as 6% before you take the test, last-minute cramming is\nintroductory concepts, time dilation, unlikely to be of further help. The following informa-\nlength contraction, simultaneity, tion may be helpful.\nenergy and momentum, four-vectors\n(cid:1) A general review of your college courses is\nand Lorentz transformation,\nprobably the best preparation for the test. How-\nvelocity addition)\never, the test covers a broad range of subject\n8. LABORATORY METHODS (such as 6% matter, and no one is expected to be familiar\ndata and error analysis, electronics, with the content of every question.\ninstrumentation, radiation detection,\n(cid:1) Use this practice book to become familiar\ncounting statistics, interaction of\nwith the types of questions in the GRE Physics\ncharged particles with matter, lasers\nTest, paying special attention to the directions. If\nand optical interferometers, dimen-\nyou thoroughly understand the directions before\nsional analysis, fundamental applica-\nyou take the test, you will have more time during\ntions of probability and statistics)\nthe test to focus on the questions themselves.\n9. SPECIALIZED TOPICS: Nuclear 9%\nand Particle physics (e.g., nuclear\nproperties, radioactive decay, fission\nand fusion, reactions, fundamental\nproperties of elementary particles),\nCondensed Matter (e.g., crystal\nstructure, x-ray diffraction, thermal\nproperties, electron theory of metals,\nsemiconductors, superconductors),\nPHYSICS TEST 5\nPRACTICE BOOK"
+    },
+    {
+      "page": 6,
+      "width": 594,
+      "height": 783,
+      "text": "Test-Taking Strategies What Your Scores Mean\nThe questions in the practice test in this book illus- Your raw score \u2014 that is, the number of questions you\ntrate the types of multiple-choice questions in the test. answered correctly minus one-fourth of the number\nWhen you take the test, you will mark your answers on you answered incorrectly \u2014 is converted to the scaled\na separate machine-scorable answer sheet. Total testing score that is reported. This conversion ensures that a\ntime is two hours and fifty minutes; there are no scaled score reported for any edition of a Subject Test\nseparately timed sections. Following are some general is comparable to the same scaled score earned on any\ntest-taking strategies you may want to consider. other edition of the same test. Thus, equal scaled\n(cid:1) Read the test directions carefully, and work as scores on a particular Subject Test indicate essentially\nequal levels of performance regardless of the test\nrapidly as you can without being careless. For\nedition taken. Test scores should be compared only\neach question, choose the best answer from the\nwith other scores on the same Subject Test. (For\navailable options.\nexample, a 680 on the Computer Science Test is not\n(cid:1) All questions are of equal value; do not waste\nequivalent to a 680 on the Mathematics Test.)\ntime pondering individual questions you find\nBefore taking the test, you may find it useful to\nextremely difficult or unfamiliar.\nknow approximately what raw scores would be required\n(cid:1) You may want to work through the test quite to obtain a certain scaled score. Several factors influ-\nrapidly, first answering only the questions about ence the conversion of your raw score to your scaled\nwhich you feel confident, then going back and score, such as the difficulty of the test edition and the\nanswering questions that require more thought, number of test questions included in the computation\nand concluding with the most difficult questions of your raw score. Based on recent editions of the\nif there is time. Physics Test, the table on the next page gives the range\nof raw scores associated with selected scaled scores for\n(cid:1) If you decide to change an answer, make sure you\nthree different test editions. (Note that when the\ncompletely erase it and fill in the oval corre-\nnumber of scored questions for a given test is greater\nsponding to your desired answer.\nthan the range of possible scaled scores, it is likely that\n(cid:1) Questions for which you mark no answer or more two or more raw scores will convert to the same scaled\nthan one answer are not counted in scoring. score.) The three test editions in the table that follows\n(cid:1) As a correction for haphazard guessing, one- were selected to reflect varying degrees of difficulty.\nExaminees should note that future test editions may be\nfourth of the number of questions you answer\nsomewhat more or less difficult than the test editions\nincorrectly is subtracted from the number of\nillustrated in the table.\nquestions you answer correctly. It is improbable\nthat mere guessing will improve your score\nsignificantly; it may even lower your score.\nIf, however, you are not certain of the correct\nanswer but have some knowledge of the question\nand are able to eliminate one or more of the\nanswer choices, your chance of getting the right\nanswer is improved, and it may be to your advan-\ntage to answer the question.\n(cid:1) Record all answers on your answer sheet.\nAnswers recorded in your test book will not\nbe counted.\n(cid:1) Do not wait until the last five minutes of a\ntesting session to record answers on your\nanswer sheet.\n6 PHYSICS TEST\nPRACTICE BOOK"
+    },
+    {
+      "page": 7,
+      "width": 594,
+      "height": 783,
+      "text": "Range of Raw Scores* Needed to Earn\nSelected Scaled Scores on Three\nPhysics Test Editions That\nDiffer in Difficulty\nRaw Scores\nScaled Score Form A Form B Form C\n900 75 71 60-61\n800 61 57 45\n700 47 43-44 33\n600 33-34 29-30 22\nNumber of Questions Used to Compute Raw Score\n100 100 98\n*Raw Score = Number of correct answers minus one-fourth the\nnumber of incorrect answers, rounded to the nearest integer\nFor a particular test edition, there are many ways to\nearn the same raw score. For example, on the edition\nlisted above as \u201cForm A,\u201d a raw score of 47 would earn\na scaled score of 700. Below are a few of the possible\nways in which a scaled score of 700 could be earned on\nthat edition.\nExamples of Ways to Earn\na Scaled Score of 700 on the\nEdition Labeled As \u201cForm A\u201d\nNumber of\nQuestions Questions Questions Questions Used\nAnswered Answered Not to Compute\nRaw Score Correctly Incorrectly Answered Raw Score\n47 47 0 53 100\n47 52 20 28 100\n47 57 40 3 100\nPHYSICS TEST 7\nPRACTICE BOOK"
+    },
+    {
+      "page": 8,
+      "width": 594,
+      "height": 783,
+      "text": "Practice Test\nTo become familiar with how the administration will be conducted at the test center, first remove the\nanswer sheet (pages 77 and 78). Then go to the back cover of the test book (page 72) and follow the\ninstructions for completing the identification areas of the answer sheet. When you are ready to begin the\ntest, note the time and begin marking your answers on the answer sheet.\n8 PHYSICS TEST\nPRACTICE BOOK"
+    },
+    {
+      "page": 9,
+      "width": 594,
+      "height": 783,
+      "text": "FORM GR9677\n9"
+    },
+    {
+      "page": 10,
+      "width": 594,
+      "height": 783,
+      "text": "10"
+    },
+    {
+      "page": 11,
+      "width": 594,
+      "height": 783,
+      "text": "This test starts on page 12.\n11"
+    },
+    {
+      "page": 12,
+      "width": 594,
+      "height": 783,
+      "text": "12"
+    },
+    {
+      "page": 13,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n13"
+    },
+    {
+      "page": 14,
+      "width": 594,
+      "height": 783,
+      "text": "14"
+    },
+    {
+      "page": 15,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n15"
+    },
+    {
+      "page": 16,
+      "width": 594,
+      "height": 783,
+      "text": "16"
+    },
+    {
+      "page": 17,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n17"
+    },
+    {
+      "page": 18,
+      "width": 594,
+      "height": 783,
+      "text": "18"
+    },
+    {
+      "page": 19,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n19"
+    },
+    {
+      "page": 20,
+      "width": 594,
+      "height": 783,
+      "text": "20"
+    },
+    {
+      "page": 21,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n21"
+    },
+    {
+      "page": 22,
+      "width": 594,
+      "height": 783,
+      "text": "22"
+    },
+    {
+      "page": 23,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n23"
+    },
+    {
+      "page": 24,
+      "width": 594,
+      "height": 783,
+      "text": "24"
+    },
+    {
+      "page": 25,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n25"
+    },
+    {
+      "page": 26,
+      "width": 594,
+      "height": 783,
+      "text": "26"
+    },
+    {
+      "page": 27,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n27"
+    },
+    {
+      "page": 28,
+      "width": 594,
+      "height": 783,
+      "text": "28"
+    },
+    {
+      "page": 29,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n29"
+    },
+    {
+      "page": 30,
+      "width": 594,
+      "height": 783,
+      "text": "30"
+    },
+    {
+      "page": 31,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n31"
+    },
+    {
+      "page": 32,
+      "width": 594,
+      "height": 783,
+      "text": "32"
+    },
+    {
+      "page": 33,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n33"
+    },
+    {
+      "page": 34,
+      "width": 594,
+      "height": 783,
+      "text": "34"
+    },
+    {
+      "page": 35,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n35"
+    },
+    {
+      "page": 36,
+      "width": 594,
+      "height": 783,
+      "text": "36"
+    },
+    {
+      "page": 37,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n37"
+    },
+    {
+      "page": 38,
+      "width": 594,
+      "height": 783,
+      "text": "38"
+    },
+    {
+      "page": 39,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n39"
+    },
+    {
+      "page": 40,
+      "width": 594,
+      "height": 783,
+      "text": "40"
+    },
+    {
+      "page": 41,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n41"
+    },
+    {
+      "page": 42,
+      "width": 594,
+      "height": 783,
+      "text": "d\nr Conductor\nA\ny\nVacuum x\n42"
+    },
+    {
+      "page": 43,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n43"
+    },
+    {
+      "page": 44,
+      "width": 594,
+      "height": 783,
+      "text": "44"
+    },
+    {
+      "page": 45,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n45"
+    },
+    {
+      "page": 46,
+      "width": 594,
+      "height": 783,
+      "text": "46"
+    },
+    {
+      "page": 47,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n47"
+    },
+    {
+      "page": 48,
+      "width": 594,
+      "height": 783,
+      "text": "48"
+    },
+    {
+      "page": 49,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n49"
+    },
+    {
+      "page": 50,
+      "width": 594,
+      "height": 783,
+      "text": "50"
+    },
+    {
+      "page": 51,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n51"
+    },
+    {
+      "page": 52,
+      "width": 594,
+      "height": 783,
+      "text": "52"
+    },
+    {
+      "page": 53,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n53"
+    },
+    {
+      "page": 54,
+      "width": 594,
+      "height": 783,
+      "text": "54"
+    },
+    {
+      "page": 55,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n55"
+    },
+    {
+      "page": 56,
+      "width": 594,
+      "height": 783,
+      "text": "56"
+    },
+    {
+      "page": 57,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n57"
+    },
+    {
+      "page": 58,
+      "width": 594,
+      "height": 783,
+      "text": "58"
+    },
+    {
+      "page": 59,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n59"
+    },
+    {
+      "page": 60,
+      "width": 594,
+      "height": 783,
+      "text": "THIS ITEM WAS NOT SCORED.\n60"
+    },
+    {
+      "page": 61,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n61"
+    },
+    {
+      "page": 62,
+      "width": 594,
+      "height": 783,
+      "text": "62"
+    },
+    {
+      "page": 63,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n63"
+    },
+    {
+      "page": 64,
+      "width": 594,
+      "height": 783,
+      "text": "64"
+    },
+    {
+      "page": 65,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n65"
+    },
+    {
+      "page": 66,
+      "width": 594,
+      "height": 783,
+      "text": "66"
+    },
+    {
+      "page": 67,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n67"
+    },
+    {
+      "page": 68,
+      "width": 594,
+      "height": 783,
+      "text": "68"
+    },
+    {
+      "page": 69,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n69"
+    },
+    {
+      "page": 70,
+      "width": 594,
+      "height": 783,
+      "text": "70"
+    },
+    {
+      "page": 71,
+      "width": 594,
+      "height": 783,
+      "text": "SCRATCHWORK\n71"
+    },
+    {
+      "page": 72,
+      "width": 594,
+      "height": 783,
+      "text": "72"
+    },
+    {
+      "page": 73,
+      "width": 594,
+      "height": 783,
+      "text": "Scoring Your Subject Test\nenter the total number correct and the total number\nincorrect. Divide the total incorrect by 4 and subtract\nPhysics Test scores typically range from 400 to 990. the resulting number from the total correct. This is the\nThe range for different editions of a given test may adjustment made for guessing. Then round the result to\nvary because different editions are not of precisely the nearest whole number. This will give you your raw\nthe same difficulty. The differences in ranges among total score. Use the total score conversion table to find\ndifferent editions of a given test, however, usually are the scaled total score that corresponds to your raw\nsmall. This should be taken into account, especially total score.\nwhen comparing two very high scores. The score Example: Suppose you chose the correct answers to\nconversion table on page 75 shows the score range 44 questions and incorrect answers to 30. Dividing 30\nfor this edition of the test only. by 4 yields 7.5. Subtracting 7.5 from 44 equals 36.5,\nThe worksheet on page 74 lists the correct answers which is rounded to 37. The raw score of 37 corre-\nto the questions. Columns are provided for you to mark sponds to a scaled score of 740.\nwhether you chose the correct (C) answer or an\nincorrect (I) answer to each question. Draw a line\nacross any question you omitted, because it is not\ncounted in the scoring. At the bottom of the page,\nPHYSICS TEST 73\nPRACTICE BOOK"
+    },
+    {
+      "page": 74,
+      "width": 594,
+      "height": 783,
+      "text": "Worksheet for the Physics Test, Form GR9677\nAnswer Key and Percentage* of Examinees\nAnswering Each Question Correctly\nQUESTION TOTAL QUESTION TOTAL\nNumber Answer P + C I Number Answer P + C I\n1 B 73 51 B 70\n2 B 29 52 C 15\n3 B 55 53 C 34\n4 A 34 54 B 18\n5 B 29 55 A 30\n6 B 43 56 C 42\n7 A 22 57 C 41\n8 A 37 58 E 22\n9 A 40 59 B 36\n10 B 47 60 B 9\n11 D 36 61 B 26\n12 C 36 62 C 13\n13 B 37 63 A 56\n14 D 66 64 C 26\n15 E 12 65 D 44\n16 B 20 66 E 25\n17 E 40 67 C 28\n18 C 77 68 E 61\n19 B 17 69 A 14\n20 D 20 70 D 14\n21 C 27 71 A 20\n22 C 26 72 A 29\n23 D 24 73 C 34\n24 D 70 74 B 21\n25 E 38 75 D 27\n26 C 13 76 B 52\n27 D 49 77 D 12\n28 D 40 78 E 36\n29 E 58 79 D 22\n30 C 28 80 C 31\n31 E 65 81 B 27\n32 B 41 82 E 15\n33 C 56 83 D 15\n34 D 31 84 D 20\n35 A 79 85 B 15\n36 D 46 86 B 36\n37 D 53 87 A 6\n38 D 39 88 B 57\n39 E 54 89 D 18\n40 A 21 90 ** **\n41 A 28 91 E 25\n42 B 52 92 D 15\n43 C 17 93 D 26\n44 A 48 94 D 28\n45 E 45 95 E 23\n46 C 36 96 A 28\n47 C 28 97 E 11\n48 C 30 98 D 39\n49 C 22 99 B 44\n50 C 33 100 C 51\nCorrect (C)\nIncorrect (I)\nTotal Score:\nC \u2013 I/4 = ____________\nScaled Score (SS) = ____________\n*The P+ column indicates the percentage of Physics Test examinees that\nanswered each question correctly; it is based on a sample of December 1996\nexaminees selected to represent all Physics Test examinees tested between\nOctober1,1993, and September 30, 1996.\n**Item 90 was not scored when this form of the test was originally administered.\n74 PHYSICS TEST\nPRACTICE BOOK"
+    },
+    {
+      "page": 75,
+      "width": 594,
+      "height": 783,
+      "text": "Score Conversions and Percents Below*\nfor GRE Physics Test, Form GR9677\nTOTAL SCORE\nRaw Score Scaled Score % Raw Score Scaled Score %\n67-99 990 97 30-31 690 59\n65-66 980 96 29 680 57\n64 970 96 28 670 55\n63 960 95 27 660 53\n62 950 95 26 650 50\n61 940 94 24-25 640 48\n59-60 930 93 23 630 45\n58 920 92 22 620 43\n57 910 91 21 610 40\n56 900 91 19-20 600 38\n54-55 890 90 18 590 35\n53 880 89 17 580 32\n52 870 88 16 570 29\n51 860 86 15 560 27\n50 850 85 13-14 550 25\n48-49 840 84 12 540 23\n47 830 83 11 530 20\n46 820 82 10 520 18\n45 810 81 9 510 15\n44 800 79 7-8 500 13\n42-43 790 77 6 490 11\n41 780 76 5 480 9\n40 770 74 4 470 7\n39 760 73 3 460 6\n38 750 71 1-2 450 4\n36-37 740 69 0 440 3\n35 730 67\n34 720 65\n33 710 63\n32 700 61\n*Percentage scoring below the scaled score is based on the performance of\n11,322 examinees who took the Physics Test between October1, 1993, and\nSeptember 30, 1996.\nPHYSICS TEST 75\nPRACTICE BOOK"
+    },
+    {
+      "page": 76,
+      "width": 594,
+      "height": 783,
+      "text": "Evaluating Your Performance\nthe practice test. Note: due to changes in the test-taking\npopulation, the percentile rank data have also changed.\nNow that you have scored your test, you may wish to To obtain current percentile rank information, visit the\ncompare your performance with the performance of GRE Web site at www.gre.org/codelst.html, or contact\nothers who took this test. Both the worksheet on page the GRE Program.\n74 and the table on page 75 use performance data from It is important to realize that the conditions under\nGRE Physics Test examinees. which you tested yourself were not exactly the same as\nThe data in the worksheet on page 74 are based on those you will encounter at a test center. It is impos-\nthe performance of a sample of the examinees who took sible to predict how different test-taking conditions\nthis test in December 1996. This sample was selected to will affect test performance, and this is only one factor\nrepresent the total population of GRE Physics Test that may account for differences between your practice\nexaminees tested between October 1993 and September test scores and your actual test scores. By comparing\n1996. The numbers in the column labeled \u201cP+\u201d on the your performance on this practice test with the perfor-\nworksheet indicate the percentages of examinees in this mance of other GRE Physics Test examinees, however,\nsample who answered the questions correctly. You may you will be able to determine your strengths and\nuse these numbers as a guide for evaluating your perfor- weaknesses and can then plan a program of study to\nmance on individual test questions. prepare yourself for taking the GRE Physics Test under\nThe table on page 75 contains, for each scaled standard conditions.\nscore, the percentage of examinees tested between\nOctober 1993 and September 1996 who received lower\nscores. Interpretive data based on the scores earned by\nexaminees tested in this three-year period were used by\nadmissions officers in the 1997-98 testing year. These\npercentages appear in the score conversion table in a\ncolumn to the right of the scaled scores. For example,\nin the percentage column opposite the scaled score of\n660 is the number 53. This means that 53 percent of\nthe GRE Physics Test examinees tested between\nOctober 1993 and September 1996 scored lower than\n660. To compare yourself with this population, look at\nthe percentage next to the scaled score you earned on\n76 PHYSICS TEST\nPRACTICE BOOK"
+    },
+    {
+      "page": 77,
+      "width": 594,
+      "height": 783,
+      "text": ""
+    },
+    {
+      "page": 78,
+      "width": 594,
+      "height": 783,
+      "text": ""
+    },
+    {
+      "page": 79,
+      "width": 594,
+      "height": 783,
+      "text": "\u00ae\n54082-007627 \u2022 U81M9 \u2022 Printed in U.S.A.\nIN 991067"
+    }
+  ]
+}

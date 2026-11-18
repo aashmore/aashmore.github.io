@@ -1,0 +1,863 @@
+{
+  "source": "physics-gre\\pdfs\\practice-book-physics.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "page": 9,
+      "bbox": [
+        18.0,
+        252.51200000000006,
+        297.0,
+        468.012
+      ],
+      "text": "1. Two objects sliding on a frictionless surface,\nas represented above, collide and stick together.\nHow much kinetic energy is converted to heat\nduring the collision?\n1\n(A) J\n9\n1\n(B) J\n6\n1\n(C) J\n2\n3\n(D) J\n4\n5\n(E) J\n6"
+    },
+    {
+      "number": 3,
+      "page": 9,
+      "bbox": [
+        297.0,
+        252.51200000000006,
+        576.0,
+        361.51000000000005
+      ],
+      "text": "3. For the circuit shown in the figure above, what is\nthe current i through the 2 W resistor?\n(A) 2 A\n(B) 4 A\n(C) 5 A\n(D) 10 A\n(E) 20 A"
+    },
+    {
+      "number": 4,
+      "page": 9,
+      "bbox": [
+        297.0,
+        360.51000000000005,
+        576.0,
+        469.50800000000004
+      ],
+      "text": "4. By definition, the electric displacement current\nthrough a surface S is proportional to the\n(A) magnetic flux through S\n(B) rate of change of the magnetic flux through S\n(C) time integral of the magnetic flux through S\n(D) electric flux through S\n(E) rate of change of the electric flux through S"
+    },
+    {
+      "number": 2,
+      "page": 9,
+      "bbox": [
+        18.0,
+        467.012,
+        297.0,
+        751.0
+      ],
+      "text": "2. Two simple pendulums A and B consist\nof identical masses suspended from strings\nof length L and L , respectively. The two\nA B\npendulums oscillate in equal gravitational fields.\nIf the period of pendulum B is twice the period\nof pendulum A, which of the following is true\nof the lengths of the two pendulums?\n1\n(A) L = L\nB 4 A\n1\n(B) L = L\nB 2 A\n(C) L = L\nB A\n(D) L = 2L\nB A\n(E) L = 4L\nB A\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 5,
+      "page": 9,
+      "bbox": [
+        297.0,
+        468.50800000000004,
+        576.0,
+        751.0
+      ],
+      "text": "5. The electric field of a plane electromagnetic wave\nof wave number k and angular frequency w is\ngiven by E = E (e + e ) sin(kz - wt). Which of\n0 x y\nthe following gives the direction of the associated\nmagnetic field B ?\n(A) e\nz\n(B) -e + e\nx y\n(C) -e - e\nx y\n(D) e - e\nx z\n(E) e - e\ny z\n9 | Page"
+    },
+    {
+      "number": 6,
+      "page": 10,
+      "bbox": [
+        18.0,
+        48.91100000000006,
+        297.0,
+        217.914
+      ],
+      "text": "6. Which of the following is true about any system\nthat undergoes a reversible thermodynamic\nprocess?\n(A) There are no changes in the internal energy\nof the system.\n(B) The temperature of the system remains\nconstant during the process.\n(C) The entropy of the system and its\nenvironment remains unchanged.\n(D) The entropy of the system and its\nenvironment must increase.\n(E) The net work done by the system is zero."
+    },
+    {
+      "number": 10,
+      "page": 10,
+      "bbox": [
+        297.0,
+        48.91100000000006,
+        576.0,
+        169.90999999999997
+      ],
+      "text": "10. A single-electron atom has the electron in the\n\uf06c = 2 state. The number of allowed values of\nthe quantum number m is\n\uf06c\n(A) 1\n(B) 2\n(C) 3\n(D) 4\n(E) 5"
+    },
+    {
+      "number": 11,
+      "page": 10,
+      "bbox": [
+        297.0,
+        168.90999999999997,
+        576.0,
+        397.90700000000004
+      ],
+      "text": "11. A particle of mass m is confined inside a\none-dimensional box (infinite square well) of\nlength a. The particle\u2019s ground state energy is\nwhich of the following?\n\uf068\n(A)\n8ma\n\uf068\n2\n(B)\n8ma 2\n\uf068\n2\n(C)\nma 2\n\uf068\n2p 2\n(D)\n2ma 2\n\uf068\n2a 2\n(E)\n2mc 2"
+    },
+    {
+      "number": 7,
+      "page": 10,
+      "bbox": [
+        18.0,
+        216.914,
+        297.0,
+        337.913
+      ],
+      "text": "7. For which of the following thermodynamic\nprocesses is the increase in the internal energy\nof an ideal gas equal to the heat added to the gas?\n(A) Constant temperature\n(B) Constant volume\n(C) Constant pressure\n(D) Adiabatic\n(E) Cyclic"
+    },
+    {
+      "number": 8,
+      "page": 10,
+      "bbox": [
+        18.0,
+        336.913,
+        297.0,
+        541.908
+      ],
+      "text": "8. Light of variable frequency n shines on the metal\nsurface of a photoelectric tube. Einstein\u2019s theory\nof the photoelectric effect predicts that the\n(A) work function of the metal is proportional\nto the frequency\n(B) work function of the metal is proportional\nto the wavelength\n(C) current in the tube is a linear function of\nthe wavelength\n(D) potential difference necessary to stop the\nemitted electrons is a linear function of\nthe frequency above the threshold frequency\n(E) potential difference necessary to stop the\nemitted electrons is equal to the work\nfunction"
+    },
+    {
+      "number": 12,
+      "page": 10,
+      "bbox": [
+        297.0,
+        396.90700000000004,
+        576.0,
+        751.0
+      ],
+      "text": "12. The Planck length is the only combination of\nthe factors G (Newton\u2019s gravitational constant),\n\uf068 (Planck\u2019s constant / 2\u03c0 ), and c (the speed of\nlight) that has units of length. Which of the\nfollowing gives the Planck length?\n1/ 2\n\u00ca \uf068G \u02c6\n(A) \u00c1 \u02dc\n\u00cb c3 \u00af\n\uf068G\n(B)\nc 3\nG 2\n(C)\n\uf068c\n(D) \uf068cG\n\uf068G\n(E)\nc\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 9,
+      "page": 10,
+      "bbox": [
+        18.0,
+        540.908,
+        297.0,
+        751.0
+      ],
+      "text": "9. Characteristic X rays, appearing as sharp lines\non a continuous background, are produced\nwhen high-energy electrons bombard a metal\ntarget. Which of the following processes results\nin the characteristic X rays?\n(A) Electrons producing \u010cerenkov radiation\n(B) Electrons colliding with phonons in the metal\n(C) Electrons filling inner shell vacancies that are\ncreated in the metal atoms\n(D) Electrons combining with protons to form\nneutrons\n(E) Electrons undergoing Coulomb scattering\nwith nuclei\n10 | Page"
+    },
+    {
+      "number": 19,
+      "page": 11,
+      "bbox": [
+        297.0,
+        89.67923999999994,
+        576.0,
+        263.27923999999996
+      ],
+      "text": "19.\nmfmA tohoor ec\n1\ntt iie\n0\nrooa innk tsi..g o aTT p\nb\nohhp\no\nfee l\nx\nt ibbh e\ns\nooed\nl i\nxx a\nd\nt ontte rr g\ns\ntaah uvvh eleeo a llb\nr\nrssi o m\nz\n55x\no\no\nn\nmmimn\nta\nwwet\nl\nh\nl\nniiy ettt hhu\nw\nd mtti\ni\nhhr\nt\ne\nh\neeoc\no\nfcct\nu\nioooA\nt\nnn n\nf\nssr ttto\ni\noaac f nnt t\ni\nitth\no\nt se\nn\nffa\na\noon\nt\nrr ccg\na\nee u\ns\nl\np\naaappe r\ne\nppm\nd\nllii oeeo ddm\nf\n..\n1\neTTn\nm\nhhtuee/ m\ns\nff. oo\nA\norrccf\nt\nee\no\nBiin ss\ne\n? tt hhp eeo nnin rrt ee, mma ooc vvo een dds ,,t\na\nlln eeaat vviinngg\nttf hho eer\nc\nbbe oo xxis wwap iittp hhl\ni\naae\nd\nsspp\nt\neeo ee\nt\nddh\ne\noo ffb 22o\nx\nmmi //n ss ..t\nh\nWWe hhd iii ccr hhe\nc\noot ffio ttn hh eeo\nf its\nff(\nm\nooAllo ll)oot\ni\nwwo\nn\nii4nn. ggT ggh iie vvb eesso\nx\ntthh\nt\neer\na\nmmve aal ggs nn\n5\niittuum dd eew ooit ffh tt hhth eee aa\nc\nppo ppn lliis eeta ddn\nt\nfff ooo rrr ccc eee ??\napplied. The force is then removed, leaving\n(( (tAA hBe)) ) b11 o NN 2x with a speed of 2 m/s. Which of the\n(( fBB o)) l lo22 w NN in g gives the magnitude of the applied\n(( (fCC Co)) r) c 33 e? NN 2\n((( DDA ))) 44\n1\nNN\n1N\n(((\n(\nEED\nB\n))) ) 552 NNN\n2\n(C) 3 N\n122700. .. WW((ED hh)) aa tt\n4\nii 1ssN tt hhee mmaaggnniittuuddee ooff tthhee mmaaggnneettiicc ffiieelldd aatt tthhee\ncc( eeE nn) tt ee5 rr 2ooN ff aa cciirrccuullaarr ccoonndduuccttiinngg lloooopp ooff rraaddiiuuss aa\ntthhaatt iiss ccaarrrryyiinngg ccuurrrreenntt II ??"
+    },
+    {
+      "number": 19,
+      "page": 11,
+      "bbox": [
+        297.0,
+        262.27923999999996,
+        576.0,
+        268.57722
+      ],
+      "text": "tthhaatt iiss ccaarrrryyiinngg ccuurrrreenntt II ??\n19. A 10 kg box slides horizontally without friction"
+    },
+    {
+      "number": 20,
+      "page": 11,
+      "bbox": [
+        297.0,
+        267.57722,
+        576.0,
+        433.7599799999999
+      ],
+      "text": "19.tAha 1t 0is kcga rbroyxin sgl icduersr ehnotr iIz o?n tally without friction\n20. What is the magnitude of the magnetic field at the\n((aAAt ))a s44pppemmedII aao 22f 1 m/s. At one point, a constant\ncenter of00 a circular conducting loop of radius a\nforce is applied to the box in the direction of its\nthat is carrying current I ?\n(( mBB)) o timm onII . aa T he box travels 5 m with the constant\nf\n(\no\nA\nr\n)\nc e\n4\na\n00\np\np\nm\npl\nI\nie\na\nd2. The force is then removed, leaving\n0\nthe box with a speed of 2 m/s. Which of the\n((CC)) 00\nfollowing gives the magnitude of the applied\n(B) m Ia\nforcemm ?0II\n((DD)) oo\n(A) 122 aaN\n(C) 0\n(B) 2mm NII\n((\n( (\nEE\nD C\n))\n) ) 3 44 m pp N o\noo\naa I 22\n(D) 42 Na\n(E) 5 N\nm I\n(E) o"
+    },
+    {
+      "number": 17,
+      "page": 11,
+      "bbox": [
+        18.0,
+        353.45895999999993,
+        297.0,
+        469.87406
+      ],
+      "text": "17. ((CDDo)) ns TT iT 11d 2 er== tw 11 1o identical systems, 1 and 2, each\nc (C on ) s TT i\nT\ns22t 1 in = g 88 o\n4\nf a planet in circular orbit about a\n(( m EE)) u chTT T 11 h 2 e == avi11 1 er star. For system 1 the radius of\nt\nt\n(h\nh\nDe\ne\n) o\no\nTTr\nrT\nb\nb\n22 1\n2\ni\ni\nt\nt\n= i\ni\ns\ns\n11\n8\n66\n4\na\na\n,\n.\na n\nW\nd\nh\nf\ni\no\nc\nr\nh\ns\no\ny\nf\ns t\nt\ne\nh\nm\ne f\n2\no l\nt\nl\nh\no\ne\nw\nr\ni\na\nn\nd\ng\ni u\ng\ns\ni v\no\ne\nf\ns\nT T1\nt(hEe) rati1o,= 1 , of the period of system 1 to the\nT T16\n2 2\nperiod of system 2 ?\nT"
+    },
+    {
+      "number": 1,
+      "page": 11,
+      "bbox": [
+        297.0,
+        432.7599799999999,
+        576.0,
+        640.28044
+      ],
+      "text": "(E) moI\n128\n2\n1.\n0\n.\n.\nL\nW\net\nh a\nw\nt 4 pi p s\n,\na th\n2w\ned m\n,\na\na\ng\nn\nn\nd\ni tu\nw\ndae o\nb\nf\ne\nt h\nth\ne\ne\nm\nc\na\ny\ng\nc\nn\nlo\ne\nt\nt\nr\nic\no n\nfield at the\nfcreeqnuteern ocfi eas coifr cpurloatro cnos,n ddeuuctteinrogn lso,o apn odf a rlapdhiau s a\nptahratti cisle csa, rrreysipnegc tciuvrerleyn, tinI t?h e same magnetic\nf(iAel)d . 4Tphme fIrae2quencies are related by which\n0\nof the following? (Assume that the particle\nm (B as ) se m s0 a I r a e in GGthOOe r OOatiNNo TT1 OO: 2TT :HH 4EE.) NNEEXXTT PPAAGGEE..\n1100--\n(A) w = w = w\n(C) 0 p d a\n(B) w = w G>Ow O N TO THE NEXT PAGE.\nmp I d a\n-10- (D) o\n(C) w 2pa= w\nd\n< w\na\n(D) wm <I w = w\n(E) p o d a\n(E) w4pa> 2 w = w\np d a"
+    },
+    {
+      "number": 15,
+      "page": 11,
+      "bbox": [
+        18.0,
+        468.87406,
+        297.0,
+        597.00842
+      ],
+      "text": "T\n15.\n(\nT\nA\nw\n)\no id1en\n=\nti\n1\ncal satellites, A and B, are in circular\norbitsT around Earth. The orbital radius of A is\n2\ntwiceT that o\n1\nf B. Which of the following gives\n(thBe) rati 1 o =of the angular momentum of A to the\nT 2\nangula2r momentum of B ?\n(C) T 1 = 1 --11\n(A) T4 4\n2\nT 1\n(D) 1 =\n(B) T2 8 -\n2\nT 1"
+    },
+    {
+      "number": 15,
+      "page": 11,
+      "bbox": [
+        18.0,
+        468.91264,
+        297.0,
+        597.00842
+      ],
+      "text": "T\n15.\n(\nT\nA\nw\n)\no id1en\n=\nti\n1\ncal satellites, A and B, are in circular\norbitsT around Earth. The orbital radius of A is\n2\ntwiceT that o\n1\nf B. Which of the following gives\n(thBe) rati 1 o =of the angular momentum of A to the\nT 2\nangula2r momentum of B ?\n(C) T 1 = 1 --11\n(A) T4 4\n2\nT 1\n(D) 1 =\n(B) T2 8 -\n2\nT 1"
+    },
+    {
+      "number": 16,
+      "page": 11,
+      "bbox": [
+        18.0,
+        596.00842,
+        297.0,
+        683.41924
+      ],
+      "text": "((EC))\nT12\n=\n1\nT 16\n2\n1\n(D)\n2\n1\n(E)\n2"
+    },
+    {
+      "number": 22,
+      "page": 11,
+      "bbox": [
+        297.0,
+        639.28044,
+        576.0,
+        770.3625
+      ],
+      "text": "22. The emission spectrum of the doubly ionized\nlithium atom Li++ (Z = 3, A = 7) is identical\nto that of a hydrogen atom in which all the\nwavelengths are\n(A) decreased by a factor of 9\n(B) decreased by a factor of 49\n(C) decreased by a factor of 81\n(D) increased GbyO a OfaNct oTrO ofT 9H E NEXT PAGE.\n11 | Page\n-10- (E) increased by a factor of 81"
+    },
+    {
+      "number": 19,
+      "page": 11,
+      "bbox": [
+        18.0,
+        682.41924,
+        297.0,
+        774.59894
+      ],
+      "text": "19. A 10 kg box slides horizontally without friction\nat a speed of 1 m/s. At one point, a constant\nforce is applied to the box in the direction of its\nmotion. The box travels 5 m with the constant\nforce applied. The force is then removed, leaving\nGRE\u00ae Physics Test Practice Book\nthe box with a speed of 2 m/s. Which of the -\nfollowing gives the magnitude of the applied\nforce?"
+    },
+    {
+      "number": 23,
+      "page": 11,
+      "bbox": [
+        297.0,
+        769.3625,
+        576.0,
+        751.0
+      ],
+      "text": ""
+    },
+    {
+      "number": 17,
+      "page": 11,
+      "bbox": [
+        18.0,
+        773.59894,
+        297.0,
+        861.3172000000001
+      ],
+      "text": "force?\n(A) 1 N\n(B) 2 N\n(C) 3 N\n(D) 4 N\n(E) 5 N"
+    },
+    {
+      "number": 20,
+      "page": 11,
+      "bbox": [
+        18.0,
+        860.3172000000001,
+        297.0,
+        751.0
+      ],
+      "text": ""
+    },
+    {
+      "number": 23,
+      "page": 12,
+      "bbox": [
+        297.0,
+        120.90600000000006,
+        576.0,
+        433.91
+      ],
+      "text": "\u02c6\n23. Consider the kinetic energy operator T and the\n\u02c6\nHamiltonian operator H above. Which\nof the following pairs of observables can be\nmeasured simultaneously with no restriction\non their precision?\n(A) x\u02c6 and p\u02c6\n(B) x\u02c6 and T \u02c6\n(C) H \u02c6 and p\u02c6\n\u02c6 \u02c6\n(D) H and T\n(E) T \u02c6 and p\u02c6"
+    },
+    {
+      "number": 21,
+      "page": 12,
+      "bbox": [
+        18.0,
+        372.916,
+        297.0,
+        577.9110000000001
+      ],
+      "text": "21. Which of the following gives the total spin\nquantum number of the electrons in the ground\nstate of neutral nitrogen (Z = 7) ?\n1\n(A)\n2\n(B) 1\n3\n(C)\n2\n5\n(D)\n2\n7\n(E)\n2\n\u02c6"
+    },
+    {
+      "number": 24,
+      "page": 12,
+      "bbox": [
+        297.0,
+        432.91,
+        576.0,
+        751.0
+      ],
+      "text": "24. A sample of nitrogen gas undergoes the cyclic\nthermodynamic process shown above. Which of the\nfollowing gives the net heat transferred to the system\nin one complete cycle 1 \u00c6 2 \u00c6 3 \u00c6 1 ?\n(A) -80 J\n(B) -40 J\n(C) 40 J\n(D) 80 J\n(E) 180 J\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 22,
+      "page": 12,
+      "bbox": [
+        18.0,
+        576.9110000000001,
+        297.0,
+        751.0
+      ],
+      "text": "\u02c6\n22. Consider a Hermitian operator A with the\nproperty A \u02c6 4 = 1 . Which of the following\n\u02c6\nis an allowed pair of eigenvalues of A?\n(A) 0, 1\n(B) 1, -1\n(C) 1, i\n(D) 1, -i\n(E) 1 + i, 1 - i\n12 | Page"
+    },
+    {
+      "number": 28,
+      "page": 13,
+      "bbox": [
+        297.0,
+        48.817999999999984,
+        576.0,
+        181.81799999999998
+      ],
+      "text": "28. A refracting telescope consists of two converging\nlenses separated by 100 cm. The eye-piece lens\nhas a focal length of 20 cm. The angular\nmagnification of the telescope is\n(A) 4\n(B) 5\n(C) 6\n(D) 20\n(E) 100"
+    },
+    {
+      "number": 29,
+      "page": 13,
+      "bbox": [
+        297.0,
+        180.81799999999998,
+        576.0,
+        313.81800000000004
+      ],
+      "text": "29. A particle decays in 2.0 ms in its rest frame. If\nthe same particle moves at u = 0.60c in the lab\nframe, how far will it travel in the lab before\ndecaying?\n(A) 150 m\n(B) 288 m\n(C) 360 m\n(D) 450 m\n(E) 750 m"
+    },
+    {
+      "number": 25,
+      "page": 13,
+      "bbox": [
+        18.0,
+        216.81100000000004,
+        297.0,
+        409.815
+      ],
+      "text": "25. For an ideal gas, consider the three thermodynamic\nprocesses\u2014labeled 1, 2, and 3\u2014shown in the\nPV diagram above. Each process has the same\ninitial state and the same final volume. One\nprocess is adiabatic, on is isobaric, and on is\nisothermal. Which of the following correctly\nidentifies the three processes?\nAdiabatic Isobaric Isothermal\n(A) 1 2 3\n(B) 2 1 3\n(C) 2 3 1\n(D) 3 1 2\n(E) 3 2 1"
+    },
+    {
+      "number": 30,
+      "page": 13,
+      "bbox": [
+        297.0,
+        312.81800000000004,
+        576.0,
+        443.81600000000003
+      ],
+      "text": "30. The rest mass of a particle with total energy\n5.0 GeV and momentum 4.9 GeV/c is\napproximately\n(A) 0.1 GeV/c2\n(B) 0.2 GeV/c2\n(C) 0.5 GeV/c2\n(D) 1.0 GeV/c2\n(E) 1.5 GeV/c2"
+    },
+    {
+      "number": 26,
+      "page": 13,
+      "bbox": [
+        18.0,
+        408.815,
+        297.0,
+        565.817
+      ],
+      "text": "26. The driver of a police car hears an echo of the\ncar\u2019s siren from a wall toward which the car is\nmoving with a speed of 3.5 m/s. If the speed of\nsound is 350 m/s and the frequency of the siren is\n600 Hz, the driver hears the echo at a frequency\nnearest to which of the following?\n(A) 588 Hz\n(B) 594 Hz\n(C) 600 Hz\n(D) 606 Hz\n(E) 612 Hz"
+    },
+    {
+      "number": 31,
+      "page": 13,
+      "bbox": [
+        297.0,
+        442.81600000000003,
+        576.0,
+        751.0
+      ],
+      "text": "31. If charge +Q is located in space at the point\n(x = 1 m, y = 10 m, z = 5 m), what is the total\nelectric flux that passes through the yz-plane?\n(A) \u2022\n(B) 1\nQ\n(C)\ne\n0\nQ\n(D)\n2e\n0\n(E) 0\n13 | Page"
+    },
+    {
+      "number": 27,
+      "page": 13,
+      "bbox": [
+        18.0,
+        564.817,
+        297.0,
+        751.0
+      ],
+      "text": "27. The first five harmonics produced by an organ\npipe open at both ends are 50 Hz, 100 Hz, 150 Hz,\n200 Hz, and 250 Hz. Which of the harmonics,\nif any, will survive once the pipe is closed at\none end?\n(A) 50 Hz, 150 Hz, and 250 Hz only\n(B) 100 Hz and 200 Hz only\n(C) 150 Hz and 250 Hz only\n(D) 200 Hz only\n(E) None\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 32,
+      "page": 14,
+      "bbox": [
+        18.0,
+        204.91100000000006,
+        297.0,
+        751.0
+      ],
+      "text": "32. A point charge Q is placed at the center of a\nhollow, conducting spherical shell of inner radius\na and outer radius b, as shown above. A net\ncharge q is placed on the conducting shell. If the\nelectric potential is assumed to be 0 at infinity, the\nmagnitude of the electric potential at r, where\na < r < b, is\n(A) 0\nQ\n(B)\n4pe r\n0\nQ + q\n(C)\n4pe r\n0\nQ\n(D)\n4pe a\n0\nQ + q\n(E)\n4pe b\n0\n14 | Page"
+    },
+    {
+      "number": 33,
+      "page": 14,
+      "bbox": [
+        297.0,
+        360.913,
+        576.0,
+        751.0
+      ],
+      "text": "33. The figure above shows three arrangements of\none electron (e) and two protons (p). Which of the\nfollowing is true about the magnitude F of the net\nelectrostatic force acting on the electron due to the\nprotons?\n(A) F > F > F\n1 2 3\n(B) F = F > F\n1 2 3\n(C) F > F > F\n1 3 2\n(D) F > F > F\n2 1 3\n(E) F > F > F\n2 3 1\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 36,
+      "page": 15,
+      "bbox": [
+        297.0,
+        48.91500000000008,
+        576.0,
+        265.91099999999994
+      ],
+      "text": "36. Two students perform an experiment in which\nthey drop a ball from rest from a known height\nabove the ground and measure the speed of\nthe ball just before it strikes the ground. From\nrepeated measurement, the students estimate\nthe uncertainty in the measured speed of the\nball to be 10 percent. Which of the following\ngives the uncertainty in the kinetic energy of\nthe ball? (Assume the uncertainty in the ball\u2019s\nmass is negligibly small.)\n(A) 5%\n(B) 10%\n(C) 15%\n(D) 20%\n(E) 40%"
+    },
+    {
+      "number": 34,
+      "page": 15,
+      "bbox": [
+        18.0,
+        132.91100000000006,
+        297.0,
+        445.915
+      ],
+      "text": "34. A series AC circuit with impedance Z consists\nof resistor R, inductor L, and capacitor C,\nas shown above. The ideal emf source has\ne e\na sinusoidal output given by = sin wt ,\nmax\nand the current is given by I = I sin( wt - f).\nmax\nWhat is the average power dissipated in the\ncircuit? ( I is the root-mean-square current.)\nrms\n(A) I 2 R\nrms\n1\n(B) I 2 R\n2 rms\n1\n(C) I2 Z\n2 rms\n1\n(D) I 2 R cos f\n2 rms\n1\n(E) I2 Z cos f\n2 rms"
+    },
+    {
+      "number": 37,
+      "page": 15,
+      "bbox": [
+        297.0,
+        264.91099999999994,
+        576.0,
+        751.0
+      ],
+      "text": "37. A particle in an infinite square well has as\nits initial wave function an equal mixture of\nthe first three orthonormal stationary states:\nY( x,0) = A[y (x ) + y (x ) + y (x )] .\n1 2 3\nThe value of the normalization constant A is\nequal to which of the following?\n1\n(A)\n3\n1\n(B)\n2\n(C) 1\ne (D) 2\n(E) 3\n15 | Page"
+    },
+    {
+      "number": 35,
+      "page": 15,
+      "bbox": [
+        18.0,
+        444.915,
+        297.0,
+        751.0
+      ],
+      "text": "35. The quantum effciency of a photon detector is 0.1.\nIf 100 photons are sent into the detector, one after the\nother, the detector will detect photons\n(A) exactly 10 times\n(B) an average of 10 times, with an rms deviation of\nabout 0.1\n(C) an average of 10 times, with an rms deviation of\nabout 1\n(D) an average of 10 times, with an rms deviation of\nabout 2\n(E) an average of 10 times, with an rms deviation of\nabout 3\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 40,
+      "page": 16,
+      "bbox": [
+        297.0,
+        145.29000000000008,
+        576.0,
+        338.295
+      ],
+      "text": "40. A stone is glued to the top of a light wooden\nblock that floats in a pool of water, as shown in\nFigure 1 above. Assume that exactly 50 percent\nof the block is under water, and that the stone\nhas half the weight of the block. If the block and\nstone are flipped over, as shown in Figure 2, and\nreplaced in the pool, the amount of the block\nunder water will be\n(A) less than 50%\n(B) still 50%\n(C) between 50% and 75%\n(D) between 75% and 100%\n(E) 100%, since the stone and block sink"
+    },
+    {
+      "number": 38,
+      "page": 16,
+      "bbox": [
+        18.0,
+        157.29100000000005,
+        297.0,
+        374.28700000000003
+      ],
+      "text": "38. A matter wave of energy E > 0 and wave\nnumber k is incident from the left on a potential\nwell of width L and depth V . The top of the\n0\nwell is at zero energy and the bottom of the well\nis at -V , as shown in the figure above. The\n0\nspatial part of the wave function in region 3 has\nwhich of the following forms? (A is a constant.)\n(A) Aeikx\n(B) Asin kx\n(C) Acos kx\n(D) Ae ik\u00a2x (k\u00a2 < k)\n(E) Ae -k x (k real and positive)"
+    },
+    {
+      "number": 41,
+      "page": 16,
+      "bbox": [
+        297.0,
+        337.295,
+        576.0,
+        751.0
+      ],
+      "text": "41. A uniform solid disk starts from rest and rolls\ndown an inclined plane without slipping. After\nsome time, what fraction of the disk\u2019s total kinetic\nenergy is rotational kinetic energy?\n1\n(A)\n4\n1\n(B)\n3\n1\n(C)\n2\n2\n(D)\n3\n3\n(E)\n4\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 39,
+      "page": 16,
+      "bbox": [
+        18.0,
+        373.28700000000003,
+        297.0,
+        751.0
+      ],
+      "text": "39. Spring 1 has force constant k and spring 2 has\n1\nforce constant k , where k > k . If the same\n2 1 2\nexternal force is applied to both springs, which\nof the following is true about the extensions\n( Dx and Dx ) and the stored potential energies\n1 2\n(U and U ) of the two springs?\n1 2\nExtension Stored Potential Energy\n(A) Dx < Dx U < U\n1 2 1 2\n(B) Dx < Dx U > U\n1 2 1 2\n(C) Dx = Dx U < U\n1 2 1 2\n(D) Dx = Dx U = U\n1 2 1 2\n(E) Dx > Dx U = U\n1 2 1 2\n16 | Page"
+    },
+    {
+      "number": 42,
+      "page": 17,
+      "bbox": [
+        18.0,
+        48.891000000000076,
+        297.0,
+        181.89100000000008
+      ],
+      "text": "42. A grating spectrometer can just barely resolve\ntwo wavelengths of 500 nm and 502 nm,\nrespectively. Which of the following gives\nthe resolving power of the spectrometer?\n(A) 2\n(B) 250\n(C) 5,000\n(D) 10,000\n(E) 250,000"
+    },
+    {
+      "number": 43,
+      "page": 17,
+      "bbox": [
+        18.0,
+        180.89100000000008,
+        297.0,
+        421.889
+      ],
+      "text": "43. A gas cell with an optical path length of 10 cm is\nplaced in one arm of a Michelson interferometer.\nIf the light source for the interferometer is a laser\nwith wavelength l = 632.2 nm, then 100 fringes\nare counted as the gas cell is evacuated. What is\nthe index of refraction of the original gas?\n(A) 1.00063\n(B) 1.00032\n(C) 1.00016\n(D) 0.99968\n(E) -1.00016"
+    },
+    {
+      "number": 44,
+      "page": 17,
+      "bbox": [
+        18.0,
+        420.889,
+        297.0,
+        751.0
+      ],
+      "text": "44. The AC circuit shown above contains an ideal rectify\ne\n(t ) = V sin wt , which of the following describes th\n0\n(A)\n(B)\n(C)\n(D)\n(E)\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 47,
+      "page": 18,
+      "bbox": [
+        297.0,
+        48.91300000000001,
+        576.0,
+        751.0
+      ],
+      "text": "47. Which of the following statements is (are) true for\na Maxwell-Boltzmann description of an ideal gas\nof atoms in equilibrium at temperature T ?\nI. The average velocity of the atoms is zero.\nII. The distribution of the speeds of the atoms\nhas a maximum at u = 0.\nIII. The probability of finding an atom with zero\nkinetic energy is zero.\nt is (A) I only\n(B) II only\n(C) I and II\n(D) I and III\n(E) II and III\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 45,
+      "page": 18,
+      "bbox": [
+        18.0,
+        156.91100000000006,
+        297.0,
+        481.916
+      ],
+      "text": "45. The Fourier series expansion of a function f (x) that\nperiodic with period 2p is\na \u2022 \u2022\nf (x ) = 0 + \u00c2a cos(nx) + \u00c2b sin(nx).\n2 n n\nn =1 n =1\nIf f (x) is given by the graph above, which of the\nfollowing statements about the coefficients is true?\n(A) a = 0 for all n\nn\n(B) b = 0 for all n\nn\n(C) a = 0 for even n only\nn\n(D) b = 0 for even n only\nn\n(E) a = b for all n\nn n"
+    },
+    {
+      "number": 46,
+      "page": 18,
+      "bbox": [
+        18.0,
+        480.916,
+        297.0,
+        751.0
+      ],
+      "text": "46. A sample of N molecules has the distribution of\nspeeds shown in the figure above. P (u)du is an\nestimate of the number of molecules with speeds\nbetween u and u + du, and this number is\nnonzero only up to 3u , where u is constant.\n0 0\nWhich of the following gives the value of a ?\nN\n(A) a =\n3u\n0\nN\n(B) a =\n2u\n0\nN\n(C) a =\nu\n0\n3N\n(D) a =\n2u\n0\n(E) a = N\n18 | Page"
+    },
+    {
+      "number": 48,
+      "page": 19,
+      "bbox": [
+        18.0,
+        216.91100000000006,
+        297.0,
+        361.91200000000003
+      ],
+      "text": "48. Low-energy electrons are accelerated between electro\napparatus represented above. A plot of current collec\ndata provide evidence for which of the following?\n(A) Electronic energy losses due only to elastic collis\n(B) Excitation energies of the gas atoms of 4.9, 9.8,\n(C) Excitation energy of the gas atoms of 4.9 eV onl\n(D) Atomic energy levels of -4.9, -9.8, and -14.7 eV\n(E) Atomic energy levels of -4.9 and -9.8 eV only"
+    },
+    {
+      "number": 49,
+      "page": 19,
+      "bbox": [
+        18.0,
+        360.91200000000003,
+        297.0,
+        751.0
+      ],
+      "text": "49. A particle of mass m and spin zero is in a\nthree-dimensional isotropic well described\n1\nby V (r) = mw 2r2, where r2 = x2 + y2 + z2.\n2\n7\nHow many states have energy \uf068w ?\n2\n(A) 1\n(B) 2\n(C) 4\n(D) 6\n(E) 8\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 50,
+      "page": 19,
+      "bbox": [
+        297.0,
+        360.91200000000003,
+        576.0,
+        751.0
+      ],
+      "text": "50. The operators for the total angular momentum\n\u02c6 \u02c6 \u02c6 \u02c6\nand its three projections are J and J , J , J ,\nx y z\nrespectively. The commutator between two\n\u02c6 \u02c6 \u02c6 \u02c6 \u02c6 \u02c6 \u02c6 \u02c6\noperators A and B is \u00c8A, B\u02d8 \u222b AB - BA.\n\u00ce \u02da\nWhich of the following is true?\n(A) \u00c8J \u02c6 2 , J \u02c6 \u02d8 = 0\n\u00ce z\u02da\n(B) \u00c8J \u02c6 2, J \u02c6 \u02d8 = i\uf068 J \u02c6\n\u00ce z\u02da y\n\u02c6 \u02c6\n(C) \u00c8J , J \u02d8 = 0\n\u00ce x y\u02da\n\u02c6 \u02c6 \u02c6\n(D) \u00c8J , J \u02d8 = i\uf068 J\n\u00ce x z\u02da z\n\u02c6 \u02c6 \u02c6\n(E) \u00c8J + iJ , J \u02d8 = 0\n\u00ce x y z \u02da\n19 | Page"
+    },
+    {
+      "number": 53,
+      "page": 20,
+      "bbox": [
+        297.0,
+        50.172000000000025,
+        576.0,
+        327.173
+      ],
+      "text": "53. A magnetic field is directed perpendicular to the\nplane of a circular coil of area 0.2 m2 and 250\nturns. If the magnetic field is increased from\n0.01 T to 0.06 T during a time interval of 0.25 s,\nthe average induced EMF in the coil is\n(A) 0.04 V\n(B) 0.1 V\n(C) 2.5 V\n(D) 10 V\n(E) 50 V"
+    },
+    {
+      "number": 51,
+      "page": 20,
+      "bbox": [
+        18.0,
+        170.17100000000005,
+        297.0,
+        411.16900000000004
+      ],
+      "text": "51. A uniform rod of length L and mass M is\nreleased from rest at q = 0 and rotates about a\nhorizontal axis through its base, as shown in the\nfigure above. What is the angular acceleration of\nthe rod as a function of q ? (Ignore the effects of\nfriction and air resistance.)\ng\n(A)\n2L\ng\n(B) q\nL\n6g\n(C) cosq\nL\n3g\n(D) sinq\n2L\n12g\n(E) sinq\nL"
+    },
+    {
+      "number": 54,
+      "page": 20,
+      "bbox": [
+        297.0,
+        326.173,
+        576.0,
+        751.0
+      ],
+      "text": "54. The figure above depicts a step potential with\nU(x) = 0, for x \u00a3 0 (region 1),\nU(x) = \u02dcU , for x > 0 (region 2).\n0\nA beam of particles with E > 0 is incident from\nthe left. The momentum of the particle in each\nregion has the form \uf068k . The reflection coefficient\nR for the interface at x = 0 is\n(A) R = 0\n4k k\n(B) R = 1 2\n(k + k ) 2\n1 2\n(k + k )2\n(C) R = 1 2\n(k - k )2\n1 2\n(k - k )2\n(D) R = 1 2\n(k + k )2\n1 2\n-4k k\n(E) R = 1 2\n(k + k )2\n1 2\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 52,
+      "page": 20,
+      "bbox": [
+        18.0,
+        410.16900000000004,
+        297.0,
+        751.0
+      ],
+      "text": "52. A block attached to a spring is moving along the\nx-axis on a frictionless horizontal surface. What is\nthe Hamiltonian for the block?\n(A) H = 0\n(B) H = -kx\nk\n(C) H = x2\n2\np 2 k\n(D) H = - x2\n2m 2\np 2 k\n(E) H = + x2\n2m 2\n20 | Page"
+    },
+    {
+      "number": 55,
+      "page": 21,
+      "bbox": [
+        18.0,
+        48.91100000000006,
+        297.0,
+        193.91700000000003
+      ],
+      "text": "55. Consider the Pauli spin matrices s , s , and\nx y\ns\nz\n. The product s\nx\ns\ny\nis equal to which of the\nfollowing?\n(A) 0\n(B) s\nz\n(C) -s\nz\n(D) s s\ny x\n(E) -s s\ny x"
+    },
+    {
+      "number": 59,
+      "page": 21,
+      "bbox": [
+        297.0,
+        108.91100000000006,
+        576.0,
+        373.915
+      ],
+      "text": "59. A beam of positive ions is initially moving in\nthe +x-direction with nonrelativistic velocity.\nThe beam enters a velocity selector in which\nthe electric field E is oriented along the\n+y-direction and the magnetic field B is\noriented along the +z-direction, as shown\nabove. Which of the following gives the critical\nspeed u at which the ion beam is not deflected\nc\nas it moves through the velocity selector?\n(A) u = EB\nc\n1\n(B) u =\nc EB\nB2\n(C) u =\nc E\nB\n(D) u =\nc E\nE\n(E) u =\nc B"
+    },
+    {
+      "number": 56,
+      "page": 21,
+      "bbox": [
+        18.0,
+        192.91700000000003,
+        297.0,
+        349.91400000000004
+      ],
+      "text": "56. The binding energy per nucleon is greatest for\nwhich of the following nuclei?\n(A) 3 He\n2\n(B) 4He\n2\n(C) 56Fe\n26\n(D) 235 U\n92\n(E) 238 U\n92"
+    },
+    {
+      "number": 57,
+      "page": 21,
+      "bbox": [
+        18.0,
+        348.91400000000004,
+        297.0,
+        462.411
+      ],
+      "text": "57. The negative muon, m -, has properties\nmost similar to which of the following?\n(A) Quark\n(B) Boson\n(C) Photon\n(D) Meson\n(E) Electron"
+    },
+    {
+      "number": 60,
+      "page": 21,
+      "bbox": [
+        297.0,
+        372.915,
+        576.0,
+        751.0
+      ],
+      "text": "60. Under ideal conditions, the electric and\nmagnetic fields inside a superconductor\nare zero. Maxwell\u2019s equations imply that\nwhich of the following must be true just\noutside the surface of the superconductor?\n(A) B = 0\n(B) B is perpendicular to the surface.\n(C) B is tangential to the surface.\n(D) B is time independent.\n(E) The magnetic flux is quantized.\n21 | Page"
+    },
+    {
+      "number": 58,
+      "page": 21,
+      "bbox": [
+        18.0,
+        461.411,
+        297.0,
+        751.0
+      ],
+      "text": "58. Which of the following correctly gives the quark\nand antiquark content of a lepton and a baryon?\nLepton Baryon\nQuarks Antiquarks Quarks Antiquarks\n(A) 0 0 3 0\n(B) 0 0 1 1\n(C) 1 0 1 1\n(D) 1 1 2 0\n(E) 1 1 3 0\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 61,
+      "page": 22,
+      "bbox": [
+        18.0,
+        144.91100000000006,
+        297.0,
+        397.91
+      ],
+      "text": "61. A positive charge, +q, oscillates up and down,\nas represented in the figure above. What is the\ndirection of the Poynting vector S at point P ?\n(Assume P is located far to the right of +q.)\n(A) Toward the left\n(B) Toward the right\n(C) Toward the top of the page\n(D) Toward the bottom of the page\n(E) Into the page"
+    },
+    {
+      "number": 63,
+      "page": 22,
+      "bbox": [
+        297.0,
+        204.90499999999997,
+        576.0,
+        433.90200000000004
+      ],
+      "text": "63. As represented in the figure above, a light ray\nrefracts from air into a rectangular block of plastic\nwith an index of refraction n > 1. At a point on\nthe side of the block, the ray partly reflects (at an\nangle of 60\u221e) and partly refracts. The value of the\nangle a is\n(A) 30\u221e\n(B) 60\u221e\nn\n(C) cos -1\n2\nn\n(D) sin -1\n2\n(E) tan-1 n"
+    },
+    {
+      "number": 62,
+      "page": 22,
+      "bbox": [
+        18.0,
+        396.91,
+        297.0,
+        751.0
+      ],
+      "text": "62. A block with mass m that slides on a frictionless\n1\ntable is attached by a massless string over a\nmassless, frictionless pulley to a hanging ball\nwith mass m , as shown in the figure above.\n2\nThe tension in the string must be\n(A) equal to m g\n2\n(B) greater than m g\n2\n(C) less than m g\n2\n(D) equal to m g\n1\n(E) greater than m g\n1\n22 | Page"
+    },
+    {
+      "number": 64,
+      "page": 22,
+      "bbox": [
+        297.0,
+        432.90200000000004,
+        576.0,
+        751.0
+      ],
+      "text": "64. The hydrogen lines observed in the spectrum of\nthe quasar 3C9 are shifted so far into the red that\ntheir wavelengths are three times as long as those\nobserved in the light from hydrogen atoms at rest\nin a laboratory on Earth. If it is assumed that the\nshift is entirely due to the relative motion of\n3C9 and Earth, the relative speed of the quasar is\n(A) 2c\n(B) c\n(C) 0.8c\n(D) 0.5c\n(E) 0.3c\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 65,
+      "page": 23,
+      "bbox": [
+        18.0,
+        48.91100000000006,
+        297.0,
+        205.913
+      ],
+      "text": "65. Protons used in cancer therapy are typically\naccelerated to about 0.6c . How much work must\nbe done on a particle of mass m in order for it to\nreach this speed, assuming it starts at rest?\n(A) 0.25mc2\n(B) 0.60mc2\n(C) 0.67mc2\n(D) 1.25mc2\n(E) 1.60mc2"
+    },
+    {
+      "number": 68,
+      "page": 23,
+      "bbox": [
+        297.0,
+        48.91100000000006,
+        576.0,
+        337.911
+      ],
+      "text": "68. Two balls, identical in every way except that one\nhas twice the mass of the other, are dropped from\nrest from the same height so that they both reach\nterminal speed before hitting the ground. If it is\nassumed that the drag force varies like the speed\nsquared, what is the ratio of the terminal speeds\nof the balls? (Note: The subscripts h and l\ndenote the heavy and light masses, respectively.)\nu\n(A) h = 1\nu\nl\nu\n(B) h = 2\nu\nl\nu\n(C) h = 2\nu\nl\nu\n(D) h = 2 2\nu\nl\nu\n(E) h = 4\nu\nl"
+    },
+    {
+      "number": 66,
+      "page": 23,
+      "bbox": [
+        18.0,
+        204.913,
+        297.0,
+        325.91200000000003
+      ],
+      "text": "66. The sign of the charge carriers in a doped\nsemiconductor can be deduced by measuring\nwhich of the following properties?\n(A) Specific heat\n(B) Thermal conductivity\n(C) Electrical resistivity\n(D) Magnetic susceptibility\n(E) Hall coefficient"
+    },
+    {
+      "number": 67,
+      "page": 23,
+      "bbox": [
+        18.0,
+        324.91200000000003,
+        297.0,
+        751.0
+      ],
+      "text": "67. An airplane drops a payload while traveling due\nnorth, parallel to the ground, at a constant speed\nof 100 m/s. If air resistance is neglected, what is\nthe velocity of the payload relative to the plane\n4.0 s after it is released?\n(A) 0\n(B) 40 m/s down\n(C) 80 m/s down\n(D) 100 m/s north and 40 m/s down\n(E) 100 m/s south and 40 m/s down\nGRE\u00ae Physics Test Practice Book"
+    },
+    {
+      "number": 69,
+      "page": 23,
+      "bbox": [
+        297.0,
+        336.911,
+        576.0,
+        751.0
+      ],
+      "text": "69. One end of a horizontal, massless spring is\nattached to a wall. A mass of 0.30 kg is attached\nto the other end of the spring and rests on a\ntable. The mass is displaced 0.030 m from its\nequilibrium position and released. It has a speed\nof 0.040 m/s as it passes through its equilibrium\nposition. In the absence of friction, what is the\ntotal mechanical energy of the system?\n(A) 0.24 mJ\n(B) 0.38 mJ\n(C) 0.48 mJ\n(D) 0.75 mJ\n(E) 0.96 mJ\n23 | Page"
+    },
+    {
+      "number": 70,
+      "page": 24,
+      "bbox": [
+        18.0,
+        192.91100000000006,
+        297.0,
+        751.0
+      ],
+      "text": "70. The diagram above shows a Carnot cycle for an\nideal air conditioner, which is to cool a house on a\nhot summer day. The air conditioner absorbs heat\nat the lower temperature inside and pumps it to\nthe environment at the higher temperature outside.\nWhich of the following gives the ratio of the heat\nQ absorbed in the house (i.e., between points b\nbc\nand c on the cycle) to the work done during the\ncycle?\n(A) 0\n(B) 0.033\n(C) 0.97\n(D) 1.0\n(E) 30.\n24 | Page"
+    },
+    {
+      "number": 14,
+      "page": 25,
+      "bbox": [
+        297.0,
+        498.3959,
+        576.0,
+        524.3959
+      ],
+      "text": "/ 14) x 100 = __________ (rounded to nearest whole number)."
+    },
+    {
+      "number": 13,
+      "page": 25,
+      "bbox": [
+        297.0,
+        523.3959,
+        576.0,
+        557.3959
+      ],
+      "text": "/ 13) x 100 = __________ (rounded to nearest whole number)."
+    },
+    {
+      "number": 16,
+      "page": 25,
+      "bbox": [
+        297.0,
+        556.3959,
+        576.0,
+        751.0
+      ],
+      "text": "/ 16) x 100 = __________ (rounded to nearest whole number).\nted States who answer each question correctly.\n25 | Page"
+    }
+  ]
+}

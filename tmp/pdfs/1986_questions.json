@@ -1,0 +1,1180 @@
+{
+  "questions": [
+    {
+      "number": 1,
+      "page": 5,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-05.jpg",
+      "bbox": [
+        10,
+        187.0,
+        408.0,
+        450.0
+      ],
+      "text": "1.Arock is thrown verticallyupwardwith initial\nspeed vo.Assume a frictionforce proportional\nto-v,where v is the velocity of the rock,and\nneglect the buoyant force exerted by air.Which\nof the following is correct?\n\uff08A) The acceleration of the rock is always\nequal tog.\n(B)The acceleration of the rock is equal tog\nonly at the top of the flight.\n\uff08C) The acceleration of the rock is always less\nthang.\n\uff08D\uff09The speedof therock upon return to its\nstarting point is vo\n\uff08E)Therock can attaina terminal speed\ngreater than vobeforeitreturns to its\nstarting point."
+    },
+    {
+      "number": 4,
+      "page": 5,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-05.jpg",
+      "bbox": [
+        408.0,
+        185.0,
+        806,
+        612.0
+      ],
+      "text": "4.The equationy=A sin2\u03c0\nA,T,and\u5165 are positive constants,represents\na wave whose\n(A)amplitude is 2A\n\uff08B)velocity is in the negative x-direction\n(C) periodis\n(D\uff09 speed is\n(E)speed is\nW\nB\n3M"
+    },
+    {
+      "number": 2,
+      "page": 5,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-05.jpg",
+      "bbox": [
+        10,
+        447.0,
+        408.0,
+        637.0
+      ],
+      "text": "2.A satellite orbitstheEarthinacircular orbit.\nAnastronaut onboardperturbsthe orbit\nslightlybybrieflyfiringa controljetaimed\ntoward theEarth\u2019scenter.Afterward,whichof\nthe following is true of the satellite's path?\n(A) It is an ellipse.\n(B)It is a hyperbola.\n(C)It is a circle with larger radius.\n(D) It is a spiral with incrcasing radius.\n(E)It exhibits manyradial oscillationsper\nrevolution."
+    },
+    {
+      "number": 5,
+      "page": 5,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-05.jpg",
+      "bbox": [
+        408.0,
+        609.0,
+        806,
+        1054
+      ],
+      "text": "5.Two small spheres of putty.A and B,of mass\nMand3M,respectively.hangfrom theceiling\non strings ofequal length .Sphere Ais\ndrawn aside so that it israised to a height ho\nas shown above and then released.Sphcre A\ncollides with sphere B\uff1bthey stick together and\nswingtoamaximum height h equal to\n(A)\n(B)ho\n(D)ho\n(E)ho\nGOONTOTHENEXTPAGE.\n17"
+    },
+    {
+      "number": 3,
+      "page": 5,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-05.jpg",
+      "bbox": [
+        10,
+        634.0,
+        408.0,
+        1054
+      ],
+      "text": "3.For blue light,a transparentmaterial hasa\nrelative permittivity(dielectric constant)of 2.1\nand a relative permeability of 1.0.If the speed of\nlight ina vacuum is c,the phase velocity of\nblue light in an unboundedmedium of this\nmaterial is\n(A)\u221a3.1c\n(B)\u221a2.1c\n(C)\n1.1\n(D)\n(E)\n/3.1"
+    },
+    {
+      "number": 8,
+      "page": 6,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-06.jpg",
+      "bbox": [
+        408.0,
+        56.0,
+        806,
+        197.0
+      ],
+      "text": "8.A 5-kilogram stone is dropped ona nail and\ndrives the nail 0.025meter into a piece of wood.\nIf the stone ismovingat10metersper second\nwhenithitsthenailtheaverageforce exerted\non thenailby the stone while the nail is going\ninto the wood is most nearly\n(A)\n10N\n(B)\n100N\n(C)\n1000N"
+    },
+    {
+      "number": 10,
+      "page": 6,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-06.jpg",
+      "bbox": [
+        408.0,
+        194.0,
+        806,
+        260.0
+      ],
+      "text": "(D)\n10.000N\n(E\uff09100,000N"
+    },
+    {
+      "number": 6,
+      "page": 6,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-06.jpg",
+      "bbox": [
+        10,
+        250.0,
+        408.0,
+        725.0
+      ],
+      "text": "6.A particle is initially atrest at the top of acurved\nfrictionless track.The x- and y-coordinates of\nthetrack are related in dimensionless units\nbyy=\nx2\nthe vertical downward direction.As the particle\nslides down thetrack,what isits tangential\nacceleration?\n(A)0\n(B)g\n(C)\ngx\n(D)\n\u221ax2+4\n(E)\ngx2\nx2+16\n\u2192F=10N\n2kg"
+    },
+    {
+      "number": 9,
+      "page": 6,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-06.jpg",
+      "bbox": [
+        408.0,
+        257.0,
+        806,
+        716.0
+      ],
+      "text": "9.A wire of diameter0.02meter contains 1\u00d71028\nfree electrons per cubic meter.Foranelectric\ncurrentof100amperes,thedriftvelocityforfree\nelectrons inthe wire ismost nearly\n(A)0.6\u00d710-29m/s\n(B)1\u00d710-19m/s\n(C\uff095\u00d710-10m/s\n(D\uff092\u00d710m/s\n(E)8X10m/s\nElectricField\nMagnitude\nB"
+    },
+    {
+      "number": 7,
+      "page": 6,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-06.jpg",
+      "bbox": [
+        10,
+        722.0,
+        408.0,
+        1054
+      ],
+      "text": "7.A 2-kilogram boxhangs by a massless rope\nfrom a ceiling.A force slowly pullsthe box\nhorizontallyto the side until the horizontal force\nis10newtons.The box is thenin equilibrium as\nshown above.The angle that the ropcmakes\nwith the vertical is closest to\n(A)arctan 0.5\n(B)arcsin 0.5\n(C\uff09arctan2.0\n(D)arcsin 2.0\n(E)450\n81"
+    },
+    {
+      "number": 10,
+      "page": 6,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-06.jpg",
+      "bbox": [
+        408.0,
+        713.0,
+        806,
+        1054
+      ],
+      "text": "10.An isolated sphere of radius R containsa\nuniform volume distribution of positive charge.\nWhich of the curves on the graph above\ncorrectlyillustrates the dependence of the\nmagnitude of the electricfield of the sphere asa\nfunction of the distance r from its center?\n(A)A(B)B(C)C(D\uff09D(E\uff09E\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 11,
+      "page": 7,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-07.jpg",
+      "bbox": [
+        10,
+        63.0,
+        408.0,
+        267.0
+      ],
+      "text": "11.Which of the following equations is a con-\nsequence of theequation VxH=D+J?\n(A)V\u00b7\uff08D+J\uff09=0\n0=\uff08r+q\uff09x\u25b3\uff08g\uff09\n(C)V(D\u00b7J\uff09=0\n(D\uff09D+J=0\n(E)D\u00b7J=0"
+    },
+    {
+      "number": 14,
+      "page": 7,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-07.jpg",
+      "bbox": [
+        408.0,
+        63.0,
+        806,
+        380.0
+      ],
+      "text": "14.For an ideal gas,the specific heat at constant\npressure C,is greater than the specific heatat\nconstant volume C,because the\n\uff08A\uff09 gas does work onits environment when its\npressure remains constant while its\ntemperature isincreased\n\uff08B)heat input per degre increase in tempera-\nture is the samein processesfor which\neither the pressure or the volume is kept\nconstant\n(C) pressure of the gasremains constant when\nits temperatureremains constant\n(D) inerease in the gas's internal energy is\ngreater when the pressure remains\nconstant than when thevolume rermains\nconstant\n\uff08E)heat needed is greater when the volume\nremains constant than when the pressure\nremains constant"
+    },
+    {
+      "number": 12,
+      "page": 7,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-07.jpg",
+      "bbox": [
+        10,
+        264.0,
+        408.0,
+        412.0
+      ],
+      "text": "12.A source ofI-kilohertz sound ismoving straight\nsound.The frequency you receiveis\n(A)0.1kHz\n(B)\n0.5kHz\n(C)\n1.1kHz\n(D)1.9kHz\n(E)10kHz"
+    },
+    {
+      "number": 15,
+      "page": 7,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-07.jpg",
+      "bbox": [
+        408.0,
+        377.0,
+        806,
+        516.0
+      ],
+      "text": "15.A sample of N atoms of helium gasisconfined\nin a 1.0 cubic meter volume.The probability that\nnone of the helium atoms is ina1.0x106\ncubicmeter volume of the container is\n(A)0\uff08B\uff09\uff0810-\uff08C\uff09\uff081-10-)\n(D\uff091-\uff0810-(E\uff091"
+    },
+    {
+      "number": 13,
+      "page": 7,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-07.jpg",
+      "bbox": [
+        10,
+        409.0,
+        408.0,
+        1054
+      ],
+      "text": "13.Twocoherent sources ofvisible monochromatic\nlight form an interference pattern on a screen.\nIf therelative phaseof thesourcesisvariedfrom\n0to2 ata frequency of500hertz,which of\nthefollowingbestdescribestheffectifanyn\nthe interference pattern?\n(A) lt is unaffected because the frequency of\nthe phase changeisvery smallcompared\nto the frequency of visible light.\n(B)It is unaffected because thefrequency of\nthe phase change is an integral multiple\nJo\n(C\uff09It is destroyed except when the phase\ndifference is 0or\u03c0\n(D\uff09It is destroyed for all phase differences\nbecause themonochromaticityof the\nsources is destroyed.\n(E)It is not destroyed but simply shifts posi-\ntionsatarate toorapid tobe detectedby\nthe eye."
+    },
+    {
+      "number": 16,
+      "page": 7,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-07.jpg",
+      "bbox": [
+        408.0,
+        513.0,
+        806,
+        1054
+      ],
+      "text": "16.Except formass,theproperties of themuon\nmost closely resemble theproperties of the\n\uff08A)electron\uff08B)graviton\uff08C)photon\n(D)pion\uff08E)proton\nGOONTOTHENEXTPAGE.\n19"
+    },
+    {
+      "number": 17,
+      "page": 8,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-08.jpg",
+      "bbox": [
+        10,
+        72.0,
+        408.0,
+        364.0
+      ],
+      "text": "17.Suppose that\nA\nZ\nintwostagesto\nA-4\nY.The two stages would\nZ-1\nmost likely be which of the following?\nFirst Stage\nSecond Stage\n\uff08A)\u03b2emission with\n\u03b1emission\nanantineutrino\n\uff08B\uff09\u03b2emission\n\u03b1emissionwith\naneutrino\n(C)\u03b2emission\nemission\n(D)Emission ofa\nEmissionof\ndeuteron\ntwoneutrons\n(E)a emission\nemission\nb\u00b2x\u00b27"
+    },
+    {
+      "number": 20,
+      "page": 8,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-08.jpg",
+      "bbox": [
+        408.0,
+        61.0,
+        806,
+        237.0
+      ],
+      "text": "20.A positive kaon (K')has a rest mass of\n494MeV/c2,whereas a proton hasarest\nmass of 938MeV/c2.lfa kaon has a total\nenergy that isequal to the protonrest energy,\nthe speed of the kaon is most nearly\n(A)0.25c\n\uff08B\uff090.40c\n(C\uff090.55c\n(D)0.70c\n(E)0.85c"
+    },
+    {
+      "number": 21,
+      "page": 8,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-08.jpg",
+      "bbox": [
+        408.0,
+        234.0,
+        806,
+        451.0
+      ],
+      "text": "21.Two observers Oand O'observe two events,\nA and B. The observers have a constant\nrelative speed of0.8c.In units such that the\nspeed of light is1,observer Oobtained the\nfollowing coordinates:\nEventA:x=3,y=3,z=3,1=3\nEventB:x=5.y=3,z=1\uff0c=5\nWhat is thelength of the space-time interval\nbetween these two events,as measured by O'\uff1f\n(A)1(B\uff09\u221a2\uff08C\uff092(D\uff093\uff08E\uff092\u221a3"
+    },
+    {
+      "number": 18,
+      "page": 8,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-08.jpg",
+      "bbox": [
+        10,
+        361.0,
+        408.0,
+        692.0
+      ],
+      "text": "18.The wave function w\uff08x)=Aexp\n2\nwhere A and b are real constants,isa\nnormalized eigenfunction of the Schrodinger\nequationforaparticleof mass Mandenergy E\nina one dimensional potential V\uff08x) such that\nV\uff08x)=0 at x=0.Which of thefollowingis\ncorrect?\n=A\uff08V\uff09\nh2b4\n2M\n(B)v=\u00b2b\u00b2x\u00b2\n2M\n(C)v=\u00b2bx\n2M\n(D)E=\u00b2b\u00b2\uff081-b\u00b2x2)\n(E)E=\n2M"
+    },
+    {
+      "number": 22,
+      "page": 8,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-08.jpg",
+      "bbox": [
+        408.0,
+        448.0,
+        806,
+        654.0
+      ],
+      "text": "22.Whichof the following statementsmost\naccuratelydescribeshowanelectromagnetic\nfield behaves under aLorentz transformation\uff1f\n\uff08A\uff09Theelectricfield transforms completely\ninto amagneticfield.\n\uff08B\uff09If initially there isonly anelectricfield\uff0c\nafter the transformation theremay be\nboth an electric and a magnetic field.\n\uff08C\uff09The electricfield is unaltered.\n(D)Themagnetic field is unaltered.\n(E)lt cannot be determined unless a gauge\ntransformationis also specified."
+    },
+    {
+      "number": 23,
+      "page": 8,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-08.jpg",
+      "bbox": [
+        408.0,
+        651.0,
+        806,
+        1054
+      ],
+      "text": "23.Which of thefollowing statements concerning\nthe electrical conductivities at room tempera-\nture ofa pure copper sample andapure silicon\nsample isNOT true\n(A)The conductivity of the copper sampleis\nmany orders of magnitude greater than\nthat of the silicon sample.\n\uff08B\uff09If thetemperature of the copper sampleis\nincreased,its conductivitywill decrease.\n\uff08C\uff09If the temperature of the silicon sample is\nincreased,itsconductivitywill increase.\n\uff08D)The addition of an impurity in the copper\nsample always decreases its conductivity.\n\uff08E\uff09The addition of animpurityin the silicon\nsample always decreases its conductivity.\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 19,
+      "page": 8,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-08.jpg",
+      "bbox": [
+        10,
+        689.0,
+        408.0,
+        1054
+      ],
+      "text": "19.The cnergy levelsof thehydrogen atom are given\nin termsof the principalquantum numbern and\napositive constant A by the expression\n(A)A\n1\n(B)A(1-n\u00b2)\n(C)A(-+)\n(D)An\u00b2\n(E)-\nn2\n20"
+    },
+    {
+      "number": 28,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-09.jpg",
+      "bbox": [
+        408.0,
+        62.0,
+        806,
+        364.0
+      ],
+      "text": "28.Eigenfunctions forarigid dumbbellrotating\nabout its center haveadependence of the\nform \uff08d\uff09=Aeim\uff0cwhere m isaquantum\nnumber and A isa constant.Which of the\nfollowingvaluesofAwillproperlynormalize\ntheeigenfunction?\n(A)\u221a2\u5143\n(B\uff092\u03c0\n(C)(2\u03c0\uff092\n(D)\n(E)"
+    },
+    {
+      "number": 24,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-09.jpg",
+      "bbox": [
+        10,
+        190.0,
+        408.0,
+        365.0
+      ],
+      "text": "24.The battery in the diagram above is to be\ncharged by the generator G. The generator\nhasaterminalvoltage of120volts when the\ncharging current is 10 amperes.The battery has\nanemfof100volts andan internal resistance\nof 1 ohm.In order to charge the battery at 10\namperes charging current,theresistance R\nshould be set at\n(A)0.10\n(B\uff090.5\u03a9\n\uff08C)1.00\n\uff08D)5.0n\uff08E\uff0910.0"
+    },
+    {
+      "number": 25,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-09.jpg",
+      "bbox": [
+        10,
+        362.0,
+        408.0,
+        539.0
+      ],
+      "text": "25.A charged particle is released from rest ina\nregionwhere thereisa constant electricfield\nanda constant magneticfield.If the twofields\nare parallel to each other,the path of the\nparticle isa\n(A)circle\n(B)parabola\n(C\uff09helix\n(D)cycloid\n(E)straight line"
+    },
+    {
+      "number": 29,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-09.jpg",
+      "bbox": [
+        408.0,
+        361.0,
+        806,
+        551.0
+      ],
+      "text": "29.A negative test charge ismoving near a long\nstraight wire in which there is a current.A force\nwill act on thetest charge in a direction parallel\nto the direction of the currentif the motion of\nthe charge is ina direction\n(A)toward the wire\n(B)away from the wire\n(C)the same as that of the current\n\uff08D\uff09opposite to that of the current\n\uff08E)perpendicular to both the direction of the\ncurrent andthedirection towardthe wire"
+    },
+    {
+      "number": 26,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-09.jpg",
+      "bbox": [
+        10,
+        536.0,
+        408.0,
+        698.0
+      ],
+      "text": "26.A nickel target (Z=28) is bombarded with fast\nelectrons.The minimum electronkineticenergy\nneeded to produce x-raysin the K series is\nmost nearly\n(A)\n10eV\n(B)\n100eV\n(C)\n1000eV\n(D)\n10,000eV\n(E)\n100,000eV"
+    },
+    {
+      "number": 30,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-09.jpg",
+      "bbox": [
+        408.0,
+        548.0,
+        806,
+        1054
+      ],
+      "text": "30.The configuration of the potassium atom inits\nground stateis1s22s\u00b22p63s\u00b23p64s1.\nWhichof thefollowingstatements about\npotassium is true?\n(A) Its n=3 shellis completelyfilled.\n(B)Its 4s subshell is completely filled.\n\uff08C)Its least tightly bound electron has =4.\n(D)Its atomic numberis 17.\n(E)Its electron charge distribution is\nspherically symmetrical.\nGOONTOTHENEXTPAGE.\n21"
+    },
+    {
+      "number": 27,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-09.jpg",
+      "bbox": [
+        10,
+        695.0,
+        408.0,
+        1054
+      ],
+      "text": "27.The hypothesis that an electron possesses spin is\nqualitatively significantfor theexplanationof\nallof thefollowingtopicsEXCEPT the\n\uff08A)structure of the periodic table\n\uff08B)specific heat of metals\n(C)anomalous Zeeman effect\n(D)deflection of amovingelectron by a\nuniform magneticfield\n\uff08E) fine structure of atomic spectra"
+    },
+    {
+      "number": 32,
+      "page": 10,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-10.jpg",
+      "bbox": [
+        408.0,
+        57.0,
+        806,
+        248.0
+      ],
+      "text": "32.The photoelectric equation is derived under the\nassumptionthat\n(A)electrons are restricted to orbits of angular\nmomentum nh,where n is aninteger\n\uff08B)clectrons are associated with waves ofwave-\nlength\u5165=h/p,where pismomentum\n\uff08C)light isemitted only when electrons jump\nbetween orbits\n(D) light isabsorbed in quanta of energy\nE=hv\n(E)light behaves like a wave"
+    },
+    {
+      "number": 33,
+      "page": 10,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-10.jpg",
+      "bbox": [
+        408.0,
+        245.0,
+        806,
+        1054
+      ],
+      "text": "33.The quantity W in the photoelectric equation\nisthe\n(A)energy difference between thetwo lowest\nelectronorbitsintheatomsofthe\nphotocathode\n(B)totallightenergy absorbed by the\nphotocathode duringthe measurement\n\uff08C\uff09minimum energy a photon must have in\nordertobeabsorbedbythe\nphotocathode\n(D\uff09minimum energy required to free an\nelectron from its bindingto thecathode\nmaterial\n(E)average energy ofallelectrons in the\nphotocathode\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 31,
+      "page": 10,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-10.jpg",
+      "bbox": [
+        10,
+        414.0,
+        408.0,
+        1054
+      ],
+      "text": "31.When the photoelectric equation is satisfied\nand applicable to this situation,V is the\n\uff08A)negative value at which the current stops\n(B)negative value at which the current starts\n(C\uff09positive value at which the current stops\n\uff08D\uff09positive value at which the current starts\n(E)voltage induced when the light is on\n22"
+    },
+    {
+      "number": 34,
+      "page": 11,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-11.jpg",
+      "bbox": [
+        10,
+        178.0,
+        408.0,
+        277.0
+      ],
+      "text": "34.The force on the bodyis\n(A)\nmu2\n(B)-4kx3\n(C)kx\n(D)-k\n(E)mg"
+    },
+    {
+      "number": 37,
+      "page": 11,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-11.jpg",
+      "bbox": [
+        408.0,
+        256.0,
+        806,
+        637.0
+      ],
+      "text": "37.The figure above represents a point mass m\nattached to the ceilingby a cordof fixed\nlengthIf the point mass moves ina\nhorizontalcircleofradiusrwith uniform\nangular velocity @,the tension in the cord is\n(\uff09au(v)\n\uff08B\uff09mgcos\uff08\uff09\n(C)mor\nsin (\u53f7)\n(D)m\uff08w\u00b2r\u00b2+g)\n(E\uff09m\uff08ar\u00b2+g\u00b2)\nInput1\nOutput\nInput2"
+    },
+    {
+      "number": 35,
+      "page": 11,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-11.jpg",
+      "bbox": [
+        10,
+        274.0,
+        408.0,
+        370.0
+      ],
+      "text": "35.The Hamiltonian functionfor this system is\n(A)\n+kx\n(B)\n-kx4\n(C)kx\n2m\n(D)mu\u00b2-kx\n(E)"
+    },
+    {
+      "number": 36,
+      "page": 11,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-11.jpg",
+      "bbox": [
+        10,
+        367.0,
+        408.0,
+        1054
+      ],
+      "text": "36.The body moves from xattime to x at\ntime t2.Which of the following quantities is an\nextremum for the x-1curve corresponding to\nthis motion,if end points are fixed?\nB\nip(axu)\n(D)\n(E)\n(mu)dx"
+    },
+    {
+      "number": 38,
+      "page": 11,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-11.jpg",
+      "bbox": [
+        408.0,
+        634.0,
+        806,
+        1054
+      ],
+      "text": "38.If logical0 is0volts andlogical1is +1volt,\nthecircuit shown above isalogiccircuit\ncommonlyknown as\n(A)anORgate\n(B)an ANDgate\n(C)a2-bit adder\n(D)aflip-flop\n(E)afanout\nGOONTOTHENEXTPAGE.\n23"
+    },
+    {
+      "number": 40,
+      "page": 13,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-13.jpg",
+      "bbox": [
+        10,
+        68.0,
+        408.0,
+        198.0
+      ],
+      "text": "40.Anexperimenter measures9934 counts during\none hour fromaradioactive sample.From this\nnumber the countingrate of the sample can be\nestimatedwithastandard deviation ofmost\nnearly\n(A)100\n(B)200\n(C\uff09300\n(D)400\n(E)500"
+    },
+    {
+      "number": 41,
+      "page": 13,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-13.jpg",
+      "bbox": [
+        10,
+        195.0,
+        408.0,
+        340.0
+      ],
+      "text": "41.Which of the following nuclei has the largest\nbinding energy per nucleon?(Consider the most\nabundant isotope of eachelement.)\n(A)Helium\n(B)Carbon\n(C\uff09Iron\n(D)Uranium\n(E)Plutonium"
+    },
+    {
+      "number": 44,
+      "page": 13,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-13.jpg",
+      "bbox": [
+        408.0,
+        259.0,
+        806,
+        470.0
+      ],
+      "text": "44.Auniform stick of length Landmass M lies\nonafrictionless horizontal surface.A point\nparticle of mass m approaches the stickwith\nspeedv ona straight line perpendicular to the\nstick thatintersects thestick at one end\uff0cas\nshown above.After the collsion,which s\nelastic,the particle isatrest.The speed Vof the\ncenter of mass of the stick afterthe collision is\n(A)\nm\n(C)\n(D)\nm\nM"
+    },
+    {
+      "number": 42,
+      "page": 13,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-13.jpg",
+      "bbox": [
+        10,
+        337.0,
+        408.0,
+        625.0
+      ],
+      "text": "42.A proton beam is incident ona scatterer\n0.1centimeter thick.The scatterer contains\n1020 target nuclei per cubic centimeter.In\npassing through the scatterer,onc proton per\nincidentmillionis scattered.The scattering\ncrosssectionis\n(A)10-29cm2\n(B\uff0910-27cm2\n(C) 10-25 cm\u00b2\n(D)10-2 cm\u00b2\n(E)10-21cm\u00b22\nA\nB\nm\n2m\nm"
+    },
+    {
+      "number": 45,
+      "page": 13,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-13.jpg",
+      "bbox": [
+        408.0,
+        467.0,
+        806,
+        1054
+      ],
+      "text": "45.Photons of wavelength\u5165 scatter elastically on\nfree protons initially at rest.The wavelength of\nthe photons scattered at90\u00b0is increased by\n(A)/137\n(B)/1836\n\uff08C)h/mc, where h is Planck's constant,m\nthe rest mass of an electron,andc the\nspeedof light\n(D)h/m,c,where h is Planck's constant,m\nthe rest mass ofa proton,andc the\nspeedof light\n(E)zero\nGOONTOTHENEXTPAGE.\n25"
+    },
+    {
+      "number": 43,
+      "page": 13,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-13.jpg",
+      "bbox": [
+        10,
+        622.0,
+        408.0,
+        1054
+      ],
+      "text": "43.Three masses areconnected by two springs as\nshown above.A longitudinal normalmodewith\nfrequency2\u221am\n1\n\u533a\nisexhibitedby\n\uff08A)A,B,Callmoving in the same direction\nwithequalamplitude\n\uff08B)A and Cmovingin opposite directions\nwith equalamplitude,and Batrest\n\uff08C\uff09A and Cmovingin the same direction\nwith equalamplitude,and Bmovingin\nthe oppositedirection withthe same\namplitude\n\uff08D)A and Cmovingin the same direction\nwithequalamplitude,and Bmoving in\nthe oppositedirection withtwice the\namplitude\n(E)noneof the above"
+    },
+    {
+      "number": 46,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-14.jpg",
+      "bbox": [
+        10,
+        66.0,
+        408.0,
+        182.0
+      ],
+      "text": "46.A blackbodyat temperature T,radiatesenergy\nata power level of 10milliwatts(mW).The\nsame blackbody,when at a temperature 2T,\nradiates energy atapower levelof\n(A)10mW\uff08B\uff0920mW\uff08C\uff0940mW\n\uff08D)80mW\uff08E)160mW"
+    },
+    {
+      "number": 51,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-14.jpg",
+      "bbox": [
+        408.0,
+        61.0,
+        806,
+        309.0
+      ],
+      "text": "51.Onefeature common to both theDebye theory\nand the Einstein theory of the specific heat ofa\ncrystal composed ofNidenticalatomsis\nthatthe\n(A)average energy ofeach atom is3kT\n\uff08B)vibrationalenergy of the crystalis\nequivalent to the energy of3N\nindependent harmonic oscillators\n\uff08C)crystalis assumed to be continuous for all\nelastic waves\n\uff08D\uff09speed of the longitudinalelastic waves is\nless than thespeedof the transverse\nelastic waves\n\uff08E)upper cutoffrequency of the elastic waves\nis the same"
+    },
+    {
+      "number": 47,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-14.jpg",
+      "bbox": [
+        10,
+        179.0,
+        408.0,
+        397.0
+      ],
+      "text": "47.TheFranck-Hertzexperiment and related\nscatteringexpcriments showthat\n(A)electrons are always scatteredelasticaily\nfromatoms\n\uff08B\uff09electrons are never scatteredelastically\nfrom atoms\n\uff08C\uff09electrons ofa certain energy range can be\nscattered inelastically,and the energy lost\nbyelectronsisdiscrete\n(D)electrons always lose thesame energy when\nthey are scattered inelastically\n(E) there is no energy range in which the cnergy\nlostbyelectronsvaries continuously"
+    },
+    {
+      "number": 52,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-14.jpg",
+      "bbox": [
+        408.0,
+        306.0,
+        806,
+        623.0
+      ],
+      "text": "52.A cube has a constant electric potential V on its\nsurface.If there are no charges inside the cube,\nthe potential at the center of the cube is\n\uff08A\uff09zero\uff08B)v/8\n\uff08C\uff09V/6\n(D\uff09V/2(E\uff09V"
+    },
+    {
+      "number": 48,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-14.jpg",
+      "bbox": [
+        10,
+        394.0,
+        408.0,
+        571.0
+      ],
+      "text": "48.A transition in which one photon is radiated\nby the electron in a hydrogen atom when the\nelectron'swave function changesfrom to\nisforbiddenifand\n(A)have opposite parity\n\uff08B\uff09are orthogonal to each other\n\uff08C\uff09arezero at the center of theatomicnucleus\n(D\uff09are both spherically symmetrical\n(E)are associated with different angular\nmomenta"
+    },
+    {
+      "number": 49,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-14.jpg",
+      "bbox": [
+        10,
+        568.0,
+        408.0,
+        759.0
+      ],
+      "text": "49.The Hamiltonian operator in the Schrodinger\nequationcanbeformed from theclassical\nHamiltonian by substituting\n(A)wavelength and frequency formomentum\nandenergy\n\uff08B)a differential operatorformomentum\n\uff08C\uff09transition probability for potential energy\n(D) sums over discrete eigenvalues forintegrals\nover continuous variables\n\uff08E)Gaussian distributions of observables for\nexactvalues"
+    },
+    {
+      "number": 53,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-14.jpg",
+      "bbox": [
+        408.0,
+        620.0,
+        806,
+        1054
+      ],
+      "text": "53.A charged particle oscillates harmonicallyalong\nthe x-axisas shown above.Theradiationfrom\nthe particle is detected ata distant point P,\nwhich lies in the xy-plane.The electric field at\nPisin the\n(A)\u00b1z direction and has a maximum\namplitudeat \u03b8=900\n\uff08B)\u00b1z direction and has a minimum\namplitudeat\u03b8=90c\n(C)xy-plane and hasamaximum amplitude\nat0=900\n(D)xy-planeand hasaminimum amplitude\nat0=90\u00b0\n\uff08E)xy-plane and has amaximum amplitude\nat\u03b8=450\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 50,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-14.jpg",
+      "bbox": [
+        10,
+        756.0,
+        408.0,
+        1054
+      ],
+      "text": "50.The Hall effect is used in solid-state physics to\nmeasure\n(A)ratio of charge to mass\n(B)magnetic susceptibility\n\uff08C\uff09the sign of the charge carriers\n(D\uff09the width of the gap between the conduction\nandvalence bands\n(E)Fermienergy\n26"
+    },
+    {
+      "number": 58,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-15.jpg",
+      "bbox": [
+        408.0,
+        63.0,
+        806,
+        129.0
+      ],
+      "text": "58.In an ordinary hologram,coherentmonochro-\nmatic lightproducesa3-dimensionalpicture\nbecause wave informationisrecorded for which\nof the following?"
+    },
+    {
+      "number": 1,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-15.jpg",
+      "bbox": [
+        408.0,
+        126.0,
+        806,
+        148.0
+      ],
+      "text": "1.Amplitude"
+    },
+    {
+      "number": 11,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-15.jpg",
+      "bbox": [
+        408.0,
+        145.0,
+        806,
+        273.0
+      ],
+      "text": "11.\nPhase\nIIl.Wave-front angular frequency\n(A)Ionly\n(B)Iand ll only\n(C\uff091and Illonly\n(D)I andIIl only\n\uff08E)1,II,and III"
+    },
+    {
+      "number": 54,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-15.jpg",
+      "bbox": [
+        10,
+        157.0,
+        408.0,
+        351.0
+      ],
+      "text": "54.A dielectric of dielectric constant K is placed\nin contact witha conductor having surface\ncharge density o,as shown above.What is the\npolarization\uff08bound) charge density,on the\nsurfaceof thedielectric attheinterfacebetween\nthe two materials?\nx-lo(v)\nK\nK\n(C)oK\n(E)\nK"
+    },
+    {
+      "number": 59,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-15.jpg",
+      "bbox": [
+        408.0,
+        270.0,
+        806,
+        507.0
+      ],
+      "text": "59.The dispersion lawfor a certain type of wave\nmotionis=\uff08c\u00b2k2+m2)\nwhere is the\nangular frequency,k is themagnitude of the\npropagation vector,and c and m are\nconstants.The group velocity of these waves\napproaches\n(A)infinityask-0andzero as k-\u221eo\n\uff08B\uff09infinityask0andcask-o\n\uff08C\uff09cask\u21920andzeroask\u221e\n\uff08D)zero as k-\u21920 and infinity as k\u2192\u221e\n\uff08E\uff09zeroask\u21920andcas k-oo"
+    },
+    {
+      "number": 55,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-15.jpg",
+      "bbox": [
+        10,
+        348.0,
+        408.0,
+        509.0
+      ],
+      "text": "55.Themean kinetic energy of electrons in metals\natroom temperatureisusuallymanytimesthe\nthermal energy kT.Which of the following can\nbest be used to explain this fact?\n(A)The energy-time uncertainty relation\n\uff08B\uff09The Pauli exclusion principle\n(C)The degeneracy of the energy levels\n(D\uff09The Born approximation\n(E)The wave-particle duality"
+    },
+    {
+      "number": 56,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-15.jpg",
+      "bbox": [
+        10,
+        506.0,
+        408.0,
+        678.0
+      ],
+      "text": "56.If isa normalized solution of the Schrodinger\nequationandQis the operatorcorresponding\ntoa physicalobservable x,the quantity\n*Qmaybeintegratedin order to obtain the\n(A)normalization constant for \n\uff08B\uff09spatial overlap of Qwith\n\uff08C\uff09mean value of x\n\uff08D\uff09uncertainty inx\n(E)time derivative ofx"
+    },
+    {
+      "number": 60,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-15.jpg",
+      "bbox": [
+        408.0,
+        504.0,
+        806,
+        1054
+      ],
+      "text": "60.A particle of mass m that moves along the\nx-axis has potential energy V\uff08x)=a+bx2,\nwhere aand b are positive constants.Its\ninitial velocity is vo at x=0.It will execute\nsimpleharmonicmotion with afrequency\ndetermined by thevalue of\n(A\uff09balone\n(B\uff09bandaalone\n(C)bandm alone\n\uff08D\uff09b,a,andm alone\n(E)b\uff0ca,m,and vo\nGOONTOTHENEXTPAGE.\n27"
+    },
+    {
+      "number": 57,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-15.jpg",
+      "bbox": [
+        10,
+        675.0,
+        408.0,
+        1054
+      ],
+      "text": "57.Which of thefollowingisan eigenfunction of\nthe linearmomentum operator-h\nx0\na\nwitha\npositive eigenvalue hk;ie.,an eigenfunction\nthat describes a particle that ismovingin free\nspacein the direction of positive x with a\nprecise value of linear momentum?\n\uff08A)cos kx\uff08B\uff09 sinkx\uff08C)e~ikx\n(D)ekx(E)e-kx"
+    },
+    {
+      "number": 65,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-16.jpg",
+      "bbox": [
+        408.0,
+        66.0,
+        806,
+        199.0
+      ],
+      "text": "65.A current i ina circular loop ofradiusb\nproduces amagnetic field.Atafixed point\nfarfromtheloop,thestrengthof themagnetic\nfieldisproportionaltowhichof thefollowing\ncombinations ofiandb\uff1f\n(E)\n\uff08A\uff09ib\uff08B\uff09ib\u00b2\uff08C\uff09i\u00b2b\uff08D\uff09"
+    },
+    {
+      "number": 66,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-16.jpg",
+      "bbox": [
+        408.0,
+        196.0,
+        806,
+        520.0
+      ],
+      "text": "66.For a systemin which the number of\nparticlesisfixed\uff0cthe reciprocal of theKelvin\ntemperature Tis given by which of the\nfollowing derivatives?(Let P= pressure,\nV=volume,S=entropy,andU=internal\nenergy.)\n(A)()\n(D)\nP\nE)"
+    },
+    {
+      "number": 61,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-16.jpg",
+      "bbox": [
+        10,
+        225.0,
+        408.0,
+        342.0
+      ],
+      "text": "61.The constant urepresents the speed of the\n(A)rocketat1=0\n(B)rocket after its fuel is spent\n\uff08C)rocket in its instantaneous rest frame\n\uff08D\uff09rockets exhaust ina stationary frame\n\uff08E)rocket'sexhaust relative to the rocket"
+    },
+    {
+      "number": 62,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-16.jpg",
+      "bbox": [
+        10,
+        339.0,
+        408.0,
+        508.0
+      ],
+      "text": "62.Theequation can be solved togive yasa\nfunction of m.If therocket has m=mo\nand =0 when it starts,what is the solution\uff1f\n(A)umo/m\n(B\uff09uexp\uff08mo/m\uff09\n(C\uff09u sin\uff08mo/m\uff09\n(D\uff09utan\uff08mo/m\uff09\n(E) None of the above."
+    },
+    {
+      "number": 63,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-16.jpg",
+      "bbox": [
+        10,
+        505.0,
+        408.0,
+        1054
+      ],
+      "text": "63.A point charge -q coulombs is placed ata\ndistance dfroma large grounded conducting\nplane.The surface charge density on the planea\ndistance D from the pointchargeis\n(B)\n(C\uff092D2\ngd\n(D\uff092D\ngd\ngd\n(E)4\u03c06D2\nimpedance R+jX,where j=\u221a1,\nR0,and x\u22600.Formaximum power\ntransfer between the gencratorand theload\nX should be equalto\n(A)0\n(B\uff09x\n(C)-\n(D)Rg\n(E)-Rg\n28"
+    },
+    {
+      "number": 67,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-16.jpg",
+      "bbox": [
+        408.0,
+        517.0,
+        806,
+        682.0
+      ],
+      "text": "67.A large isolated system of Nweakly interacting\nparticlesis in thermalequilibrium.Each particle\nhas only3possible nondegenerate states of\nenergies0,,and3.Whenthesystemisatan\nabsolute temperature T>>e/k,where kis\nBoltzmann's constant,the average energy of\neach particleis\n(A)0\uff08B)\u2208(C)\n\uff08D\uff092t\uff08E\uff093"
+    },
+    {
+      "number": 68,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-16.jpg",
+      "bbox": [
+        408.0,
+        679.0,
+        806,
+        1054
+      ],
+      "text": "68.If anewly discoveredparticleXmoves with\na speedequal to the speedof lightinvacuum,\nthen which of the followingmust be true?\n(A) The rest mass of X is zero.\n\uff08B)The spin of X equals the spin ofa photon.\n(C)The charge of X is carried on its surface.\n(D)X does not spin.\n(E)X cannot bc detected.\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 72,
+      "page": 17,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-17.jpg",
+      "bbox": [
+        408.0,
+        60.0,
+        806,
+        250.0
+      ],
+      "text": "72.The measured index ofrefraction of x-rays in\nrock salt isless than one.Thisis consistent with\nthe theory of relativitybecause\n(A)relativity deals with light waves traveling in\n\uff08B)X-rays cannot transmit signals\navacuumonly\n(C)x-ray photons have imaginary mass\n(D)the theory of relativity predates the\ndevclopment of solid-state physics\n(E)the phase velocity and group velocity are\ndifferent"
+    },
+    {
+      "number": 69,
+      "page": 17,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-17.jpg",
+      "bbox": [
+        10,
+        219.0,
+        408.0,
+        350.0
+      ],
+      "text": "69.The velocity of the car in the garage'srest\nframeis\n(A)0.4c\n(B)0.6c\n(C)0.8c\n(D\uff09greaterthanc\n\uff08E)not determinable from thedata given"
+    },
+    {
+      "number": 73,
+      "page": 17,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-17.jpg",
+      "bbox": [
+        408.0,
+        247.0,
+        806,
+        384.0
+      ],
+      "text": "73.It is necessaryto coat a glass lens with a non-\nreflecting layer.If the wavelength of the light in\nthe coatingis\u5165,the best choice isa layerof\nmaterialhaving anindex ofrefractionbetween\nthose of glass and air and a thickness of\n\uff08C)\n(D\uff09\u5165\uff08E\uff091.5\u5165\n/2"
+    },
+    {
+      "number": 70,
+      "page": 17,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-17.jpg",
+      "bbox": [
+        10,
+        347.0,
+        408.0,
+        462.0
+      ],
+      "text": "70.The lengthof thegarage in the car'srest frame is\n(A)2.4m\n(B)4.0m\n(C\uff095.0m\n(D\uff098.3m\n(E)not determinable from the data given"
+    },
+    {
+      "number": 74,
+      "page": 17,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-17.jpg",
+      "bbox": [
+        408.0,
+        381.0,
+        806,
+        561.0
+      ],
+      "text": "74.Unpolarized light is incident on twoideal\npolarizersinseries.The polarizersare oriented\nso thatnolight emerges through the second\npolarizer.A thirdpolarizerisnowinserted\nbetween thefirst two and its orientation\ndirectionis continuously rotated through 1800.\nThemaximumfractionof theincidentpower\ntransmitted through allthree polarizersis\n(A)zero\uff08B)\n\uff08C\uff09\n(@)\n(E)1"
+    },
+    {
+      "number": 71,
+      "page": 17,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-17.jpg",
+      "bbox": [
+        10,
+        459.0,
+        408.0,
+        1054
+      ],
+      "text": "71.Which of the following statements is the best\nresponse to the question:\n\u201cWas the carever inside a closed garage\uff1f\u201d\n(A)No,because the car is longer than thc\ngarage in all reference frames.\n\uff08B)No,because theLorentz contraction is not\na\u201creal\"effect.\n\uff08C\uff09Yes,because thecaris shorter than the\ngarage in all reference frames.\n\uff08D\uff09Yesbecause theanswer to thcquestionin\nthe garage'srest frame must apply inall\nreferenceframes.\n\uff08E)There is no unique answer to the question,\nas the orderof dooropenings and\nclosings depends on the reference frame."
+    },
+    {
+      "number": 75,
+      "page": 17,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-17.jpg",
+      "bbox": [
+        408.0,
+        558.0,
+        806,
+        1054
+      ],
+      "text": "75.The periodofa hypotheticalEarth satellite\norbiting at sealevel would be 80minutes.In\nterms of the Earth\u2019sradius R,the radius ofa\nsynchronous satellite orbit(period 24 hours\uff09is\nmostnearly\n(A)\n3R,\n(B)\n7R.\n(C)\n18R\n(D)\n320R\n(E)5800R\nGOONTOTHENEXTPAGE.\n29"
+    },
+    {
+      "number": 79,
+      "page": 18,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-18.jpg",
+      "bbox": [
+        408.0,
+        58.0,
+        806,
+        444.0
+      ],
+      "text": "79.One of Maxwell's cquations is V\u00b7B=0.\nWhich of the following sketches showsmagnetic\nfield lines that clearlyviolate this equation\nwithin the region boundedby the dashed lines\n(A)\n(B)\nD\n\uff08E)"
+    },
+    {
+      "number": 80,
+      "page": 18,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-18.jpg",
+      "bbox": [
+        408.0,
+        441.0,
+        806,
+        1054
+      ],
+      "text": "80.Which of thefollowing electric fields could exist\nina finite region of space that contains no\ncharges?(In thesc expressions,A is a constant,\nandI,j,and kareunitvectors pointingin\nthe x,y\uff0cand z directions,respectively.)\n\uff08A)A(2xyi-xzk)\n\uff08B)A\uff08-xyj+xzk\uff09\n\uff08C\uff09A\uff08xzi+xzj)\n(D)Axyz(i+j\uff09\n(E)Axyzi\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 83,
+      "page": 19,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-19.jpg",
+      "bbox": [
+        408.0,
+        68.0,
+        806,
+        269.0
+      ],
+      "text": "83.A spectral line is produced by a gas that is\nsufficiently dense that themean'timebetween\natomic collisions ismuch shorterthan the mean\nlives of the atomic statesresponsiblefor the line.\nComparedwiththe samelineproduced bya\nlow-density gas,the line produced by the\nhigher-density gas will appear\n(A)the same\n(B)more highly polarized.\n(C)broader\n(D)shifted toward the blueendof the spectrum\n(E)split into a doublet"
+    },
+    {
+      "number": 81,
+      "page": 19,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-19.jpg",
+      "bbox": [
+        10,
+        188.0,
+        408.0,
+        554.0
+      ],
+      "text": "81.A small circular wire loop of radius a is located\nat the center ofamuchlargercircularwireloop\nofradius b as shown above.The larger loop\ncarries an alternating current /=/ cos t,\nwhere oand @ are constants.The magnetic\nfield generatedby thecurrent in thelarge loop\ninduces in the smalloop anemf that is\napproximately equal towhich of thefollowing?\n\uff08Either use mks units and let \u03bco be the\npermeability offree space,oruse Gaussian units\nandlet \u03bcobe 4\u03c0/c\u00b2.)\n\uff08A)\n\uff080\uff09g\u00b2\n(B)\nsinut\n(C)\n(D)\n(E)"
+    },
+    {
+      "number": 84,
+      "page": 19,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-19.jpg",
+      "bbox": [
+        408.0,
+        266.0,
+        806,
+        650.0
+      ],
+      "text": "84.Sodium has cleven electrons and the sequence in\nwhich energy levels fill in atoms is 1s,2s,2p\n3s,3p,4s,3d,etc.Whatis the ground state of\nsodium in the usual notation 2S+1L,?\n(A)'So\n(B)2S\n(C\uff09P\n(D)\u00b2P\n(E)P\no\uff08cm2)10-20\n10-21\n10-22\n10-23\n10-24\n105\n108\n107\nhv(eV)"
+    },
+    {
+      "number": 82,
+      "page": 19,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-19.jpg",
+      "bbox": [
+        10,
+        551.0,
+        408.0,
+        1054
+      ],
+      "text": "82.The emission spectrum of an atomic gas ina\nmagneticfield differs from that of thc gasin\nthe absence of amagnetic field.Which of the\nfollowing is true of the phenomenon?\n(A) It is called the Stern-Gerlach effect.\n(B)It is called the Stark effect.\n\uff08C\uff09It is due primarily to the nuclear magnetic\nmoment of the atoms.\n\uff08D)The number ofemission lines observed for\nthe gasina magnetic field is always twice\nthe number observed in the absence of a\nmagneticfield.\n(E)Thenumber ofemission lines observed for\nthe gas in a magnetic field is either\ngreater than or equal to the number\nobserved in the absence ofa magnetic\nfield."
+    },
+    {
+      "number": 85,
+      "page": 19,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-19.jpg",
+      "bbox": [
+        408.0,
+        647.0,
+        806,
+        1054
+      ],
+      "text": "85.Thefigure above shows the photon interaction\ncross sectionsforlead in the energyrange where\nthe Compton,photoelectric,andpair production\nprocesses all playarole.What isthe correct\nidentification of these cross sections?\n\uff08A)1=photoelectric,2=Compton,3=pair\nproduction\n(B\uff091=photoelectric,2=pair production,3=\nCompton\n\uff08C)1=Compton\uff0c2=pair production,3=\nphotoelectric\n\uff08D\uff091=Compton\uff0c2=photoelectric,3=pair\nproduction\n\uff08E\uff091=pair production,2=photoelectric,3=\nCompton\nGOONTOTHENEXTPAGE.\n31"
+    },
+    {
+      "number": 86,
+      "page": 20,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-20.jpg",
+      "bbox": [
+        10,
+        63.0,
+        408.0,
+        281.0
+      ],
+      "text": "86.Theexponent in Coulombsinverse square law\nhas beenfound todifferfromtwobylessthan\none partina billion by measuring whichof the\nfollowing?\n\uff08A)The charge on an oil dropin the Millikan\nexperiment\n\uff08B\uff09The deflection of an clectron beam in an\nelectricfield\n\uff08C)The neutrality of charge of an atom\n(D\uff09Theelectricforce between two charged\nobjects\n\uff08E)The electric field inside a charged\nconducting shell"
+    },
+    {
+      "number": 89,
+      "page": 20,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-20.jpg",
+      "bbox": [
+        408.0,
+        57.0,
+        806,
+        449.0
+      ],
+      "text": "89.A system containing two identical particles is\ndescribed by a wavefunction of the form\n[\uff08x\uff09\uff08x2\uff09+g\uff08x1\uff09\u03b1\uff08x2\uff09]\nwhere x,and xrepresent the spatial\ncoordinates of the particles and\u03b1 and\u03b2\nrepresentall thequantumnumbers,including\nspin,of the statesthat theyoccupy.\nparticiesmightbe\n(A)electrons\n(B)positrons\n(C\uff09protons\n(D)neutrons\n(E)deuterons\n\uff08x)"
+    },
+    {
+      "number": 87,
+      "page": 20,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-20.jpg",
+      "bbox": [
+        10,
+        278.0,
+        408.0,
+        583.0
+      ],
+      "text": "87.InagasofNdiatomicmolecules,two possible\nmodelsforaclassical descriptionofa diatomic\nmolecule are:\nModell\nModelII\nRigid Dumbbell\nSpringyDumbbell\nWhichof thefollowing statements about this\ngas is true?\n\uff08A)Model I has a specific heat c\n\uff08B)Model II hasa smaller specific heat than\nMode!I.\n(C)Model I is always correct.\n(D)Model II is always correct.\n(E)The choice between Models Iand II\ndepends on the temperature."
+    },
+    {
+      "number": 90,
+      "page": 20,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-20.jpg",
+      "bbox": [
+        408.0,
+        446.0,
+        806,
+        1054
+      ],
+      "text": "90.The figure above shows one of the possible\nbouncing freely back and forth along the x-axis\nbetwcenimpenetrable walls located at x=-a\nand x=+a.The potential energy equals zero\nfor|x|<a.If the energy of the particle is 2\nclectronvolts whenit is in the quantum state\nassociatedwiththiseigenfunction,whatisits\npossible energy?\n(A)OeV\n(B)\n(C\uff09\n(D\uff091eV\n(E)2eV\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 88,
+      "page": 20,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-20.jpg",
+      "bbox": [
+        10,
+        580.0,
+        408.0,
+        1054
+      ],
+      "text": "88.ConsiderasystemofNnoninteracting particles\nconfined in avolume Vat a temperature such\nthat theparticles obey classical Boltzmann\nstatistics.If thetemperatureisloweredto the\npoint atwhich quantum effects become\nimportant,thepressure ofthegasmaydiffer\ndepending on whether theparticles arefermions\nor bosons.Let Pbe the pressure exerted by\nthe particlesif theyarefermions,Pbe the\npressureif theyarebosonsand Pbe the\npressuretheparticleswouldexertifquantum\neffects areignored.Which of thefollowingis\ntrue?\n(A)P=PB=PC\n<<(\n(C)PF>P>PC\n>>(\n>>(3)\n32"
+    },
+    {
+      "number": 91,
+      "page": 21,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-21.jpg",
+      "bbox": [
+        10,
+        59.0,
+        408.0,
+        292.0
+      ],
+      "text": "91.When a narrow beam of monoenergetic\nelectronsimpinges on the surface of a single\nmetal crystalat an angle of 30 degrees with the\nplane ofthesurface,fist-orderreflectionis\nobserved.If the spacing of the reflecting crystal\nplanesis known fromx-raymeasurements to be\n3angstromsthespeedoftheelctronsismost\nnearly\n(A)1.4\u00d710-m/s\n(B)2.4m/s\n(C\uff095.0\u00d710m/s\n\uff08D)2.4\u00d7106m/s\n(E)4.5\u00d7109m/s"
+    },
+    {
+      "number": 94,
+      "page": 21,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-21.jpg",
+      "bbox": [
+        408.0,
+        205.0,
+        806,
+        1054
+      ],
+      "text": "94.In the circuit shown above,R=3R and\nthe battery of emfhas negligible internal\nresistance.The resistance of the diode when\nit allowscurrent topassthroughitisalso\nnegligible.Attime =0. the switch Sis\nclosedand thecurrents andvoltages are allowed\ntoreach their asymptotic values.Then at time\n,the swithisopned.whichof thefollowing\ncurvesmost nearlyrepresents thepotential at\npoint Aasa function of time ?\n(A)\n(B)\nVA\n(C)\n(D)\nVA\n(E)\nGOONTOTHENEXTPAGE.\n33"
+    },
+    {
+      "number": 92,
+      "page": 21,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-21.jpg",
+      "bbox": [
+        10,
+        289.0,
+        408.0,
+        519.0
+      ],
+      "text": "92.Which of thefollowingis NOTcompatible with\nthe selectionrule that controls clectricdipole\nemission of photons by excited states of atoms?\n(A)n may have any negative integral value.\n\uff08B\uff09\u25b3=\u00b11\n(C\uff09\u25b3m=0,\u00b11\n(D\uff09\u25b3s=\u00b11\n(E)\u25b3j=\u00b11\nBelt\nSurface"
+    },
+    {
+      "number": 93,
+      "page": 21,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-21.jpg",
+      "bbox": [
+        10,
+        516.0,
+        408.0,
+        1054
+      ],
+      "text": "93.An electric sander hasa continuous belt that rubs\nagainstawoodsurfaceasshownschematically\nabove.ThesanderisI00percentefficientand\ndrawsacurent of9amperesfroma120-volt\nthe sander is pushing against the woodwitha\nnormalforcc of100newtons,thc coefficient of\nfrictionismost nearly\n(A)0.02\n(B)0.2\n(C)0.4\n(D)1.1\n(E)10"
+    },
+    {
+      "number": 96,
+      "page": 22,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-22.jpg",
+      "bbox": [
+        408.0,
+        60.0,
+        806,
+        1054
+      ],
+      "text": "96.A particle ofmass M is in an infinitely deep\nsquare well potential Vwhere\ny=0for-a\u2264x\u2264a,and\nV=\u221eforx<-a.a<x.\nA very small perturbing potential V' is super-\nimposed onV such that\nv=\u2208(2-1x1)\nfor\u2264x\u2264\uff0cand\nV'=0\nforx<\uff0c<x.\nIfo,\uff0c\uff0c.are the energy eigen-\nfunctionsforaparticleintheinfinitelydeep\nsquare well potential,with being the ground\nstate,whichof thefollowingstatementss\ncorrect about the eigenfunction o'of a\nparticle in the perturbed potcntial +V'\uff1f\n\uff08A\uff09o'=ao\uff0cao\u22600\n(B)=\naonwithaon=0for allodd\nn=0\nvaluesofn\n(C)=\nonhn withaon=Ofor all even\nn=0\nvalues ofn\n(D)\naonwithan0forall\nn=0\nvaluesofn\n(E)None of the above\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 95,
+      "page": 22,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-22.jpg",
+      "bbox": [
+        10,
+        270.0,
+        408.0,
+        1054
+      ],
+      "text": "95.In the cycle shown above,KL and NM repre-\nsent isotherms,while KNand LMrepresent\nreversible adiabats.A system iscarried through\nthe Carnot cycle KLMN,taking in heat Q2\nfrom the hotreservoir Tandreleasing heat\nQto the cold reservoir T.Allof the\nfollowing statements are true EXCEPT:\n(A)Q/T=Q2/T2-\n(B)Theentropy of the hotreservoir decreases.\n(C)The entropy of the system increases.\nabsorbed,Q2-Q1.\n(E)Theefficiency of the cycle isindependent of\nthe working substance.\n34"
+    },
+    {
+      "number": 99,
+      "page": 23,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-23.jpg",
+      "bbox": [
+        408.0,
+        63.0,
+        806,
+        367.0
+      ],
+      "text": "99.The positronium\u201catom\u201dconsists of anelectron\nandapositron bound together by theirmutual\nCoulombattractionandmovingabout their\ncenter of mass,whichislocated halfway between\nthem.Thus the positronium\u201catom\u201dis somewhat\nanalogous toahydrogen atom.The ground-state\nbindingenergyof hydrogenis13.6electron volts.\nWhat istheground-state binding energy of\npositronium?\n(A)\nX13.6eV\n(B)\n13.6eV\n(C)13.6eV\n(D\uff092X13.6eV\n(E)(2)2\u00d713.6eV"
+    },
+    {
+      "number": 97,
+      "page": 23,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-23.jpg",
+      "bbox": [
+        10,
+        171.0,
+        408.0,
+        617.0
+      ],
+      "text": "97.Two uniform cylindrical disks of identical\nmass M,radius R,and moment ofinertia\nMR,as shown above,collideona\nfrictionless,horizontal surface.Disk 1,\nhaving an initial counterclockwise angular\nvelocity w and a center-of-mass velocity\nR to the right,makes a grazing\ncollision with diskIl initially at rest.If\nafter thecollision thetwo disks stick together,\nthemagnitude of the total angular momentum\nabout thepoint Pis\n(A)zero\n(B)MR\u00b2\n\uff08C\uff09\nMRuo\n(D)MRuo\n\uff08E)dependent on the time of the collision\nP"
+    },
+    {
+      "number": 100,
+      "page": 23,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-23.jpg",
+      "bbox": [
+        408.0,
+        364.0,
+        806,
+        1054
+      ],
+      "text": "100.The screen ofa pinhole camera is at a distance D\nfrom the pinhole,which has a diameter d.The\nlight has an efective wavelcngth \u5165.(\u5165<<D)\nForwhich of thefollowingvalues ofdwill the\nimagebe sharpest?\n(E)\n\u5165\n35"
+    },
+    {
+      "number": 98,
+      "page": 23,
+      "image": "tmp\\pdfs\\ocr_rendered\\1986\\page-23.jpg",
+      "bbox": [
+        10,
+        614.0,
+        408.0,
+        1054
+      ],
+      "text": "98.Thelong thin cylindricalglass rod shown above\nhaslength and is insulated from its surround-\nings.The rod has an excess charge Q uniformly\ndistributed along its length.Assume the electric\npotential tobe zero atinfinite distancesfrom the\nrod.If k is the constant in Coulomb's law,the\nelectric potential at a point Palong the axis of\ntherodanda distance & from one end is\nmultipliedby\n(B\uff09\n(C)\n(D\uff09In2\n(E)1"
+    }
+  ]
+}

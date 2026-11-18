@@ -1,0 +1,1204 @@
+{
+  "questions": [
+    {
+      "number": 1,
+      "page": 5,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-05.jpg",
+      "bbox": [
+        10,
+        196.0,
+        408.0,
+        454.0
+      ],
+      "text": "1.The wavefunction of a particle ise\uff08kx-)\nwhere xisdistanc,istime,andk and\nare positive realnumbers.Thex-component of\nthemomentum of the particleis\n(A)0\n(B\uff09h\n(C)hk\n(D)\nhoo\n\u4e1b\n(E)"
+    },
+    {
+      "number": 4,
+      "page": 5,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-05.jpg",
+      "bbox": [
+        408.0,
+        309.0,
+        806,
+        435.0
+      ],
+      "text": "4.What is\nF(2R)\n(A)32\n(B)\n8\n(C)\n4\n(D)\n2\n(E)\n\u3011"
+    },
+    {
+      "number": 5,
+      "page": 5,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-05.jpg",
+      "bbox": [
+        408.0,
+        432.0,
+        806,
+        1031
+      ],
+      "text": "5.Suppose there is avery smallshaftin the Earth such\nthat the point mass can be placed at a radius of R/2.\nWhatis\nF(R)\nR\n(A)8\n(B)4\n(C)2\n(D)\n(E)\nGOONTOTHENEXTPAGE.\n47"
+    },
+    {
+      "number": 2,
+      "page": 5,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-05.jpg",
+      "bbox": [
+        10,
+        451.0,
+        408.0,
+        691.0
+      ],
+      "text": "2.The longest wavelength x-ray that can undergo\nof planes of spacingdis\nd\n(A)\n(B)\n(C)\nd\n(D\uff092d\n(E)4d"
+    },
+    {
+      "number": 3,
+      "page": 5,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-05.jpg",
+      "bbox": [
+        10,
+        688.0,
+        408.0,
+        1031
+      ],
+      "text": "3.Theratio of the energies of thc K characteristic\nx-raysof carbon(Z=6) to those of magnesium\n(Z=12)ismost nearly\n(B)\n(C)1\n(D\uff092\n(E)4"
+    },
+    {
+      "number": 6,
+      "page": 6,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-06.jpg",
+      "bbox": [
+        10,
+        175.0,
+        408.0,
+        1031
+      ],
+      "text": "6.Twowedgeseachofmassm,arelacednext\neach other ona flat floor.Acubeofmass Mis\nbalanced on the wedges as shown above.Assume\nnofriction between the cube and the wedges,buta\ncoeficient ofstaticfriction\u03bc<1between the\nwedges and the floor.Whatis the largest M that\ncan be balanced as shown withoutmotion of the\nwedges?\n(A)\n2\n(B)\n2\n(C)\n(D)\n2wm\n(E)All Mwill balance.\n48"
+    },
+    {
+      "number": 7,
+      "page": 6,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-06.jpg",
+      "bbox": [
+        408.0,
+        215.0,
+        806,
+        1031
+      ],
+      "text": "7.A cylindrical tube of mass Mcan slide ona hori-\nzontal wire.Twoidentical pendulums,eachofmass\nmand length Q,hang from the ends of the tube,\nas shownabove.Forsmalloscillationsof thependu\nlumsinthe plane of the paper,theigenfrequencis\nof the normal modes of oscillation of this system\ng\uff08M+2m)\nare 0,\nQM\n,and\n+w\n(B)\n(C)\n8m\nM\nD)\nm\nM+m\nE\nm\nu+W\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 9,
+      "page": 7,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-07.jpg",
+      "bbox": [
+        408.0,
+        277.0,
+        806,
+        1031
+      ],
+      "text": "9.A coaxial cable having radi a,b,and c carries\nequaland opposite currents ofmagnitudeion\nthe inner andouter conductors.What is the\nmagnitude of the magnetic induction at pointP\noutside of thecable atadistancer from the\naxis?\n(A)Zero(B)\nHoir\n(C)\nHoi\n2\u03c0a2\n127\n(D)\n\u03bcoi\nc\u00b2-r\u00b2\nHor\u00b2-b\u00b2\n(E)\n9\nGOONTOTHENEXTPAGE.\n49"
+    },
+    {
+      "number": 8,
+      "page": 7,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-07.jpg",
+      "bbox": [
+        10,
+        314.0,
+        408.0,
+        1031
+      ],
+      "text": "8.A solid cone hangs froma frictionlesspivot at the\norigin O,as shown above.If,,and kare\nunit vectors,anda,b\uff0candcare positive constants,\nwhichof the following forvesFapplied to therimof\nthe cone at a point Presultsin a torqueon the\ncone witha negative component \uff1f\n(A\uff09F=ak,Pis\uff080\uff0cb,-c)\n(B) F=-ak,Pis(0,-b\uff0c-c)\n(C)F=a,Pis(-b,0,-c)\n(D)F=aj,Pis (b,0,-c)\n(E)F=-ak,Pis(-b,0,-c)"
+    },
+    {
+      "number": 10,
+      "page": 8,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-08.jpg",
+      "bbox": [
+        10,
+        210.0,
+        408.0,
+        626.0
+      ],
+      "text": "10.Two positive chargesofg and2q coulombs are\nlocated on thex-axis atx=0.5a and1.5a,\nrespectively,asshowaboveThreisanininit,\ngrounded conducting plane at x = 0.What is the\nmagnitudeof thenet force on the charge q\uff1f\n1_3g\u00b2\n(a)\n4ntEg2a\u00b2\n(C)\n4tEa\u00b2\n3g\u00b2\n1\n7g\u00b2\n(E)\n4\u03c0Ea2"
+    },
+    {
+      "number": 12,
+      "page": 8,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-08.jpg",
+      "bbox": [
+        408.0,
+        358.0,
+        806,
+        1031
+      ],
+      "text": "12.Twolarge conductingplates form a wedge ofangle\nas shownin the diagram above.The plates are\ninsulated fromeach otheronehasapotential v\nand the otheris grounded.Assuming that theplates\narelargeenoughso that thepotential difference\nbetween them is independent of the cylindrical coor-\ndinates  and p,the potcntial anywhere between\nthe plates as afunction of the angle  is\n(A)\nV\nVo\n(B)\nV\n(C)\nVoco2\n(D)\nVo\n(E)\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 11,
+      "page": 8,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-08.jpg",
+      "bbox": [
+        10,
+        623.0,
+        408.0,
+        1031
+      ],
+      "text": "11.Thecapacitorin thecircuit shownaboveisinitially\ncharged.Afterclosing theswith,howmuchtime\nelapsesuntilone-halfof the capacitor'sinitial stored\nenergyisdissipated?\n(A)RC\n(C)\nRC\n4\n(D)2RCIn(2)\n(E)\nRC1n(2)\n50"
+    },
+    {
+      "number": 13,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-09.jpg",
+      "bbox": [
+        10,
+        55.0,
+        408.0,
+        320.0
+      ],
+      "text": "13.Listedbelow areMaxwell'sequations of clectromag-\nnetism.Ifmagneticmonopolesexist,whichof these\nequationswouldbeINCORRECT?\nII.Curl E=\nIII.divD=p\nIV.divB=0\n(A\uff091Vonly\n(B\uff09IandI1\n(C\uff09IandIIl\nAIpeII(\u2460\n(E)IIIandIV"
+    },
+    {
+      "number": 16,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-09.jpg",
+      "bbox": [
+        408.0,
+        58.0,
+        806,
+        250.0
+      ],
+      "text": "16.Anengine absorbs heat ata temperature of\n727\u00b0Cand exhausts heat at a temperature of\n527\u00b0C.If the engine operates atmaximum\npossibleffciency,for2000joulesofheat\ninput the amount ofwork the engine performs\nismostnearly\n(A)400J\n\uff08B)1450J\n(C\uff091600J\n(D)2000J\n(E)2760J"
+    },
+    {
+      "number": 17,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-09.jpg",
+      "bbox": [
+        408.0,
+        247.0,
+        806,
+        1031
+      ],
+      "text": "17.The outputs of two electricaloscillators are compared\nonanoscilloscope screen.The oscilloscope spotis\ninitially at the center ofthe screen.Oscillator Yis\nconnected to the vertical terminals of the oscillo-\nscopeandoscillatorXto the horizontal terminals.\noscilloscope screenif thefrequencyofoscillator\nis twice that ofoscillator x\uff1f\n(A)\n(B)\n(C\n(D)\n(E)\nGOONTOTHENEXTPAGE\n51"
+    },
+    {
+      "number": 14,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-09.jpg",
+      "bbox": [
+        10,
+        317.0,
+        408.0,
+        362.0
+      ],
+      "text": "14.The totalenergy ofablackbodyradiation sourceis\ncollected for one minute and used to heat water.The\ntemperature ofthe waterincreasesfrom 20.0\u00b0Cto"
+    },
+    {
+      "number": 20,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-09.jpg",
+      "bbox": [
+        10,
+        359.0,
+        408.0,
+        648.0
+      ],
+      "text": "20.5\u00b0C.Iftheabsolute temperatureoftheblackbody\ndoubledandtheexperimentrepeatedwhichof\nthefollowingstatementswould bemostnearly\ncorret?\n\uff08A)Inetemperature of the water would increase\nfrom20\u00b0C to afinal temperature of 21\u00b0C.\n(B\uff09Thetemperature of the water would increase\nfrom20\u00b0Cto afinal temperature of 24\u00b0\u2103.\n(C)Thetemperatureofthewaterwouldincrease\nfrom 20\u00b0Cto afinal temperature of 28\u00b0C.\n(D)Thetemperature of thewater would increase\nfrom 20\u00b0Cto afinal temperature of36\u00b0C.\n(E)The water would boil within the one-minute\ntime period."
+    },
+    {
+      "number": 15,
+      "page": 9,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-09.jpg",
+      "bbox": [
+        10,
+        645.0,
+        408.0,
+        1031
+      ],
+      "text": "15.Aclassicalmodelofa diatomicmolecule isaspringy\ndumbbellas shown above,where thedumbbellis\nfreetorotate about axesperpendicularto the spring.\nInthelmitfhightmratrewhatistheif\nheat per mole at constant volume?\n\uff08A)\n(B)\nD\nE"
+    },
+    {
+      "number": 18,
+      "page": 10,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-10.jpg",
+      "bbox": [
+        10,
+        62.0,
+        408.0,
+        268.0
+      ],
+      "text": "18.In transmitting highfrequency signals ona coaxial\nanendwith its characteristic impedance in order to\n(A)leakage of the signalout of the cable\n(B)overheatingof thc cable\nthe cable\n(D)attenuation of the signal propagating in the\ncable\n(E)production of image currents in the outer\nconductor"
+    },
+    {
+      "number": 21,
+      "page": 10,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-10.jpg",
+      "bbox": [
+        408.0,
+        59.0,
+        806,
+        677.0
+      ],
+      "text": "21.A soapfilm withindex ofrefraction greater than air\nisformed on a circular wire frame thatisheld ina\nvertical plane.Thefilm isviewedbyreflected light\nfromawhite-lightsource.Bandsofcolorareobserved\nat thelowerpartsoftheoapflmbuttheareanear\nthetopappearsblack.Acorrectexplanationforthis\nphenomenon would involvewhichof thefollowing?\nI.The top of the soapfilm absorbs all of the light\nincident onit\uff1bnone is transmitted.\nIl.The thickness of the top part of the soapfilm\nhas become much less than a wavelength of\nvisible light.\nIl.There is a phase change of 180\u00b0for all wave-\nlengthsof lightreflectedfrom thefrontsurface\nof the soap film.\nIV.Thereisnophasechange forany wavelengthof\nlightreflectedfrom the back surface of the\nsoapfilm.\n(A)Ionly\n(B\uff09II and II only\n(C\uff09III andIVonly\n(D\uff091,II,and III\n(E)II,I,and IV\n22A simple telescope consists of two convex lenses,\ntheobjective and theeyepiecewhichhaveacom-\nmonfocal pointP,as shownin thefigure above.\nIf thefocal lengthof theobjective is1.0meter and\nthe angular magnification of the telescope is10,\nwhatisthe opticalpathlengthbetween objcctive\nand eyepiece?\n(A\uff090.1m\n(B)\n0.9m"
+    },
+    {
+      "number": 19,
+      "page": 10,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-10.jpg",
+      "bbox": [
+        10,
+        265.0,
+        408.0,
+        631.0
+      ],
+      "text": "19.Which of the followingismostnearly themass of\nthe Earth?\uff08The radius of the Earth isabout\n6.4x10meters.)\n(A)6\u00d71024kg\n(B)6\u00d71027kg\n(C)6\u00d71030kg\n(D)6\u00d7103kg\n(E)6\u00d71036kg"
+    },
+    {
+      "number": 20,
+      "page": 10,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-10.jpg",
+      "bbox": [
+        10,
+        628.0,
+        408.0,
+        1031
+      ],
+      "text": "20.Ina double-slitinterference experiment,dis the\ndistancebetween the centersof the slits andwis\non a distant screen willbe\u201cmissing\u201dwhen\n(A)d=\u221a2w\n(B)d=\u221a3w\n(C)2d=w\n(D\uff092d=3w\n(E)3d=2w\n52"
+    },
+    {
+      "number": 1,
+      "page": 10,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-10.jpg",
+      "bbox": [
+        408.0,
+        674.0,
+        806,
+        688.0
+      ],
+      "text": "(C)\n1.0m"
+    },
+    {
+      "number": 1,
+      "page": 10,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-10.jpg",
+      "bbox": [
+        408.0,
+        685.0,
+        806,
+        736.0
+      ],
+      "text": "(D)\n1.1m\n(E)10m"
+    },
+    {
+      "number": 23,
+      "page": 10,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-10.jpg",
+      "bbox": [
+        408.0,
+        733.0,
+        806,
+        1031
+      ],
+      "text": "23.TheFermi temperature of Cuis about 80,000 K.\nWhichof thcfollowingismostnearlyequal to the\naverage speed of a conduction clectron in Cu?\n(A)2\u00d710-2m/s\n(B)2m/s\n(C\uff092\u00d710\u00b2m/s\n(D\uff092\u00d710*m/s\n(E)2\u00d710m/s\nGOONTOTHENEXTPAGE"
+    },
+    {
+      "number": 24,
+      "page": 11,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-11.jpg",
+      "bbox": [
+        10,
+        58.0,
+        408.0,
+        191.0
+      ],
+      "text": "24.Solid argon is held together by which of the\nfollowing bondingmechanisms?\n(A)Ionic bond only\n(B)Covalent bondonly\nC\uff09Partly covalent and partly ionic bond\n(D)Metallic bond\n(E)van der Waals bond"
+    },
+    {
+      "number": 27,
+      "page": 11,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-11.jpg",
+      "bbox": [
+        408.0,
+        58.0,
+        806,
+        420.0
+      ],
+      "text": "27.If a freely moving electronis localized in\nspace to withinxofx,its wave\nfunction can be described bya wave packet\ny\uff08x\uff0ct\uff09=\nei(kx-wbf(k\uff09dk\uff0cwhere f(k\uff09is\npeaked around a central value ko.Which of the\nfollowing ismost nearly the width of the peak in k\uff1f\n(A)\u25b3k=\nxo\n(B)\u25b3k=\n1\nxo\n(C)\u25b3k\n\u25b3x\n(D\uff09\u25b3k\n(E)k=k\u00b2"
+    },
+    {
+      "number": 25,
+      "page": 11,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-11.jpg",
+      "bbox": [
+        10,
+        188.0,
+        408.0,
+        681.0
+      ],
+      "text": "25.In experiments located deep underground,the two\nexperimental apparatus are\n(A)alpha particles and neutrons\n(B)protons and electrons\n(C\uff09iron nucleiand carbon nuclei\n(D)muons andneutrinos\n(E)positrons and electrons\n(log102=0.30;log10e=0.43\uff09\n104\n103\n10\n10\n20\n30\n40\nTime (minutes)"
+    },
+    {
+      "number": 28,
+      "page": 11,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-11.jpg",
+      "bbox": [
+        408.0,
+        417.0,
+        806,
+        1031
+      ],
+      "text": "28.A systemis known tobe in thenormalized state\ndescribedby thewavefunction\n(0,\u03a6)=\n(SY\u00b2+Y\u00b2-2x),\n30\nwhere the Ym\uff08\u03b8,) are the spherical harmonics.\nThe probability of finding the systemina state with\nazimuthal orbitalquantumnumber m=3is\n0(v)\n(B)\n1\n(C)\n(D)\nGOONTOTHENEXTPAGE.\n53"
+    },
+    {
+      "number": 26,
+      "page": 11,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-11.jpg",
+      "bbox": [
+        10,
+        678.0,
+        408.0,
+        1031
+      ],
+      "text": "26.Aradioactivenucleusdecays,withtheactivity\nshown in the graph above.Thehalf-lifeof the\nnucleusis\n(A)2min\n(B)\n7min\n(C\uff0911min\n(D)18min\n(E)23min"
+    },
+    {
+      "number": 31,
+      "page": 12,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-12.jpg",
+      "bbox": [
+        408.0,
+        324.0,
+        806,
+        624.0
+      ],
+      "text": "31.Ina 3S state of the helium atom,the possible\nvalues of the total electronic angularmomentum\nquantum number are\n(A\uff090only\n(B\uff091only\n(C)0and1only\n(D\uff090,\nIpue\n(E)0,1,and 2\nQuestions32-33\n5002\nR\nR\n60\u03a9\nR430Q\nR50Q"
+    },
+    {
+      "number": 3,
+      "page": 12,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-12.jpg",
+      "bbox": [
+        408.0,
+        621.0,
+        806,
+        763.0
+      ],
+      "text": "3.0V\nRs$30\u03a9\nIn thecircuit shown abovetheresistancesare\ngivenin ohms and thebattery is assumedideal with\nemfequal to3.0volts."
+    },
+    {
+      "number": 32,
+      "page": 12,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-12.jpg",
+      "bbox": [
+        408.0,
+        760.0,
+        806,
+        839.0
+      ],
+      "text": "32.Theresistor that dissipates the most power is\n(A)R(B)R(C\uff09R\n(D)R(E)Rs"
+    },
+    {
+      "number": 33,
+      "page": 12,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-12.jpg",
+      "bbox": [
+        408.0,
+        836.0,
+        806,
+        1031
+      ],
+      "text": "33.The voltage across resistor Ris\n(A)0.4V\n(B)0.6V\n(C\uff091.2V\n(D\uff091.5V\n(E)3.0V\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 34,
+      "page": 13,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-13.jpg",
+      "bbox": [
+        10,
+        52.0,
+        408.0,
+        256.0
+      ],
+      "text": "34.Aconducting cavityisdriven as anelectro-\nmagnetic resonator.If perfect conductivity is\nassumed,the transverseand normal field com-\nponents must obey whichof thefollowingcon-\nditions at the inner cavity walls?\n(A\uff09En=0,Bn=0\n(B)En=0,B=0\n(C)E=0.B=0\n(D\uff09E=0,Bn=0\n(E)None of the above"
+    },
+    {
+      "number": 37,
+      "page": 13,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-13.jpg",
+      "bbox": [
+        408.0,
+        143.0,
+        806,
+        401.0
+      ],
+      "text": "37.A \u03c0meson(rest-mass cnergy 135 MeV)is moving\nwithvelocity0.8ekinthelaboratoryrestframe\nwhen it decays into two photons,and.In the\nrestframe,isemittedforward andiemittd\nbackward relative to thendirection offlight.The\nvelocity ofin the laboratoryrest frame is\n(A)-1.0ck\n(B)-0.2c\n(C)+0.8c\n(D)+1.0c\n(E)+1.8ck"
+    },
+    {
+      "number": 35,
+      "page": 13,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-13.jpg",
+      "bbox": [
+        10,
+        253.0,
+        408.0,
+        429.0
+      ],
+      "text": "35.Light ofwavelength 5200 angstroms is incident\nnormally on a transmissiondiffractiongratingwith\nbeam,thatismostnearly\n(A)3\u00b0\n(B)6\n(C)9\u00b0\n(D\uff0912\u00b0\n(E)15\u00b0"
+    },
+    {
+      "number": 38,
+      "page": 13,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-13.jpg",
+      "bbox": [
+        408.0,
+        398.0,
+        806,
+        1031
+      ],
+      "text": "38.Tau leptons are observed tohave an average half-life\nof in the frame Sin which the leptons are at\nrest.In an inertial frame S,which ismoving ata\nspeed v2 relative to S,the leptons are observed to\nhave an average half-life of .In another inertial\nreference frame S,whichismovingataspeed\nrelative to Sandu relative to S,the leptons\nhave an observed half-lifeof .Which of the\nfollowingisa correctrelationship among two of the\nhalf-lives,\u25b3,\u25b3\uff0c and t\uff1f\n(A)2=\u25b3\u221a1-\uff0802\uff09\u00b2/c\u00b2\n(B)\u25b3=t\u221a1-\uff083\uff09\u00b2/c\u00b2\n(C)=\u25b3t\u221a-(0\uff09\u00b2c\u00b2\n(D\uff09\u25b3=2\u221a1-\uff080\uff09\u00b2/c\n(E)1=\u25b3t2\u221a1-(}\u00b2/c\u00b2\nGOONTOTHENEXTPAGE.\n55"
+    },
+    {
+      "number": 36,
+      "page": 13,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-13.jpg",
+      "bbox": [
+        10,
+        426.0,
+        408.0,
+        1031
+      ],
+      "text": "36.A plane-polarized electromagneticwave is incident\nnormallyonaflatefectlyconductingsuface.\nistrue?\n\uff08A)Both theelectric vectorandmagnetic vector are\nreversed.\n(B\uff09Neither the electric vector nor the magnetic\nvector isreversed.\n\uff08C)The electric vectorisreversed;themagnetic\nvectorisnot.\n(D)Thmagneticvectorisreversedthletrc\nvectorisnot.\n(E)The directions of the electric and magnetic\nvectorsareinterchanged."
+    },
+    {
+      "number": 41,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-14.jpg",
+      "bbox": [
+        408.0,
+        165.0,
+        806,
+        284.0
+      ],
+      "text": "41.The kinetic energy lost by the cylinderis\n(A)\n80J\n(B)\n800J\n(C)\n4000J\n(D)\n9600J\n(E)19,200J"
+    },
+    {
+      "number": 39,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-14.jpg",
+      "bbox": [
+        10,
+        201.0,
+        408.0,
+        505.0
+      ],
+      "text": "39.Ifn is an integer ranging from1 to infinity\uff0c\nisan angular frquency\uff0candistime,then the\nFourierseriesforasquarewaveasshownabove\nisgivenby which of thefollowing?\n4%1s\n(A)V(t\uff09=\nsin(not)\n418\n1\nsin\uff082n+1\uff09ot)\n(B)V(t)=\n0\n(D)v(1)=\n1\n\u03c0(2n+1)\ncos\uff082n+1\uff09ot)\n(E)V()=-\n48\n1\ncos(not)"
+    },
+    {
+      "number": 42,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-14.jpg",
+      "bbox": [
+        408.0,
+        281.0,
+        806,
+        455.0
+      ],
+      "text": "42.If the cylinder takes 10 seconds toreach\n40radians per secondthemagnitudeof the\napplied torqueis\n(A)80N.m\n(B)40N.m\n(C)32N.m\n(D)16N.m\n(E)8N\u00b7m"
+    },
+    {
+      "number": 43,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-14.jpg",
+      "bbox": [
+        408.0,
+        452.0,
+        806,
+        1054
+      ],
+      "text": "43.If\nube\nconservativesystemwithout constraints andqn\nisageneralized coordinate,then the generalized\nmomentum pris\n(A)anignorable coordinate\n(B)constant\n(C)undefined\naL\n(E)cqual to the Hamiltonian for the system\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 40,
+      "page": 14,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-14.jpg",
+      "bbox": [
+        10,
+        502.0,
+        408.0,
+        1054
+      ],
+      "text": "40.Arigid cylinderrolls atconstant speedwithout\nslipping on top ofa horizontal plane surface.\nThe acceleration ofapoint on the circumfer-\nence of the cylinder at themoment when the\npoint touches the planeis\n(A)directed forward\n(B\uff09directedbackward\n(C)directedup\n(D)directeddown\n(E)zero\n56"
+    },
+    {
+      "number": 44,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-15.jpg",
+      "bbox": [
+        10,
+        65.0,
+        408.0,
+        372.0
+      ],
+      "text": "44.A particle of mass m on the Earth\u2019s surface is\nconfined to move on the parabolic curve y =ax\u00b2\ngian for the particle?\n\uff08A)L=\nmgy\n7\uff08\uff09\nmgy\nC)L=\nmgx\nxu+\uff08x+\uff09xu=\uff08)\n7\uff08\nm\u00b2+mgy"
+    },
+    {
+      "number": 45,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-15.jpg",
+      "bbox": [
+        10,
+        369.0,
+        408.0,
+        1054
+      ],
+      "text": "45.A ballis dropped fromaheight h.Asit bounces\noffthefloor,tsspeedis80percentofwhat itwas\njustbefore ithit thefloor.Theball wilthenriseto\naheight of mostnearly\n(A)0.94h\n(B\uff090.80h\n(C)0.75h\n(D\uff090.64h\n(E)0.50h"
+    },
+    {
+      "number": 46,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-15.jpg",
+      "bbox": [
+        408.0,
+        524.0,
+        806,
+        643.0
+      ],
+      "text": "46.Which numbered curve is the critical isotherm?\n(A)1\n(B)2\n(D\uff094\n(E)5"
+    },
+    {
+      "number": 47,
+      "page": 15,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-15.jpg",
+      "bbox": [
+        408.0,
+        640.0,
+        806,
+        1054
+      ],
+      "text": "47.In whichregion are the liquid and the vaporin equi-\nlibriumwitheach other?\n(A)A\n(B)B\nCC\n(DD\n(E)E\nGOONTOTHENEXTPAGE.\n57"
+    },
+    {
+      "number": 48,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-16.jpg",
+      "bbox": [
+        10,
+        78.0,
+        408.0,
+        445.0
+      ],
+      "text": "48.The magnitude of the forceFon an object can\nbe determined by measuringboth themassmof\nan object and the magnitude ofits acceleration a,\nwhereF=ma.Assume that thesemeasurements\nareuncorrelatedand normally distributed.If the\nstandarddeviations ofthemeasurements of the\nmass and the acceleration are mand\nrespectively,then o/Fis\nB\namda\n(D)\nma\nm+\n(E)\nm\na"
+    },
+    {
+      "number": 51,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-16.jpg",
+      "bbox": [
+        408.0,
+        250.0,
+        806,
+        476.0
+      ],
+      "text": "51.For any state n,the expectationvalue of the\nmomentum of the particleis\n(A)0\nhnt\n(B)\na\n(C)\n2hnn\na\n(D)\n(E)\na"
+    },
+    {
+      "number": 49,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-16.jpg",
+      "bbox": [
+        10,
+        442.0,
+        408.0,
+        650.0
+      ],
+      "text": "49.Two horizontal scintillation counters are located near\nthe Earth\u2019s surface.Oneis3.0metersdirectlyabove\nthe otherOfthefollowing,whichisthelargestcin-\ntillatorresolvingtime that can be usedtodistinguish\ndownward-goingrelativisticmuons from upward.\ngoingrelativisticmuons using therelative time of the\nscintillator signals?\n(A)1picosecond\n(B\uff091nanosecond\n(C\uff091microsecond\n(D)1millisecond\n(E)1 second"
+    },
+    {
+      "number": 52,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-16.jpg",
+      "bbox": [
+        408.0,
+        473.0,
+        806,
+        654.0
+      ],
+      "text": "52.The eigenfunctions satisfy the condition\nn*\uff08x\uff09Q\uff08x\uff09dx=on\uff0con=1ifn=,\notherwise n=0.Thisis a statement that the\neigenfunctions are\n(A)solutions to theSchrodinger equation\n(B)orthonormal\n(C\uff09bounded\n(D\uff09linearly dependent\n(E)symmetric"
+    },
+    {
+      "number": 50,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-16.jpg",
+      "bbox": [
+        10,
+        647.0,
+        408.0,
+        1054
+      ],
+      "text": "50.The state ofaquantummechanicalsystemis\ndescribedbyawave function.Consider two phys-\nical observables thathave discrete eigenvalues:\nobservable Awitheigenvalues {),and observable\nBwith eigenvalues {\u03b2}.Under what circumstances\ncan all wavefunctionsbe expanded inaset of basis\nstates,eachofwhichsa simutaneouseigenfunction\nofboth A and B\uff1f\n\uff08A)Only if the values (\u03b1}and(\u03b2}are nondegen-\nerate\n(B)Onlyif Aand Bcommute\n(C)Onlyif A commutes with the Hamiltonian of\nthe system\n(D)OnlyifBcommutes with the Hamiltonian of\nthesystem\n(E)Under all circumstances\n58"
+    },
+    {
+      "number": 53,
+      "page": 16,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-16.jpg",
+      "bbox": [
+        408.0,
+        651.0,
+        806,
+        1054
+      ],
+      "text": "53.Ameasurement ofenergyEwillalways satisfy\nwhich of the followingrelationships?\n8ma2\nnh2\n(B)E2\nDu\n\u03c0\u00b2h\n(C)E=\nBma2\nn\u00b2n2h2\n(D\uff09E=\n8ma\nn\u00b2h2\n(E)E=\n2ma\u00b2\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 56,
+      "page": 17,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-17.jpg",
+      "bbox": [
+        408.0,
+        77.0,
+        806,
+        1054
+      ],
+      "text": "56.IfisfrequencyandhisPlanck'sconstant,the\nground state energy ofaone-dimensionalquantum\nmechanical harmonic oscillator is\n(A)0\nB)\n(C)\n(D)hv\n(E)\nGOONTOTHENEXTPAGE.\n59"
+    },
+    {
+      "number": 54,
+      "page": 17,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-17.jpg",
+      "bbox": [
+        10,
+        341.0,
+        408.0,
+        523.0
+      ],
+      "text": "54.Whatare the directions of the induced current in the\nloopand themagneticforces ontheleft and the\nright sides of the loop asthe loop is pulled?\nForce on\nForce on\nInduced Current\nLeft Side\nRight Side\n(A)Counterclockwise\nTo theleft\nTo theright\n(B)Counterclockwise\nTo theleft\n(C\uff09Counterclockwise\nTo theleft\n(D)Clockwise\nTo theleft\nTo theright\nTo theleft\n(E)Clockwise\nTo theleft\nTo the right"
+    },
+    {
+      "number": 55,
+      "page": 17,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-17.jpg",
+      "bbox": [
+        10,
+        520.0,
+        408.0,
+        1054
+      ],
+      "text": "55.What is themagnitude of thenetforce onthe loop\nwhen the induced current isi?\n(A)\nLoil\n2\u03c0\n(B)\n2\u03c0\n(C)\nHoilb\nD\nab\n(0+)"
+    },
+    {
+      "number": 58,
+      "page": 18,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-18.jpg",
+      "bbox": [
+        408.0,
+        64.0,
+        806,
+        228.0
+      ],
+      "text": "58.The ground state configuration of a neutral sodium\natom(Z=11)is\n(A)1s225\u00b22p*3s2\n(B)1s\u00b225\u00b22p6\n(C)1s\u00b22\u00b22p3s\n(D)1s\u00b22s\u00b22p3p\n(E)1s\u00b22s\u00b22ps"
+    },
+    {
+      "number": 57,
+      "page": 18,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-18.jpg",
+      "bbox": [
+        10,
+        197.0,
+        408.0,
+        1054
+      ],
+      "text": "57.A uniform and constant magnetic field Bis\ndirected perpendicularly into theplaneof the\npage everywhere withinarectangularregion as\nshown above.Awire circuit in the shape ofa\nsemicircle isuniformlyrotated counterclockwise\nin the plane of the pagc about an axis A.The\naxisAis perpendicular to the page at the edge\nof thefield and directed through the centerof\nthe straight-line portion of the circuit.Which of\nthe followinggraphsbest approximates the\nemfinduced in the circuit as a function of\ntimet?\n(A)\n(B)\n(C)\n(D)\n(E)\nE\n60"
+    },
+    {
+      "number": 59,
+      "page": 18,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-18.jpg",
+      "bbox": [
+        408.0,
+        225.0,
+        806,
+        342.0
+      ],
+      "text": "59.The ground state of the helium atom is a spin\n(A)singlet\n(B)doublet\n(C\uff09triplet\n(D\uff09quartet\n(E)quintuplet"
+    },
+    {
+      "number": 60,
+      "page": 18,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-18.jpg",
+      "bbox": [
+        408.0,
+        339.0,
+        806,
+        656.0
+      ],
+      "text": "60.An electron in a metal has an effective mass\nm*=0.1me.If thismetal is placed in amagnetic\nfieldofmagnitude1tesla,thecyclotronresonance\nfrequency\uff0cwc,ismost nearly\n(A)930rad/s\n(B)8.5x10rad/s\n(C\uff092.8x10rad/s\n(D\uff091.8\u00d71012rad/s\n(E)7.7x 1020 rad/s\n\u2161"
+    },
+    {
+      "number": 61,
+      "page": 18,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-18.jpg",
+      "bbox": [
+        408.0,
+        653.0,
+        806,
+        1054
+      ],
+      "text": "61.Alongstraightandmasslessrodpivots aboutne\nend inavertical plane.InconfigurationI,shown\nabove,twosmallidenticalmasses areattachedto\nthefree endin configurationII,one mass ismoved\nto the center of therod.What is theratioof the\nfrequency of small oscillationsof configurationII to\nthat ofconfigurationI?\n(A)\uff086/5)\u00b2\n(B)(3/2\uff09\u00b2\n(C)6/5\n(D)3/2\n(E)5/3\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 62,
+      "page": 19,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-19.jpg",
+      "bbox": [
+        10,
+        60.0,
+        408.0,
+        303.0
+      ],
+      "text": "62.A mole of ideal gasinitially at temperature T\nandvolume Vundergoesareversible isothermal\nexpansion to volumeV.If the ratio of specific\nheats is cp/cv=y andif R is the gas constant,\ntheworkdoneby thegasis\n(A)zero\n(B)RT(V/V)\n(C)RT(V/V-1)\n(D)\n(E)RTn(V/V)"
+    },
+    {
+      "number": 65,
+      "page": 19,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-19.jpg",
+      "bbox": [
+        408.0,
+        220.0,
+        806,
+        552.0
+      ],
+      "text": "65.Two point charges with the same charge +Qare\nfixed along thex-axis and area distance 2Rapart as\nshown.A small particle with mass m and charge -q\nisplacedat the midpoint between them.Whatis the\nangularfrequency wofsmall oscillations of this\nparticle along the y-direction?\nQq\n(A)\n2momR2\n(B)\nQq\n4reomR2\nQq\n(C)\n2neomR3\n(D)\nQq\n4TEmR2\n(E)\nQq\n2TeomR"
+    },
+    {
+      "number": 63,
+      "page": 19,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-19.jpg",
+      "bbox": [
+        10,
+        300.0,
+        408.0,
+        463.0
+      ],
+      "text": "63.Which of the followingis trueif the arrangement\nofanisolated thermodynamic systemisofmaximal\nprobability?\n(A)Spontaneous change toalower probability\noccurs.\n(B)The entropy is a minimum.\n(C)Boltzmann's constant approaches zero.\n(D)No spontaneous change occurs.\n(E)The entropy is zero."
+    },
+    {
+      "number": 64,
+      "page": 19,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-19.jpg",
+      "bbox": [
+        10,
+        460.0,
+        408.0,
+        1054
+      ],
+      "text": "64.If an electricfield isgiven in a certain region\nbyEx=0.Ey=0\uff0cE=kz,wherekisa\nnonzeroconstantwhichof thefollowingistrue?\n(A)There is atime-varying magneticfild\n(B)There is charge density in the region.\n(C)The electric field cannot be constant in\ntime.\n(D\uff09The electric field is impossible under any\ncircumstances.\n(E)None of the above"
+    },
+    {
+      "number": 66,
+      "page": 19,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-19.jpg",
+      "bbox": [
+        408.0,
+        549.0,
+        806,
+        1054
+      ],
+      "text": "66.A thin uniform steelchainis10 meters longwith\namass density of 2kilograms permeter.One\nend of the chain is attached to a horizontal axle\nhaving a radius that issmall compared to the\nlength of the chain.If the chaininitiallyhangs\nvertically,theworkrequired to slowlywindit\nup on to the axleis closest to\n(A)\n100J\n(B)\n200J\n(C)\n1,000\n(D)\n2,000J\n(E)10,000J\nGOONTOTHENEXTPAGE.\n61"
+    },
+    {
+      "number": 69,
+      "page": 20,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-20.jpg",
+      "bbox": [
+        408.0,
+        64.0,
+        806,
+        319.0
+      ],
+      "text": "69.A fast charged particle passes perpendicularly\nthrough a thin glass sheet of index of refraction1.5.\nThe particle emits light in the glass.Theminimum\nspeed of the particle is\n(A)\n(B)\nC)\n(D\uff09\n(E)c"
+    },
+    {
+      "number": 67,
+      "page": 20,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-20.jpg",
+      "bbox": [
+        10,
+        179.0,
+        408.0,
+        411.0
+      ],
+      "text": "67.A steady beam of light is normally incident on a\npieceofpolaroid.Asthe polaroidisrotated around\nthebeam axis,the transmitted intensity varies as\nA+Bcos20,where 0is the angle of rotation,\nandAand Bare constants withA>B>0.\nWhichofthefollowingmaybe correctly concluded\nabout the incident light?\n(C)Thelight is partly plane polarized andpartly\nunpolarized.\npartlyunpolarized.\n(E)Thelight is completely circularly polarized."
+    },
+    {
+      "number": 70,
+      "page": 20,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-20.jpg",
+      "bbox": [
+        408.0,
+        316.0,
+        806,
+        1054
+      ],
+      "text": "70.A monoenergetic beam consists ofunstable particles\nwith totalenergies100 times theirrest energy.If the\nparticles haverestmassm,theirmomentumismost\nnearly\n(A)\nmc\n(B)\n10mc\n(C)\n70mc\n(D\uff09100mc\n(E)\n10mc\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 68,
+      "page": 20,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-20.jpg",
+      "bbox": [
+        10,
+        408.0,
+        408.0,
+        1054
+      ],
+      "text": "68.The angular separation of the two components ofa\ndouble staris8microradiansandthelightfrom the\ndouble starhas awavelength of 5500 angstroms.\nThe smallest diameter ofatelescopemirror that will\nresolve the double staris most nearly\n(A)\n1mm\n(B)\n1cm\n(C)\n10cm\n(D)\n1m\n(E)100m\n62"
+    },
+    {
+      "number": 74,
+      "page": 21,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-21.jpg",
+      "bbox": [
+        408.0,
+        64.0,
+        806,
+        254.0
+      ],
+      "text": "74.Two circular hoops,X and Y.are hanging on\nnails in a wall.The mass ofX isfour times\nthat of Y\uff0cand thediameter ofXisalsofour\ntimes that ofY.If the period of small oscil-\nlations ofXis T,theperiod of small oscilla\ntionsofYis\n(A)T(B\uff09T/2(C)T/4\n(D\uff09T/8(E\uff09T/16\n2U\u21922Th+He"
+    },
+    {
+      "number": 71,
+      "page": 21,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-21.jpg",
+      "bbox": [
+        10,
+        184.0,
+        408.0,
+        469.0
+      ],
+      "text": "71.Fora systemat temperature T,the averagenumber\nof subsystemsin the state ofenergy Eis given by\nNo\nNo\n(B)\n1+e-e/kT\n(C)Noe-\u2208/kT\nON\n(D)\n1+ec/kT\n(E)"
+    },
+    {
+      "number": 75,
+      "page": 21,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-21.jpg",
+      "bbox": [
+        408.0,
+        251.0,
+        806,
+        457.0
+      ],
+      "text": "75.A uranium nucleus decays at rest into a thorium\nnucleus andaheliumnucleus,as shown above.\nWhich of thefollowingis true?\n(A)Each decay product hasthe same kinetic\nenergy.\n\uff08C\uff09The decay products tend to go in the same\ndirection.\n\uff08D)The thorium nucleus hasmoremomentum than\nthe helium nucleus.\n(E)The hlium nucleushasmorc kinetic energy\nthan the thorium nucleus."
+    },
+    {
+      "number": 76,
+      "page": 21,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-21.jpg",
+      "bbox": [
+        408.0,
+        454.0,
+        806,
+        677.0
+      ],
+      "text": "76.The configuration of three electronsIs2p3p has\nwhichof thefollowingas thevalueofitsmaximum\npossible total angularmomentumquantum number?\n7\n(B\uff093\n(C)\n(D\uff092"
+    },
+    {
+      "number": 72,
+      "page": 21,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-21.jpg",
+      "bbox": [
+        10,
+        466.0,
+        408.0,
+        816.0
+      ],
+      "text": "72.The internalenergy of this system at any tempera\nNoE\nture T is given by EN+\ncapacityof thesystemisgiven by whichof the\nfollowing expressions?\nee/kT\n(A)Nok\n(1+e/kT)2\n(B)Nok\nkT\n+1)\ne-e/kT\n(C)Nok\n(D)\nE"
+    },
+    {
+      "number": 77,
+      "page": 21,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-21.jpg",
+      "bbox": [
+        408.0,
+        674.0,
+        806,
+        1054
+      ],
+      "text": "77.Consider a heavy nucleus with spin\nThemagni-\ntude of theratioof the intrinsicmagnetic moment\nof this nucleus to that of an electronis\n\uff08A)zero,because the nucleus has no intrinsic\nmagneticmoment\n\uff08B\uff09greater than 1,because the nucleus contains\nmanyprotons\n\uff08C\uff09greater than1,because thenucleusis so much\nlargerin diameter than the electron\n(D\uff09less than 1,because of the strong interactions\namong the nucleons ina nucleus\n(E)less than 1,because the nucleus has amass\nmuch larger than that of the electron\nGOONTOTHENEXTPAGE.\n9"
+    },
+    {
+      "number": 73,
+      "page": 21,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-21.jpg",
+      "bbox": [
+        10,
+        813.0,
+        408.0,
+        1054
+      ],
+      "text": "73.Which of thefollowing is true of theentropy of the\nsystem?\n(A)It increases without limit with T from zero at\nT=0.\n\uff08C\uff09It increases fromzero at T=0 to Nokln 2at\narbitrarilyhigh temperatures.\n(D)Itis given by Nk\nnT-1np+constant\n(E)It cannot becalculated from the information\ngiven."
+    },
+    {
+      "number": 80,
+      "page": 22,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-22.jpg",
+      "bbox": [
+        408.0,
+        473.0,
+        806,
+        1054
+      ],
+      "text": "80.A beam of electrons is accelerated through a\npotentialdifference of 25kilovoltsinanx-ray\ntube.The continuous x-ray spectrum emitted\nbythe targetof thetubewill havea short\nwavelength limit ofmostnearly\n(A)0.1A\n(B)0.5A\n(C)2A\n(D\uff0925A\n(E)50A\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 79,
+      "page": 22,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-22.jpg",
+      "bbox": [
+        10,
+        605.0,
+        408.0,
+        1054
+      ],
+      "text": "79.The dispersion curve shown above relates the\nwaves withwave numberslying in therange\nk<k<k\uff0cwhich of the followingis true of\nthe phasevelocity and the groupvelocity?\n(A)They are in opposite directions.\n(B)Theyare in the same direction and the\nphase velocityis larger.\n(C)They are in the same direction and the\ngroup velocityislarger.\n(D)The phase velocity is infinite and the\ngroupvelocityisfinite.\n(E)They are the same in direction and\nmagnitude.\n9"
+    },
+    {
+      "number": 81,
+      "page": 23,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-23.jpg",
+      "bbox": [
+        10,
+        194.0,
+        408.0,
+        1054
+      ],
+      "text": "81.In the RLC circuit shown above,the applied\nvoltageis\nE(r)=Emcoscot.\nFor aconstant Em,at what angular frequency \ndoes the current have itsmaximum steady-state\namplitude after the transients have died out\uff1f\n(A)\nRC\n(B)\n2L\nR\n(C)\n(-(\n("
+    },
+    {
+      "number": 82,
+      "page": 23,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-23.jpg",
+      "bbox": [
+        408.0,
+        292.0,
+        806,
+        1054
+      ],
+      "text": "82.A thin plate of mass M\uff0clength L\uff0cand width 2d\nismountedverticallyonafrictionless axle along the\nz-axisas shown above.Initially the objectis atrest.\nIt is then tappedwith a hammer toprovidea torque\n,which produces an angularimpulse H about the\nz-axis of magnitude H= di.What is the angular\nspeed  of the plate about the z-axis after the tap?\n(A)\nH\n2Md2\n(B)\nH\nPW\n(C)\n2H\nPW\n(D)\n3H\nMd\n(E)\n4H\nPW\nGOONTOTHENEXTPAGE.\n65"
+    },
+    {
+      "number": 85,
+      "page": 24,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-24.jpg",
+      "bbox": [
+        408.0,
+        58.0,
+        806,
+        386.0
+      ],
+      "text": "85.Afree electron(rest mass me=0.5MeV/e\u00b2)has\na total energy of 1.5MeV.Itsmomentum p in\nunitsofMeV/cisabout\n(A)0.86\n(B)1.0\n(C\uff091.4\n(D)1.5\n(E)2.0\nR'\nOscilloscope"
+    },
+    {
+      "number": 83,
+      "page": 24,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-24.jpg",
+      "bbox": [
+        10,
+        201.0,
+        408.0,
+        537.0
+      ],
+      "text": "83.Two pith balls ofequal mass M and equal chargeq\naresuspendedfromthe same point onlongmassless\nthreads oflength Las shown in thefigure above.If\nkis the Coulomb'slaw constant,then for small\nvalues of0,the distance dbetween the charged\npithballsatequilibrium is\n(2kg\u00b2L\uff09}\n(A)\nMg\n(B)\nMg\n2kq\u00b2L\n(C)\n8W\n(E)"
+    },
+    {
+      "number": 86,
+      "page": 24,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-24.jpg",
+      "bbox": [
+        408.0,
+        383.0,
+        806,
+        1054
+      ],
+      "text": "86.The circuit shown above is used to measure the size\nof the capacitance C.They-coordinate of the spot\non the oscilloscope screen isproportional to the\npotential difference across R.and thex-coordinate\nof the spot is swept at a constant speed s.The\nswitch is closed and then opened.One can then calcu-\nlate Cfrom the shape and the size of the curve on\nthescreen plus aknowledge ofwhich of the following?\n(A)Voand R\n(B)sandR\n(C\uff09sandV\u3002\n(D)RandR'\n(E)The sensitivity of the oscilloscope\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 84,
+      "page": 24,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-24.jpg",
+      "bbox": [
+        10,
+        534.0,
+        408.0,
+        1054
+      ],
+      "text": "84.An electron oscillatesback and forth along the\n+and-x-axes,consequentlyemittingelectro-\nmagnetic radiation.Whichof thefollowing state-\nments concerning theradiation isNOT true?\n(A)The totalrate ofradiation ofenergyinto all\ndirectionsisproportional to thesquare of the\nelectron's acceleration.\ndirections is proportional to thesquare of the\nelectron's charge.\n\uff08C\uff09Farfrom the electron,therateat whichradi\ndecreases as theinverse square of the distance\nfrom theclectron.\n(D\uff09Farfrom the electron,the rate at which radi-\nated energy crossesaperpendicular unit area\nis amaximum when the unit areaislocated\non the+or-x-axes.\n(E)Farfrom the electron,the radiated energy is\ncarriedequally by the transverse clectricand\nthe transverse magneticfields.\n66"
+    },
+    {
+      "number": 87,
+      "page": 25,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-25.jpg",
+      "bbox": [
+        10,
+        61.0,
+        408.0,
+        464.0
+      ],
+      "text": "87.Aparticle of mass Mmoves ina circular orbit of\nradiusarounda fixedpoint under theinfluence of\nK\nan attractiveforce F=\nwhere K is a constant.\nIf the potentialenergyoftheparticleiszeroatan\ninfinite distance from the force center,thetotal\nenergyof the particlein the circular orbitis\n(A)\nK\n(C)0\n(D)\nK\nE"
+    },
+    {
+      "number": 89,
+      "page": 25,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-25.jpg",
+      "bbox": [
+        408.0,
+        189.0,
+        806,
+        458.0
+      ],
+      "text": "89.Theenergy levelsfor the one-dimensionalharmonic\noscillator are hv\n\uff0cn=0,1,2....How\nwilltheenergy levelsforthe potential showninthe\ngraphabove differ from thosefortheharmonic\noscillator?\n(A)The term\n3\n(B)The energy of each level will be doubled.\n(C)The energy of each level will be halved.\n(D)Only those for even values of nwillbe present.\n(E)Only those for odd values of n will be present."
+    },
+    {
+      "number": 88,
+      "page": 25,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-25.jpg",
+      "bbox": [
+        10,
+        461.0,
+        408.0,
+        1054
+      ],
+      "text": "88.A parall-plate capacitorisconnected toabattery.\nVis the potential difference between the plates,\nQthe charge on the positive plate,Ee the magni-\ntude ofthe electricfield,and Dthemagnitudeof\nthe displacement vector.The originalvacuum\nbetween theplatesisfilledwitha dielectric and then\nthebatteryisdsconnected.If thecorresponding\nelectricalparametersforthefinalstate of the capac-\nitorare denoted bya subscript f\uff0cwhich of the\nfollowing is true?\n(A)Vs>V\u3002\n(B)V<V\u3002\n(C)Qf=\n(D)Ef>Eo\n(E)Df>D"
+    },
+    {
+      "number": 90,
+      "page": 25,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-25.jpg",
+      "bbox": [
+        408.0,
+        455.0,
+        806,
+        589.0
+      ],
+      "text": "90.The spacing of the rotational energy levels for the\nhydrogenmolecule Hismostnearly\n(A)10-9ev\n(B)\n10-3eV\n(C)\n10eV\n(D\uff0910MeV\n(E)100MeV"
+    },
+    {
+      "number": 91,
+      "page": 25,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-25.jpg",
+      "bbox": [
+        408.0,
+        586.0,
+        806,
+        1054
+      ],
+      "text": "91.The particle decay A\u2192p+\u03c0must be a weak\ninteraction because\n(A\uff09the \u03c0-isalepton\n(B)the A has spin zero\nCnoneutrino is produced inthe decay\n(D\uff09it does not conserve angular momentum\n(E)it does not conserve strangeness\nGOONTOTHENEXTPAGE.\n67"
+    },
+    {
+      "number": 94,
+      "page": 26,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-26.jpg",
+      "bbox": [
+        408.0,
+        59.0,
+        806,
+        420.0
+      ],
+      "text": "94.Which of the followingisaLorentz transformation?\n(Assume asystem ofunits such that the velocity of\nlight is 1.)\n(A\uff09x'=4x\ny'=y\n2'=z\nt=.251\n(B\uff09x'=x-.75t\ny'=y\n2=2\n1=\n\uff08C\uff09x'=1.25x-.75t\ny'=y\nz'=2\nt'=1.25t-.75x\n\uff08D)x'=1.25x-.75t\ny'=y\n2'=2\nt'=.75t-1.25x\n(E)None of the above"
+    },
+    {
+      "number": 92,
+      "page": 26,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-26.jpg",
+      "bbox": [
+        10,
+        268.0,
+        408.0,
+        711.0
+      ],
+      "text": "92.A flat coilofwire isrotated at afrequency of10\nhertz in themagneticfield produced by three pairs\nofmagnets as shown above.The axis of rotation of\nthe coil liesintheplane of the coil and isperpendic.\nular to thefield lines.What isthefrequencyof the\nalternating voltage in the coil?\n10HZ\n(A)\n6\n(B)\n10\n3\nHz\n(C\uff0910Hz\n(D)30Hz\n(E)60Hz\nInitial\nPosition"
+    },
+    {
+      "number": 95,
+      "page": 26,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-26.jpg",
+      "bbox": [
+        408.0,
+        417.0,
+        806,
+        1054
+      ],
+      "text": "95.A beam of 10protons per second isincident ona\nAtan angle of10 degrees,there are 10\u00b2protons per\nsecondelasticallyscatteredintoadetectorthat\nsubtendsa solid angle of10-4steradians.Whatis\nthedifferentialelasticscatteringcrosssectionn\nunits of square centimeters per steradian?\n(A)10-24\n(B)10-25\n(C)10-26\n(D\uff0910-27\n(E)10-28\nGOONTOTHENEXTPAGE."
+    },
+    {
+      "number": 93,
+      "page": 26,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-26.jpg",
+      "bbox": [
+        10,
+        708.0,
+        408.0,
+        1054
+      ],
+      "text": "93.The figure above shows a smallmass connected to\na string,whichisattached toaverticalpost.If t\nmass isreleasedwhen the stringishorizontal as\nshown,themagnitude of thetotal accelerationof\nthemass as afunction of the angle 0is\n(A) g sin0\n(B)2gcos6\n(C\uff092g sin\u03b8\n(D\uff09g\u221a3cos\u00b2\u03b8+1\n(E\uff09g\u221a3sin\u00b20+1\n68"
+    },
+    {
+      "number": 97,
+      "page": 27,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-27.jpg",
+      "bbox": [
+        408.0,
+        61.0,
+        806,
+        496.0
+      ],
+      "text": "97.Lattice forces affect the motion of electrons ina\nmetallic crystal,so that therelationship between the\nenergy Eand wave numberk isnot the classical\nequation E=h\u00b2k\u00b2/2m,where m istheelectron\nmass.Instaditispossibletueanfcivemass\nm*given by which of the following?\n(A)m*=\n(B)m*\nk\ndk\naP\n(C)m*\n(D)m*\ndE\ndk\n(E)m*="
+    },
+    {
+      "number": 96,
+      "page": 27,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-27.jpg",
+      "bbox": [
+        10,
+        333.0,
+        408.0,
+        1054
+      ],
+      "text": "96.Agas-filledcelloflength5 centimeters isinserted in\none armofaMichelsoninterferometer,as shownin\nthefigure above.Theinteferometer isilluminated\nby light of wavelength 500nanometers.As the gas\nisevacuatedfrom thecell,40fringescross apoint\nin the field ofview.Therefractive index ofthis gas\nismost nearly\n(A)1.02\n(B)1.002\n(C\uff091.0002\n(D)1.00002\n(E)0.98"
+    },
+    {
+      "number": 98,
+      "page": 27,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-27.jpg",
+      "bbox": [
+        408.0,
+        493.0,
+        806,
+        1054
+      ],
+      "text": "98.\nx\n00\nhas three eigenvalues ;defined by Av=\nWhich of thefollowing statements isNOT true?\n\uff08A\uff09+2+=0\n\uff08B\uff09\uff0c\uff0cand are all real numbers.\n\uff08C\uff09=+1 for some pair ofroots.\n(D\uff09++=0\n(E)A;3=+1,1=1,2,3\nGOONTOTHENEXTPAGE.\n69"
+    },
+    {
+      "number": 99,
+      "page": 28,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-28.jpg",
+      "bbox": [
+        10,
+        59.0,
+        408.0,
+        1054
+      ],
+      "text": "99.In perturbation theory\uff0cwhatis thefirstorder\ncorrection to theenergy ofahydrogenatom\n(Bohrradiusao)initsgroundstatedueto\nthe presence ofa static electricfield E?\n(A)Zero\n(B)eEao\n(C)3eEag\n8e\u00b2Eao?\n(D)\n3\n8e\u00b2E\u00b2ao3\n(E)\n3\n70"
+    },
+    {
+      "number": 100,
+      "page": 28,
+      "image": "tmp\\pdfs\\ocr_rendered\\1992\\page-28.jpg",
+      "bbox": [
+        408.0,
+        203.0,
+        806,
+        1054
+      ],
+      "text": "100.Auniformrodoflength10meters andmass20kilo-\ngramsisbalancedonafulcrumwitha40-kilogram\nmassononeendoftherodanda20-kilogrammass\non the otherendas shown above.Howfaristhe\nfulcrumlocatedfromthecenteroftherod?\n(A)0m\n(B\uff091m\n(C)1.25m\n(D\uff091.5m\n(E)2m"
+    }
+  ]
+}
