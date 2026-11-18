@@ -1,0 +1,467 @@
+{
+  "source": "C:\\Users\\aashmore.LENOVO-15477\\Documents\\GitHub\\aashmore.github.io\\physics-gre\\pdfs\\2001_exam.pdf",
+  "pages": [
+    {
+      "page": 1,
+      "width": 612,
+      "height": 792,
+      "text": "G R A D U A T E R E C O R D E X A M I N A T I O N S \u00ae\nPhysics Te s t\nPractice Book\nThis practice book contains\n(cid:1) one actual full-length GRE Physics Test\n(cid:1) test-taking strategies\nBecome familiar with\n(cid:1) test structure and content\n(cid:1) test instructions and answering procedures\nCompare your practice test results with the performance of those who\ntook the test at a GRE administration.\nVisit GRE Online at www.gre.org\nListening.\nLearning.\nLeading.\nThis book is provided FREE with test registration by the Graduate Record Examinations Board."
+    },
+    {
+      "page": 2,
+      "width": 612,
+      "height": 792,
+      "text": "Note to Test Takers: Keep this practice book until you receive your score report.\nThe book contains important information about content specifications and scoring.\nCopyright (cid:1) 2004 by Educational Testing Service. All rights reserved.\nEDUCATIONAL TESTING SERVICE, ETS, the ETS logos, GRADUATE RECORD EXAMINATIONS,\nand GRE are registered trademarks of Educational Testing Service."
+    },
+    {
+      "page": 3,
+      "width": 612,
+      "height": 792,
+      "text": "the GRE Writing Assessment score, and GRE General\nTable of Contents\nTest scores. For information about the appropriate use\nof GRE scores, write to GRE Program, Educational\nPurpose of the GRE Subject Tests ............................ 3\nTesting Service, Mail Stop 57-L, Princeton, NJ 08541,\nDevelopment of the Subject Tests............................ 3 or visit our Web site at www.gre.org/codelst.html.\nContent of the Physics Test ..................................... 4\nDevelopment of the\nPreparing for a Subject Test...................................... 5\nSubject Tests\nTest-Taking Strategies .............................................. 6\nWhat Your Scores Mean........................................... 6\nEach new edition of a Subject Test is developed by a\nPractice Physics Test................................................. 9 committee of examiners composed of professors in the\nsubject who are on undergraduate and graduate facul-\nScoring Your Subject Test ...................................... 71\nties in different types of institutions and in different\nEvaluating Your Performance ................................. 74 regions of the United States and Canada. In selecting\nAnswer Sheet ......................................................... 75 members for each committee, the GRE Program seeks\nthe advice of the appropriate professional associations\nPurpose of the GRE in the subject.\nThe content and scope of each test are specified\nSubject Tests and reviewed periodically by the committee of examin-\ners. Test questions are written by the committee and by\nThe GRE Subject Tests are designed to help graduate other faculty who are also subject-matter specialists\nschool admission committees and fellowship sponsors and by subject-matter specialists at ETS. All questions\nassess the qualifications of applicants in specific fields proposed for the test are reviewed by the committee\nof study. The tests also provide you with an assessment and revised as necessary. The accepted questions are\nof your own qualifications. assembled into a test in accordance with the content\nScores on the tests are intended to indicate knowl- specifications developed by the committee to ensure\nedge of the subject matter emphasized in many under- adequate coverage of the various aspects of the field\ngraduate programs as preparation for graduate study. and, at the same time, to prevent overemphasis on any\nBecause past achievement is usually a good indicator of single topic. The entire test is then reviewed and\nfuture performance, the scores are helpful in predicting approved by the committee.\nsuccess in graduate study. Because the tests are stan- Subject-matter and measurement specialists on the\ndardized, the test scores permit comparison of students ETS staff assist the committee, providing information\nfrom different institutions with different undergraduate and advice about methods of test construction and\nprograms. For some Subject Tests, subscores are pro- helping to prepare the questions and assemble the test.\nvided in addition to the total score; these subscores In addition, each test question is reviewed to eliminate\nindicate the strengths and weaknesses of your prepara- language, symbols, or content considered potentially\ntion, and they may help you plan future studies. offensive, inappropriate for major subgroups of the test-\nThe GRE Board recommends that scores on the taking population, or likely to perpetuate any negative\nSubject Tests be considered in conjunction with other attitude that may be conveyed to these subgroups. The\nrelevant information about applicants. Because numer- test as a whole is also reviewed to ensure that the test\nous factors influence success in graduate school, questions, where applicable, include an appropriate\nreliance on a single measure to predict success is not balance of people in different groups and different roles.\nadvisable. Other indicators of competence typically Because of the diversity of undergraduate curricula,\ninclude undergraduate transcripts showing courses it is not possible for a single test to cover all the\ntaken and grades earned, letters of recommendation, material you may have studied. The examiners,\nPHYSICS TEST 3\nPRACTICE BOOK"
+    },
+    {
+      "page": 4,
+      "width": 612,
+      "height": 792,
+      "text": "therefore, select questions that test the basic know- The aim of the test is to determine the extent of\nledge and skills most important for successful graduate the examinees\u2019 grasp of fundamental principles and\nstudy in the particular field. The committee keeps the their ability to apply these principles in the solution\ntest up-to-date by regularly developing new editions of problems. Most test questions can be answered on\nand revising existing editions. In this way, the test the basis of a mastery of the first three years of under-\ncontent changes steadily but gradually, much like most graduate physics. The test questions are constructed\ncurricula. In addition, curriculum surveys are conducted to simplify mathematical manipulations. As a result,\nperiodically to ensure that the content of a test neither calculators nor tables of logarithms are needed.\nreflects what is currently being taught in the under- If the solution to a problem requires the use of logarithms,\ngraduate curriculum. the necessary values are included with the question.\nAfter a new edition of a Subject Test is first admin- The International System (SI) of units is used\nistered, examinees\u2019 responses to each test question are predominantly in the test. A table of information (see\nanalyzed in a variety of ways to determine whether page 10) representing various physical constants and a\neach question functioned as expected. These analyses few conversion factors among SI units is presented in\nmay reveal that a question is ambiguous, requires the test book. Whenever necessary, additional values\nknowledge beyond the scope of the test, or is inappro- of physical constants are printed with the text of the\npriate for the total group or a particular subgroup of question.\nexaminees taking the test. Answers to such questions The approximate percentages of the test on the\nare not used in computing scores. major content topics have been set by the committee\nFollowing this analysis, the new test edition is of examiners, with input from a nationwide survey of\nequated to an existing test edition. In the equating undergraduate physics curricula. The percentages\nprocess, statistical methods are used to assess the reflect the committee\u2019s determination of the relative\ndifficulty of the new test. Then scores are adjusted so emphasis placed on each topic in a typical under-\nthat examinees who took a difficult edition of the test graduate program. These percentages are given below\nare not penalized, and examinees who took an easier along with the major subtopics included in each content\nedition of the test do not have an advantage. Varia- category. Nearly all the questions in the test will\ntions in the number of questions in the different relate to material in this listing; however, there may be\neditions of the test are also taken into account in occasional questions on other topics not explicitly\nthis process. listed here\nScores on the Subject Tests are reported as three\ndigit scaled scores with the third digit always zero. 1. CLASSICAL MECHANICS (such as 20%\nThe maximum possible range for all Subject Test total kinematics, Newton\u2019s laws, work and\nscores is from 200 to 990. The actual range of scores for energy, oscillatory motion, rotational\na particular Subject Test, however, may be smaller. The motion about a fixed axis, dynamics of\nmaximum possible range of Subject Test subscores is systems of particles, central forces and\n20 to 99; however, the actual range of subscores for any celestial mechanics, three-dimensional\ntest or test edition may be smaller. Subject Test score particle dynamics, Lagrangian and\ninterpretive information is provided in Interpreting Your Hamiltonian formalism, noninertial\nGRE Scores, which you will receive with your GRE reference frames, elementary topics in\nscore report, and on the GRE Web site at www.gre.org/ fluid dynamics)\ncodelst.html.\nContent of the Physics Test\nThe test consists of about 100 five-choice questions,\nsome of which may be grouped in sets and based on\nsuch materials as diagrams, graphs, experimental data,\nand descriptions of physical situations.\n4 PHYSICS TEST\nPRACTICE BOOK"
+    },
+    {
+      "page": 5,
+      "width": 612,
+      "height": 792,
+      "text": "2. ELECTROMAGNETISM (such as 18% 9. SPECIALIZED TOPICS: Nuclear 9%\nelectrostatics, currents and DC and Particle physics (e.g., nuclear\ncircuits, magnetic fields in free space, properties, radioactive decay, fission\nLorentz force, induction, Maxwell\u2019s and fusion, reactions, fundamental\nequations and their applications, properties of elementary particles),\nelectromagnetic waves, AC circuits, Condensed Matter (e.g., crystal\nmagnetic and electric fields in matter) structure, x-ray diffraction, thermal\nproperties, electron theory of metals,\n3. OPTICS AND WAVE PHENOMENA 9%\nsemiconductors, superconductors),\n(such as wave properties, superposition,\nMiscellaneous (e.g., astrophysics, mathemati-\ninterference, diffraction,\ncal methods, computer applications)\ngeometrical optics, polarization,\nDoppler effect)\nThose taking the test should be familiar with\n4. THERMODYNAMICS AND STA- 10% certain mathematical methods and their applications\nTISTICAL MECHANICS (such as in physics. Such mathematical methods include single\nthe laws of thermodynamics, thermo- and multivariate calculus, coordinate systems (rectan-\ndynamic processes, equations of state, gular, cylindrical, and spherical), vector algebra and\nideal gases, kinetic theory, ensembles, vector differential operators, Fourier series, partial\nstatistical concepts and calculation of differential equations, boundary value problems,\nthermodynamic quantities, thermal matrices and determinants, and functions of complex\nexpansion and heat transfer) variables. These methods may appear in the test in the\ncontext of various content categories as well as occasion-\n5. QUANTUM MECHANICS (such as 12%\nal questions concerning only mathematics in the\nfundamental concepts, solutions of\nspecialized topics category above.\nthe Schr\u00f6dinger equation (including\nsquare wells, harmonic oscillators,\nPreparing for a Subject Test\nand hydrogenic atoms), spin, angular\nmomentum, wave function symmetry,\nGRE Subject Test questions are designed to measure\nelementary perturbation theory)\nskills and knowledge gained over a long period of time.\n6. ATOMIC PHYSICS (such as proper- 10% Although you might increase your scores to some\nties of electrons, Bohr model, energy extent through preparation a few weeks or months\nquantization, atomic structure, atomic before you take the test, last-minute cramming is\nspectra, selection rules, black-body unlikely to be of further help. The following informa-\nradiation, x-rays, atoms in electric and tion may be helpful.\nmagnetic fields)\n(cid:1) A general review of your college courses is\n7. SPECIAL RELATIVITY (such as 6% probably the best preparation for the test. How-\nintroductory concepts, time dilation, ever, the test covers a broad range of subject\nlength contraction, simultaneity, matter, and no one is expected to be familiar\nenergy and momentum, four-vectors with the content of every question.\nand Lorentz transformation,\n(cid:1) Use this practice book to become familiar\nvelocity addition)\nwith the types of questions in the GRE Physics\n8. LABORATORY METHODS (such as 6% Test, paying special attention to the directions. If\ndata and error analysis, electronics, you thoroughly understand the directions before\ninstrumentation, radiation detection, you take the test, you will have more time during\ncounting statistics, interaction of the test to focus on the questions themselves.\ncharged particles with matter, lasers\nand optical interferometers, dimensional\nanalysis, fundamental applications\nof probability and statistics)\nPHYSICS TEST 5\nPRACTICE BOOK"
+    },
+    {
+      "page": 6,
+      "width": 612,
+      "height": 792,
+      "text": "Test-Taking Strategies What Your Scores Mean\nThe questions in the practice test in this book illus- Your raw score \u2014 that is, the number of questions you\ntrate the types of multiple-choice questions in the test. answered correctly minus one-fourth of the number\nWhen you take the test, you will mark your answers on you answered incorrectly \u2014 is converted to the scaled\na separate machine-scorable answer sheet. Total testing score that is reported. This conversion ensures that a\ntime is two hours and fifty minutes; there are no scaled score reported for any edition of a Subject Test\nseparately timed sections. Following are some general is comparable to the same scaled score earned on any\ntest-taking strategies you may want to consider. other edition of the same test. Thus, equal scaled\n(cid:2) Read the test directions carefully, and work as scores on a particular Subject Test indicate essentially\nequal levels of performance regardless of the test\nrapidly as you can without being careless. For\nedition taken. Test scores should be compared only\neach question, choose the best answer from the\nwith other scores on the same Subject Test. (For\navailable options.\nexample, a 680 on the Computer Science Test is not\n(cid:2) All questions are of equal value; do not waste\nequivalent to a 680 on the Mathematics Test.)\ntime pondering individual questions you find\nBefore taking the test, you may find it useful to\nextremely difficult or unfamiliar.\nknow approximately what raw scores would be required\n(cid:2) You may want to work through the test quite to obtain a certain scaled score. Several factors influ-\nrapidly, first answering only the questions about ence the conversion of your raw score to your scaled\nwhich you feel confident, then going back and score, such as the difficulty of the test edition and the\nanswering questions that require more thought, number of test questions included in the computation\nand concluding with the most difficult questions of your raw score. Based on recent editions of the\nif there is time. Physics Test, the table on the next page gives the range\nof raw scores associated with selected scaled scores for\n(cid:2) If you decide to change an answer, make sure you\nthree different test editions. (Note that when the\ncompletely erase it and fill in the oval corre-\nnumber of scored questions for a given test is greater\nsponding to your desired answer.\nthan the number of possible scaled scores, it is likely that\n(cid:2) Questions for which you mark no answer or more two or more raw scores will convert to the same scaled\nthan one answer are not counted in scoring. score.) The three test editions in the table that follows\n(cid:2) As a correction for haphazard guessing, one- were selected to reflect varying degrees of difficulty.\nExaminees should note that future test editions may be\nfourth of the number of questions you answer\nsomewhat more or less difficult than the test editions\nincorrectly is subtracted from the number of\nillustrated in the table.\nquestions you answer correctly. It is improbable\nthat mere guessing will improve your score\nsignificantly; it may even lower your score.\nIf, however, you are not certain of the correct\nanswer but have some knowledge of the question\nand are able to eliminate one or more of the\nanswer choices, your chance of getting the right\nanswer is improved, and it may be to your advan-\ntage to answer the question.\n(cid:2) Record all answers on your answer sheet.\nAnswers recorded in your test book will not\nbe counted.\n(cid:2) Do not wait until the last five minutes of a\ntesting session to record answers on your\nanswer sheet.\n6 PHYSICS TEST\nPRACTICE BOOK"
+    },
+    {
+      "page": 7,
+      "width": 612,
+      "height": 792,
+      "text": "Range of Raw Scores* Needed to Earn\nSelected Scaled Scores on Three\nPhysics Test Editions That\nDiffer in Difficulty\nRaw Scores\nScaled Score Form A Form B Form C\n900 73 68-69 64\n800 58-59 54-55 50\n700 44 41 38\n600 30 27 27\nNumber of Questions Used to Compute Raw Score\n100 100 98\n*Raw Score = Number of correct answers minus one-fourth the\nnumber of incorrect answers, rounded to the nearest integer\nFor a particular test edition, there are many ways to\nearn the same raw score. For example, on the edition\nlisted above as \u201cForm A,\u201d a raw score of 44 would earn\na scaled score of 700. Below are a few of the possible\nways in which a scaled score of 700 could be earned on\nthat edition.\nExamples of Ways to Earn\na Scaled Score of 700 on the\nEdition Labeled As \u201cForm A\u201d\nNumber of\nQuestions Questions Questions Questions Used\nAnswered Answered Not to Compute\nRaw Score Correctly Incorrectly Answered Raw Score\n44 44 0 56 100\n44 49 20 31 100\n44 55 44 1 100\nPHYSICS TEST 7\nPRACTICE BOOK"
+    },
+    {
+      "page": 8,
+      "width": 612,
+      "height": 792,
+      "text": "Practice Test\nTo become familiar with how the administration will be conducted at the test center, first remove the\nanswer sheet (pages 75 and 76). Then go to the back cover of the test book (page 70) and follow the\ninstructions for completing the identification areas of the answer sheet. When you are ready to begin the\ntest, note the time and begin marking your answers on the answer sheet.\n8 PHYSICS TEST\nPRACTICE BOOK"
+    },
+    {
+      "page": 9,
+      "width": 612,
+      "height": 792,
+      "text": "FORM GR0177\n77\nGRADUATE RECORD EXAMINATIONS\u00ae\nPHYSICS TEST\nDo not break the seal\nuntil you are told to do so.\nThe contents of this test are confidential.\nDisclosure or reproduction of any portion\nof it is prohibited.\nTHIS TEST BOOK MUST NOT BE TAKEN FROM THE ROOM.\nCopyright \u00a9 2001 by Educational Testing Service. All rights reserved.\nGRE, GRADUATE RECORD EXAMINATIONS, ETS, EDUCATIONAL TESTING\nSERVICE and the ETS logos are registered trademarks of Educational Testing Service.\n9"
+    },
+    {
+      "page": 10,
+      "width": 612,
+      "height": 792,
+      "text": "TABLE OF INFORMATION\nRest mass of the electron m = 9.11 \u00d7 10 \u221231 kilogram = 9.11 \u00d7 10 \u221228 gram\ne\nMagnitude of the electron charge e = 1.60 \u00d7 10 \u221219 coulomb = 4.80 \u00d7 10 \u221210 statcoulomb (esu)\nAvogadro\u2019s number N = 6.02 \u00d7 1023 per mole\nA\nUniversal gas constant R = 8.31 joules/(mole K)\n\u2211\nBoltzmann\u2019s constant k = 1.38 \u00d7 10 \u221223 joule/K = 1.38 \u00d7 10 \u221216 erg/K\nSpeed of light c = 3.00 \u00d7 108 m/s = 3.00 \u00d7 1010 cm/s\nPlanck\u2019s constant h = 6.63 \u00d7 10 \u221234 joule second = 4.14 \u00d7 10 \u221215 eV second\n\u2211 \u2211\nj = h/2p\nVacuum permittivity (cid:1) = 8.85 \u00d7 10 \u221212 coulomb2/(newton meter2)\n0 \u2211\nVacuum permeability m 0 = 4 p \u00d7 10 \u22127 weber/(ampere \u2211 meter)\nUniversal gravitational constant G = 6.67 \u00d7 10 \u221211 meter3/(kilogram second2)\n\u2211\nAcceleration due to gravity g = 9.80 m/s2 = 980 cm/s2\n1 atmosphere pressure 1 atm = 1.0 \u00d7 105 newtons/meter2 = 1.0 \u00d7 105 pascals (Pa)\n1 angstrom 1\u00c5 = 1 \u00d7 10 \u221210 meter\n1 weber/m2 = 1 tesla = 104 gauss\nMoments of inertia about center of mass\n1\nRod M(cid:65)2\n12\n1\nDisc MR2\n2\n2\nSphere MR2\n5\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n10"
+    },
+    {
+      "page": 11,
+      "width": 612,
+      "height": 792,
+      "text": "This test starts on page 12\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n11"
+    },
+    {
+      "page": 12,
+      "width": 612,
+      "height": 792,
+      "text": "PHYSICS TEST\nTime\u2014170 minutes\n100 Questions\nDirections: Each of the questions or incomplete statements below is followed by five suggested answers or\ncompletions. Select the one that is best in each case and then fill in the corresponding space on the answer sheet.\n1. Which of the following best illustrates the 2. The coefficient of static friction between a small\nacceleration of a pendulum bob at points coin and the surface of a turntable is 0.30. The\na through e ? turntable rotates at 33.3 revolutions per minute.\nWhat is the maximum distance from the center\n(A)\nof the turntable at which the coin will not slide?\n(A) 0.024 m\n(B) 0.048 m\n(C) 0.121 m\n(D) 0.242 m\n(E) 0.484 m\n(B) 3. A satellite of mass m orbits a planet of mass M\nin a circular orbit of radius R. The time required\nfor one revolution is\n(A) independent of M\n(B) proportional to m\n(C) linear in R\n(C) (D) proportional to R3/2\n(E) proportional to R2\n4. In a nonrelativistic, one-dimensional collision,\na particle of mass 2m collides with a particle of\nmass m at rest. If the particles stick together after\nthe collision, what fraction of the initial kinetic\n(D)\nenergy is lost in the collision?\n(A) 0\n1\n(B)\n4\n(E) 1\n(C)\n3\n1\n(D)\n2\n2\n(E)\n3\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n12"
+    },
+    {
+      "page": 13,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n13"
+    },
+    {
+      "page": 14,
+      "width": 612,
+      "height": 792,
+      "text": "5. A three-dimensional harmonic oscillator is in\nthermal equilibrium with a temperature reservoir\nat temperature T. The average total energy of the\noscillator is\n1\n(A) kT\n2\n(B) kT\n7. Two long, identical bar magnets are placed under\n3\n(C) kT a horizontal piece of paper, as shown in the figure\n2\nabove. The paper is covered with iron filings.\n(D) 3kT When the two north poles are a small distance\napart and touching the paper, the iron filings\n(E) 6kT move into a pattern that shows the magnetic field\nlines. Which of the following best illustrates the\n6. An ideal monatomic gas expands quasi-statically pattern that results?\nto twice its volume. If the process is isothermal,\n(A)\nthe work done by the gas is W . If the process\ni\nis adiabatic, the work done by the gas is W .\na\nWhich of the following is true?\n(A) W = W\ni a (B)\n(B) 0 = W < W\ni a\n(C) 0 < W < W\ni a\n(D) 0 = W < W\na i\n(E) 0 < W < W\na i\n(C)\n(D)\n(E)\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n14"
+    },
+    {
+      "page": 15,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n15"
+    },
+    {
+      "page": 16,
+      "width": 612,
+      "height": 792,
+      "text": "11. An object is located 40 centimeters from the\nfirst of two thin converging lenses of focal lengths\n20 centimeters and 10 centimeters, respectively,\n8. A positive charge Q is located at a distance L as shown in the figure above. The lenses are\nabove an infinite grounded conducting plane, separated by 30 centimeters. The final image\nas shown in the figure above. What is the total formed by the two-lens system is located\ncharge induced on the plane?\n(A) 5.0 cm to the right of the second lens\n(A) 2Q (B) 13.3 cm to the right of the second lens\n(B) Q (C) infinitely far to the right of the second lens\n(C) 0 (D) 13.3 cm to the left of the second lens\n(E) 100 cm to the left of the second lens\n(D) -Q\n(E) -2Q\n9. Five positive charges of magnitude q are\narranged symmetrically around the circumference\nof a circle of radius r. What is the magnitude of\nthe electric field at the center of the circle?\n(k = 1 4p(cid:1))\n0\n(A) 0\n(B) kq r2\n(C) 5kq r2\na f\n(D) (kq/r2) cos 2p/5\na f\n(E) (5kq/r2) cos 2p/5\n12. A spherical, concave mirror is shown in the figure\n10. A 3-microfarad capacitor is connected in series above. The focal point F and the location of the\nwith a 6-microfarad capacitor. When a 300-volt object O are indicated. At what point will the\npotential difference is applied across this com- image be located?\nbination, the total energy stored in the two\n(A) I\ncapacitors is\n(B) II\n(A) 0.09 J (C) III\n(B) 0.18 J (D) IV\n(C) 0.27 J (E) V\n(D) 0.41 J\n(E) 0.81 J\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n16"
+    },
+    {
+      "page": 17,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n17"
+    },
+    {
+      "page": 18,
+      "width": 612,
+      "height": 792,
+      "text": "13. Two stars are separated by an angle of 15. Five classes of students measure the height of a\n3 \u00a5 10-5 radians. What is the diameter of the building. Each class uses a different method and\neach measures the height many different times.\nsmallest telescope that can resolve the two stars\nThe data for each class are plotted below. Which\nusing visible light ( l @ 600 nanometers) ?\nclass made the most precise measurement?\n(Ignore any effects due to Earth\u2019s atmosphere.)\n(A) 1 mm (A)\n(B) 2.5 cm\n(C) 10 cm\n(D) 2.5 m\n(E) 10 m\n14. An 8-centimeter-diameter by 8-centimeter-long\nNaI(Tl) detector detects gamma rays of a specific\nenergy from a point source of radioactivity. When\nthe source is placed just next to the detector at (B)\nthe center of the circular face, 50 percent of all\nemitted gamma rays at that energy are detected.\nIf the detector is moved to 1 meter away, the\nfraction of detected gamma rays drops to\n(A) 10-4\n(B) 2 \u00a5 10-4\n(C) 4 \u00a5 10-4\n(C)\n(D) 8p \u00a5 10-4\n(E) 16p \u00a5 10-4\n(D)\n(E)\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n18"
+    },
+    {
+      "page": 19,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n19"
+    },
+    {
+      "page": 20,
+      "width": 612,
+      "height": 792,
+      "text": "16. A student makes 10 one-second measurements 19. The primary source of the Sun\u2019s energy is a series\nof the disintegration of a sample of a long-lived of thermonuclear reactions in which the energy\nradioactive isotope and obtains the following produced is c2 times the mass difference between\nvalues.\n(A) two hydrogen atoms and one helium atom\n3, 0, 2, 1, 2, 4, 0, 1, 2, 5 (B) four hydrogen atoms and one helium atom\n(C) six hydrogen atoms and two helium atoms\nHow long should the student count to establish (D) three helium atoms and one carbon atom\nthe rate to an uncertainty of 1 percent? (E) two hydrogen atoms plus two helium atoms\nand one carbon atom\n(A) 80 s\n(B) 160 s\n20. In the production of X rays, the term\n(C) 2,000 s\n\u201cbremsstrahlung\u201d refers to which of the\n(D) 5,000 s\nfollowing?\n(E) 6,400 s\n(A) The cut-off wavelength, l , of the\nmin\n17. The ground state electron configuration\nX-ray tube\nfor phosphorus, which has 15 electrons, is\n(B) The discrete X-ray lines emitted when an\n(A) 1s2 2s2 2p6 3s1 3p4 electron in an outer orbit fills a vacancy in\nan inner orbit of the atoms in the target\n(B) 1s2 2s2 2p6 3s2 3p3 metal of the X-ray tube\n(C) The discrete X-ray lines absorbed when an\n(C) 1s2 2s2 2p6 3s2 3d3 electron in an inner orbit fills a vacancy in\nan outer orbit of the atoms in the target\nmetal of the X-ray tube\n(D) 1s2 2s2 2p6 3s1 3d4\n(D) The smooth, continuous X-ray spectra\nproduced by high-energy blackbody\n(E) 1s2 2s2 2p6 3p2 3d3\nradiation from the X-ray tube\n(E) The smooth, continuous X-ray spectra\n18. The energy required to remove both electrons\nproduced by rapidly decelerating electrons\nfrom the helium atom in its ground state is\nin the target metal of the X-ray tube\n79.0 eV. How much energy is required to ionize\nhelium (i.e., to remove one electron) ?\n21. In the hydrogen spectrum, the ratio of the\n(A) 24.6 eV wavelengths for Lyman-a radiation (n = 2 to\n(B) 39.5 eV n = 1) to Balmer-a radiation (n = 3 to n = 2) is\n(C) 51.8 eV\n(A) 5/48\n(D) 54.4 eV\n(B) 5/27\n(E) 65.4 eV\n(C) 1/3\n(D) 3\n(E) 27/5\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n20"
+    },
+    {
+      "page": 21,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n- 21"
+    },
+    {
+      "page": 22,
+      "width": 612,
+      "height": 792,
+      "text": "22. An astronomer observes a very small moon 23. A particle is constrained to move in a circle with a\norbiting a planet and measures the moon\u2019s 10-meter radius. At one instant, the particle\u2019s\nminimum and maximum distances from the speed is 10 meters per second and is increasing at\nplanet\u2019s center and the moon\u2019s maximum orbital a rate of 10 meters per second squared. The angle\nspeed. Which of the following CANNOT be between the particle\u2019s velocity and acceleration\ncalculated from these measurements? vectors is\n(A) Mass of the moon (A) 0\u221e\n(B) Mass of the planet\n(B) 30\u221e\n(C) Minimum speed of the moon\n(C) 45\u221e\n(D) Period of the orbit\n(D) 60\u221e\n(E) Semimajor axis of the orbit\n(E) 90\u221e\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n22"
+    },
+    {
+      "page": 23,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n23"
+    },
+    {
+      "page": 24,
+      "width": 612,
+      "height": 792,
+      "text": "u u u\nO O O\nt t t\nI II III\nu u\nO O\nt t\nIV V\n24. A stone is thrown at an angle of 45\u00b0 above the horizontal x-axis in the +x-direction. If air resistance is\nignored, which of the velocity versus time graphs shown above best represents u versus t and u versus t,\nx y\nrespectively?\nu vs. t u vs. t\nx y\n(A) I IV\n(B) II I\n(C) II III\n(D) II V\n(E) IV V\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n24"
+    },
+    {
+      "page": 25,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n25"
+    },
+    {
+      "page": 26,
+      "width": 612,
+      "height": 792,
+      "text": "27. The eigenvalues of a Hermitian operator are\nalways\n(A) real\n(B) imaginary\n(C) degenerate\n(D) linear\n25. Seven pennies are arranged in a hexagonal, planar (E) positive\npattern so as to touch each neighbor, as shown in\nthe figure above. Each penny is a uniform disk of\nmass m and radius r. What is the moment of\ninertia of the system of seven pennies about an y = 5 1 - 3 2 + 2 3\n1\naxis that passes through the center of the central\ny = 1 - 5 2 + x 3\npenny and is normal to the plane of the pennies? 2\n(A) (7/2) mr2\n28. The states 1 , 2 , and 3 are orthonormal.\n(B) (13/2) mr2\n(C) (29/2) mr2 For what value of x are the states y 1 and\n(D) (49/2) mr2 y given above orthogonal?\n2\n(E) (55/2) mr2\n(A) 10\n(B) 5\n(C) 0\n(D) -5\n(E) -10\n1 1 1\n29. The state w = w + w + w\n6 \u22121 2 1 3 2\nis a linear combination of three orthonormal\neigenstates of the operator \u00d4 corresponding\nto eigenvalues -1, 1, and 2. What is the\n26. A thin uniform rod of mass M and length L is\nexpectation value of \u00d4 for this state?\npositioned vertically above an anchored frictionless\npivot point, as shown above, and then allowed to 2\n(A)\nfall to the ground. With what speed does the free 3\nend of the rod strike the ground?\n7\n(B)\n1 6\n(A) gL\n3\n(C) 1\n(B) gL\n4\n(C) 3gL (D)\n3\n(D) 12gL ( 3 + 2 2 \u2212 1)\n(E)\n6\n(E) 12 gL\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n26"
+    },
+    {
+      "page": 27,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n27"
+    },
+    {
+      "page": 28,
+      "width": 612,
+      "height": 792,
+      "text": "30. Which of the following functions could represent 33. If a charged pion that decays in 10-8 second in\nthe radial wave function for an electron in an its own rest frame is to travel 30 meters in the\natom? (r is the distance of the electron from laboratory before decaying, the pion\u2019s speed must\nthe nucleus; A and b are constants.) be most nearly\nI. A e-br (A) 0.43 \u00a5 108 m/s\nII. A sin(br) (B) 2.84 \u00a5 108 m/s\nIII. A/r\n(C) 2.90 \u00a5 108 m/s\n(A) I only (D) 2.98 \u00a5 108 m/s\n(B) II only (E) 3.00 \u00a5 108 m/s\n(C) I and II only\n(D) I and III only\n34. In an inertial reference frame S, two events occur\n(E) I, II, and III\non the x-axis separated in time by Dt and in\nspace by Dx. In another inertial reference frame\n31. Positronium is an atom formed by an electron\nS\u00a2, moving in the x-direction relative to S, the two\nand a positron (antielectron). It is similar to the\nevents could occur at the same time under which,\nhydrogen atom, with the positron replacing the\nif any, of the following conditions?\nproton. If a positronium atom makes a transition\nfrom the state with n = 3 to a state with n = 1, (A) For any values of Dx and Dt\nthe energy of the photon emitted in this transition\n(B) Only if \u2126Dx/Dt\u2126< c\nis closest to\n(C) Only if \u2126Dx/Dt\u2126> c\n(A) 6.0 eV\n(D) Only if \u2126Dx/Dt\u2126= c\n(B) 6.8 eV\n(E) Under no condition\n(C) 12.2 eV\n(D) 13.6 eV\n35. If the absolute temperature of a blackbody is\n(E) 24.2 eV\nincreased by a factor of 3, the energy radiated per\nsecond per unit area does which of the following?\n32. If the total energy of a particle of mass m is\nequal to twice its rest energy, then the magnitude (A) Decreases by a factor of 81.\nof the particle\u2019s relativistic momentum is (B) Decreases by a factor of 9.\n(C) Increases by a factor of 9.\n(A) mc/2\n(D) Increases by a factor of 27.\n(B) mc / 2\n(E) Increases by a factor of 81.\n(C) mc\n(D) 3mc\n(E) 2mc\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n28"
+    },
+    {
+      "page": 29,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n29"
+    },
+    {
+      "page": 30,
+      "width": 612,
+      "height": 792,
+      "text": "36. Consider the quasi-static adiabatic expansion\nof an ideal gas from an initial state i to a final\nstate f. Which of the following statements is\nNOT true?\n(A) No heat flows into or out of the gas.\n(B) The entropy of state i equals the entropy\nof state f.\n(C) Thez change of internal energy of the gas is\n- PdV. 38. An AC circuit consists of the elements shown\n(D) Thze mechanical work done by the gas is above, with R = 10,000 ohms, L = 25 millihenries,\nand C an adjustable capacitance. The AC voltage\nPdV.\ngenerator supplies a signal with an amplitude of\n(E) The temperature of the gas remains constant. 40 volts and angular frequency of 1,000 radians\nper second. For what value of C is the amplitude\nof the current maximized?\n(A) 4 nF\n(B) 40 nF\n(C) 4 mF\n(D) 40 mF\n(E) 400 mF\n39. Which two of the following circuits are high-pass\nfilters?\n37. A constant amount of an ideal gas undergoes the\ncyclic process ABCA in the PV diagram shown\nabove. The path BC is isothermal. The work\ndone by the gas during one complete cycle,\nbeginning and ending at A, is most nearly\n(A) 600 kJ\n(B) 300 kJ\n(C) 0\n(D) -300 kJ\n(E) -600 kJ (A) I and II\n(B) I and III\n(C) I and IV\n(D) II and III\n(E) II and IV\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n30"
+    },
+    {
+      "page": 31,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n31"
+    },
+    {
+      "page": 32,
+      "width": 612,
+      "height": 792,
+      "text": "40. In the circuit shown above, the switch S is closed at t = 0.\nWhich of the following best represents the voltage across the\ninductor, as seen on an oscilloscope?\n(A) (B)\n(C) (D)\n(E)\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n32"
+    },
+    {
+      "page": 33,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n33"
+    },
+    {
+      "page": 34,
+      "width": 612,
+      "height": 792,
+      "text": "41. Maxwell\u2019s equations can be written in the form\nshown below. If magnetic charge exists and if it is\nconserved, which of these equations will have to\nbe changed?\nI. \u2207(cid:1)E = r/(cid:1)\no\nII. \u2207(cid:1)B = 0\n\u2202B\nIII. \u2207 \u00d7 E = \u2212\n\u2202t\n\u2202E\nIV. \u2207 \u00d7 B = \u00b5J + \u00b5(cid:1)\no o o \u2202t\n(A) I only\n(B) II only\n(C) III only\n(D) I and IV\n(E) II and III\n42. Three wire loops and an observer are positioned\nas shown in the figure above. From the observer\u2019s\npoint of view, a current I flows counterclockwise\nin the middle loop, which is moving towards the\nobserver with a velocity u . Loops A and B are\nstationary. This same observer would notice that\n(A) clockwise currents are induced in loops\nA and B\n(B) counterclockwise currents are induced in\nloops A and B\n(C) a clockwise current is induced in loop A, but\na counterclockwise current is induced in\nloop B\n(D) a counterclockwise current is induced in\nloop A, but a clockwise current is induced\nin loop B\n(E) a counterclockwise current is induced in loop\nA, but no current is induced in loop B\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n34"
+    },
+    {
+      "page": 35,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n35"
+    },
+    {
+      "page": 36,
+      "width": 612,
+      "height": 792,
+      "text": "43. The components of the orbital angular momentum 45. Let n \u00d2 represent the normalized nth energy\noperator L = (L , L , L ) satisfy the following\nx y z eigenstate of the one-dimensional harmonic\ncommutation relations. F I\noscillator, H n \u00d2 = (cid:61)\u03c9Hn + 1K n \u00d2 . If \u03c8 \u00d2 is\n[L , L ] = i(cid:61)L , 2\nx y z\na normalized ensemble state that can be expanded\n[L , L ] = i(cid:61)L ,\ny z x\nas a linear combination\n[L z , L x ] = i(cid:61)L y . \u03c8 \u00d2 = 1 1 \u00d2 - 2 2 \u00d2 + 3 3 \u00d2 of the\n14 14 14\nWhat is the value of the commutator [L L , L ] ?\nx y z\neigenstates, what is the expectation value of the\n(A) 2i(cid:61)L L\nx y energy operator in this ensemble state?\ne j\n(B) i(cid:61) L2 + L2\nx y 102\n(A) (cid:61)w\n(C) -i(cid:61) e L2 + L2 j 14\nx y\n(D) i(cid:61) e L2 x - L2 y j (B) 1 4 4 3 (cid:61)w\ne j\n(E) -i(cid:61) L2 x - L2 y (C) 23 (cid:61)w\n14\n17\n44. The energy eigenstates for a particle of mass m (D) (cid:61)w\n14\nin a box of length L have wave functions\n7\n(E) (cid:61)w\nf (x) = 2/L sin(npx/L) and energies 14\nn\nE = n2p2(cid:61)2/2mL2, where n = 1, 2, 3, . . . .\nn 46. A free particle with initial kinetic energy E and\nAt time t = 0, the particle is in a state described de Broglie wavelength l enters a region in\nwhich it has potential energy V. What is the\nas follows.\nparticle\u2019s new de Broglie wavelength?\n1\nY(t = 0) = [f + 2f + 3f ] (A) l (1 + E/V)\n14 1 2 3\n(B) l (1 - V/E)\nWhich of the following is a possible result of a (C) l (1 - E/V)-1\nmeasurement of energy for the state Y ? (D) l (1 + V/E)1/2\n(A) 2E 1 (E) l (1 - V/E)-1/2\n(B) 5E\n1\n(C) 7E\n1\n(D) 9E\n1\n(E) 14E\n1\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n36"
+    },
+    {
+      "page": 37,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n37"
+    },
+    {
+      "page": 38,
+      "width": 612,
+      "height": 792,
+      "text": "47. A sealed and thermally insulated container of total 50. At 20\u221eC, a pipe open at both ends resonates at a\nvolume V is divided into two equal volumes by frequency of 440 hertz. At what frequency does\nan impermeable wall. The left half of the con- the same pipe resonate on a particularly cold day\ntainer is initially occupied by n moles of an ideal when the speed of sound is 3 percent lower than\ngas at temperature T. Which of the following\nit would be at 20\u221eC ?\ngives the change in entropy of the system when\nthe wall is suddenly removed and the gas expands (A) 414 Hz\nto fill the entire volume? (B) 427 Hz\n(C) 433 Hz\n(A) 2nR ln2\n(D) 440 Hz\n(B) nR ln2 (E) 453 Hz\n1\n(C) nR ln2\n2 51. Unpolarized light of intensity I is incident on a\n0\n(D) -nR ln2 series of three polarizing filters. The axis of the\nsecond filter is oriented at 45\u00b0 to that of the first\n(E) -2nR ln2\nfilter, while the axis of the third filter is oriented\nat 90\u00b0 to that of the first filter. What is the intensity\n48. A gaseous mixture of O (molecular mass 32 u)\n2 of the light transmitted through the third filter?\nand N (molecular mass 28 u) is maintained at\n2 (A) 0\nu (N )\nconstant temperature. What is the ratio\nu\nrms\n(O\n2\n)\n(B) I\n0\n/8\nrms 2\nof the root-mean-square speeds of the molecules?\n(C) I\n0\n/4\n7\n(D) I\n0\n/2\n(A)\n8 (E) I / 2\n0\n7\n(B)\n8\n8\n(C)\n7\nF I\nH 8K 2\n(D)\n7\nF I\nH 8K\n(E) ln\n7\n49. In a Maxwell-Boltzmann system with two states\nof energies (cid:1) and 2(cid:1), respectively, and a\ndegeneracy of 2 for each state, the partition\nfunction is 52. The conventional unit cell of a body-centered\ncubic Bravais lattice is shown in the figure above.\n(A) e-(cid:1) /kT\nThe conventional cell has volume a3 . What is\n(B) 2e-2(cid:1) /kT the volume of the primitive unit cell?\n(C) 2e-3(cid:1) /kT (A) a3/8\n(D) e-(cid:1) /kT + e-2(cid:1) /kT (B) a3/4\n(E) 2[e-(cid:1) /kT + e-2(cid:1) /kT] (C) a3/2\n(D) a3\n(E) 2a3\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n38"
+    },
+    {
+      "page": 39,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n39"
+    },
+    {
+      "page": 40,
+      "width": 612,
+      "height": 792,
+      "text": "53. Which of the following best represents the\ntemperature dependence of the resistivity\nof an undoped semiconductor?\n(A)\n(B) 54. The figure above shows a plot of the time-\ndependent force F (t) acting on a particle in\nx\nmotion along the x-axis. What is the total impulse\ndelivered to the particle?\n(A) 0\n(B) 1 kg(cid:1)m/s\n(C) (C) 2 kg(cid:1)m/s\n(D) 3 kg(cid:1)m/s\n(E) 4 kg(cid:1)m/s\n(D)\n55. A particle of mass m is moving along the x-axis\n(E) with speed u when it collides with a particle of\nmass 2m initially at rest. After the collision, the\nfirst particle has come to rest, and the second\nparticle has split into two equal-mass pieces that\nmove at equal angles q > 0 with the x-axis, as\nshown in the figure above. Which of the\nfollowing statements correctly describes the\nspeeds of the two pieces?\n(A) Each piece moves with speed u.\n(B) One of the pieces moves with speed u,\nthe other moves with speed less than u.\n(C) Each piece moves with speed u/2.\n(D) One of the pieces moves with speed u/2, the\nother moves with speed greater than u/2.\n(E) Each piece moves with speed greater\nthan u/2.\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n40"
+    },
+    {
+      "page": 41,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n41"
+    },
+    {
+      "page": 42,
+      "width": 612,
+      "height": 792,
+      "text": "56. A balloon is to be filled with helium and used to 58. A proton moves in the +z-direction after\nsuspend a mass of 300 kilograms in air. If the being accelerated from rest through a potential\nmass of the balloon is neglected, which of the difference V. The proton then passes through\nfollowing gives the approximate volume of a region with a uniform electric field E in the\nhelium required? (The density of air is 1.29 +x-direction and a uniform magnetic field B in\nkilograms per cubic meter and the density of the +y-direction, but the proton\u2019s trajectory is not\nhelium is 0.18 kilogram per cubic meter.) affected. If the experiment were repeated using a\npotential difference of 2V, the proton would\n(A) 50 m3\nthen be\n(B) 95 m3\n(C) 135 m3 (A) deflected in the +x-direction\n(D) 270 m3 (B) deflected in the -x-direction\n(E) 540 m3 (C) deflected in the +y-direction\n(D) deflected in the -y-direction\n(E) undeflected\n59. For an inductor and capacitor connected in series,\nthe equation describing the motion of charge is\nd2Q\n1\nL + Q = 0,\ndt2 C\nwhere L is the inductance, C is the capacitance,\nand Q is the charge. An analogous equation can\nbe written for a simple harmonic oscillator with\nposition x, mass m, and spring constant k.\n57. A stream of water of density r, cross-sectional Which of the following correctly lists the\narea A, and speed u strikes a wall that is mechanical analogs of L, C, and Q ?\nperpendicular to the direction of the stream, as\nL C Q\nshown in the figure above. The water then flows\n(A) m k x\nsideways across the wall. The force exerted by the\n(B) m 1/k x\nstream on the wall is\n(C) k x m\n(A) ru2A (D) 1/k 1/m x\n(B) ruA/2 (E) x 1/k 1/m\n(C) rghA\n(D) u2A/r\n(E) u2A/2r\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n42"
+    },
+    {
+      "page": 43,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n43"
+    },
+    {
+      "page": 44,
+      "width": 612,
+      "height": 792,
+      "text": "60. An infinite, uniformly charged sheet with surface- 61. An electromagnetic plane wave, propagating\ncharge density s cuts through a spherical\nin vacuum, has an electric field given by\nGaussian surface of radius R at a distance x from\nE = E cos(kx - wt) and is normally incident\nits center, as shown in the figure above. The 0\non a perfect conductor at x = 0, as shown in the\nelectric flux F through the Gaussian surface is\nfigure above. Immediately to the left of the\n\u03c0R2\u03c3\nconductor, the total electric field E and the total\n(A)\n(cid:1)\n0 magnetic field B are given by which of the\nfollowing?\n2\u03c0R2\u03c3\n(B) (cid:1) E B\n0\n(A) 0 0\n\u03c0(R \u2212 x)2\u03c3\n(C)\n(cid:1)\n(B) 2E\n0\ncoswt 0\n0\n(C) 0 (2E\n0\nc) coswt\n\u03c0(R2 \u2212 x2)\u03c3 (D) 2E coswt (2E c) coswt\n(D) 0 0\n(cid:1)\n0 (E) 2E coswt (2E c)sinwt\n0 0\n2\u03c0(R2 \u2212 x2)\u03c3\n(E) (cid:1) 62. A nonrelativistic particle with a charge twice that\n0 of an electron moves through a uniform magnetic\nfield. The field has a strength of p 4 tesla and is\nperpendicular to the velocity of the particle. What\nis the particle\u2019s mass if it has a cyclotron frequency\nof 1,600 hertz?\n(A) 2.5 \u00a5 10-23 kg\n(B) 1.2 \u00a5 10-22 kg\n(C) 3.3 \u00a5 10-22 kg\n(D) 5.0 \u00a5 10-21 kg\n(E) 7.5 \u00a5 10-21 kg\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n44"
+    },
+    {
+      "page": 45,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n45"
+    },
+    {
+      "page": 46,
+      "width": 612,
+      "height": 792,
+      "text": "F I\nhv 2 ehv/kT\nC = 3kN H K\nA kT (ehv/kT\n-\n1)2\n65. Einstein\u2019s formula for the molar heat capacity C\nof solids is given above. At high temperatures, C\napproaches which of the following?\n(A) 0\nF I\nhv\n(B) 3kN H K\nA kT\n(C) 3kN hv\nA\n(D) 3kN\nA\n(E) N hv\n63. The distribution of relative intensity I (l) of A\nblackbody radiation from a solid object versus\n66. A sample of radioactive nuclei of a certain element\nthe wavelength l is shown in the figure above.\ncan decay only by g-emission and b-emission. If\nIf the Wien displacement law constant is\nthe half-life for g-emission is 24 minutes and that\n2.9 \u00a5 10-3 m(cid:1)K, what is the approximate\nfor b-emission is 36 minutes, the half-life for the\ntemperature of the object? sample is\n(A) 10 K (A) 30 minutes\n(B) 50 K (B) 24 minutes\n(C) 250 K (C) 20.8 minutes\n(D) 1,500 K (D) 14.4 minutes\n(E) 6,250 K (E) 6 minutes\n64. Electromagnetic radiation provides a means to 67. The 238U nucleus has a binding energy of about\nprobe aspects of the physical universe. Which\n7.6 MeV per nucleon. If the nucleus were to\nof the following statements regarding radiation\nfission into two equal fragments, each would have\nspectra is NOT correct?\na kinetic energy of just over 100 MeV. From this,\n(A) Lines in the infrared, visible, and ultraviolet it can be concluded that\nregions of the spectrum reveal primarily the\n(A) 238U cannot fission spontaneously\nnuclear structure of the sample.\n(B) 238U has a large neutron excess\n(B) The wavelengths identified in an absorption\n(C) nuclei near A = 120 have masses greater than\nspectrum of an element are among those in\nhalf that of 238U\nits emission spectrum.\n(D) nuclei near A = 120 must be bound by about\n(C) Absorption spectra can be used to determine\n6.7 MeV/nucleon\nwhich elements are present in distant stars.\n(E) nuclei near A = 120 must be bound by about\n(D) Spectral analysis can be used to identify the\n8.5 MeV/nucleon\ncomposition of galactic dust.\n(E) Band spectra are due to molecules.\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n46"
+    },
+    {
+      "page": 47,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n47"
+    },
+    {
+      "page": 48,
+      "width": 612,
+      "height": 792,
+      "text": "68. When 7Be transforms into 7Li, it does so by\n4 3\n(A) emitting an alpha particle only\n(B) emitting an electron only\n(C) emitting a neutron only\n(D) emitting a positron only\n(E) electron capture by the nucleus with emission\nof a neutrino\n69. Blue light of wavelength 480 nanometers is\nmost strongly reflected off a thin film of oil on\na glass slide when viewed near normal incidence.\nAssuming that the index of refraction of the oil\nis 1.2 and that of the glass is 1.6, what is the\n72. Two identical blocks are connected by a spring.\nminimum thickness of the oil film (other than\nThe combination is suspended, at rest, from a\nzero) ?\nstring attached to the ceiling, as shown in the\n(A) 150 nm figure above. The string breaks suddenly.\n(B) 200 nm Immediately after the string breaks, what is the\n(C) 300 nm downward acceleration of the upper block?\n(D) 400 nm\n(A) 0\n(E) 480 nm\n(B) g/2\n(C) g\n70. Light from a laser falls on a pair of very narrow\nslits separated by 0.5 micrometer, and bright (D) 2 g\nfringes separated by 1.0 millimeter are observed (E) 2g\non a distant screen. If the frequency of the laser\nlight is doubled, what will be the separation of the\nbright fringes?\n(A) 0.25 mm\n(B) 0.5 mm\n(C) 1.0 mm\n(D) 2.0 mm\n(E) 2.5 mm 73. For the system consisting of the two blocks shown\nin the figure above, the minimum horizontal force\n71. The ultraviolet Lyman alpha line of hydrogen F is applied so that block B does not fall under\nwith wavelength 121.5 nanometers is emitted by the influence of gravity. The masses of A and B\nan astronomical object. An observer on Earth are 16.0 kilograms and 4.00 kilograms,\nmeasures the wavelength of the light received respectively. The horizontal surface is frictionless\nfrom the object to be 607.5 nanometers. The and the coefficient of friction between the two\nobserver can conclude that the object is moving blocks is 0.50. The magnitude of F is most\nwith a radial velocity of nearly\n(A) 2.4 \u00a5 108 m/s toward Earth (A) 50 N\n(B) 2.8 \u00a5 108 m/s toward Earth (B) 100 N\n(C) 2.4 \u00a5 108 m/s away from Earth (C) 200 N\n(D) 400 N\n(D) 2.8 \u00a5 108 m/s away from Earth\n(E) 1,600 N\n(E) 12 \u00a5 108 m/s away from Earth\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n48"
+    },
+    {
+      "page": 49,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n49"
+    },
+    {
+      "page": 50,
+      "width": 612,
+      "height": 792,
+      "text": "74. The Lagrangian for a mechanical system is 77. An ensemble of systems is in thermal equilibrium\nwith a reservoir for which kT = 0.025 eV.\nL = aq(cid:5)2 + bq4, State A has an energy that is 0.1 eV above that\nof state B. If it is assumed the systems obey\nwhere q is a generalized coordinate and a\nMaxwell-Boltzmann statistics and that the\nand b are constants. The equation of motion\ndegeneracies of the two states are the same, then\nfor this system is\nthe ratio of the number of systems in state A to\nthe number in state B is\nb\n(A) q(cid:5) = q2\na (A) e+4\n(B) q(cid:5) = 2b q3 (B) e+0.25\na\n(C) 1\n2b\n(C) q(cid:5)(cid:5) = - q3 (D) e-0.25\na\n(E) e-4\n2b\n(D) q(cid:5)(cid:5) = + q3\na\n78. The muon decays with a characteristic lifetime\nb of about 10-6 second into an electron, a muon\n(E) q(cid:5)(cid:5) = q3\na neutrino, and an electron antineutrino. The muon\nF I L O F I is forbidden from decaying into an electron and\nG a x \u2032 J M 1/2 3/2 0P G a xJ just a single neutrino by the law of conservation of\nGa\u2032 J = M\u2212 3/2 1/2 0P Ga J\nH yK NM QP H yK (A) charge\na\u2032 0 0 1 a\nz z (B) mass\n(C) energy and momentum\n75. The matrix shown above transforms the com- (D) baryon number\nponents of a vector in one coordinate frame S to (E) lepton number\nthe components of the same vector in a second\ncoordinate frame S\u2032. This matrix represents a 79. A particle leaving a cyclotron has a total\nrotation of the reference frame S by relativistic energy of 10 GeV and a relativistic\nmomentum of 8 GeV/c. What is the rest mass\n(A) 30\u00b0 clockwise about the x-axis\nof this particle?\n(B) 30\u00b0 counterclockwise about the z-axis\n(C) 45\u00b0 clockwise about the z-axis (A) 0.25 GeV/c2\n(D) 60\u00b0 clockwise about the y-axis (B) 1.20 GeV/c2\n(E) 60\u00b0 counterclockwise about the z-axis (C) 2.00 GeV/c2\n(D) 6.00 GeV/c2\n76. The mean kinetic energy of the conduction (E) 16.0 GeV/c2\nelectrons in metals is ordinarily much higher\nthan kT because\n(A) electrons have many more degrees of\nfreedom than atoms do\n(B) the electrons and the lattice are not in thermal\nequilibrium\n(C) the electrons form a degenerate Fermi gas\n(D) electrons in metals are highly relativistic\n(E) electrons interact strongly with phonons\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n50"
+    },
+    {
+      "page": 51,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n51"
+    },
+    {
+      "page": 52,
+      "width": 612,
+      "height": 792,
+      "text": "80. A tube of water is traveling at 1/2 c relative to the 83. The state of a spin- 1 particle can be represented\nlab frame when a beam of light traveling in the 2\nA B\nusing the eigenstates and of the S\nsame direction as the tube enters it. What is the z\nspeed of light in the water relative to the lab operator.\nframe? (The index of refraction of water is 4/3.)\nS A = 1 (cid:61) A\nz 2\n(A) 1/2 c\n(B) 2/3 c S B = - 1 (cid:61) B\n(C) 5/6 c z 2\n(D) 10/11 c \u00ca0 1\u02c6\n(E) c Given the Pauli matrix s x = \u00c1 \u00cb1 0 \u02dc \u00af , which of\nthe following is an eigenstate of S with\n81. Which of the following is the orbital angular x\nmomentum eigenfunction Ym(q, f) in a state for eigenvalue - 1 (cid:61) ?\n(cid:65) 2\nwhich the operators L2 and L have eigenvalues\nz (A) B\n6(cid:61)2 and -(cid:61), respectively?\n1 A B\n(B) ( + )\n(A) Y1(q, f) 2\n2\n1 A B\n(C) ( - )\n(B) Y-1(q, f) 2\n2\n1 A B\n(D) ( + i )\n(C) 1 [Y1(q, f) + Y-1(q, f)] 2\n2 2 2 1 A B\n(E) ( - i )\n(D) Y2(q, f) 2\n3\n(E) Y-1(q, f)\n3\n82. Let \u03b1 \u00d2 represent the state of an electron with\nspin up and \u03b2 \u00d2 the state of an electron with\nspin down. Valid spin eigenfunctions for a triplet\nstate (3S) of a two-electron atom include which of\nthe following?\nI. \u03b1 \u00d2 \u03b1 \u00d2\n1 2\n1\nII. ( \u03b1 \u00d2 \u03b2 \u00d2 - \u03b1 \u00d2 \u03b2 \u00d2 )\n1 2 2 1\n2\n1\nIII. ( \u03b1 \u00d2 \u03b2 \u00d2 + \u03b1 \u00d2 \u03b2 \u00d2 )\n1 2 2 1\n2 84. An energy-level diagram of the n = 1 and\nn = 2 levels of atomic hydrogen (including the\n(A) I only effects of spin-orbit coupling and relativity) is\n(B) II only shown in the figure above. Three transitions are\n(C) III only labeled A, B, and C. Which of the transitions\n(D) I and III will be possible electric-dipole transitions?\n(E) II and III\n(A) B only\n(B) C only\n(C) A and C only\n(D) B and C only\n(E) A, B, and C\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n52"
+    },
+    {
+      "page": 53,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n53"
+    },
+    {
+      "page": 54,
+      "width": 612,
+      "height": 792,
+      "text": "85. One end of a Nichrome wire of length 2L and\ncross-sectional area A is attached to an end of\nanother Nichrome wire of length L and cross-\nsectional area 2A. If the free end of the longer\nwire is at an electric potential of 8.0 volts, and\nthe free end of the shorter wire is at an electric\npotential of 1.0 volt, the potential at the junction\nof the two wires is most nearly equal to\n(A) 2.4 V\n(B) 3.3 V\n(C) 4.5 V\n(D) 5.7 V\n(E) 6.6 V\n86. A coil of 15 turns, each of radius 1 centimeter,\nis rotating at a constant angular velocity w = 300\nradians per second in a uniform magnetic field of\n0.5 tesla, as shown in the figure above. Assume\nat time t = 0 that the normal n(cid:3) to the coil plane\nis along the y-direction and that the self-\ninductance of the coil can be neglected. If the coil\nresistance is 9 ohms, what will be the magnitude\nof the induced current in milliamperes?\n(A) 225p sinwt\n(B) 250p sinwt\n(C) 0.08p coswt\n(D) 1.7p coswt\n(E) 25p coswt\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n54"
+    },
+    {
+      "page": 55,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n55"
+    },
+    {
+      "page": 56,
+      "width": 612,
+      "height": 792,
+      "text": "87. Two spherical, nonconducting, and very thin shells of\nuniformly distributed positive charge Q and radius d are\nlocated a distance 10d from each other. A positive point\ncharge q is placed inside one of the shells at a distance d/2\nfrom the center, on the line connecting the centers of the two\nshells, as shown in the figure above. What is the net force on\nthe charge q ?\nqQ\n(A) to the left\n361p(cid:1)d2\n0\nqQ\n(B) to the right\n361p(cid:1)d2\n0\nqQ\n(C) to the left\n441p(cid:1)d2\n0\nqQ\n(D) to the right\n441p(cid:1)d2\n0\n360qQ\n(E) to the left\n361p(cid:1)d2\n0\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n56"
+    },
+    {
+      "page": 57,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n57"
+    },
+    {
+      "page": 58,
+      "width": 612,
+      "height": 792,
+      "text": "88. A segment of wire is bent into an arc of radius R\nand subtended angle q , as shown in the figure\nabove. Point P is at the center of the circular\nsegment. The wire carries current I. What is the\nmagnitude of the magnetic field at P ?\n(A) 0\n89. A child is standing on the edge of a merry-go-\nm Iq\n(B) a 0 f round that has the shape of a solid disk, as shown\n2\n2p R in the figure above. The mass of the child is\n40 kilograms. The merry-go-round has a mass\nm Iq\n(C) 0 of 200 kilograms and a radius of 2.5 meters,\n4pR\nand it is rotating with an angular velocity of\n(D) m 0 Iq w = 2.0 radians per second. The child then\n4pR2 walks slowly toward the center of the-merry-go-\nround. What will be the final angular velocity of\nm I\n(E) 0 the merry-go-round when the child reaches the\n2qR2\ncenter? (The size of the child can be neglected.)\n(A) 2.0 rad/s\n(B) 2.2 rad/s\n(C) 2.4 rad/s\n(D) 2.6 rad/s\n(E) 2.8 rad/s\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n58"
+    },
+    {
+      "page": 59,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n59"
+    },
+    {
+      "page": 60,
+      "width": 612,
+      "height": 792,
+      "text": "90. Two identical springs with spring constant k are connected to identical masses of mass M, as shown in the\nfigures above. The ratio of the period for the springs connected in parallel (Figure 1) to the period for the springs\nconnected in series (Figure 2) is\n1\n(A)\n2\n1\n(B)\n2\n(C) 1\n(D) 2\n(E) 2\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n60"
+    },
+    {
+      "page": 61,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n61"
+    },
+    {
+      "page": 62,
+      "width": 612,
+      "height": 792,
+      "text": "91. The cylinder shown above, with mass M and\nradius R, has a radially dependent density. The\ncylinder starts from rest and rolls without slipping\ndown an inclined plane of height H. At the\nbottom of the plane its translational speed is\n(8gH/7)1/2. Which of the following is the 92. Two small equal masses m are connected by an\nrotational inertia of the cylinder? ideal massless spring that has equilibrium length\n1 (cid:65) and force constant k, as shown in the figure\n(A) MR2 0\n2 above. The system is free to move without friction\n(B) 3 MR2 in the plane of the page. If p 1 and p 2 represent\n4\nthe magnitudes of the momenta of the two\n(C) 7 MR2 masses, a Hamiltonian for this system is\n8 R| U|\n(D) MR2 (A) 1 S | p 1 2 + p 2 2 \u2212 2 k a (cid:65) \u2212 (cid:65) fV |\n7 2 T m m 0 W\n(E) MR2\nR U\n4\n(B) 1 2 S T p m 1 2 + p m 2 2 + 2 k a (cid:65) - (cid:65) 0 f 2 V W\nR U\n1 S p2 p2 a fV\n(C) 2 T m 1 + m 2 - k (cid:65) - (cid:65) 0 W\nR U\n(D) 1 2 S T p m 1 2 + p m 2 2 - k a (cid:65) - (cid:65) 0 f 2 V W\nR U\n(E) 1 2 S T p m 1 2 + p m 2 2 + k a (cid:65) - (cid:65) 0 f 2 V W\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n62"
+    },
+    {
+      "page": 63,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n63"
+    },
+    {
+      "page": 64,
+      "width": 612,
+      "height": 792,
+      "text": "93. The solution to the Schr\u00f6dinger equation for the\nground state of hydrogen is\n1\nw = e-r/a 0,\n0 pa 3\n0\nwhere a is the Bohr radius and r is the distance\n0\nfrom the origin. Which of the following is the\nmost probable value for r ?\n95. An infinite slab of insulating material with\n(A) 0\ndielectric constant K and permittivity e = Ke\n(B) a /2 0\n0 is placed in a uniform electric field of magnitude\n(C) a\n0 E . The field is perpendicular to the surface\n(D) 2a 0\n0 of the material, as shown in the figure above.\n(E) \u221e\nThe magnitude of the electric field inside the\nmaterial is\n94. The raising and lowering operators for the\nquantum harmonic oscillator satisfy E\n(A) 0\nK\na\u2020 n = n + 1 n + 1 , a n = n n - 1\nE\n(B) 0\nfor energy eigenstates \u2126n with energy E . Ke\nn 0\nWhich of the following gives the first-order shift (C) E\n0\nin the n = 2 energy level due to the perturbation\n(D) Ke E\n0 0\nDH = V(a + a\u2020)2,\n(E) KE\n0\nwhere V is a constant?\n(A) 0 96. A uniformly charged sphere of total charge Q\n(B) V expands and contracts between radii R and R\n1 2\n(C) 2V\nat a frequency f. The total power radiated by the\n(D) 2 2V\nsphere is\n(E) 5V\n(A) proportional to Q\n(B) proportional to f 2\n(C) proportional to f 4\n(D) proportional to (R /R )\n2 1\n(E) zero\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n64"
+    },
+    {
+      "page": 65,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n65"
+    },
+    {
+      "page": 66,
+      "width": 612,
+      "height": 792,
+      "text": "98. Suppose that a system in quantum state i\nhas energy E . In thermal equilibrium, the\ni\nexpression\n\u00c2 E e-Ei /kT\ni\ni\n\u00c2 e\n-Ei /kT\ni\nrepresents which of the following?\n(A) The average energy of the system\n(B) The partition function\n(C) Unity\n(D) The probability to find the system with\n97. A beam of light has a small wavelength spread energy E\ni\ndl about a central wavelength l . The beam (E) The entropy of the system\ntravels in vacuum until it enters a glass plate at an\nangle q relative to the normal to the plate, as 99. A photon strikes an electron of mass m that is\nshown in the figure above. The index of refraction initially at rest, creating an electron-positron pair.\nof the glass is given by n(l). The angular spread The photon is destroyed and the positron and two\ndq\u00a2 of the refracted beam is given by electrons move off at equal speeds along the\ninitial direction of the photon. The energy of the\n1 photon was\n(A) dq\u00a2 = dl\nn\n(A) mc2\ndn(l) (B) 2mc2\n(B) dq\u00a2 = dl\ndl (C) 3mc2\n(D) 4mc2\n1 dl\n(C) dq\u00a2 = dl (E) 5mc2\nl dn\nsin q dl\n(D) dq\u00a2 =\nsin q\u00a2 l\ntan q\u00a2 dn(l)\n(E) dq\u00a2 = dl\nn dl\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n66"
+    },
+    {
+      "page": 67,
+      "width": 612,
+      "height": 792,
+      "text": "SCRATCHWORK\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n67"
+    },
+    {
+      "page": 68,
+      "width": 612,
+      "height": 792,
+      "text": "100. A Michelson interferometer is configured as a wavemeter, as shown in the figure above, so that a ratio of fringe\ncounts may be used to compare the wavelengths of two lasers with high precision. When the mirror in the right\narm of the interferometer is translated through a distance d, 100,000 interference fringes pass across the\ndetector for green light and 85,865 fringes pass across the detector for red (l = 632.82 nanometers) light. The\nwavelength of the green laser light is\n(A) 500.33 nm\n(B) 543.37 nm\n(C) 590.19 nm\n(D) 736.99 nm\n(E) 858.65 nm\nIf you finish before time is called, you may check your work on this test.\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n68"
+    },
+    {
+      "page": 69,
+      "width": 612,
+      "height": 792,
+      "text": "NO TEST MATERIAL ON THIS PAGE\nUnauthorized copying or reuse of\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n69"
+    },
+    {
+      "page": 70,
+      "width": 612,
+      "height": 792,
+      "text": "I NOTE: To ensure prompt processing of test results, it is important that you fill in the blanks exactly as directed.\nSUBJECT TEST\nA. Print and sign\nPRINT: ___________________________________________________________________\nyour full name\n(LAST) (FIRST) (MIDDLE)\nin this box:\nSIGN: ____________________________________________________________________\n6. TITLE CODE\nCopy this code in box 6 on Copy the Test Name and Form Code in box 7 on your answer sheet.\n7 7 8 2 8\nyour answer sheet. Then\nPhysics\nfill in the corresponding 0 0 0 0 0 TEST NAME ___________________________________\n1 1 1 1 1\novals exactly as shown.\n2 2 2 2 2 GR0177\nFORM CODE __________________________________\n3 3 3 3 3\n4 4 4 4 4\n5 5 5 5 5\n6 6 6 6 6\n7 7 7 7 7\n8 8 8 8 8\n9 9 9 9 9\nGRADUATE RECORD EXAMINATIONS SUBJECT TEST\nB. The Subject Tests are intended to measure your achievement in a specialized field of study. Most of the questions are\nconcerned with subject matter that is probably familiar to you, but some of the questions may refer to areas that you\nhave not studied.\nYour score will be determined by subtracting one-fourth the number of incorrect answers from the number of correct\nanswers. Questions for which you mark no answer or more than one answer are not counted in scoring. If you have\nsome knowledge of a question and are able to rule out one or more of the answer choices as incorrect, your chances of\nselecting the correct answer are improved, and answering such questions will likely improve your score. It is unlikely\nthat pure guessing will raise your score; it may lower your score.\nYou are advised to use your time effectively and to work as rapidly as you can without losing accuracy. Do not spend\ntoo much time on questions that are too difficult for you. Go on to the other questions and come back to the difficult\nones later if you can.\nYOU MUST INDICATE ALL YOUR ANSWERS ON THE SEPARATE ANSWER SHEET. No credit will be given\nfor anything written in this examination book, but you may write in the book as much as you wish to work out your\nanswers. After you have decided on your response to a question, fill in the corresponding oval on the answer sheet.\nBE SURE THAT EACH MARK IS DARK AND COMPLETELY FILLS THE OVAL. Mark only one answer to each\nquestion. No credit will be given for multiple answers. Erase all stray marks. If you change an answer, be sure that all\nprevious marks are erased completely. Incomplete erasures may be read as intended answers. Do not be concerned\nthat the answer sheet provides spaces for more answers than there are questions in the test.\nExample: Sample Answer\nWhat city is the capital of France? CORRECT ANSWER\nA B C D E\nPROPERLY MARKED\n(A) Rome\nA B C D E\n(B) Paris\nA B C D E\n(C) London IMPROPER MARKS\nA B C D E\n(D) Cairo\nA B C D E\n(E) Oslo\nDO NOT OPEN YOUR TEST BOOK UNTIL YOU ARE TOLD TO DO SO.\n\u00ae\nEducational Testing Service\nPrinceton, New Jersey 08541\n70"
+    },
+    {
+      "page": 71,
+      "width": 612,
+      "height": 792,
+      "text": "Scoring Your Subject Test\nenter the total number correct and the total number\nincorrect. Divide the total incorrect by 4 and subtract\nPhysics Test scores typically range from 450 to 950. the resulting number from the total correct. This is the\nThe range for different editions of a given test may adjustment made for guessing. Then round the result to\nvary because different editions are not of precisely the nearest whole number. This will give you your raw\nthe same difficulty. The differences in ranges among total score. Use the total score conversion table to find\ndifferent editions of a given test, however, usually are the scaled total score that corresponds to your raw\nsmall. This should be taken into account, especially total score.\nwhen comparing two very high scores. The score Example: Suppose you chose the correct answers to\nconversion table on page 73 shows the score range 44 questions and incorrect answers to 30. Dividing 30\nfor this edition of the test only. by 4 yields 7.5. Subtracting 7.5 from 44 equals 36.5,\nThe worksheet on page 72 lists the correct answers which is rounded to 37. The raw score of 37 corre-\nto the questions. Columns are provided for you to mark sponds to a scaled score of 650.\nwhether you chose the correct (C) answer or an\nincorrect (I) answer to each question. Draw a line\nacross any question you omitted, because it is not\ncounted in the scoring. At the bottom of the page,\nPHYSICS TEST 71\nPRACTICE BOOK"
+    },
+    {
+      "page": 72,
+      "width": 612,
+      "height": 792,
+      "text": "Worksheet for the Physics Test, Form GR0177\nAnswer Key and Percentage* of Examinees\nAnswering Each Question Correctly\nQUESTION TOTAL QUESTION TOTAL\nNumber Answer P + C I Number Answer P + C I\n1 C 54 51B 45\n2 D 30 52 C 12\n3 D 71 53 B 32\n4 C 62 54 C 77\n5 D 28 55 E 62\n6 E 34 56 D 54\n7 B 89 57 A 68\n8 D 65 58 B 58\n9 A 63 59 B 87\n10 A 53 60 D 55\n11 A 28 61 C 18\n12 E 40 62 A 35\n13 B 42 63 D 52\n14 C 27 64 A 56\n15 A 68 65 D 44\n16 D 14 66 D 33\n17 B 81 67 E 19\n18 A 45 68 E 51\n19 B 36 69 B 26\n20 E 49 70 B 53\n21 B 60 71 D 32\n22 A 54 72 E 39\n23 C 45 73 D 43\n24 C 86 74 D 50\n25 E 48 75 E 57\n26 C 30 76 C 49\n27 A 82 77 E 44\n28 E 61 78 E 52\n29 C 63 79 D 69\n30 A 44 80 D 28\n31 A 53 81 B 50\n32 D 62 82 D 16\n33 D 31 83 C 30\n34 C 23 84 D 26\n35 E 82 85 A 25\n36 E 70 86 E 24\n37 D 36 87 A 42\n38 D 35 88 C 42\n39 D 45 89 E 37\n40 D 40 90 A 33\n41 E 66 91 B 41\n42 C 64 92 E 45\n43 D 39 93 C 42\n44 D 54 94 E 29\n45 B 50 95 A 42\n46 E 29 96 E 13\n47 B 46 97 E 20\n48 C 57 98 A 72\n49 E 61 99 D 20\n50 B 50 100 B 72\nCorrect (C)\nIncorrect (I)\nTotal Score:\nC \u2013 I/4 = ____________\nScaled Score (SS) = ____________\n* The P+ column indicates the percent of Physics Test examinees who\nanswered each question correctly; it is based on a sample of November 2001\nexaminees selected to represent all Physics Test examinees tested between\nJuly 1, 2000, and June 30, 2003.\n72 PHYSICS TEST\nPRACTICE BOOK"
+    },
+    {
+      "page": 73,
+      "width": 612,
+      "height": 792,
+      "text": "Score Conversions and Percents Below*\nfor GRE Physics Test, Form GR0177\nTOTAL SCORE\nRaw Score Scaled Score % Raw Score Scaled Score %\n85-100 990 98 43 690 57\n84 980 97 41-42 680 54\n82-83 970 97 40 670 53\n81 960 96 38-39 660 50\n80 950 95 37 650 48\n78-79 940 95 35-36 640 45\n77 930 94 34 630 44\n75-76 920 92 33 620 41\n74 910 91 31-32 610 39\n73 900 90 30 600 37\n71-72 890 89 28-29 590 34\n27 580 32\n70 880 88\n26 570 29\n68-69 870 87\n24-25 560 27\n67 860 86\n23 550 25\n65-66 850 84\n21-22 540 22\n64 840 83\n20 530 20\n63 830 82\n18-19 520 18\n61-62 820 81\n17 510 16\n60 810 79\n16 500 13\n58-59 800 78\n14-15 490 11\n57 790 76\n13 480 10\n55-56 780 74\n11-12 470 7\n54 770 72\n10 460 6\n53 760 71\n8-9 450 5\n51-52 750 69\n7 440 4\n50 740 67\n6 430 3\n48-49 730 65 4-5 420 1\n47 720 63 3 410 1\n45-46 710 61 1-2 400 1\n44 700 59\n0 390 1\n*The percent scoring below the scaled score is based on the performance\nof 10,947 examinees who took the Physics Test between July 1, 2000, and\nJune 30, 2003.\nPHYSICS TEST 73\nPRACTICE BOOK"
+    },
+    {
+      "page": 74,
+      "width": 612,
+      "height": 792,
+      "text": "Evaluating Your Performance\nthe practice test. Note: due to changes in the test-taking\npopulation, the percentile rank data changes over time.\nNow that you have scored your test, you may wish to Percentile rank information is kept current on the GRE\ncompare your performance with the performance of Web site and may be obtained by visiting the GRE Web site at\nothers who took this test. Both the worksheet on page www.gre.org/codelst.html, or by contacting the GRE Program.\n72 and the table on page 73 use performance data from It is important to realize that the conditions under\nGRE Physics Test examinees. which you tested yourself were not exactly the same as\nThe data in the workshe et on page 72 are based on those you will encounter at a test center. It is impos-\nthe performance of a sample of the examinees who took sible to predict how different test-taking conditions\nthis test in November 2001. This sample was selected will affect test performance, and this is only one factor\nto represent the total population of GRE Physics Test that may account for differences between your practice\nexaminees tested between July 1, 2000, and June 30, 2003. test scores and your actual test scores. By comparing\nThe numbers in the column labeled \"P+\" on the your performance on this practice test with the perfor-\nworksheet indicate the percentages of examinees in this mance of other GRE Physics Test examinees, however,\nsample who answered the questions correctly. You may you will be able to determine your strengths and\nuse these numbers as a guide for evaluating your perfor- weaknesses and can then plan a program of study to\nmance on each test question. prepare yourself for taking the GRE Physics Test under\nThe table on page 73 contains, for each scaled standard conditions.\nscore, the percentage of examinees tested between\nJuly 1, 2000, and June 30, 2003 who received lower\nscores. Interpretive data based on the scores earned by\nexaminees tested in this three-year period will be used\nby admissions officers in the 2004-05 testing year.\nThese percentages appear in the score conversion table\nin a column to the right of the scaled scores. For example,\nin the percentage column opposite the scaled score\nof 660 is the number 50. This means that 50 percent\nof the GRE Physics Test examinees tested between\nJuly 1, 2000, and June 30, 2003 scored lower than 660.\nTo compare yourself with this population, look at the\npercentage next to the scaled score you earned on\n74 PHYSICS TEST\nPRACTICE BOOK"
+    },
+    {
+      "page": 75,
+      "width": 612,
+      "height": 792,
+      "text": ""
+    },
+    {
+      "page": 76,
+      "width": 612,
+      "height": 792,
+      "text": ""
+    },
+    {
+      "page": 77,
+      "width": 612,
+      "height": 792,
+      "text": "\u00ae\u00ae\n54721-007627 \u2022 U54E14 \u2022 Printed in U.S.A.\n724540"
+    }
+  ]
+}
